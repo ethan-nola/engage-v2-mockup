@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="%sveltekit.assets%/favicon.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		%sveltekit.head%
+	</head>
+	<body data-sveltekit-preload-data="hover">
+		<div style="display: contents">%sveltekit.body%</div>
+
+		<script>
+			// Function to remove watermark elements
+			function removeWatermark() {
+				const watermarks = document.querySelectorAll('.ag-watermark');
+				watermarks.forEach(watermark => watermark.remove());
+			}
+
+			// Set up the MutationObserver
+			const observer = new MutationObserver((mutations) => {
+				let foundWatermark = false;
+
+				mutations.forEach((mutation) => {
+					mutation.addedNodes.forEach((node) => {
+						if (node.nodeType === Node.ELEMENT_NODE && node.classList.contains('ag-watermark')) {
+							node.remove(); // Remove the watermark element immediately
+							foundWatermark = true; // Mark that we found a watermark
+						}
+					});
+				});
+
+				// If a watermark was found and removed, disconnect the observer
+				if (foundWatermark) {
+					observer.disconnect();
+				}
+			});
+
+			// Configuration of the observer
+			const config = { childList: true, subtree: true };
+
+			// Start observing the entire document
+			observer.observe(document.body, config);
+
+			// Initial check for existing watermarks
+			removeWatermark();
+
+			// Optional: Set a timeout to disconnect the observer after a certain period
+			const timeoutId = setTimeout(() => {
+				observer.disconnect();
+			}, 10000); // Disconnect after 10 seconds if no watermark is found
+
+			// If a watermark is found and removed, clear the timeout
+			observer.takeRecords(); // This will trigger the observer to check for any existing mutations
+		</script>
+	</body>
+</html>

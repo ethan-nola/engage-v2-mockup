@@ -1,0 +1,3440 @@
+{
+  "students": [
+    {
+      "studentid": "eh877",
+      "firstname": "Harry",
+      "lastname": "Shelly",
+      "email": "harry.s@school.edu",
+      "enrollments": [
+        {
+          "enrollmentid": 1,
+          "period": 8,
+          "subject": "Mathematics",
+          "classname": "IPLs",
+          "classroom": "Room 201",
+          "instructor": "John Smith",
+          "progress": 44,
+          "averageGrade": 70,
+          "enrollmentdate": "2024-01-17",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 2,
+          "period": 7,
+          "subject": "English",
+          "classname": "Voyager",
+          "classroom": "Room 101",
+          "instructor": "Jane Austen",
+          "progress": 75,
+          "averageGrade": 89,
+          "enrollmentdate": "2024-01-17",
+          "status": "Active"
+        }
+      ]
+    },
+    {
+      "studentid": "ru858",
+      "firstname": "Bryan",
+      "lastname": "Frederick",
+      "email": "bryan.f@school.edu",
+      "enrollments": [
+        {
+          "enrollmentid": 3,
+          "period": 7,
+          "subject": "English",
+          "classname": "Voyager",
+          "classroom": "Room 101",
+          "instructor": "Jane Austen",
+          "progress": 78,
+          "averageGrade": 84,
+          "enrollmentdate": "2024-01-15",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 4,
+          "period": 8,
+          "subject": "Social Studies",
+          "classname": "TCI",
+          "classroom": "Room 401",
+          "instructor": "Howard Zinn",
+          "progress": 55,
+          "averageGrade": 90,
+          "enrollmentdate": "2024-01-15",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 5,
+          "period": 5,
+          "subject": "Mathematics",
+          "classname": "Math Connections",
+          "classroom": "Room 201",
+          "instructor": "John Smith",
+          "progress": 54,
+          "averageGrade": 93,
+          "enrollmentdate": "2024-01-15",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 6,
+          "period": 2,
+          "subject": "Science",
+          "classname": "Expeditions",
+          "classroom": "Lab A",
+          "instructor": "Marie Curie",
+          "progress": 93,
+          "averageGrade": 78,
+          "enrollmentdate": "2024-01-15",
+          "status": "Active"
+        }
+      ]
+    },
+    {
+      "studentid": "bc326",
+      "firstname": "Tony",
+      "lastname": "Chambers",
+      "email": "tony.c@school.edu",
+      "enrollments": [
+        {
+          "enrollmentid": 7,
+          "period": 7,
+          "subject": "English",
+          "classname": "Voyager",
+          "classroom": "Room 101",
+          "instructor": "Jane Austen",
+          "progress": 83,
+          "averageGrade": 72,
+          "enrollmentdate": "2024-01-17",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 8,
+          "period": 6,
+          "subject": "Social Studies",
+          "classname": "TCI",
+          "classroom": "Room 401",
+          "instructor": "Howard Zinn",
+          "progress": 40,
+          "averageGrade": 72,
+          "enrollmentdate": "2024-01-17",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 9,
+          "period": 1,
+          "subject": "Mathematics",
+          "classname": "IPLs",
+          "classroom": "Room 201",
+          "instructor": "John Smith",
+          "progress": 46,
+          "averageGrade": 91,
+          "enrollmentdate": "2024-01-17",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 10,
+          "period": 4,
+          "subject": "Science",
+          "classname": "Expeditions",
+          "classroom": "Lab A",
+          "instructor": "Marie Curie",
+          "progress": 34,
+          "averageGrade": 89,
+          "enrollmentdate": "2024-01-17",
+          "status": "Active"
+        }
+      ]
+    },
+    {
+      "studentid": "rp561",
+      "firstname": "Katie",
+      "lastname": "Cantu",
+      "email": "katie.c@school.edu",
+      "enrollments": [
+        {
+          "enrollmentid": 11,
+          "period": 3,
+          "subject": "Science",
+          "classname": "Expeditions",
+          "classroom": "Lab A",
+          "instructor": "Marie Curie",
+          "progress": 33,
+          "averageGrade": 74,
+          "enrollmentdate": "2024-01-17",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 12,
+          "period": 5,
+          "subject": "Mathematics",
+          "classname": "Math Modules",
+          "classroom": "Room 201",
+          "instructor": "John Smith",
+          "progress": 71,
+          "averageGrade": 69,
+          "enrollmentdate": "2024-01-17",
+          "status": "Active"
+        }
+      ]
+    },
+    {
+      "studentid": "zj132",
+      "firstname": "Dianna",
+      "lastname": "Purpura",
+      "email": "dianna.p@school.edu",
+      "enrollments": [
+        {
+          "enrollmentid": 13,
+          "period": 1,
+          "subject": "Science",
+          "classname": "Science Modules",
+          "classroom": "Lab A",
+          "instructor": "Marie Curie",
+          "progress": 53,
+          "averageGrade": 72,
+          "enrollmentdate": "2024-01-15",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 14,
+          "period": 7,
+          "subject": "Mathematics",
+          "classname": "Math Connections",
+          "classroom": "Room 201",
+          "instructor": "John Smith",
+          "progress": 96,
+          "averageGrade": 95,
+          "enrollmentdate": "2024-01-15",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 15,
+          "period": 4,
+          "subject": "English",
+          "classname": "Voyager",
+          "classroom": "Room 101",
+          "instructor": "Jane Austen",
+          "progress": 40,
+          "averageGrade": 96,
+          "enrollmentdate": "2024-01-15",
+          "status": "Active"
+        }
+      ]
+    },
+    {
+      "studentid": "ck763",
+      "firstname": "Bessie",
+      "lastname": "Clark",
+      "email": "bessie.c@school.edu",
+      "enrollments": [
+        {
+          "enrollmentid": 16,
+          "period": 7,
+          "subject": "Mathematics",
+          "classname": "Steps",
+          "classroom": "Room 201",
+          "instructor": "John Smith",
+          "progress": 47,
+          "averageGrade": 65,
+          "enrollmentdate": "2024-01-17",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 17,
+          "period": 3,
+          "subject": "English",
+          "classname": "Voyager",
+          "classroom": "Room 101",
+          "instructor": "Jane Austen",
+          "progress": 79,
+          "averageGrade": 81,
+          "enrollmentdate": "2024-01-17",
+          "status": "Active"
+        }
+      ]
+    },
+    {
+      "studentid": "cc808",
+      "firstname": "Denis",
+      "lastname": "Casillas",
+      "email": "denis.c@school.edu",
+      "enrollments": [
+        {
+          "enrollmentid": 18,
+          "period": 5,
+          "subject": "Science",
+          "classname": "Expeditions",
+          "classroom": "Lab A",
+          "instructor": "Marie Curie",
+          "progress": 81,
+          "averageGrade": 74,
+          "enrollmentdate": "2024-01-16",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 19,
+          "period": 6,
+          "subject": "English",
+          "classname": "Voyager",
+          "classroom": "Room 101",
+          "instructor": "Jane Austen",
+          "progress": 81,
+          "averageGrade": 94,
+          "enrollmentdate": "2024-01-16",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 20,
+          "period": 8,
+          "subject": "Mathematics",
+          "classname": "IPLs",
+          "classroom": "Room 201",
+          "instructor": "John Smith",
+          "progress": 76,
+          "averageGrade": 73,
+          "enrollmentdate": "2024-01-16",
+          "status": "Active"
+        }
+      ]
+    },
+    {
+      "studentid": "gd713",
+      "firstname": "Christina",
+      "lastname": "Smith",
+      "email": "christina.s@school.edu",
+      "enrollments": [
+        {
+          "enrollmentid": 21,
+          "period": 7,
+          "subject": "Social Studies",
+          "classname": "TCI",
+          "classroom": "Room 401",
+          "instructor": "Howard Zinn",
+          "progress": 46,
+          "averageGrade": 82,
+          "enrollmentdate": "2024-01-16",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 22,
+          "period": 4,
+          "subject": "English",
+          "classname": "Voyager",
+          "classroom": "Room 101",
+          "instructor": "Jane Austen",
+          "progress": 92,
+          "averageGrade": 91,
+          "enrollmentdate": "2024-01-16",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 23,
+          "period": 6,
+          "subject": "Mathematics",
+          "classname": "IPLs",
+          "classroom": "Room 201",
+          "instructor": "John Smith",
+          "progress": 33,
+          "averageGrade": 94,
+          "enrollmentdate": "2024-01-16",
+          "status": "Active"
+        }
+      ]
+    },
+    {
+      "studentid": "kk366",
+      "firstname": "Sandra",
+      "lastname": "Scott",
+      "email": "sandra.s@school.edu",
+      "enrollments": [
+        {
+          "enrollmentid": 24,
+          "period": 7,
+          "subject": "Science",
+          "classname": "Expeditions",
+          "classroom": "Lab A",
+          "instructor": "Marie Curie",
+          "progress": 79,
+          "averageGrade": 67,
+          "enrollmentdate": "2024-01-15",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 25,
+          "period": 2,
+          "subject": "English",
+          "classname": "Voyager",
+          "classroom": "Room 101",
+          "instructor": "Jane Austen",
+          "progress": 88,
+          "averageGrade": 89,
+          "enrollmentdate": "2024-01-15",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 26,
+          "period": 6,
+          "subject": "Mathematics",
+          "classname": "Steps",
+          "classroom": "Room 201",
+          "instructor": "John Smith",
+          "progress": 33,
+          "averageGrade": 98,
+          "enrollmentdate": "2024-01-15",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 27,
+          "period": 3,
+          "subject": "Social Studies",
+          "classname": "TCI",
+          "classroom": "Room 401",
+          "instructor": "Howard Zinn",
+          "progress": 63,
+          "averageGrade": 94,
+          "enrollmentdate": "2024-01-15",
+          "status": "Active"
+        }
+      ]
+    },
+    {
+      "studentid": "br857",
+      "firstname": "Michael",
+      "lastname": "Polk",
+      "email": "michael.p@school.edu",
+      "enrollments": [
+        {
+          "enrollmentid": 28,
+          "period": 5,
+          "subject": "Social Studies",
+          "classname": "TCI",
+          "classroom": "Room 401",
+          "instructor": "Howard Zinn",
+          "progress": 95,
+          "averageGrade": 86,
+          "enrollmentdate": "2024-01-16",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 29,
+          "period": 1,
+          "subject": "Mathematics",
+          "classname": "Math Connections",
+          "classroom": "Room 201",
+          "instructor": "John Smith",
+          "progress": 35,
+          "averageGrade": 68,
+          "enrollmentdate": "2024-01-16",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 30,
+          "period": 8,
+          "subject": "Science",
+          "classname": "Expeditions",
+          "classroom": "Lab A",
+          "instructor": "Marie Curie",
+          "progress": 57,
+          "averageGrade": 74,
+          "enrollmentdate": "2024-01-16",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 31,
+          "period": 2,
+          "subject": "English",
+          "classname": "Voyager",
+          "classroom": "Room 101",
+          "instructor": "Jane Austen",
+          "progress": 53,
+          "averageGrade": 79,
+          "enrollmentdate": "2024-01-16",
+          "status": "Active"
+        }
+      ]
+    },
+    {
+      "studentid": "xh731",
+      "firstname": "Russ",
+      "lastname": "Anderson",
+      "email": "russ.a@school.edu",
+      "enrollments": [
+        {
+          "enrollmentid": 32,
+          "period": 6,
+          "subject": "Mathematics",
+          "classname": "Steps",
+          "classroom": "Room 201",
+          "instructor": "John Smith",
+          "progress": 92,
+          "averageGrade": 92,
+          "enrollmentdate": "2024-01-15",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 33,
+          "period": 3,
+          "subject": "English",
+          "classname": "Voyager",
+          "classroom": "Room 101",
+          "instructor": "Jane Austen",
+          "progress": 99,
+          "averageGrade": 74,
+          "enrollmentdate": "2024-01-15",
+          "status": "Active"
+        }
+      ]
+    },
+    {
+      "studentid": "qt787",
+      "firstname": "Stanley",
+      "lastname": "Lopez",
+      "email": "stanley.l@school.edu",
+      "enrollments": [
+        {
+          "enrollmentid": 34,
+          "period": 1,
+          "subject": "Mathematics",
+          "classname": "Math Connections",
+          "classroom": "Room 201",
+          "instructor": "John Smith",
+          "progress": 51,
+          "averageGrade": 67,
+          "enrollmentdate": "2024-01-16",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 35,
+          "period": 7,
+          "subject": "Science",
+          "classname": "Science Modules",
+          "classroom": "Lab A",
+          "instructor": "Marie Curie",
+          "progress": 91,
+          "averageGrade": 71,
+          "enrollmentdate": "2024-01-16",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 36,
+          "period": 3,
+          "subject": "Social Studies",
+          "classname": "TCI",
+          "classroom": "Room 401",
+          "instructor": "Howard Zinn",
+          "progress": 82,
+          "averageGrade": 67,
+          "enrollmentdate": "2024-01-16",
+          "status": "Active"
+        }
+      ]
+    },
+    {
+      "studentid": "zv710",
+      "firstname": "Paul",
+      "lastname": "Snyder",
+      "email": "paul.s@school.edu",
+      "enrollments": [
+        {
+          "enrollmentid": 37,
+          "period": 2,
+          "subject": "Mathematics",
+          "classname": "IPLs",
+          "classroom": "Room 201",
+          "instructor": "John Smith",
+          "progress": 84,
+          "averageGrade": 94,
+          "enrollmentdate": "2024-01-15",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 38,
+          "period": 7,
+          "subject": "Science",
+          "classname": "Expeditions",
+          "classroom": "Lab A",
+          "instructor": "Marie Curie",
+          "progress": 97,
+          "averageGrade": 69,
+          "enrollmentdate": "2024-01-15",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 39,
+          "period": 8,
+          "subject": "English",
+          "classname": "Voyager",
+          "classroom": "Room 101",
+          "instructor": "Jane Austen",
+          "progress": 64,
+          "averageGrade": 91,
+          "enrollmentdate": "2024-01-15",
+          "status": "Active"
+        }
+      ]
+    },
+    {
+      "studentid": "sd516",
+      "firstname": "Howard",
+      "lastname": "Rogers",
+      "email": "howard.r@school.edu",
+      "enrollments": [
+        {
+          "enrollmentid": 40,
+          "period": 8,
+          "subject": "English",
+          "classname": "Voyager",
+          "classroom": "Room 101",
+          "instructor": "Jane Austen",
+          "progress": 75,
+          "averageGrade": 68,
+          "enrollmentdate": "2024-01-18",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 41,
+          "period": 2,
+          "subject": "Science",
+          "classname": "Expeditions",
+          "classroom": "Lab A",
+          "instructor": "Marie Curie",
+          "progress": 47,
+          "averageGrade": 77,
+          "enrollmentdate": "2024-01-18",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 42,
+          "period": 1,
+          "subject": "Mathematics",
+          "classname": "Math Connections",
+          "classroom": "Room 201",
+          "instructor": "John Smith",
+          "progress": 43,
+          "averageGrade": 86,
+          "enrollmentdate": "2024-01-18",
+          "status": "Active"
+        }
+      ]
+    },
+    {
+      "studentid": "xp352",
+      "firstname": "Robin",
+      "lastname": "Bookwalter",
+      "email": "robin.b@school.edu",
+      "enrollments": [
+        {
+          "enrollmentid": 43,
+          "period": 1,
+          "subject": "Social Studies",
+          "classname": "TCI",
+          "classroom": "Room 401",
+          "instructor": "Howard Zinn",
+          "progress": 41,
+          "averageGrade": 88,
+          "enrollmentdate": "2024-01-17",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 44,
+          "period": 4,
+          "subject": "English",
+          "classname": "Voyager",
+          "classroom": "Room 101",
+          "instructor": "Jane Austen",
+          "progress": 31,
+          "averageGrade": 80,
+          "enrollmentdate": "2024-01-17",
+          "status": "Active"
+        }
+      ]
+    },
+    {
+      "studentid": "sp454",
+      "firstname": "Ann",
+      "lastname": "Pratt",
+      "email": "ann.p@school.edu",
+      "enrollments": [
+        {
+          "enrollmentid": 45,
+          "period": 8,
+          "subject": "English",
+          "classname": "Voyager",
+          "classroom": "Room 101",
+          "instructor": "Jane Austen",
+          "progress": 48,
+          "averageGrade": 67,
+          "enrollmentdate": "2024-01-18",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 46,
+          "period": 3,
+          "subject": "Social Studies",
+          "classname": "TCI",
+          "classroom": "Room 401",
+          "instructor": "Howard Zinn",
+          "progress": 57,
+          "averageGrade": 69,
+          "enrollmentdate": "2024-01-18",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 47,
+          "period": 4,
+          "subject": "Science",
+          "classname": "Expeditions",
+          "classroom": "Lab A",
+          "instructor": "Marie Curie",
+          "progress": 76,
+          "averageGrade": 83,
+          "enrollmentdate": "2024-01-18",
+          "status": "Active"
+        }
+      ]
+    },
+    {
+      "studentid": "fs891",
+      "firstname": "Charlie",
+      "lastname": "Calderon",
+      "email": "charlie.c@school.edu",
+      "enrollments": [
+        {
+          "enrollmentid": 48,
+          "period": 2,
+          "subject": "Social Studies",
+          "classname": "TCI",
+          "classroom": "Room 401",
+          "instructor": "Howard Zinn",
+          "progress": 72,
+          "averageGrade": 86,
+          "enrollmentdate": "2024-01-16",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 49,
+          "period": 4,
+          "subject": "Mathematics",
+          "classname": "IPLs",
+          "classroom": "Room 201",
+          "instructor": "John Smith",
+          "progress": 53,
+          "averageGrade": 85,
+          "enrollmentdate": "2024-01-16",
+          "status": "Active"
+        }
+      ]
+    },
+    {
+      "studentid": "jr992",
+      "firstname": "Jody",
+      "lastname": "Flowers",
+      "email": "jody.f@school.edu",
+      "enrollments": [
+        {
+          "enrollmentid": 50,
+          "period": 4,
+          "subject": "English",
+          "classname": "Voyager",
+          "classroom": "Room 101",
+          "instructor": "Jane Austen",
+          "progress": 63,
+          "averageGrade": 75,
+          "enrollmentdate": "2024-01-18",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 51,
+          "period": 3,
+          "subject": "Mathematics",
+          "classname": "Math Connections",
+          "classroom": "Room 201",
+          "instructor": "John Smith",
+          "progress": 95,
+          "averageGrade": 91,
+          "enrollmentdate": "2024-01-18",
+          "status": "Active"
+        }
+      ]
+    },
+    {
+      "studentid": "bq833",
+      "firstname": "Sherrie",
+      "lastname": "Turner",
+      "email": "sherrie.t@school.edu",
+      "enrollments": [
+        {
+          "enrollmentid": 52,
+          "period": 6,
+          "subject": "Science",
+          "classname": "Science Modules",
+          "classroom": "Lab A",
+          "instructor": "Marie Curie",
+          "progress": 48,
+          "averageGrade": 91,
+          "enrollmentdate": "2024-01-16",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 53,
+          "period": 1,
+          "subject": "Social Studies",
+          "classname": "TCI",
+          "classroom": "Room 401",
+          "instructor": "Howard Zinn",
+          "progress": 73,
+          "averageGrade": 80,
+          "enrollmentdate": "2024-01-16",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 54,
+          "period": 3,
+          "subject": "Mathematics",
+          "classname": "Math Connections",
+          "classroom": "Room 201",
+          "instructor": "John Smith",
+          "progress": 44,
+          "averageGrade": 85,
+          "enrollmentdate": "2024-01-16",
+          "status": "Active"
+        }
+      ]
+    },
+    {
+      "studentid": "hu235",
+      "firstname": "Sarah",
+      "lastname": "Gonzalez",
+      "email": "sarah.g@school.edu",
+      "enrollments": [
+        {
+          "enrollmentid": 55,
+          "period": 7,
+          "subject": "Social Studies",
+          "classname": "TCI",
+          "classroom": "Room 401",
+          "instructor": "Howard Zinn",
+          "progress": 60,
+          "averageGrade": 79,
+          "enrollmentdate": "2024-01-15",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 56,
+          "period": 1,
+          "subject": "Mathematics",
+          "classname": "Steps",
+          "classroom": "Room 201",
+          "instructor": "John Smith",
+          "progress": 72,
+          "averageGrade": 77,
+          "enrollmentdate": "2024-01-15",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 57,
+          "period": 3,
+          "subject": "Science",
+          "classname": "Expeditions",
+          "classroom": "Lab A",
+          "instructor": "Marie Curie",
+          "progress": 55,
+          "averageGrade": 65,
+          "enrollmentdate": "2024-01-15",
+          "status": "Active"
+        }
+      ]
+    },
+    {
+      "studentid": "dx272",
+      "firstname": "Michael",
+      "lastname": "Swiney",
+      "email": "michael.s@school.edu",
+      "enrollments": [
+        {
+          "enrollmentid": 58,
+          "period": 6,
+          "subject": "Mathematics",
+          "classname": "Math Modules",
+          "classroom": "Room 201",
+          "instructor": "John Smith",
+          "progress": 72,
+          "averageGrade": 67,
+          "enrollmentdate": "2024-01-15",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 59,
+          "period": 8,
+          "subject": "Science",
+          "classname": "Science Modules",
+          "classroom": "Lab A",
+          "instructor": "Marie Curie",
+          "progress": 76,
+          "averageGrade": 97,
+          "enrollmentdate": "2024-01-15",
+          "status": "Active"
+        }
+      ]
+    },
+    {
+      "studentid": "sb277",
+      "firstname": "Sarah",
+      "lastname": "Roberts",
+      "email": "sarah.r@school.edu",
+      "enrollments": [
+        {
+          "enrollmentid": 60,
+          "period": 8,
+          "subject": "Mathematics",
+          "classname": "Math Modules",
+          "classroom": "Room 201",
+          "instructor": "John Smith",
+          "progress": 98,
+          "averageGrade": 97,
+          "enrollmentdate": "2024-01-16",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 61,
+          "period": 3,
+          "subject": "Science",
+          "classname": "Science Modules",
+          "classroom": "Lab A",
+          "instructor": "Marie Curie",
+          "progress": 60,
+          "averageGrade": 95,
+          "enrollmentdate": "2024-01-16",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 62,
+          "period": 1,
+          "subject": "English",
+          "classname": "Voyager",
+          "classroom": "Room 101",
+          "instructor": "Jane Austen",
+          "progress": 51,
+          "averageGrade": 97,
+          "enrollmentdate": "2024-01-16",
+          "status": "Active"
+        }
+      ]
+    },
+    {
+      "studentid": "qr104",
+      "firstname": "Nathan",
+      "lastname": "Arriola",
+      "email": "nathan.a@school.edu",
+      "enrollments": [
+        {
+          "enrollmentid": 63,
+          "period": 7,
+          "subject": "English",
+          "classname": "Voyager",
+          "classroom": "Room 101",
+          "instructor": "Jane Austen",
+          "progress": 53,
+          "averageGrade": 75,
+          "enrollmentdate": "2024-01-18",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 64,
+          "period": 5,
+          "subject": "Science",
+          "classname": "Science Modules",
+          "classroom": "Lab A",
+          "instructor": "Marie Curie",
+          "progress": 45,
+          "averageGrade": 66,
+          "enrollmentdate": "2024-01-18",
+          "status": "Active"
+        }
+      ]
+    },
+    {
+      "studentid": "fj851",
+      "firstname": "Robert",
+      "lastname": "Burnham",
+      "email": "robert.b@school.edu",
+      "enrollments": [
+        {
+          "enrollmentid": 65,
+          "period": 1,
+          "subject": "Social Studies",
+          "classname": "TCI",
+          "classroom": "Room 401",
+          "instructor": "Howard Zinn",
+          "progress": 42,
+          "averageGrade": 94,
+          "enrollmentdate": "2024-01-16",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 66,
+          "period": 5,
+          "subject": "Mathematics",
+          "classname": "Math Modules",
+          "classroom": "Room 201",
+          "instructor": "John Smith",
+          "progress": 81,
+          "averageGrade": 90,
+          "enrollmentdate": "2024-01-16",
+          "status": "Active"
+        }
+      ]
+    },
+    {
+      "studentid": "co932",
+      "firstname": "Cheryl",
+      "lastname": "Benninger",
+      "email": "cheryl.b@school.edu",
+      "enrollments": [
+        {
+          "enrollmentid": 67,
+          "period": 2,
+          "subject": "Mathematics",
+          "classname": "IPLs",
+          "classroom": "Room 201",
+          "instructor": "John Smith",
+          "progress": 84,
+          "averageGrade": 72,
+          "enrollmentdate": "2024-01-17",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 68,
+          "period": 3,
+          "subject": "Social Studies",
+          "classname": "TCI",
+          "classroom": "Room 401",
+          "instructor": "Howard Zinn",
+          "progress": 72,
+          "averageGrade": 75,
+          "enrollmentdate": "2024-01-17",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 69,
+          "period": 5,
+          "subject": "English",
+          "classname": "Voyager",
+          "classroom": "Room 101",
+          "instructor": "Jane Austen",
+          "progress": 43,
+          "averageGrade": 72,
+          "enrollmentdate": "2024-01-17",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 70,
+          "period": 7,
+          "subject": "Science",
+          "classname": "Science Modules",
+          "classroom": "Lab A",
+          "instructor": "Marie Curie",
+          "progress": 98,
+          "averageGrade": 67,
+          "enrollmentdate": "2024-01-17",
+          "status": "Active"
+        }
+      ]
+    },
+    {
+      "studentid": "zz900",
+      "firstname": "Renee",
+      "lastname": "Thibodeaux",
+      "email": "renee.t@school.edu",
+      "enrollments": [
+        {
+          "enrollmentid": 71,
+          "period": 3,
+          "subject": "Social Studies",
+          "classname": "TCI",
+          "classroom": "Room 401",
+          "instructor": "Howard Zinn",
+          "progress": 83,
+          "averageGrade": 86,
+          "enrollmentdate": "2024-01-18",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 72,
+          "period": 2,
+          "subject": "Mathematics",
+          "classname": "Math Connections",
+          "classroom": "Room 201",
+          "instructor": "John Smith",
+          "progress": 41,
+          "averageGrade": 89,
+          "enrollmentdate": "2024-01-18",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 73,
+          "period": 7,
+          "subject": "English",
+          "classname": "Voyager",
+          "classroom": "Room 101",
+          "instructor": "Jane Austen",
+          "progress": 58,
+          "averageGrade": 66,
+          "enrollmentdate": "2024-01-18",
+          "status": "Active"
+        }
+      ]
+    },
+    {
+      "studentid": "pp767",
+      "firstname": "Kimberley",
+      "lastname": "Smith",
+      "email": "kimberley.s@school.edu",
+      "enrollments": [
+        {
+          "enrollmentid": 74,
+          "period": 8,
+          "subject": "Mathematics",
+          "classname": "IPLs",
+          "classroom": "Room 201",
+          "instructor": "John Smith",
+          "progress": 38,
+          "averageGrade": 87,
+          "enrollmentdate": "2024-01-18",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 75,
+          "period": 1,
+          "subject": "English",
+          "classname": "Voyager",
+          "classroom": "Room 101",
+          "instructor": "Jane Austen",
+          "progress": 74,
+          "averageGrade": 74,
+          "enrollmentdate": "2024-01-18",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 76,
+          "period": 3,
+          "subject": "Social Studies",
+          "classname": "TCI",
+          "classroom": "Room 401",
+          "instructor": "Howard Zinn",
+          "progress": 73,
+          "averageGrade": 67,
+          "enrollmentdate": "2024-01-18",
+          "status": "Active"
+        }
+      ]
+    },
+    {
+      "studentid": "hp973",
+      "firstname": "Joseph",
+      "lastname": "Sherman",
+      "email": "joseph.s@school.edu",
+      "enrollments": [
+        {
+          "enrollmentid": 77,
+          "period": 2,
+          "subject": "Science",
+          "classname": "Science Modules",
+          "classroom": "Lab A",
+          "instructor": "Marie Curie",
+          "progress": 97,
+          "averageGrade": 81,
+          "enrollmentdate": "2024-01-15",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 78,
+          "period": 4,
+          "subject": "Social Studies",
+          "classname": "TCI",
+          "classroom": "Room 401",
+          "instructor": "Howard Zinn",
+          "progress": 32,
+          "averageGrade": 68,
+          "enrollmentdate": "2024-01-15",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 79,
+          "period": 5,
+          "subject": "English",
+          "classname": "Voyager",
+          "classroom": "Room 101",
+          "instructor": "Jane Austen",
+          "progress": 88,
+          "averageGrade": 97,
+          "enrollmentdate": "2024-01-15",
+          "status": "Active"
+        }
+      ]
+    },
+    {
+      "studentid": "uk302",
+      "firstname": "Jerry",
+      "lastname": "Archer",
+      "email": "jerry.a@school.edu",
+      "enrollments": [
+        {
+          "enrollmentid": 80,
+          "period": 6,
+          "subject": "Science",
+          "classname": "Expeditions",
+          "classroom": "Lab A",
+          "instructor": "Marie Curie",
+          "progress": 70,
+          "averageGrade": 73,
+          "enrollmentdate": "2024-01-16",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 81,
+          "period": 1,
+          "subject": "Mathematics",
+          "classname": "Math Connections",
+          "classroom": "Room 201",
+          "instructor": "John Smith",
+          "progress": 46,
+          "averageGrade": 96,
+          "enrollmentdate": "2024-01-16",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 82,
+          "period": 4,
+          "subject": "English",
+          "classname": "Voyager",
+          "classroom": "Room 101",
+          "instructor": "Jane Austen",
+          "progress": 37,
+          "averageGrade": 85,
+          "enrollmentdate": "2024-01-16",
+          "status": "Active"
+        }
+      ]
+    },
+    {
+      "studentid": "fu490",
+      "firstname": "Richard",
+      "lastname": "Carpenter",
+      "email": "richard.c@school.edu",
+      "enrollments": [
+        {
+          "enrollmentid": 83,
+          "period": 3,
+          "subject": "English",
+          "classname": "Voyager",
+          "classroom": "Room 101",
+          "instructor": "Jane Austen",
+          "progress": 35,
+          "averageGrade": 98,
+          "enrollmentdate": "2024-01-16",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 84,
+          "period": 5,
+          "subject": "Science",
+          "classname": "Science Modules",
+          "classroom": "Lab A",
+          "instructor": "Marie Curie",
+          "progress": 46,
+          "averageGrade": 95,
+          "enrollmentdate": "2024-01-16",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 85,
+          "period": 2,
+          "subject": "Mathematics",
+          "classname": "Math Modules",
+          "classroom": "Room 201",
+          "instructor": "John Smith",
+          "progress": 74,
+          "averageGrade": 80,
+          "enrollmentdate": "2024-01-16",
+          "status": "Active"
+        }
+      ]
+    },
+    {
+      "studentid": "vn511",
+      "firstname": "Jack",
+      "lastname": "Kendrick",
+      "email": "jack.k@school.edu",
+      "enrollments": [
+        {
+          "enrollmentid": 86,
+          "period": 1,
+          "subject": "Social Studies",
+          "classname": "TCI",
+          "classroom": "Room 401",
+          "instructor": "Howard Zinn",
+          "progress": 73,
+          "averageGrade": 66,
+          "enrollmentdate": "2024-01-15",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 87,
+          "period": 4,
+          "subject": "English",
+          "classname": "Voyager",
+          "classroom": "Room 101",
+          "instructor": "Jane Austen",
+          "progress": 59,
+          "averageGrade": 98,
+          "enrollmentdate": "2024-01-15",
+          "status": "Active"
+        }
+      ]
+    },
+    {
+      "studentid": "ij513",
+      "firstname": "Shelia",
+      "lastname": "Calderon",
+      "email": "shelia.c@school.edu",
+      "enrollments": [
+        {
+          "enrollmentid": 88,
+          "period": 4,
+          "subject": "Social Studies",
+          "classname": "TCI",
+          "classroom": "Room 401",
+          "instructor": "Howard Zinn",
+          "progress": 57,
+          "averageGrade": 94,
+          "enrollmentdate": "2024-01-17",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 89,
+          "period": 6,
+          "subject": "Science",
+          "classname": "Science Modules",
+          "classroom": "Lab A",
+          "instructor": "Marie Curie",
+          "progress": 71,
+          "averageGrade": 70,
+          "enrollmentdate": "2024-01-17",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 90,
+          "period": 8,
+          "subject": "Mathematics",
+          "classname": "IPLs",
+          "classroom": "Room 201",
+          "instructor": "John Smith",
+          "progress": 67,
+          "averageGrade": 84,
+          "enrollmentdate": "2024-01-17",
+          "status": "Active"
+        }
+      ]
+    },
+    {
+      "studentid": "am948",
+      "firstname": "Patricia",
+      "lastname": "Tong",
+      "email": "patricia.t@school.edu",
+      "enrollments": [
+        {
+          "enrollmentid": 91,
+          "period": 8,
+          "subject": "English",
+          "classname": "Voyager",
+          "classroom": "Room 101",
+          "instructor": "Jane Austen",
+          "progress": 55,
+          "averageGrade": 80,
+          "enrollmentdate": "2024-01-18",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 92,
+          "period": 4,
+          "subject": "Mathematics",
+          "classname": "IPLs",
+          "classroom": "Room 201",
+          "instructor": "John Smith",
+          "progress": 58,
+          "averageGrade": 91,
+          "enrollmentdate": "2024-01-18",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 93,
+          "period": 3,
+          "subject": "Social Studies",
+          "classname": "TCI",
+          "classroom": "Room 401",
+          "instructor": "Howard Zinn",
+          "progress": 74,
+          "averageGrade": 80,
+          "enrollmentdate": "2024-01-18",
+          "status": "Active"
+        }
+      ]
+    },
+    {
+      "studentid": "lt481",
+      "firstname": "Tiffany",
+      "lastname": "Mclaughlin",
+      "email": "tiffany.m@school.edu",
+      "enrollments": [
+        {
+          "enrollmentid": 94,
+          "period": 6,
+          "subject": "Science",
+          "classname": "Science Modules",
+          "classroom": "Lab A",
+          "instructor": "Marie Curie",
+          "progress": 54,
+          "averageGrade": 72,
+          "enrollmentdate": "2024-01-16",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 95,
+          "period": 1,
+          "subject": "Mathematics",
+          "classname": "IPLs",
+          "classroom": "Room 201",
+          "instructor": "John Smith",
+          "progress": 49,
+          "averageGrade": 83,
+          "enrollmentdate": "2024-01-16",
+          "status": "Active"
+        }
+      ]
+    },
+    {
+      "studentid": "fb228",
+      "firstname": "David",
+      "lastname": "Mohn",
+      "email": "david.m@school.edu",
+      "enrollments": [
+        {
+          "enrollmentid": 96,
+          "period": 7,
+          "subject": "Science",
+          "classname": "Expeditions",
+          "classroom": "Lab A",
+          "instructor": "Marie Curie",
+          "progress": 100,
+          "averageGrade": 86,
+          "enrollmentdate": "2024-01-15",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 97,
+          "period": 4,
+          "subject": "Social Studies",
+          "classname": "TCI",
+          "classroom": "Room 401",
+          "instructor": "Howard Zinn",
+          "progress": 52,
+          "averageGrade": 98,
+          "enrollmentdate": "2024-01-15",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 98,
+          "period": 5,
+          "subject": "Mathematics",
+          "classname": "Steps",
+          "classroom": "Room 201",
+          "instructor": "John Smith",
+          "progress": 98,
+          "averageGrade": 83,
+          "enrollmentdate": "2024-01-15",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 99,
+          "period": 2,
+          "subject": "English",
+          "classname": "Voyager",
+          "classroom": "Room 101",
+          "instructor": "Jane Austen",
+          "progress": 42,
+          "averageGrade": 75,
+          "enrollmentdate": "2024-01-15",
+          "status": "Active"
+        }
+      ]
+    },
+    {
+      "studentid": "hq407",
+      "firstname": "Sheila",
+      "lastname": "Graves",
+      "email": "sheila.g@school.edu",
+      "enrollments": [
+        {
+          "enrollmentid": 100,
+          "period": 4,
+          "subject": "Social Studies",
+          "classname": "TCI",
+          "classroom": "Room 401",
+          "instructor": "Howard Zinn",
+          "progress": 36,
+          "averageGrade": 69,
+          "enrollmentdate": "2024-01-15",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 101,
+          "period": 7,
+          "subject": "Science",
+          "classname": "Expeditions",
+          "classroom": "Lab A",
+          "instructor": "Marie Curie",
+          "progress": 58,
+          "averageGrade": 74,
+          "enrollmentdate": "2024-01-15",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 102,
+          "period": 8,
+          "subject": "English",
+          "classname": "Voyager",
+          "classroom": "Room 101",
+          "instructor": "Jane Austen",
+          "progress": 64,
+          "averageGrade": 83,
+          "enrollmentdate": "2024-01-15",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 103,
+          "period": 3,
+          "subject": "Mathematics",
+          "classname": "Math Modules",
+          "classroom": "Room 201",
+          "instructor": "John Smith",
+          "progress": 73,
+          "averageGrade": 96,
+          "enrollmentdate": "2024-01-15",
+          "status": "Active"
+        }
+      ]
+    },
+    {
+      "studentid": "vr977",
+      "firstname": "Helen",
+      "lastname": "Parker",
+      "email": "helen.p@school.edu",
+      "enrollments": [
+        {
+          "enrollmentid": 104,
+          "period": 7,
+          "subject": "English",
+          "classname": "Voyager",
+          "classroom": "Room 101",
+          "instructor": "Jane Austen",
+          "progress": 48,
+          "averageGrade": 75,
+          "enrollmentdate": "2024-01-17",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 105,
+          "period": 6,
+          "subject": "Social Studies",
+          "classname": "TCI",
+          "classroom": "Room 401",
+          "instructor": "Howard Zinn",
+          "progress": 90,
+          "averageGrade": 96,
+          "enrollmentdate": "2024-01-17",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 106,
+          "period": 2,
+          "subject": "Science",
+          "classname": "Expeditions",
+          "classroom": "Lab A",
+          "instructor": "Marie Curie",
+          "progress": 74,
+          "averageGrade": 89,
+          "enrollmentdate": "2024-01-17",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 107,
+          "period": 1,
+          "subject": "Mathematics",
+          "classname": "Math Modules",
+          "classroom": "Room 201",
+          "instructor": "John Smith",
+          "progress": 37,
+          "averageGrade": 95,
+          "enrollmentdate": "2024-01-17",
+          "status": "Active"
+        }
+      ]
+    },
+    {
+      "studentid": "xh316",
+      "firstname": "Jeremiah",
+      "lastname": "Snider",
+      "email": "jeremiah.s@school.edu",
+      "enrollments": [
+        {
+          "enrollmentid": 108,
+          "period": 2,
+          "subject": "English",
+          "classname": "Voyager",
+          "classroom": "Room 101",
+          "instructor": "Jane Austen",
+          "progress": 57,
+          "averageGrade": 72,
+          "enrollmentdate": "2024-01-17",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 109,
+          "period": 4,
+          "subject": "Social Studies",
+          "classname": "TCI",
+          "classroom": "Room 401",
+          "instructor": "Howard Zinn",
+          "progress": 63,
+          "averageGrade": 86,
+          "enrollmentdate": "2024-01-17",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 110,
+          "period": 8,
+          "subject": "Science",
+          "classname": "Science Modules",
+          "classroom": "Lab A",
+          "instructor": "Marie Curie",
+          "progress": 78,
+          "averageGrade": 81,
+          "enrollmentdate": "2024-01-17",
+          "status": "Active"
+        }
+      ]
+    },
+    {
+      "studentid": "xt369",
+      "firstname": "Amina",
+      "lastname": "Blanchette",
+      "email": "amina.b@school.edu",
+      "enrollments": [
+        {
+          "enrollmentid": 111,
+          "period": 2,
+          "subject": "Social Studies",
+          "classname": "TCI",
+          "classroom": "Room 401",
+          "instructor": "Howard Zinn",
+          "progress": 30,
+          "averageGrade": 94,
+          "enrollmentdate": "2024-01-17",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 112,
+          "period": 7,
+          "subject": "English",
+          "classname": "Voyager",
+          "classroom": "Room 101",
+          "instructor": "Jane Austen",
+          "progress": 85,
+          "averageGrade": 72,
+          "enrollmentdate": "2024-01-17",
+          "status": "Active"
+        }
+      ]
+    },
+    {
+      "studentid": "ip860",
+      "firstname": "Joseph",
+      "lastname": "Rudloff",
+      "email": "joseph.r@school.edu",
+      "enrollments": [
+        {
+          "enrollmentid": 113,
+          "period": 7,
+          "subject": "English",
+          "classname": "Voyager",
+          "classroom": "Room 101",
+          "instructor": "Jane Austen",
+          "progress": 87,
+          "averageGrade": 79,
+          "enrollmentdate": "2024-01-15",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 114,
+          "period": 8,
+          "subject": "Social Studies",
+          "classname": "TCI",
+          "classroom": "Room 401",
+          "instructor": "Howard Zinn",
+          "progress": 84,
+          "averageGrade": 81,
+          "enrollmentdate": "2024-01-15",
+          "status": "Active"
+        }
+      ]
+    },
+    {
+      "studentid": "jx322",
+      "firstname": "Michael",
+      "lastname": "Neely",
+      "email": "michael.n@school.edu",
+      "enrollments": [
+        {
+          "enrollmentid": 115,
+          "period": 5,
+          "subject": "Science",
+          "classname": "Science Modules",
+          "classroom": "Lab A",
+          "instructor": "Marie Curie",
+          "progress": 82,
+          "averageGrade": 70,
+          "enrollmentdate": "2024-01-17",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 116,
+          "period": 4,
+          "subject": "Mathematics",
+          "classname": "IPLs",
+          "classroom": "Room 201",
+          "instructor": "John Smith",
+          "progress": 100,
+          "averageGrade": 71,
+          "enrollmentdate": "2024-01-17",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 117,
+          "period": 1,
+          "subject": "Social Studies",
+          "classname": "TCI",
+          "classroom": "Room 401",
+          "instructor": "Howard Zinn",
+          "progress": 89,
+          "averageGrade": 68,
+          "enrollmentdate": "2024-01-17",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 118,
+          "period": 7,
+          "subject": "English",
+          "classname": "Voyager",
+          "classroom": "Room 101",
+          "instructor": "Jane Austen",
+          "progress": 31,
+          "averageGrade": 76,
+          "enrollmentdate": "2024-01-17",
+          "status": "Active"
+        }
+      ]
+    },
+    {
+      "studentid": "jw462",
+      "firstname": "George",
+      "lastname": "Mcallister",
+      "email": "george.m@school.edu",
+      "enrollments": [
+        {
+          "enrollmentid": 119,
+          "period": 5,
+          "subject": "Mathematics",
+          "classname": "Math Connections",
+          "classroom": "Room 201",
+          "instructor": "John Smith",
+          "progress": 36,
+          "averageGrade": 65,
+          "enrollmentdate": "2024-01-15",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 120,
+          "period": 1,
+          "subject": "Social Studies",
+          "classname": "TCI",
+          "classroom": "Room 401",
+          "instructor": "Howard Zinn",
+          "progress": 94,
+          "averageGrade": 66,
+          "enrollmentdate": "2024-01-15",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 121,
+          "period": 6,
+          "subject": "Science",
+          "classname": "Expeditions",
+          "classroom": "Lab A",
+          "instructor": "Marie Curie",
+          "progress": 79,
+          "averageGrade": 78,
+          "enrollmentdate": "2024-01-15",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 122,
+          "period": 2,
+          "subject": "English",
+          "classname": "Voyager",
+          "classroom": "Room 101",
+          "instructor": "Jane Austen",
+          "progress": 60,
+          "averageGrade": 93,
+          "enrollmentdate": "2024-01-15",
+          "status": "Active"
+        }
+      ]
+    },
+    {
+      "studentid": "ya650",
+      "firstname": "Stephan",
+      "lastname": "Patron",
+      "email": "stephan.p@school.edu",
+      "enrollments": [
+        {
+          "enrollmentid": 123,
+          "period": 5,
+          "subject": "Mathematics",
+          "classname": "Math Modules",
+          "classroom": "Room 201",
+          "instructor": "John Smith",
+          "progress": 84,
+          "averageGrade": 95,
+          "enrollmentdate": "2024-01-17",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 124,
+          "period": 3,
+          "subject": "English",
+          "classname": "Voyager",
+          "classroom": "Room 101",
+          "instructor": "Jane Austen",
+          "progress": 95,
+          "averageGrade": 86,
+          "enrollmentdate": "2024-01-17",
+          "status": "Active"
+        }
+      ]
+    },
+    {
+      "studentid": "ki222",
+      "firstname": "Jennifer",
+      "lastname": "Holbrook",
+      "email": "jennifer.h@school.edu",
+      "enrollments": [
+        {
+          "enrollmentid": 125,
+          "period": 4,
+          "subject": "Mathematics",
+          "classname": "Steps",
+          "classroom": "Room 201",
+          "instructor": "John Smith",
+          "progress": 71,
+          "averageGrade": 98,
+          "enrollmentdate": "2024-01-16",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 126,
+          "period": 7,
+          "subject": "Science",
+          "classname": "Expeditions",
+          "classroom": "Lab A",
+          "instructor": "Marie Curie",
+          "progress": 79,
+          "averageGrade": 80,
+          "enrollmentdate": "2024-01-16",
+          "status": "Active"
+        }
+      ]
+    },
+    {
+      "studentid": "fx603",
+      "firstname": "Sharell",
+      "lastname": "Bercegeay",
+      "email": "sharell.b@school.edu",
+      "enrollments": [
+        {
+          "enrollmentid": 127,
+          "period": 8,
+          "subject": "Social Studies",
+          "classname": "TCI",
+          "classroom": "Room 401",
+          "instructor": "Howard Zinn",
+          "progress": 78,
+          "averageGrade": 95,
+          "enrollmentdate": "2024-01-16",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 128,
+          "period": 6,
+          "subject": "English",
+          "classname": "Voyager",
+          "classroom": "Room 101",
+          "instructor": "Jane Austen",
+          "progress": 74,
+          "averageGrade": 72,
+          "enrollmentdate": "2024-01-16",
+          "status": "Active"
+        }
+      ]
+    },
+    {
+      "studentid": "fl836",
+      "firstname": "James",
+      "lastname": "Avila",
+      "email": "james.a@school.edu",
+      "enrollments": [
+        {
+          "enrollmentid": 129,
+          "period": 2,
+          "subject": "English",
+          "classname": "Voyager",
+          "classroom": "Room 101",
+          "instructor": "Jane Austen",
+          "progress": 74,
+          "averageGrade": 88,
+          "enrollmentdate": "2024-01-18",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 130,
+          "period": 5,
+          "subject": "Social Studies",
+          "classname": "TCI",
+          "classroom": "Room 401",
+          "instructor": "Howard Zinn",
+          "progress": 75,
+          "averageGrade": 91,
+          "enrollmentdate": "2024-01-18",
+          "status": "Active"
+        }
+      ]
+    },
+    {
+      "studentid": "hp481",
+      "firstname": "William",
+      "lastname": "Bryant",
+      "email": "william.b@school.edu",
+      "enrollments": [
+        {
+          "enrollmentid": 131,
+          "period": 7,
+          "subject": "English",
+          "classname": "Voyager",
+          "classroom": "Room 101",
+          "instructor": "Jane Austen",
+          "progress": 76,
+          "averageGrade": 75,
+          "enrollmentdate": "2024-01-18",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 132,
+          "period": 3,
+          "subject": "Mathematics",
+          "classname": "Math Modules",
+          "classroom": "Room 201",
+          "instructor": "John Smith",
+          "progress": 79,
+          "averageGrade": 80,
+          "enrollmentdate": "2024-01-18",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 133,
+          "period": 2,
+          "subject": "Science",
+          "classname": "Expeditions",
+          "classroom": "Lab A",
+          "instructor": "Marie Curie",
+          "progress": 43,
+          "averageGrade": 79,
+          "enrollmentdate": "2024-01-18",
+          "status": "Active"
+        }
+      ]
+    },
+    {
+      "studentid": "jv148",
+      "firstname": "Irene",
+      "lastname": "Rivera",
+      "email": "irene.r@school.edu",
+      "enrollments": [
+        {
+          "enrollmentid": 134,
+          "period": 3,
+          "subject": "Science",
+          "classname": "Expeditions",
+          "classroom": "Lab A",
+          "instructor": "Marie Curie",
+          "progress": 40,
+          "averageGrade": 70,
+          "enrollmentdate": "2024-01-16",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 135,
+          "period": 1,
+          "subject": "Mathematics",
+          "classname": "Steps",
+          "classroom": "Room 201",
+          "instructor": "John Smith",
+          "progress": 64,
+          "averageGrade": 75,
+          "enrollmentdate": "2024-01-16",
+          "status": "Active"
+        }
+      ]
+    },
+    {
+      "studentid": "uj882",
+      "firstname": "Ed",
+      "lastname": "Kittinger",
+      "email": "ed.k@school.edu",
+      "enrollments": [
+        {
+          "enrollmentid": 136,
+          "period": 1,
+          "subject": "Mathematics",
+          "classname": "Math Modules",
+          "classroom": "Room 201",
+          "instructor": "John Smith",
+          "progress": 39,
+          "averageGrade": 96,
+          "enrollmentdate": "2024-01-16",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 137,
+          "period": 2,
+          "subject": "English",
+          "classname": "Voyager",
+          "classroom": "Room 101",
+          "instructor": "Jane Austen",
+          "progress": 44,
+          "averageGrade": 69,
+          "enrollmentdate": "2024-01-16",
+          "status": "Active"
+        }
+      ]
+    },
+    {
+      "studentid": "eh704",
+      "firstname": "Paul",
+      "lastname": "Varrone",
+      "email": "paul.v@school.edu",
+      "enrollments": [
+        {
+          "enrollmentid": 138,
+          "period": 7,
+          "subject": "Science",
+          "classname": "Expeditions",
+          "classroom": "Lab A",
+          "instructor": "Marie Curie",
+          "progress": 41,
+          "averageGrade": 86,
+          "enrollmentdate": "2024-01-16",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 139,
+          "period": 3,
+          "subject": "Social Studies",
+          "classname": "TCI",
+          "classroom": "Room 401",
+          "instructor": "Howard Zinn",
+          "progress": 47,
+          "averageGrade": 67,
+          "enrollmentdate": "2024-01-16",
+          "status": "Active"
+        }
+      ]
+    },
+    {
+      "studentid": "cd104",
+      "firstname": "Jessie",
+      "lastname": "Abraham",
+      "email": "jessie.a@school.edu",
+      "enrollments": [
+        {
+          "enrollmentid": 140,
+          "period": 8,
+          "subject": "Mathematics",
+          "classname": "Steps",
+          "classroom": "Room 201",
+          "instructor": "John Smith",
+          "progress": 48,
+          "averageGrade": 96,
+          "enrollmentdate": "2024-01-17",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 141,
+          "period": 6,
+          "subject": "Social Studies",
+          "classname": "TCI",
+          "classroom": "Room 401",
+          "instructor": "Howard Zinn",
+          "progress": 80,
+          "averageGrade": 93,
+          "enrollmentdate": "2024-01-17",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 142,
+          "period": 3,
+          "subject": "Science",
+          "classname": "Expeditions",
+          "classroom": "Lab A",
+          "instructor": "Marie Curie",
+          "progress": 83,
+          "averageGrade": 97,
+          "enrollmentdate": "2024-01-17",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 143,
+          "period": 1,
+          "subject": "English",
+          "classname": "Voyager",
+          "classroom": "Room 101",
+          "instructor": "Jane Austen",
+          "progress": 62,
+          "averageGrade": 94,
+          "enrollmentdate": "2024-01-17",
+          "status": "Active"
+        }
+      ]
+    },
+    {
+      "studentid": "xu695",
+      "firstname": "Wanda",
+      "lastname": "Beaver",
+      "email": "wanda.b@school.edu",
+      "enrollments": [
+        {
+          "enrollmentid": 144,
+          "period": 6,
+          "subject": "Science",
+          "classname": "Science Modules",
+          "classroom": "Lab A",
+          "instructor": "Marie Curie",
+          "progress": 73,
+          "averageGrade": 79,
+          "enrollmentdate": "2024-01-16",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 145,
+          "period": 3,
+          "subject": "Mathematics",
+          "classname": "Math Connections",
+          "classroom": "Room 201",
+          "instructor": "John Smith",
+          "progress": 78,
+          "averageGrade": 98,
+          "enrollmentdate": "2024-01-16",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 146,
+          "period": 1,
+          "subject": "English",
+          "classname": "Voyager",
+          "classroom": "Room 101",
+          "instructor": "Jane Austen",
+          "progress": 40,
+          "averageGrade": 79,
+          "enrollmentdate": "2024-01-16",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 147,
+          "period": 7,
+          "subject": "Social Studies",
+          "classname": "TCI",
+          "classroom": "Room 401",
+          "instructor": "Howard Zinn",
+          "progress": 34,
+          "averageGrade": 72,
+          "enrollmentdate": "2024-01-16",
+          "status": "Active"
+        }
+      ]
+    },
+    {
+      "studentid": "gs240",
+      "firstname": "Marcia",
+      "lastname": "Farrow",
+      "email": "marcia.f@school.edu",
+      "enrollments": [
+        {
+          "enrollmentid": 148,
+          "period": 1,
+          "subject": "Social Studies",
+          "classname": "TCI",
+          "classroom": "Room 401",
+          "instructor": "Howard Zinn",
+          "progress": 86,
+          "averageGrade": 65,
+          "enrollmentdate": "2024-01-16",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 149,
+          "period": 3,
+          "subject": "English",
+          "classname": "Voyager",
+          "classroom": "Room 101",
+          "instructor": "Jane Austen",
+          "progress": 73,
+          "averageGrade": 75,
+          "enrollmentdate": "2024-01-16",
+          "status": "Active"
+        }
+      ]
+    },
+    {
+      "studentid": "to622",
+      "firstname": "Ernest",
+      "lastname": "Ware",
+      "email": "ernest.w@school.edu",
+      "enrollments": [
+        {
+          "enrollmentid": 150,
+          "period": 4,
+          "subject": "Social Studies",
+          "classname": "TCI",
+          "classroom": "Room 401",
+          "instructor": "Howard Zinn",
+          "progress": 40,
+          "averageGrade": 89,
+          "enrollmentdate": "2024-01-18",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 151,
+          "period": 2,
+          "subject": "Mathematics",
+          "classname": "Steps",
+          "classroom": "Room 201",
+          "instructor": "John Smith",
+          "progress": 76,
+          "averageGrade": 67,
+          "enrollmentdate": "2024-01-18",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 152,
+          "period": 6,
+          "subject": "Science",
+          "classname": "Expeditions",
+          "classroom": "Lab A",
+          "instructor": "Marie Curie",
+          "progress": 55,
+          "averageGrade": 72,
+          "enrollmentdate": "2024-01-18",
+          "status": "Active"
+        }
+      ]
+    },
+    {
+      "studentid": "km153",
+      "firstname": "George",
+      "lastname": "Stoneham",
+      "email": "george.s@school.edu",
+      "enrollments": [
+        {
+          "enrollmentid": 153,
+          "period": 3,
+          "subject": "Science",
+          "classname": "Expeditions",
+          "classroom": "Lab A",
+          "instructor": "Marie Curie",
+          "progress": 62,
+          "averageGrade": 87,
+          "enrollmentdate": "2024-01-15",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 154,
+          "period": 8,
+          "subject": "Social Studies",
+          "classname": "TCI",
+          "classroom": "Room 401",
+          "instructor": "Howard Zinn",
+          "progress": 70,
+          "averageGrade": 90,
+          "enrollmentdate": "2024-01-15",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 155,
+          "period": 4,
+          "subject": "Mathematics",
+          "classname": "Steps",
+          "classroom": "Room 201",
+          "instructor": "John Smith",
+          "progress": 39,
+          "averageGrade": 72,
+          "enrollmentdate": "2024-01-15",
+          "status": "Active"
+        }
+      ]
+    },
+    {
+      "studentid": "yr203",
+      "firstname": "Angela",
+      "lastname": "Hight",
+      "email": "angela.h@school.edu",
+      "enrollments": [
+        {
+          "enrollmentid": 156,
+          "period": 7,
+          "subject": "Social Studies",
+          "classname": "TCI",
+          "classroom": "Room 401",
+          "instructor": "Howard Zinn",
+          "progress": 39,
+          "averageGrade": 79,
+          "enrollmentdate": "2024-01-17",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 157,
+          "period": 3,
+          "subject": "Science",
+          "classname": "Expeditions",
+          "classroom": "Lab A",
+          "instructor": "Marie Curie",
+          "progress": 66,
+          "averageGrade": 92,
+          "enrollmentdate": "2024-01-17",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 158,
+          "period": 1,
+          "subject": "Mathematics",
+          "classname": "IPLs",
+          "classroom": "Room 201",
+          "instructor": "John Smith",
+          "progress": 95,
+          "averageGrade": 92,
+          "enrollmentdate": "2024-01-17",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 159,
+          "period": 5,
+          "subject": "English",
+          "classname": "Voyager",
+          "classroom": "Room 101",
+          "instructor": "Jane Austen",
+          "progress": 57,
+          "averageGrade": 65,
+          "enrollmentdate": "2024-01-17",
+          "status": "Active"
+        }
+      ]
+    },
+    {
+      "studentid": "ru168",
+      "firstname": "Paul",
+      "lastname": "Collins",
+      "email": "paul.c@school.edu",
+      "enrollments": [
+        {
+          "enrollmentid": 160,
+          "period": 1,
+          "subject": "Mathematics",
+          "classname": "Steps",
+          "classroom": "Room 201",
+          "instructor": "John Smith",
+          "progress": 30,
+          "averageGrade": 79,
+          "enrollmentdate": "2024-01-15",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 161,
+          "period": 5,
+          "subject": "Social Studies",
+          "classname": "TCI",
+          "classroom": "Room 401",
+          "instructor": "Howard Zinn",
+          "progress": 88,
+          "averageGrade": 86,
+          "enrollmentdate": "2024-01-15",
+          "status": "Active"
+        }
+      ]
+    },
+    {
+      "studentid": "eg926",
+      "firstname": "Willie",
+      "lastname": "Lapp",
+      "email": "willie.l@school.edu",
+      "enrollments": [
+        {
+          "enrollmentid": 162,
+          "period": 7,
+          "subject": "Science",
+          "classname": "Science Modules",
+          "classroom": "Lab A",
+          "instructor": "Marie Curie",
+          "progress": 33,
+          "averageGrade": 92,
+          "enrollmentdate": "2024-01-18",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 163,
+          "period": 2,
+          "subject": "English",
+          "classname": "Voyager",
+          "classroom": "Room 101",
+          "instructor": "Jane Austen",
+          "progress": 32,
+          "averageGrade": 72,
+          "enrollmentdate": "2024-01-18",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 164,
+          "period": 1,
+          "subject": "Mathematics",
+          "classname": "Math Connections",
+          "classroom": "Room 201",
+          "instructor": "John Smith",
+          "progress": 37,
+          "averageGrade": 70,
+          "enrollmentdate": "2024-01-18",
+          "status": "Active"
+        }
+      ]
+    },
+    {
+      "studentid": "pp239",
+      "firstname": "Mary",
+      "lastname": "Kingsbury",
+      "email": "mary.k@school.edu",
+      "enrollments": [
+        {
+          "enrollmentid": 165,
+          "period": 3,
+          "subject": "Mathematics",
+          "classname": "Math Modules",
+          "classroom": "Room 201",
+          "instructor": "John Smith",
+          "progress": 58,
+          "averageGrade": 78,
+          "enrollmentdate": "2024-01-15",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 166,
+          "period": 7,
+          "subject": "Social Studies",
+          "classname": "TCI",
+          "classroom": "Room 401",
+          "instructor": "Howard Zinn",
+          "progress": 45,
+          "averageGrade": 66,
+          "enrollmentdate": "2024-01-15",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 167,
+          "period": 1,
+          "subject": "Science",
+          "classname": "Science Modules",
+          "classroom": "Lab A",
+          "instructor": "Marie Curie",
+          "progress": 98,
+          "averageGrade": 86,
+          "enrollmentdate": "2024-01-15",
+          "status": "Active"
+        }
+      ]
+    },
+    {
+      "studentid": "kd768",
+      "firstname": "Marie",
+      "lastname": "Calhoon",
+      "email": "marie.c@school.edu",
+      "enrollments": [
+        {
+          "enrollmentid": 168,
+          "period": 5,
+          "subject": "Mathematics",
+          "classname": "Math Modules",
+          "classroom": "Room 201",
+          "instructor": "John Smith",
+          "progress": 44,
+          "averageGrade": 80,
+          "enrollmentdate": "2024-01-18",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 169,
+          "period": 3,
+          "subject": "Social Studies",
+          "classname": "TCI",
+          "classroom": "Room 401",
+          "instructor": "Howard Zinn",
+          "progress": 36,
+          "averageGrade": 85,
+          "enrollmentdate": "2024-01-18",
+          "status": "Active"
+        }
+      ]
+    },
+    {
+      "studentid": "fa759",
+      "firstname": "David",
+      "lastname": "Mcmillan",
+      "email": "david.m@school.edu",
+      "enrollments": [
+        {
+          "enrollmentid": 170,
+          "period": 1,
+          "subject": "Science",
+          "classname": "Expeditions",
+          "classroom": "Lab A",
+          "instructor": "Marie Curie",
+          "progress": 73,
+          "averageGrade": 93,
+          "enrollmentdate": "2024-01-18",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 171,
+          "period": 3,
+          "subject": "English",
+          "classname": "Voyager",
+          "classroom": "Room 101",
+          "instructor": "Jane Austen",
+          "progress": 91,
+          "averageGrade": 92,
+          "enrollmentdate": "2024-01-18",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 172,
+          "period": 7,
+          "subject": "Mathematics",
+          "classname": "IPLs",
+          "classroom": "Room 201",
+          "instructor": "John Smith",
+          "progress": 37,
+          "averageGrade": 93,
+          "enrollmentdate": "2024-01-18",
+          "status": "Active"
+        }
+      ]
+    },
+    {
+      "studentid": "kw916",
+      "firstname": "William",
+      "lastname": "Swenson",
+      "email": "william.s@school.edu",
+      "enrollments": [
+        {
+          "enrollmentid": 173,
+          "period": 6,
+          "subject": "Science",
+          "classname": "Expeditions",
+          "classroom": "Lab A",
+          "instructor": "Marie Curie",
+          "progress": 53,
+          "averageGrade": 77,
+          "enrollmentdate": "2024-01-15",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 174,
+          "period": 5,
+          "subject": "English",
+          "classname": "Voyager",
+          "classroom": "Room 101",
+          "instructor": "Jane Austen",
+          "progress": 65,
+          "averageGrade": 66,
+          "enrollmentdate": "2024-01-15",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 175,
+          "period": 1,
+          "subject": "Social Studies",
+          "classname": "TCI",
+          "classroom": "Room 401",
+          "instructor": "Howard Zinn",
+          "progress": 50,
+          "averageGrade": 70,
+          "enrollmentdate": "2024-01-15",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 176,
+          "period": 8,
+          "subject": "Mathematics",
+          "classname": "IPLs",
+          "classroom": "Room 201",
+          "instructor": "John Smith",
+          "progress": 80,
+          "averageGrade": 87,
+          "enrollmentdate": "2024-01-15",
+          "status": "Active"
+        }
+      ]
+    },
+    {
+      "studentid": "vf876",
+      "firstname": "Mary",
+      "lastname": "Foster",
+      "email": "mary.f@school.edu",
+      "enrollments": [
+        {
+          "enrollmentid": 177,
+          "period": 3,
+          "subject": "Science",
+          "classname": "Expeditions",
+          "classroom": "Lab A",
+          "instructor": "Marie Curie",
+          "progress": 63,
+          "averageGrade": 65,
+          "enrollmentdate": "2024-01-16",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 178,
+          "period": 8,
+          "subject": "English",
+          "classname": "Voyager",
+          "classroom": "Room 101",
+          "instructor": "Jane Austen",
+          "progress": 31,
+          "averageGrade": 67,
+          "enrollmentdate": "2024-01-16",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 179,
+          "period": 5,
+          "subject": "Social Studies",
+          "classname": "TCI",
+          "classroom": "Room 401",
+          "instructor": "Howard Zinn",
+          "progress": 30,
+          "averageGrade": 68,
+          "enrollmentdate": "2024-01-16",
+          "status": "Active"
+        }
+      ]
+    },
+    {
+      "studentid": "ta185",
+      "firstname": "Steven",
+      "lastname": "Williams",
+      "email": "steven.w@school.edu",
+      "enrollments": [
+        {
+          "enrollmentid": 180,
+          "period": 4,
+          "subject": "Social Studies",
+          "classname": "TCI",
+          "classroom": "Room 401",
+          "instructor": "Howard Zinn",
+          "progress": 70,
+          "averageGrade": 65,
+          "enrollmentdate": "2024-01-15",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 181,
+          "period": 6,
+          "subject": "Mathematics",
+          "classname": "Math Connections",
+          "classroom": "Room 201",
+          "instructor": "John Smith",
+          "progress": 50,
+          "averageGrade": 81,
+          "enrollmentdate": "2024-01-15",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 182,
+          "period": 2,
+          "subject": "Science",
+          "classname": "Expeditions",
+          "classroom": "Lab A",
+          "instructor": "Marie Curie",
+          "progress": 63,
+          "averageGrade": 73,
+          "enrollmentdate": "2024-01-15",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 183,
+          "period": 3,
+          "subject": "English",
+          "classname": "Voyager",
+          "classroom": "Room 101",
+          "instructor": "Jane Austen",
+          "progress": 53,
+          "averageGrade": 86,
+          "enrollmentdate": "2024-01-15",
+          "status": "Active"
+        }
+      ]
+    },
+    {
+      "studentid": "ag914",
+      "firstname": "David",
+      "lastname": "Boggs",
+      "email": "david.b@school.edu",
+      "enrollments": [
+        {
+          "enrollmentid": 184,
+          "period": 5,
+          "subject": "Social Studies",
+          "classname": "TCI",
+          "classroom": "Room 401",
+          "instructor": "Howard Zinn",
+          "progress": 70,
+          "averageGrade": 86,
+          "enrollmentdate": "2024-01-15",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 185,
+          "period": 4,
+          "subject": "Science",
+          "classname": "Science Modules",
+          "classroom": "Lab A",
+          "instructor": "Marie Curie",
+          "progress": 39,
+          "averageGrade": 67,
+          "enrollmentdate": "2024-01-15",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 186,
+          "period": 6,
+          "subject": "Mathematics",
+          "classname": "IPLs",
+          "classroom": "Room 201",
+          "instructor": "John Smith",
+          "progress": 68,
+          "averageGrade": 82,
+          "enrollmentdate": "2024-01-15",
+          "status": "Active"
+        }
+      ]
+    },
+    {
+      "studentid": "py126",
+      "firstname": "Michele",
+      "lastname": "Creed",
+      "email": "michele.c@school.edu",
+      "enrollments": [
+        {
+          "enrollmentid": 187,
+          "period": 4,
+          "subject": "Mathematics",
+          "classname": "Math Connections",
+          "classroom": "Room 201",
+          "instructor": "John Smith",
+          "progress": 38,
+          "averageGrade": 68,
+          "enrollmentdate": "2024-01-16",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 188,
+          "period": 5,
+          "subject": "Science",
+          "classname": "Science Modules",
+          "classroom": "Lab A",
+          "instructor": "Marie Curie",
+          "progress": 39,
+          "averageGrade": 89,
+          "enrollmentdate": "2024-01-16",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 189,
+          "period": 1,
+          "subject": "English",
+          "classname": "Voyager",
+          "classroom": "Room 101",
+          "instructor": "Jane Austen",
+          "progress": 88,
+          "averageGrade": 94,
+          "enrollmentdate": "2024-01-16",
+          "status": "Active"
+        }
+      ]
+    },
+    {
+      "studentid": "ye456",
+      "firstname": "Suzanne",
+      "lastname": "Cowan",
+      "email": "suzanne.c@school.edu",
+      "enrollments": [
+        {
+          "enrollmentid": 190,
+          "period": 4,
+          "subject": "Social Studies",
+          "classname": "TCI",
+          "classroom": "Room 401",
+          "instructor": "Howard Zinn",
+          "progress": 62,
+          "averageGrade": 92,
+          "enrollmentdate": "2024-01-15",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 191,
+          "period": 7,
+          "subject": "English",
+          "classname": "Voyager",
+          "classroom": "Room 101",
+          "instructor": "Jane Austen",
+          "progress": 70,
+          "averageGrade": 83,
+          "enrollmentdate": "2024-01-15",
+          "status": "Active"
+        }
+      ]
+    },
+    {
+      "studentid": "po323",
+      "firstname": "Bryan",
+      "lastname": "Lewis",
+      "email": "bryan.l@school.edu",
+      "enrollments": [
+        {
+          "enrollmentid": 192,
+          "period": 3,
+          "subject": "English",
+          "classname": "Voyager",
+          "classroom": "Room 101",
+          "instructor": "Jane Austen",
+          "progress": 62,
+          "averageGrade": 73,
+          "enrollmentdate": "2024-01-15",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 193,
+          "period": 4,
+          "subject": "Science",
+          "classname": "Science Modules",
+          "classroom": "Lab A",
+          "instructor": "Marie Curie",
+          "progress": 68,
+          "averageGrade": 90,
+          "enrollmentdate": "2024-01-15",
+          "status": "Active"
+        }
+      ]
+    },
+    {
+      "studentid": "kw478",
+      "firstname": "Leon",
+      "lastname": "Bellomy",
+      "email": "leon.b@school.edu",
+      "enrollments": [
+        {
+          "enrollmentid": 194,
+          "period": 2,
+          "subject": "Science",
+          "classname": "Expeditions",
+          "classroom": "Lab A",
+          "instructor": "Marie Curie",
+          "progress": 94,
+          "averageGrade": 87,
+          "enrollmentdate": "2024-01-16",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 195,
+          "period": 5,
+          "subject": "Social Studies",
+          "classname": "TCI",
+          "classroom": "Room 401",
+          "instructor": "Howard Zinn",
+          "progress": 81,
+          "averageGrade": 87,
+          "enrollmentdate": "2024-01-16",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 196,
+          "period": 3,
+          "subject": "Mathematics",
+          "classname": "Math Connections",
+          "classroom": "Room 201",
+          "instructor": "John Smith",
+          "progress": 34,
+          "averageGrade": 76,
+          "enrollmentdate": "2024-01-16",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 197,
+          "period": 8,
+          "subject": "English",
+          "classname": "Voyager",
+          "classroom": "Room 101",
+          "instructor": "Jane Austen",
+          "progress": 35,
+          "averageGrade": 70,
+          "enrollmentdate": "2024-01-16",
+          "status": "Active"
+        }
+      ]
+    },
+    {
+      "studentid": "ha275",
+      "firstname": "Grace",
+      "lastname": "Hunt",
+      "email": "grace.h@school.edu",
+      "enrollments": [
+        {
+          "enrollmentid": 198,
+          "period": 5,
+          "subject": "English",
+          "classname": "Voyager",
+          "classroom": "Room 101",
+          "instructor": "Jane Austen",
+          "progress": 89,
+          "averageGrade": 96,
+          "enrollmentdate": "2024-01-17",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 199,
+          "period": 4,
+          "subject": "Mathematics",
+          "classname": "IPLs",
+          "classroom": "Room 201",
+          "instructor": "John Smith",
+          "progress": 42,
+          "averageGrade": 91,
+          "enrollmentdate": "2024-01-17",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 200,
+          "period": 3,
+          "subject": "Science",
+          "classname": "Science Modules",
+          "classroom": "Lab A",
+          "instructor": "Marie Curie",
+          "progress": 98,
+          "averageGrade": 80,
+          "enrollmentdate": "2024-01-17",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 201,
+          "period": 8,
+          "subject": "Social Studies",
+          "classname": "TCI",
+          "classroom": "Room 401",
+          "instructor": "Howard Zinn",
+          "progress": 55,
+          "averageGrade": 66,
+          "enrollmentdate": "2024-01-17",
+          "status": "Active"
+        }
+      ]
+    },
+    {
+      "studentid": "mq185",
+      "firstname": "Thomas",
+      "lastname": "Mctigue",
+      "email": "thomas.m@school.edu",
+      "enrollments": [
+        {
+          "enrollmentid": 202,
+          "period": 7,
+          "subject": "Mathematics",
+          "classname": "Steps",
+          "classroom": "Room 201",
+          "instructor": "John Smith",
+          "progress": 88,
+          "averageGrade": 89,
+          "enrollmentdate": "2024-01-16",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 203,
+          "period": 1,
+          "subject": "Social Studies",
+          "classname": "TCI",
+          "classroom": "Room 401",
+          "instructor": "Howard Zinn",
+          "progress": 30,
+          "averageGrade": 96,
+          "enrollmentdate": "2024-01-16",
+          "status": "Active"
+        }
+      ]
+    },
+    {
+      "studentid": "on872",
+      "firstname": "Regina",
+      "lastname": "Hurless",
+      "email": "regina.h@school.edu",
+      "enrollments": [
+        {
+          "enrollmentid": 204,
+          "period": 6,
+          "subject": "English",
+          "classname": "Voyager",
+          "classroom": "Room 101",
+          "instructor": "Jane Austen",
+          "progress": 81,
+          "averageGrade": 91,
+          "enrollmentdate": "2024-01-15",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 205,
+          "period": 1,
+          "subject": "Science",
+          "classname": "Expeditions",
+          "classroom": "Lab A",
+          "instructor": "Marie Curie",
+          "progress": 54,
+          "averageGrade": 85,
+          "enrollmentdate": "2024-01-15",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 206,
+          "period": 2,
+          "subject": "Social Studies",
+          "classname": "TCI",
+          "classroom": "Room 401",
+          "instructor": "Howard Zinn",
+          "progress": 96,
+          "averageGrade": 68,
+          "enrollmentdate": "2024-01-15",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 207,
+          "period": 4,
+          "subject": "Mathematics",
+          "classname": "IPLs",
+          "classroom": "Room 201",
+          "instructor": "John Smith",
+          "progress": 37,
+          "averageGrade": 71,
+          "enrollmentdate": "2024-01-15",
+          "status": "Active"
+        }
+      ]
+    },
+    {
+      "studentid": "fy149",
+      "firstname": "Timothy",
+      "lastname": "Pagano",
+      "email": "timothy.p@school.edu",
+      "enrollments": [
+        {
+          "enrollmentid": 208,
+          "period": 8,
+          "subject": "Social Studies",
+          "classname": "TCI",
+          "classroom": "Room 401",
+          "instructor": "Howard Zinn",
+          "progress": 80,
+          "averageGrade": 95,
+          "enrollmentdate": "2024-01-18",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 209,
+          "period": 7,
+          "subject": "Mathematics",
+          "classname": "Math Connections",
+          "classroom": "Room 201",
+          "instructor": "John Smith",
+          "progress": 84,
+          "averageGrade": 82,
+          "enrollmentdate": "2024-01-18",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 210,
+          "period": 4,
+          "subject": "Science",
+          "classname": "Science Modules",
+          "classroom": "Lab A",
+          "instructor": "Marie Curie",
+          "progress": 33,
+          "averageGrade": 74,
+          "enrollmentdate": "2024-01-18",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 211,
+          "period": 5,
+          "subject": "English",
+          "classname": "Voyager",
+          "classroom": "Room 101",
+          "instructor": "Jane Austen",
+          "progress": 97,
+          "averageGrade": 79,
+          "enrollmentdate": "2024-01-18",
+          "status": "Active"
+        }
+      ]
+    },
+    {
+      "studentid": "kh996",
+      "firstname": "Cheryl",
+      "lastname": "Faris",
+      "email": "cheryl.f@school.edu",
+      "enrollments": [
+        {
+          "enrollmentid": 212,
+          "period": 1,
+          "subject": "Mathematics",
+          "classname": "Math Modules",
+          "classroom": "Room 201",
+          "instructor": "John Smith",
+          "progress": 39,
+          "averageGrade": 76,
+          "enrollmentdate": "2024-01-18",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 213,
+          "period": 8,
+          "subject": "Social Studies",
+          "classname": "TCI",
+          "classroom": "Room 401",
+          "instructor": "Howard Zinn",
+          "progress": 37,
+          "averageGrade": 80,
+          "enrollmentdate": "2024-01-18",
+          "status": "Active"
+        }
+      ]
+    },
+    {
+      "studentid": "ro330",
+      "firstname": "David",
+      "lastname": "Weidman",
+      "email": "david.w@school.edu",
+      "enrollments": [
+        {
+          "enrollmentid": 214,
+          "period": 3,
+          "subject": "English",
+          "classname": "Voyager",
+          "classroom": "Room 101",
+          "instructor": "Jane Austen",
+          "progress": 78,
+          "averageGrade": 92,
+          "enrollmentdate": "2024-01-16",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 215,
+          "period": 2,
+          "subject": "Social Studies",
+          "classname": "TCI",
+          "classroom": "Room 401",
+          "instructor": "Howard Zinn",
+          "progress": 69,
+          "averageGrade": 88,
+          "enrollmentdate": "2024-01-16",
+          "status": "Active"
+        }
+      ]
+    },
+    {
+      "studentid": "mf118",
+      "firstname": "Dennis",
+      "lastname": "Brady",
+      "email": "dennis.b@school.edu",
+      "enrollments": [
+        {
+          "enrollmentid": 216,
+          "period": 1,
+          "subject": "Social Studies",
+          "classname": "TCI",
+          "classroom": "Room 401",
+          "instructor": "Howard Zinn",
+          "progress": 61,
+          "averageGrade": 78,
+          "enrollmentdate": "2024-01-15",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 217,
+          "period": 4,
+          "subject": "Mathematics",
+          "classname": "Math Modules",
+          "classroom": "Room 201",
+          "instructor": "John Smith",
+          "progress": 53,
+          "averageGrade": 97,
+          "enrollmentdate": "2024-01-15",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 218,
+          "period": 6,
+          "subject": "English",
+          "classname": "Voyager",
+          "classroom": "Room 101",
+          "instructor": "Jane Austen",
+          "progress": 37,
+          "averageGrade": 66,
+          "enrollmentdate": "2024-01-15",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 219,
+          "period": 2,
+          "subject": "Science",
+          "classname": "Science Modules",
+          "classroom": "Lab A",
+          "instructor": "Marie Curie",
+          "progress": 31,
+          "averageGrade": 76,
+          "enrollmentdate": "2024-01-15",
+          "status": "Active"
+        }
+      ]
+    },
+    {
+      "studentid": "ac784",
+      "firstname": "Mark",
+      "lastname": "Gray",
+      "email": "mark.g@school.edu",
+      "enrollments": [
+        {
+          "enrollmentid": 220,
+          "period": 1,
+          "subject": "English",
+          "classname": "Voyager",
+          "classroom": "Room 101",
+          "instructor": "Jane Austen",
+          "progress": 31,
+          "averageGrade": 84,
+          "enrollmentdate": "2024-01-16",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 221,
+          "period": 4,
+          "subject": "Science",
+          "classname": "Science Modules",
+          "classroom": "Lab A",
+          "instructor": "Marie Curie",
+          "progress": 76,
+          "averageGrade": 87,
+          "enrollmentdate": "2024-01-16",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 222,
+          "period": 3,
+          "subject": "Social Studies",
+          "classname": "TCI",
+          "classroom": "Room 401",
+          "instructor": "Howard Zinn",
+          "progress": 47,
+          "averageGrade": 84,
+          "enrollmentdate": "2024-01-16",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 223,
+          "period": 2,
+          "subject": "Mathematics",
+          "classname": "Math Connections",
+          "classroom": "Room 201",
+          "instructor": "John Smith",
+          "progress": 41,
+          "averageGrade": 98,
+          "enrollmentdate": "2024-01-16",
+          "status": "Active"
+        }
+      ]
+    },
+    {
+      "studentid": "cz127",
+      "firstname": "William",
+      "lastname": "Buenrostro",
+      "email": "william.b@school.edu",
+      "enrollments": [
+        {
+          "enrollmentid": 224,
+          "period": 4,
+          "subject": "Social Studies",
+          "classname": "TCI",
+          "classroom": "Room 401",
+          "instructor": "Howard Zinn",
+          "progress": 92,
+          "averageGrade": 89,
+          "enrollmentdate": "2024-01-16",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 225,
+          "period": 6,
+          "subject": "Mathematics",
+          "classname": "Steps",
+          "classroom": "Room 201",
+          "instructor": "John Smith",
+          "progress": 88,
+          "averageGrade": 75,
+          "enrollmentdate": "2024-01-16",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 226,
+          "period": 3,
+          "subject": "Science",
+          "classname": "Science Modules",
+          "classroom": "Lab A",
+          "instructor": "Marie Curie",
+          "progress": 45,
+          "averageGrade": 94,
+          "enrollmentdate": "2024-01-16",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 227,
+          "period": 8,
+          "subject": "English",
+          "classname": "Voyager",
+          "classroom": "Room 101",
+          "instructor": "Jane Austen",
+          "progress": 44,
+          "averageGrade": 93,
+          "enrollmentdate": "2024-01-16",
+          "status": "Active"
+        }
+      ]
+    },
+    {
+      "studentid": "rx895",
+      "firstname": "Jeff",
+      "lastname": "Weldon",
+      "email": "jeff.w@school.edu",
+      "enrollments": [
+        {
+          "enrollmentid": 228,
+          "period": 3,
+          "subject": "Mathematics",
+          "classname": "Steps",
+          "classroom": "Room 201",
+          "instructor": "John Smith",
+          "progress": 33,
+          "averageGrade": 75,
+          "enrollmentdate": "2024-01-17",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 229,
+          "period": 6,
+          "subject": "Social Studies",
+          "classname": "TCI",
+          "classroom": "Room 401",
+          "instructor": "Howard Zinn",
+          "progress": 98,
+          "averageGrade": 95,
+          "enrollmentdate": "2024-01-17",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 230,
+          "period": 7,
+          "subject": "Science",
+          "classname": "Science Modules",
+          "classroom": "Lab A",
+          "instructor": "Marie Curie",
+          "progress": 98,
+          "averageGrade": 91,
+          "enrollmentdate": "2024-01-17",
+          "status": "Active"
+        }
+      ]
+    },
+    {
+      "studentid": "yk888",
+      "firstname": "Terri",
+      "lastname": "Clark",
+      "email": "terri.c@school.edu",
+      "enrollments": [
+        {
+          "enrollmentid": 231,
+          "period": 3,
+          "subject": "English",
+          "classname": "Voyager",
+          "classroom": "Room 101",
+          "instructor": "Jane Austen",
+          "progress": 46,
+          "averageGrade": 95,
+          "enrollmentdate": "2024-01-16",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 232,
+          "period": 5,
+          "subject": "Mathematics",
+          "classname": "IPLs",
+          "classroom": "Room 201",
+          "instructor": "John Smith",
+          "progress": 91,
+          "averageGrade": 84,
+          "enrollmentdate": "2024-01-16",
+          "status": "Active"
+        },
+        {
+          "enrollmentid": 233,
+          "period": 7,
+          "subject": "Social Studies",
+          "classname": "TCI",
+          "classroom": "Room 401",
+          "instructor": "Howard Zinn",
+          "progress": 76,
+          "averageGrade": 69,
+          "enrollmentdate": "2024-01-16",
+          "status": "Active"
+        }
+      ]
+    }
+  ]
+}
