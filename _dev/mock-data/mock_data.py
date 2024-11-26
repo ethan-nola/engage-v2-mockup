@@ -93,20 +93,42 @@ def generate_school():
     instructors = [generate_person() for _ in range(CONFIG["num_instructors_per_school"])]
     students = [generate_person() for _ in range(CONFIG["num_students_per_school"])]
     
+    # Create a mapping of subjects to instructors
+    subject_instructors = {}
+    available_instructors = instructors.copy()
+    for subject in CONFIG["courses"]["subjects"].keys():
+        if available_instructors:
+            instructor = random.choice(available_instructors)
+            subject_instructors[subject] = instructor
+            available_instructors.remove(instructor)
+    
     # Generate classrooms
     classrooms = [generate_classroom(school_id) for _ in range(CONFIG["num_instructors_per_school"])]
     
-    # Assign instructors to classrooms
-    for instructor, classroom in zip(instructors, classrooms):
+    # Assign instructors to classrooms and generate courses
+    for classroom in classrooms:
+        # Pick a subject that still needs courses
+        available_subjects = [subject for subject, instructor in subject_instructors.items() 
+                            if not any(c["subject"] == subject for c in classroom["courses"])]
+        
+        if not available_subjects:
+            continue
+            
+        subject = random.choice(available_subjects)
+        instructor = subject_instructors[subject]
         classroom["instructor"] = instructor["id"]
         
         # Generate courses for each period
         available_periods = list(range(1, CONFIG["courses"]["periods_range"][1] + 1))
         random.shuffle(available_periods)
-        num_courses = random.randint(3, 6)
+        num_courses = random.randint(2, 4)  # Reduced number of courses per classroom
         
         for period in available_periods[:num_courses]:
             course = generate_course(classroom, instructor, period)
+            # Override the random subject to match the assigned subject
+            course["subject"] = subject
+            course["category"] = random.choice(CONFIG["courses"]["subjects"][subject])
+            course["title"] = f"{subject} {course['category']} {random.randint(1,5)}"
             classroom["courses"].append(course)
     
     # Create lists of available Math and Science courses

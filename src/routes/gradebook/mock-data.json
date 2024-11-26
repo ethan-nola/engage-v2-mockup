@@ -2,2193 +2,1863 @@
   "title": "Sample School District",
   "schools": [
     {
-      "id": "s1985",
-      "title": "East Middle School",
-      "address": "742 Education Ave",
+      "id": "s4417",
+      "title": "West Academy",
+      "address": "9833 Education Ave",
       "administrators": [
         {
-          "id": "au497",
-          "firstname": "Lynn",
-          "lastname": "Tafoya",
-          "email": "lynn.t@school.edu",
-          "username": "lynn.tafoya",
-          "password": "Silver4729"
+          "id": "if738",
+          "firstname": "Tabitha",
+          "lastname": "Hardy",
+          "email": "tabitha.h@school.edu",
+          "username": "tabitha.hardy",
+          "password": "Orange8363"
         },
         {
-          "id": "yd432",
-          "firstname": "Luvenia",
-          "lastname": "Medina",
-          "email": "luvenia.m@school.edu",
-          "username": "luvenia.medina",
-          "password": "Yellow7057"
+          "id": "et497",
+          "firstname": "Daphne",
+          "lastname": "Landers",
+          "email": "daphne.l@school.edu",
+          "username": "daphne.landers",
+          "password": "Yellow0850"
         }
       ],
       "instructors": [
         {
-          "id": "kw611",
-          "firstname": "Betty",
-          "lastname": "Wahlberg",
-          "email": "betty.w@school.edu",
-          "username": "betty.wahlberg",
-          "password": "Orange3129"
+          "id": "db603",
+          "firstname": "Carolee",
+          "lastname": "Hubbard",
+          "email": "carolee.h@school.edu",
+          "username": "carolee.hubbard",
+          "password": "Silver3022"
         },
         {
-          "id": "wi889",
-          "firstname": "Edward",
-          "lastname": "Mcmillan",
-          "email": "edward.m@school.edu",
-          "username": "edward.mcmillan",
-          "password": "Red3960"
+          "id": "wm680",
+          "firstname": "Sammy",
+          "lastname": "Hill",
+          "email": "sammy.h@school.edu",
+          "username": "sammy.hill",
+          "password": "Orange7656"
         },
         {
-          "id": "cd834",
-          "firstname": "Cynthia",
-          "lastname": "Stepp",
-          "email": "cynthia.s@school.edu",
-          "username": "cynthia.stepp",
-          "password": "Purple1271"
+          "id": "gr948",
+          "firstname": "Clinton",
+          "lastname": "Brackett",
+          "email": "clinton.b@school.edu",
+          "username": "clinton.brackett",
+          "password": "Yellow6714"
         },
         {
-          "id": "tc429",
-          "firstname": "Walter",
-          "lastname": "Ross",
-          "email": "walter.r@school.edu",
-          "username": "walter.ross",
-          "password": "Blue6621"
+          "id": "uo345",
+          "firstname": "Ryan",
+          "lastname": "Allard",
+          "email": "ryan.a@school.edu",
+          "username": "ryan.allard",
+          "password": "Yellow5235"
         },
         {
-          "id": "mj176",
-          "firstname": "Patricia",
-          "lastname": "Helbert",
-          "email": "patricia.h@school.edu",
-          "username": "patricia.helbert",
-          "password": "Silver9005"
+          "id": "xm443",
+          "firstname": "Wilma",
+          "lastname": "Connally",
+          "email": "wilma.c@school.edu",
+          "username": "wilma.connally",
+          "password": "Gold2247"
         },
         {
-          "id": "jd956",
-          "firstname": "Maggie",
-          "lastname": "Stanier",
-          "email": "maggie.s@school.edu",
-          "username": "maggie.stanier",
-          "password": "Purple5755"
+          "id": "oc130",
+          "firstname": "Minnie",
+          "lastname": "Flanagan",
+          "email": "minnie.f@school.edu",
+          "username": "minnie.flanagan",
+          "password": "Yellow0335"
         },
         {
-          "id": "by984",
-          "firstname": "Joyce",
-          "lastname": "Anderson",
-          "email": "joyce.a@school.edu",
-          "username": "joyce.anderson",
-          "password": "Purple9086"
+          "id": "my926",
+          "firstname": "Frances",
+          "lastname": "Williamson",
+          "email": "frances.w@school.edu",
+          "username": "frances.williamson",
+          "password": "Red3667"
         },
         {
-          "id": "xg318",
-          "firstname": "Gladys",
-          "lastname": "Dupre",
-          "email": "gladys.d@school.edu",
-          "username": "gladys.dupre",
-          "password": "Gold5468"
+          "id": "zp872",
+          "firstname": "Leo",
+          "lastname": "Cracchiolo",
+          "email": "leo.c@school.edu",
+          "username": "leo.cracchiolo",
+          "password": "Gold4122"
         }
       ],
       "students": [
         {
-          "id": "se219",
-          "firstname": "Nancy",
-          "lastname": "Wayland",
-          "email": "nancy.w@school.edu",
-          "username": "nancy.wayland",
-          "password": "Silver2501"
+          "id": "hn826",
+          "firstname": "Chester",
+          "lastname": "Leftwich",
+          "email": "chester.l@school.edu",
+          "username": "chester.leftwich",
+          "password": "Yellow2878"
         },
         {
-          "id": "id736",
-          "firstname": "Michael",
-          "lastname": "Trent",
-          "email": "michael.t@school.edu",
-          "username": "michael.trent",
-          "password": "Gold6060"
+          "id": "yl866",
+          "firstname": "William",
+          "lastname": "Brooks",
+          "email": "william.b@school.edu",
+          "username": "william.brooks",
+          "password": "Green4917"
         },
         {
-          "id": "lw812",
-          "firstname": "Thomas",
-          "lastname": "Biles",
-          "email": "thomas.b@school.edu",
-          "username": "thomas.biles",
-          "password": "Green1403"
+          "id": "ct984",
+          "firstname": "Niesha",
+          "lastname": "Boyd",
+          "email": "niesha.b@school.edu",
+          "username": "niesha.boyd",
+          "password": "Green9270"
         },
         {
-          "id": "bx927",
-          "firstname": "Shawn",
-          "lastname": "Bates",
-          "email": "shawn.b@school.edu",
-          "username": "shawn.bates",
-          "password": "Red5856"
+          "id": "tv837",
+          "firstname": "Beatrice",
+          "lastname": "Mcewen",
+          "email": "beatrice.m@school.edu",
+          "username": "beatrice.mcewen",
+          "password": "Yellow6724"
         },
         {
-          "id": "uh912",
-          "firstname": "Jeffie",
-          "lastname": "Compton",
-          "email": "jeffie.c@school.edu",
-          "username": "jeffie.compton",
-          "password": "Blue3562"
+          "id": "iv832",
+          "firstname": "Ann",
+          "lastname": "Behr",
+          "email": "ann.b@school.edu",
+          "username": "ann.behr",
+          "password": "Gold7177"
         },
         {
-          "id": "qf204",
-          "firstname": "Marion",
-          "lastname": "Babiarz",
-          "email": "marion.b@school.edu",
-          "username": "marion.babiarz",
-          "password": "Gold6619"
+          "id": "ku783",
+          "firstname": "Kelly",
+          "lastname": "Mack",
+          "email": "kelly.m@school.edu",
+          "username": "kelly.mack",
+          "password": "Yellow3250"
         },
         {
-          "id": "dc301",
-          "firstname": "Gregory",
-          "lastname": "Cox",
-          "email": "gregory.c@school.edu",
-          "username": "gregory.cox",
-          "password": "Yellow1565"
+          "id": "ks847",
+          "firstname": "Edward",
+          "lastname": "Charlot",
+          "email": "edward.c@school.edu",
+          "username": "edward.charlot",
+          "password": "Gold8490"
         },
         {
-          "id": "gj914",
-          "firstname": "Amy",
-          "lastname": "Martinez",
-          "email": "amy.m@school.edu",
-          "username": "amy.martinez",
-          "password": "Red7314"
-        },
-        {
-          "id": "xh622",
-          "firstname": "Peter",
-          "lastname": "Armstrong",
-          "email": "peter.a@school.edu",
-          "username": "peter.armstrong",
-          "password": "Orange0989"
-        },
-        {
-          "id": "jr243",
-          "firstname": "Scott",
-          "lastname": "Curling",
-          "email": "scott.c@school.edu",
-          "username": "scott.curling",
-          "password": "Blue8143"
-        },
-        {
-          "id": "wi428",
-          "firstname": "Linda",
-          "lastname": "Crabtree",
-          "email": "linda.c@school.edu",
-          "username": "linda.crabtree",
-          "password": "Orange5528"
-        },
-        {
-          "id": "av993",
-          "firstname": "Ruth",
-          "lastname": "Kenner",
-          "email": "ruth.k@school.edu",
-          "username": "ruth.kenner",
-          "password": "Green1256"
-        },
-        {
-          "id": "oc206",
-          "firstname": "Lorenzo",
-          "lastname": "Ramirez",
-          "email": "lorenzo.r@school.edu",
-          "username": "lorenzo.ramirez",
-          "password": "Yellow5528"
-        },
-        {
-          "id": "td546",
-          "firstname": "Robert",
-          "lastname": "Wells",
-          "email": "robert.w@school.edu",
-          "username": "robert.wells",
-          "password": "Yellow2155"
-        },
-        {
-          "id": "rd338",
-          "firstname": "June",
-          "lastname": "Quick",
-          "email": "june.q@school.edu",
-          "username": "june.quick",
-          "password": "Purple5263"
-        },
-        {
-          "id": "bl368",
-          "firstname": "Darlene",
-          "lastname": "Anderson",
-          "email": "darlene.a@school.edu",
-          "username": "darlene.anderson",
-          "password": "Gold9076"
-        },
-        {
-          "id": "sh820",
-          "firstname": "Marsha",
-          "lastname": "Harden",
-          "email": "marsha.h@school.edu",
-          "username": "marsha.harden",
-          "password": "Orange6633"
-        },
-        {
-          "id": "ly954",
-          "firstname": "Joanne",
-          "lastname": "Stewart",
-          "email": "joanne.s@school.edu",
-          "username": "joanne.stewart",
-          "password": "Purple2398"
-        },
-        {
-          "id": "zs790",
-          "firstname": "Curtis",
-          "lastname": "Erickson",
-          "email": "curtis.e@school.edu",
-          "username": "curtis.erickson",
-          "password": "Red2804"
-        },
-        {
-          "id": "yq677",
+          "id": "ut641",
           "firstname": "James",
-          "lastname": "Worthen",
-          "email": "james.w@school.edu",
-          "username": "james.worthen",
-          "password": "Red6114"
+          "lastname": "Marroguin",
+          "email": "james.m@school.edu",
+          "username": "james.marroguin",
+          "password": "Silver6837"
         },
         {
-          "id": "hr367",
-          "firstname": "Frances",
+          "id": "kl293",
+          "firstname": "Beverly",
+          "lastname": "Adams",
+          "email": "beverly.a@school.edu",
+          "username": "beverly.adams",
+          "password": "Purple6402"
+        },
+        {
+          "id": "mx622",
+          "firstname": "Aurelia",
+          "lastname": "Goyette",
+          "email": "aurelia.g@school.edu",
+          "username": "aurelia.goyette",
+          "password": "Red9421"
+        },
+        {
+          "id": "pf624",
+          "firstname": "Carmen",
+          "lastname": "Navarro",
+          "email": "carmen.n@school.edu",
+          "username": "carmen.navarro",
+          "password": "Green1166"
+        },
+        {
+          "id": "xt659",
+          "firstname": "Richard",
+          "lastname": "Brown",
+          "email": "richard.b@school.edu",
+          "username": "richard.brown",
+          "password": "Purple4045"
+        },
+        {
+          "id": "du745",
+          "firstname": "Sally",
+          "lastname": "Williams",
+          "email": "sally.w@school.edu",
+          "username": "sally.williams",
+          "password": "Blue5578"
+        },
+        {
+          "id": "xj626",
+          "firstname": "Maricela",
+          "lastname": "Collins",
+          "email": "maricela.c@school.edu",
+          "username": "maricela.collins",
+          "password": "Gold7105"
+        },
+        {
+          "id": "ey911",
+          "firstname": "Carol",
+          "lastname": "Fletcher",
+          "email": "carol.f@school.edu",
+          "username": "carol.fletcher",
+          "password": "Purple4268"
+        },
+        {
+          "id": "bo332",
+          "firstname": "Linda",
+          "lastname": "Chavez",
+          "email": "linda.c@school.edu",
+          "username": "linda.chavez",
+          "password": "Orange0591"
+        },
+        {
+          "id": "wa809",
+          "firstname": "Velma",
+          "lastname": "Dingle",
+          "email": "velma.d@school.edu",
+          "username": "velma.dingle",
+          "password": "Purple2211"
+        },
+        {
+          "id": "qe924",
+          "firstname": "Victoria",
+          "lastname": "Mccary",
+          "email": "victoria.m@school.edu",
+          "username": "victoria.mccary",
+          "password": "Green3763"
+        },
+        {
+          "id": "cy872",
+          "firstname": "Joseph",
           "lastname": "Smith",
-          "email": "frances.s@school.edu",
-          "username": "frances.smith",
-          "password": "Yellow0233"
+          "email": "joseph.s@school.edu",
+          "username": "joseph.smith",
+          "password": "Red2899"
         },
         {
-          "id": "ya889",
-          "firstname": "Sonya",
-          "lastname": "Turner",
-          "email": "sonya.t@school.edu",
-          "username": "sonya.turner",
-          "password": "Yellow0410"
+          "id": "ev771",
+          "firstname": "David",
+          "lastname": "Noble",
+          "email": "david.n@school.edu",
+          "username": "david.noble",
+          "password": "Purple2974"
         },
         {
-          "id": "bm492",
-          "firstname": "Roseline",
-          "lastname": "Larsen",
-          "email": "roseline.l@school.edu",
-          "username": "roseline.larsen",
-          "password": "Gold7885"
+          "id": "yf542",
+          "firstname": "Bonnie",
+          "lastname": "Delong",
+          "email": "bonnie.d@school.edu",
+          "username": "bonnie.delong",
+          "password": "Yellow5070"
         },
         {
-          "id": "da815",
-          "firstname": "Jeremy",
-          "lastname": "Mullins",
-          "email": "jeremy.m@school.edu",
-          "username": "jeremy.mullins",
-          "password": "Blue7220"
+          "id": "ig755",
+          "firstname": "Jesse",
+          "lastname": "Durkin",
+          "email": "jesse.d@school.edu",
+          "username": "jesse.durkin",
+          "password": "Green3650"
         },
         {
-          "id": "cm289",
-          "firstname": "Eliza",
-          "lastname": "Zabel",
-          "email": "eliza.z@school.edu",
-          "username": "eliza.zabel",
-          "password": "Red7591"
+          "id": "kf131",
+          "firstname": "Kim",
+          "lastname": "Cortes",
+          "email": "kim.c@school.edu",
+          "username": "kim.cortes",
+          "password": "Orange7118"
         },
         {
-          "id": "nk488",
-          "firstname": "Summer",
-          "lastname": "Reed",
-          "email": "summer.r@school.edu",
-          "username": "summer.reed",
-          "password": "Green1145"
+          "id": "rn244",
+          "firstname": "Ailene",
+          "lastname": "Barber",
+          "email": "ailene.b@school.edu",
+          "username": "ailene.barber",
+          "password": "Red3359"
         },
         {
-          "id": "lb818",
-          "firstname": "Clara",
-          "lastname": "Hedtke",
-          "email": "clara.h@school.edu",
-          "username": "clara.hedtke",
-          "password": "Yellow2771"
+          "id": "gh600",
+          "firstname": "Nadine",
+          "lastname": "Jorge",
+          "email": "nadine.j@school.edu",
+          "username": "nadine.jorge",
+          "password": "Silver5619"
         },
         {
-          "id": "pe250",
-          "firstname": "Amy",
-          "lastname": "Walker",
-          "email": "amy.w@school.edu",
-          "username": "amy.walker",
-          "password": "Red5126"
+          "id": "fi398",
+          "firstname": "Regina",
+          "lastname": "Harris",
+          "email": "regina.h@school.edu",
+          "username": "regina.harris",
+          "password": "Orange9502"
         },
         {
-          "id": "ld269",
-          "firstname": "Stacey",
-          "lastname": "Sager",
-          "email": "stacey.s@school.edu",
-          "username": "stacey.sager",
-          "password": "Green8314"
+          "id": "ik550",
+          "firstname": "Meghan",
+          "lastname": "Haglund",
+          "email": "meghan.h@school.edu",
+          "username": "meghan.haglund",
+          "password": "Yellow6401"
         },
         {
-          "id": "ox490",
-          "firstname": "Gene",
-          "lastname": "Gillenwaters",
-          "email": "gene.g@school.edu",
-          "username": "gene.gillenwaters",
-          "password": "Orange9070"
+          "id": "sv426",
+          "firstname": "Sandra",
+          "lastname": "Melnick",
+          "email": "sandra.m@school.edu",
+          "username": "sandra.melnick",
+          "password": "Orange2008"
         },
         {
-          "id": "su378",
-          "firstname": "Marshall",
-          "lastname": "Wilson",
-          "email": "marshall.w@school.edu",
-          "username": "marshall.wilson",
-          "password": "Purple2065"
+          "id": "at355",
+          "firstname": "Mildred",
+          "lastname": "Rios",
+          "email": "mildred.r@school.edu",
+          "username": "mildred.rios",
+          "password": "Purple8296"
         },
         {
-          "id": "pt122",
-          "firstname": "Brenda",
-          "lastname": "Morales",
-          "email": "brenda.m@school.edu",
-          "username": "brenda.morales",
-          "password": "Gold7571"
+          "id": "fk105",
+          "firstname": "Harriet",
+          "lastname": "Buck",
+          "email": "harriet.b@school.edu",
+          "username": "harriet.buck",
+          "password": "Green6015"
         },
         {
-          "id": "xs280",
-          "firstname": "Jeffery",
-          "lastname": "Sneed",
-          "email": "jeffery.s@school.edu",
-          "username": "jeffery.sneed",
-          "password": "Silver1255"
+          "id": "qd685",
+          "firstname": "Manuel",
+          "lastname": "Felice",
+          "email": "manuel.f@school.edu",
+          "username": "manuel.felice",
+          "password": "Green4556"
         },
         {
-          "id": "xu677",
-          "firstname": "Jennifer",
-          "lastname": "Logan",
-          "email": "jennifer.l@school.edu",
-          "username": "jennifer.logan",
-          "password": "Gold2696"
+          "id": "uk710",
+          "firstname": "Elijah",
+          "lastname": "Ibarra",
+          "email": "elijah.i@school.edu",
+          "username": "elijah.ibarra",
+          "password": "Red9696"
         },
         {
-          "id": "da971",
-          "firstname": "Mara",
-          "lastname": "Sturgeon",
-          "email": "mara.s@school.edu",
-          "username": "mara.sturgeon",
-          "password": "Yellow5660"
+          "id": "xg217",
+          "firstname": "Brian",
+          "lastname": "Cass",
+          "email": "brian.c@school.edu",
+          "username": "brian.cass",
+          "password": "Blue4426"
         },
         {
-          "id": "xj545",
-          "firstname": "Elsie",
-          "lastname": "Fields",
-          "email": "elsie.f@school.edu",
-          "username": "elsie.fields",
-          "password": "Red4209"
+          "id": "lf621",
+          "firstname": "Jessica",
+          "lastname": "Dunn",
+          "email": "jessica.d@school.edu",
+          "username": "jessica.dunn",
+          "password": "Yellow4019"
         },
         {
-          "id": "vs537",
-          "firstname": "Teri",
-          "lastname": "Sandoval",
-          "email": "teri.s@school.edu",
-          "username": "teri.sandoval",
-          "password": "Silver2532"
+          "id": "yy667",
+          "firstname": "Sandra",
+          "lastname": "Rios",
+          "email": "sandra.r@school.edu",
+          "username": "sandra.rios",
+          "password": "Silver9921"
         },
         {
-          "id": "gm242",
-          "firstname": "Mary",
-          "lastname": "East",
-          "email": "mary.e@school.edu",
-          "username": "mary.east",
-          "password": "Silver2040"
+          "id": "vx454",
+          "firstname": "David",
+          "lastname": "Latta",
+          "email": "david.l@school.edu",
+          "username": "david.latta",
+          "password": "Gold3799"
         },
         {
-          "id": "tj788",
-          "firstname": "Heriberto",
-          "lastname": "Rick",
-          "email": "heriberto.r@school.edu",
-          "username": "heriberto.rick",
-          "password": "Orange8100"
+          "id": "ua613",
+          "firstname": "Michael",
+          "lastname": "Parker",
+          "email": "michael.p@school.edu",
+          "username": "michael.parker",
+          "password": "Purple6217"
         },
         {
-          "id": "og508",
-          "firstname": "Theresa",
-          "lastname": "Mckean",
-          "email": "theresa.m@school.edu",
-          "username": "theresa.mckean",
-          "password": "Orange8464"
+          "id": "qk536",
+          "firstname": "Billie",
+          "lastname": "Tyson",
+          "email": "billie.t@school.edu",
+          "username": "billie.tyson",
+          "password": "Silver6337"
+        },
+        {
+          "id": "rx602",
+          "firstname": "Ola",
+          "lastname": "Mcguire",
+          "email": "ola.m@school.edu",
+          "username": "ola.mcguire",
+          "password": "Blue8945"
+        },
+        {
+          "id": "el914",
+          "firstname": "Alfred",
+          "lastname": "Kleypas",
+          "email": "alfred.k@school.edu",
+          "username": "alfred.kleypas",
+          "password": "Yellow0965"
         }
       ],
       "classrooms": [
         {
-          "id": "s1985-Room198",
-          "title": "Room 198",
-          "instructor": "kw611",
+          "id": "s4417-Studio622",
+          "title": "Studio 622",
+          "instructor": "gr948",
           "courses": [
             {
-              "id": "c7353",
-              "period": 2,
-              "title": "Math Math Connections 1",
+              "id": "c1289",
+              "period": 7,
+              "title": "Science Modules 2",
               "grade_level": 9,
-              "category": "Math Connections",
-              "subject": "Math",
-              "classroom": "s1985-Room198",
-              "instructor": "kw611",
-              "enrolled_students": []
-            },
-            {
-              "id": "c5461",
-              "period": 3,
-              "title": "Math IPLs 5",
-              "grade_level": 9,
-              "category": "IPLs",
-              "subject": "Math",
-              "classroom": "s1985-Room198",
-              "instructor": "kw611",
+              "category": "Modules",
+              "subject": "Science",
+              "classroom": "s4417-Studio622",
+              "instructor": "gr948",
               "enrolled_students": [
-                "xs280"
+                "qd685"
               ]
             },
             {
-              "id": "c7509",
-              "period": 5,
+              "id": "c4230",
+              "period": 1,
+              "title": "Science Expeditions 4",
+              "grade_level": 8,
+              "category": "Expeditions",
+              "subject": "Science",
+              "classroom": "s4417-Studio622",
+              "instructor": "gr948",
+              "enrolled_students": [
+                "rn244",
+                "xg217"
+              ]
+            }
+          ],
+          "students": [
+            "rn244",
+            "qd685",
+            "xg217"
+          ]
+        },
+        {
+          "id": "s4417-Studio597",
+          "title": "Studio 597",
+          "instructor": "gr948",
+          "courses": [
+            {
+              "id": "c6678",
+              "period": 2,
+              "title": "Science Expeditions 3",
+              "grade_level": 8,
+              "category": "Expeditions",
+              "subject": "Science",
+              "classroom": "s4417-Studio597",
+              "instructor": "gr948",
+              "enrolled_students": [
+                "kl293",
+                "sv426",
+                "lf621"
+              ]
+            },
+            {
+              "id": "c3501",
+              "period": 1,
               "title": "Science Expeditions 3",
               "grade_level": 7,
               "category": "Expeditions",
               "subject": "Science",
-              "classroom": "s1985-Room198",
-              "instructor": "kw611",
+              "classroom": "s4417-Studio597",
+              "instructor": "gr948",
               "enrolled_students": [
-                "se219",
-                "xs280"
+                "tv837",
+                "qe924",
+                "cy872",
+                "rx602"
               ]
             },
             {
-              "id": "c4999",
-              "period": 8,
-              "title": "Math Expeditions 1",
-              "grade_level": 8,
-              "category": "Expeditions",
-              "subject": "Math",
-              "classroom": "s1985-Room198",
-              "instructor": "kw611",
+              "id": "c3527",
+              "period": 6,
+              "title": "Science Modules 4",
+              "grade_level": 6,
+              "category": "Modules",
+              "subject": "Science",
+              "classroom": "s4417-Studio597",
+              "instructor": "gr948",
               "enrolled_students": [
-                "cm289",
-                "nk488"
+                "ct984",
+                "yf542"
+              ]
+            },
+            {
+              "id": "c6959",
+              "period": 8,
+              "title": "Science Expeditions 3",
+              "grade_level": 7,
+              "category": "Expeditions",
+              "subject": "Science",
+              "classroom": "s4417-Studio597",
+              "instructor": "gr948",
+              "enrolled_students": [
+                "gh600",
+                "fk105",
+                "el914"
               ]
             }
           ],
           "students": [
-            "se219",
-            "cm289",
-            "nk488",
-            "xs280"
+            "ct984",
+            "tv837",
+            "kl293",
+            "qe924",
+            "cy872",
+            "yf542",
+            "gh600",
+            "sv426",
+            "fk105",
+            "lf621",
+            "rx602",
+            "el914"
           ]
         },
         {
-          "id": "s1985-Lab186",
-          "title": "Lab 186",
-          "instructor": "wi889",
+          "id": "s4417-Studio703",
+          "title": "Studio 703",
+          "instructor": "gr948",
           "courses": [
             {
-              "id": "c7014",
+              "id": "c1240",
               "period": 8,
-              "title": "Science Modules 4",
-              "grade_level": 9,
-              "category": "Modules",
-              "subject": "Science",
-              "classroom": "s1985-Lab186",
-              "instructor": "wi889",
-              "enrolled_students": [
-                "dc301",
-                "og508"
-              ]
-            },
-            {
-              "id": "c8688",
-              "period": 6,
-              "title": "Science Modules 2",
-              "grade_level": 7,
-              "category": "Modules",
-              "subject": "Science",
-              "classroom": "s1985-Lab186",
-              "instructor": "wi889",
-              "enrolled_students": [
-                "jr243",
-                "bl368",
-                "pt122",
-                "xj545"
-              ]
-            },
-            {
-              "id": "c7217",
-              "period": 5,
-              "title": "Science Modules 2",
-              "grade_level": 6,
-              "category": "Modules",
-              "subject": "Science",
-              "classroom": "s1985-Lab186",
-              "instructor": "wi889",
-              "enrolled_students": [
-                "gj914",
-                "da815",
-                "ox490"
-              ]
-            },
-            {
-              "id": "c7035",
-              "period": 7,
               "title": "Science Modules 2",
               "grade_level": 9,
               "category": "Modules",
               "subject": "Science",
-              "classroom": "s1985-Lab186",
-              "instructor": "wi889",
+              "classroom": "s4417-Studio703",
+              "instructor": "gr948",
               "enrolled_students": [
-                "av993"
+                "ua613"
               ]
             },
             {
-              "id": "c2431",
-              "period": 2,
-              "title": "Math IPLs 5",
+              "id": "c1244",
+              "period": 1,
+              "title": "Science Expeditions 3",
               "grade_level": 8,
+              "category": "Expeditions",
+              "subject": "Science",
+              "classroom": "s4417-Studio703",
+              "instructor": "gr948",
+              "enrolled_students": [
+                "ks847",
+                "mx622",
+                "wa809",
+                "kf131",
+                "uk710"
+              ]
+            }
+          ],
+          "students": [
+            "ks847",
+            "mx622",
+            "wa809",
+            "kf131",
+            "uk710",
+            "ua613"
+          ]
+        },
+        {
+          "id": "s4417-Studio771",
+          "title": "Studio 771",
+          "instructor": "oc130",
+          "courses": [
+            {
+              "id": "c9093",
+              "period": 5,
+              "title": "Math IPLs 2",
+              "grade_level": 7,
               "category": "IPLs",
               "subject": "Math",
-              "classroom": "s1985-Lab186",
-              "instructor": "wi889",
+              "classroom": "s4417-Studio771",
+              "instructor": "oc130",
               "enrolled_students": [
-                "dc301",
-                "ya889",
-                "bm492"
-              ]
-            }
-          ],
-          "students": [
-            "dc301",
-            "gj914",
-            "jr243",
-            "av993",
-            "bl368",
-            "ya889",
-            "bm492",
-            "da815",
-            "ox490",
-            "pt122",
-            "xj545",
-            "og508"
-          ]
-        },
-        {
-          "id": "s1985-Room383",
-          "title": "Room 383",
-          "instructor": "cd834",
-          "courses": [
-            {
-              "id": "c3321",
-              "period": 2,
-              "title": "Science Expeditions 2",
-              "grade_level": 8,
-              "category": "Expeditions",
-              "subject": "Science",
-              "classroom": "s1985-Room383",
-              "instructor": "cd834",
-              "enrolled_students": [
-                "hr367"
+                "ku783",
+                "bo332",
+                "wa809",
+                "cy872",
+                "yf542",
+                "qk536"
               ]
             },
             {
-              "id": "c1852",
-              "period": 5,
-              "title": "Science Expeditions 4",
-              "grade_level": 7,
-              "category": "Expeditions",
-              "subject": "Science",
-              "classroom": "s1985-Room383",
-              "instructor": "cd834",
-              "enrolled_students": [
-                "uh912",
-                "zs790"
-              ]
-            },
-            {
-              "id": "c6076",
-              "period": 1,
-              "title": "Math Expeditions 3",
-              "grade_level": 9,
-              "category": "Expeditions",
-              "subject": "Math",
-              "classroom": "s1985-Room383",
-              "instructor": "cd834",
-              "enrolled_students": [
-                "wi428",
-                "td546"
-              ]
-            },
-            {
-              "id": "c3919",
-              "period": 6,
-              "title": "Math Modules 1",
-              "grade_level": 8,
-              "category": "Modules",
-              "subject": "Math",
-              "classroom": "s1985-Room383",
-              "instructor": "cd834",
-              "enrolled_students": [
-                "xu677"
-              ]
-            },
-            {
-              "id": "c1812",
-              "period": 4,
-              "title": "Math Math Connections 4",
-              "grade_level": 6,
-              "category": "Math Connections",
-              "subject": "Math",
-              "classroom": "s1985-Room383",
-              "instructor": "cd834",
-              "enrolled_students": [
-                "jr243",
-                "su378"
-              ]
-            },
-            {
-              "id": "c1358",
-              "period": 7,
-              "title": "Math Steps/iLearn 1",
+              "id": "c8319",
+              "period": 8,
+              "title": "Math Steps/iLearn 4",
               "grade_level": 9,
               "category": "Steps/iLearn",
               "subject": "Math",
-              "classroom": "s1985-Room383",
-              "instructor": "cd834",
+              "classroom": "s4417-Studio771",
+              "instructor": "oc130",
               "enrolled_students": [
-                "av993",
-                "zs790",
-                "vs537"
+                "ut641",
+                "xt659"
               ]
             }
           ],
           "students": [
-            "uh912",
-            "jr243",
-            "wi428",
-            "av993",
-            "td546",
-            "zs790",
-            "hr367",
-            "su378",
-            "xu677",
-            "vs537"
+            "ku783",
+            "ut641",
+            "xt659",
+            "bo332",
+            "wa809",
+            "cy872",
+            "yf542",
+            "qk536"
           ]
         },
         {
-          "id": "s1985-Lab651",
-          "title": "Lab 651",
-          "instructor": "tc429",
+          "id": "s4417-Studio277",
+          "title": "Studio 277",
+          "instructor": "gr948",
           "courses": [
             {
-              "id": "c5983",
+              "id": "c7547",
               "period": 8,
               "title": "Science Modules 1",
-              "grade_level": 7,
-              "category": "Modules",
-              "subject": "Science",
-              "classroom": "s1985-Lab651",
-              "instructor": "tc429",
-              "enrolled_students": []
-            },
-            {
-              "id": "c3921",
-              "period": 7,
-              "title": "Math Math Connections 1",
               "grade_level": 8,
-              "category": "Math Connections",
-              "subject": "Math",
-              "classroom": "s1985-Lab651",
-              "instructor": "tc429",
-              "enrolled_students": []
-            },
-            {
-              "id": "c9966",
-              "period": 6,
-              "title": "Science Modules 2",
-              "grade_level": 7,
               "category": "Modules",
               "subject": "Science",
-              "classroom": "s1985-Lab651",
-              "instructor": "tc429",
+              "classroom": "s4417-Studio277",
+              "instructor": "gr948",
               "enrolled_students": [
-                "sh820"
+                "ey911",
+                "ev771"
               ]
             },
             {
-              "id": "c7910",
-              "period": 4,
-              "title": "Science Modules 4",
-              "grade_level": 7,
-              "category": "Modules",
-              "subject": "Science",
-              "classroom": "s1985-Lab651",
-              "instructor": "tc429",
-              "enrolled_students": [
-                "yq677",
-                "ya889",
-                "da971"
-              ]
-            },
-            {
-              "id": "c6002",
-              "period": 5,
-              "title": "Math Expeditions 5",
-              "grade_level": 8,
-              "category": "Expeditions",
-              "subject": "Math",
-              "classroom": "s1985-Lab651",
-              "instructor": "tc429",
-              "enrolled_students": [
-                "yq677",
-                "pe250",
-                "ox490"
-              ]
-            },
-            {
-              "id": "c8677",
+              "id": "c9348",
               "period": 1,
-              "title": "Math Expeditions 5",
-              "grade_level": 8,
+              "title": "Science Expeditions 2",
+              "grade_level": 7,
               "category": "Expeditions",
-              "subject": "Math",
-              "classroom": "s1985-Lab651",
-              "instructor": "tc429",
+              "subject": "Science",
+              "classroom": "s4417-Studio277",
+              "instructor": "gr948",
               "enrolled_students": [
-                "rd338"
+                "ig755",
+                "ik550",
+                "yy667"
+              ]
+            },
+            {
+              "id": "c3857",
+              "period": 4,
+              "title": "Science Expeditions 4",
+              "grade_level": 6,
+              "category": "Expeditions",
+              "subject": "Science",
+              "classroom": "s4417-Studio277",
+              "instructor": "gr948",
+              "enrolled_students": [
+                "pf624",
+                "fi398"
+              ]
+            },
+            {
+              "id": "c6427",
+              "period": 5,
+              "title": "Science Expeditions 2",
+              "grade_level": 7,
+              "category": "Expeditions",
+              "subject": "Science",
+              "classroom": "s4417-Studio277",
+              "instructor": "gr948",
+              "enrolled_students": [
+                "yl866",
+                "ku783"
               ]
             }
           ],
           "students": [
-            "rd338",
-            "sh820",
-            "yq677",
-            "ya889",
-            "pe250",
-            "ox490",
-            "da971"
+            "yl866",
+            "ku783",
+            "pf624",
+            "ey911",
+            "ev771",
+            "ig755",
+            "fi398",
+            "ik550",
+            "yy667"
           ]
         },
         {
-          "id": "s1985-Studio825",
-          "title": "Studio 825",
-          "instructor": "mj176",
+          "id": "s4417-Room899",
+          "title": "Room 899",
+          "instructor": "oc130",
           "courses": [
             {
-              "id": "c1177",
-              "period": 2,
-              "title": "Math IPLs 3",
-              "grade_level": 7,
-              "category": "IPLs",
+              "id": "c3644",
+              "period": 6,
+              "title": "Math Math Connections 3",
+              "grade_level": 9,
+              "category": "Math Connections",
               "subject": "Math",
-              "classroom": "s1985-Studio825",
-              "instructor": "mj176",
-              "enrolled_students": []
+              "classroom": "s4417-Room899",
+              "instructor": "oc130",
+              "enrolled_students": [
+                "yl866",
+                "tv837",
+                "sv426",
+                "el914"
+              ]
             },
             {
-              "id": "c8558",
-              "period": 5,
+              "id": "c8679",
+              "period": 8,
               "title": "Math IPLs 1",
-              "grade_level": 7,
+              "grade_level": 6,
               "category": "IPLs",
               "subject": "Math",
-              "classroom": "s1985-Studio825",
-              "instructor": "mj176",
+              "classroom": "s4417-Room899",
+              "instructor": "oc130",
               "enrolled_students": [
-                "gj914"
+                "mx622",
+                "qe924",
+                "ik550",
+                "uk710",
+                "vx454",
+                "rx602"
               ]
             },
             {
-              "id": "c6249",
-              "period": 1,
-              "title": "Math Modules 5",
-              "grade_level": 7,
-              "category": "Modules",
-              "subject": "Math",
-              "classroom": "s1985-Studio825",
-              "instructor": "mj176",
-              "enrolled_students": [
-                "qf204",
-                "pt122",
-                "tj788"
-              ]
-            },
-            {
-              "id": "c9920",
-              "period": 4,
-              "title": "Math Modules 3",
-              "grade_level": 8,
-              "category": "Modules",
-              "subject": "Math",
-              "classroom": "s1985-Studio825",
-              "instructor": "mj176",
-              "enrolled_students": [
-                "ly954",
-                "hr367"
-              ]
-            }
-          ],
-          "students": [
-            "qf204",
-            "gj914",
-            "ly954",
-            "hr367",
-            "pt122",
-            "tj788"
-          ]
-        },
-        {
-          "id": "s1985-Studio556",
-          "title": "Studio 556",
-          "instructor": "jd956",
-          "courses": [
-            {
-              "id": "c2869",
-              "period": 2,
-              "title": "Math Expeditions 2",
-              "grade_level": 9,
-              "category": "Expeditions",
-              "subject": "Math",
-              "classroom": "s1985-Studio556",
-              "instructor": "jd956",
-              "enrolled_students": [
-                "id736",
-                "lw812",
-                "bx927",
-                "uh912",
-                "oc206",
-                "og508"
-              ]
-            },
-            {
-              "id": "c2775",
-              "period": 1,
-              "title": "Science Expeditions 1",
-              "grade_level": 7,
-              "category": "Expeditions",
-              "subject": "Science",
-              "classroom": "s1985-Studio556",
-              "instructor": "jd956",
-              "enrolled_students": [
-                "lw812",
-                "bx927",
-                "oc206",
-                "td546",
-                "ly954",
-                "bm492",
-                "pe250"
-              ]
-            },
-            {
-              "id": "c1837",
-              "period": 5,
-              "title": "Science Modules 2",
-              "grade_level": 6,
-              "category": "Modules",
-              "subject": "Science",
-              "classroom": "s1985-Studio556",
-              "instructor": "jd956",
-              "enrolled_students": [
-                "id736",
-                "xh622",
-                "ld269"
-              ]
-            },
-            {
-              "id": "c5706",
-              "period": 7,
-              "title": "Math Modules 1",
-              "grade_level": 9,
-              "category": "Modules",
-              "subject": "Math",
-              "classroom": "s1985-Studio556",
-              "instructor": "jd956",
-              "enrolled_students": []
-            },
-            {
-              "id": "c4308",
-              "period": 4,
-              "title": "Math Math Connections 1",
-              "grade_level": 6,
-              "category": "Math Connections",
-              "subject": "Math",
-              "classroom": "s1985-Studio556",
-              "instructor": "jd956",
-              "enrolled_students": [
-                "xh622",
-                "lb818",
-                "da971"
-              ]
-            }
-          ],
-          "students": [
-            "id736",
-            "lw812",
-            "bx927",
-            "uh912",
-            "xh622",
-            "oc206",
-            "td546",
-            "ly954",
-            "bm492",
-            "lb818",
-            "pe250",
-            "ld269",
-            "da971",
-            "og508"
-          ]
-        },
-        {
-          "id": "s1985-Room309",
-          "title": "Room 309",
-          "instructor": "by984",
-          "courses": [
-            {
-              "id": "c6035",
-              "period": 2,
-              "title": "Math Expeditions 3",
-              "grade_level": 9,
-              "category": "Expeditions",
-              "subject": "Math",
-              "classroom": "s1985-Room309",
-              "instructor": "by984",
-              "enrolled_students": [
-                "se219",
-                "sh820",
-                "ld269",
-                "xj545",
-                "gm242"
-              ]
-            },
-            {
-              "id": "c5681",
-              "period": 7,
-              "title": "Science Expeditions 1",
-              "grade_level": 8,
-              "category": "Expeditions",
-              "subject": "Science",
-              "classroom": "s1985-Room309",
-              "instructor": "by984",
-              "enrolled_students": [
-                "cm289"
-              ]
-            },
-            {
-              "id": "c5942",
+              "id": "c3373",
               "period": 3,
-              "title": "Science Expeditions 3",
-              "grade_level": 9,
+              "title": "Math Expeditions 4",
+              "grade_level": 6,
               "category": "Expeditions",
-              "subject": "Science",
-              "classroom": "s1985-Room309",
-              "instructor": "by984",
+              "subject": "Math",
+              "classroom": "s4417-Room899",
+              "instructor": "oc130",
               "enrolled_students": [
-                "wi428",
-                "xu677"
-              ]
-            },
-            {
-              "id": "c2349",
-              "period": 5,
-              "title": "Science Modules 4",
-              "grade_level": 7,
-              "category": "Modules",
-              "subject": "Science",
-              "classroom": "s1985-Room309",
-              "instructor": "by984",
-              "enrolled_students": [
-                "lb818"
+                "ct984",
+                "iv832",
+                "pf624",
+                "du745",
+                "ig755",
+                "rn244",
+                "at355",
+                "qd685",
+                "ua613"
               ]
             }
           ],
           "students": [
-            "se219",
-            "wi428",
-            "sh820",
-            "cm289",
-            "lb818",
-            "ld269",
-            "xu677",
-            "xj545",
-            "gm242"
+            "yl866",
+            "ct984",
+            "tv837",
+            "iv832",
+            "mx622",
+            "pf624",
+            "du745",
+            "qe924",
+            "ig755",
+            "rn244",
+            "ik550",
+            "sv426",
+            "at355",
+            "qd685",
+            "uk710",
+            "vx454",
+            "ua613",
+            "rx602",
+            "el914"
           ]
         },
         {
-          "id": "s1985-Lab149",
-          "title": "Lab 149",
-          "instructor": "xg318",
+          "id": "s4417-Studio232",
+          "title": "Studio 232",
+          "instructor": "gr948",
           "courses": [
             {
-              "id": "c7866",
-              "period": 3,
+              "id": "c8528",
+              "period": 7,
+              "title": "Science Modules 5",
+              "grade_level": 9,
+              "category": "Modules",
+              "subject": "Science",
+              "classroom": "s4417-Studio232",
+              "instructor": "gr948",
+              "enrolled_students": [
+                "iv832"
+              ]
+            },
+            {
+              "id": "c4922",
+              "period": 8,
               "title": "Science Expeditions 3",
               "grade_level": 7,
               "category": "Expeditions",
               "subject": "Science",
-              "classroom": "s1985-Lab149",
-              "instructor": "xg318",
+              "classroom": "s4417-Studio232",
+              "instructor": "gr948",
               "enrolled_students": [
-                "rd338",
-                "nk488",
-                "su378"
+                "du745",
+                "xj626",
+                "bo332",
+                "at355",
+                "qk536"
               ]
             },
             {
-              "id": "c4862",
+              "id": "c4242",
+              "period": 2,
+              "title": "Science Expeditions 1",
+              "grade_level": 8,
+              "category": "Expeditions",
+              "subject": "Science",
+              "classroom": "s4417-Studio232",
+              "instructor": "gr948",
+              "enrolled_students": [
+                "hn826",
+                "ut641"
+              ]
+            },
+            {
+              "id": "c2197",
+              "period": 5,
+              "title": "Science Modules 1",
+              "grade_level": 6,
+              "category": "Modules",
+              "subject": "Science",
+              "classroom": "s4417-Studio232",
+              "instructor": "gr948",
+              "enrolled_students": [
+                "xt659",
+                "vx454"
+              ]
+            }
+          ],
+          "students": [
+            "hn826",
+            "iv832",
+            "ut641",
+            "xt659",
+            "du745",
+            "xj626",
+            "bo332",
+            "at355",
+            "vx454",
+            "qk536"
+          ]
+        },
+        {
+          "id": "s4417-Room328",
+          "title": "Room 328",
+          "instructor": "oc130",
+          "courses": [
+            {
+              "id": "c6710",
               "period": 6,
-              "title": "Science Modules 2",
-              "grade_level": 8,
+              "title": "Math Modules 4",
+              "grade_level": 9,
               "category": "Modules",
-              "subject": "Science",
-              "classroom": "s1985-Lab149",
-              "instructor": "xg318",
-              "enrolled_students": [
-                "gm242"
-              ]
-            },
-            {
-              "id": "c2462",
-              "period": 7,
-              "title": "Science Expeditions 3",
-              "grade_level": 7,
-              "category": "Expeditions",
-              "subject": "Science",
-              "classroom": "s1985-Lab149",
-              "instructor": "xg318",
-              "enrolled_students": [
-                "qf204",
-                "vs537",
-                "tj788"
-              ]
-            },
-            {
-              "id": "c8783",
-              "period": 4,
-              "title": "Math Steps/iLearn 1",
-              "grade_level": 7,
-              "category": "Steps/iLearn",
               "subject": "Math",
-              "classroom": "s1985-Lab149",
-              "instructor": "xg318",
+              "classroom": "s4417-Room328",
+              "instructor": "oc130",
               "enrolled_students": [
-                "bl368",
-                "da815"
+                "ks847",
+                "kl293",
+                "xj626",
+                "ey911",
+                "ev771",
+                "kf131",
+                "gh600",
+                "xg217",
+                "lf621"
               ]
             },
             {
-              "id": "c6326",
-              "period": 1,
-              "title": "Science Expeditions 3",
-              "grade_level": 6,
+              "id": "c6094",
+              "period": 7,
+              "title": "Math Expeditions 4",
+              "grade_level": 9,
               "category": "Expeditions",
-              "subject": "Science",
-              "classroom": "s1985-Lab149",
-              "instructor": "xg318",
-              "enrolled_students": []
+              "subject": "Math",
+              "classroom": "s4417-Room328",
+              "instructor": "oc130",
+              "enrolled_students": [
+                "hn826",
+                "fi398",
+                "fk105",
+                "yy667"
+              ]
             }
           ],
           "students": [
-            "qf204",
-            "rd338",
-            "bl368",
-            "da815",
-            "nk488",
-            "su378",
-            "vs537",
-            "gm242",
-            "tj788"
+            "hn826",
+            "ks847",
+            "kl293",
+            "xj626",
+            "ey911",
+            "ev771",
+            "kf131",
+            "gh600",
+            "fi398",
+            "fk105",
+            "xg217",
+            "lf621",
+            "yy667"
           ]
         }
       ]
     },
     {
-      "id": "s4447",
-      "title": "West Academy",
-      "address": "9896 Education Ave",
+      "id": "s3221",
+      "title": "East Academy",
+      "address": "6549 Education Ave",
       "administrators": [
         {
-          "id": "vt836",
-          "firstname": "Tomi",
-          "lastname": "Henry",
-          "email": "tomi.h@school.edu",
-          "username": "tomi.henry",
-          "password": "Orange8111"
+          "id": "ev302",
+          "firstname": "Ruth",
+          "lastname": "Darland",
+          "email": "ruth.d@school.edu",
+          "username": "ruth.darland",
+          "password": "Red5228"
         },
         {
-          "id": "pt694",
-          "firstname": "Rhonda",
-          "lastname": "Wilson",
-          "email": "rhonda.w@school.edu",
-          "username": "rhonda.wilson",
-          "password": "Purple0272"
+          "id": "xg569",
+          "firstname": "Holly",
+          "lastname": "Gorsky",
+          "email": "holly.g@school.edu",
+          "username": "holly.gorsky",
+          "password": "Green7410"
         }
       ],
       "instructors": [
         {
-          "id": "uz706",
-          "firstname": "Jacob",
-          "lastname": "Carrasco",
-          "email": "jacob.c@school.edu",
-          "username": "jacob.carrasco",
-          "password": "Gold8942"
+          "id": "uh228",
+          "firstname": "Dianna",
+          "lastname": "Estrada",
+          "email": "dianna.e@school.edu",
+          "username": "dianna.estrada",
+          "password": "Green9473"
         },
         {
-          "id": "zs862",
-          "firstname": "Dorothy",
-          "lastname": "Marin",
-          "email": "dorothy.m@school.edu",
-          "username": "dorothy.marin",
-          "password": "Blue6761"
+          "id": "xk630",
+          "firstname": "Francisca",
+          "lastname": "Kendricks",
+          "email": "francisca.k@school.edu",
+          "username": "francisca.kendricks",
+          "password": "Green0694"
         },
         {
-          "id": "kh298",
-          "firstname": "Rebecca",
-          "lastname": "Black",
-          "email": "rebecca.b@school.edu",
-          "username": "rebecca.black",
-          "password": "Purple2972"
+          "id": "dl120",
+          "firstname": "George",
+          "lastname": "Blair",
+          "email": "george.b@school.edu",
+          "username": "george.blair",
+          "password": "Purple7305"
         },
         {
-          "id": "kq226",
-          "firstname": "Jacqueline",
-          "lastname": "Barker",
-          "email": "jacqueline.b@school.edu",
-          "username": "jacqueline.barker",
-          "password": "Gold6169"
+          "id": "ye114",
+          "firstname": "Ernest",
+          "lastname": "Pritchett",
+          "email": "ernest.p@school.edu",
+          "username": "ernest.pritchett",
+          "password": "Orange8161"
         },
         {
-          "id": "dj450",
-          "firstname": "Blanca",
-          "lastname": "Doud",
-          "email": "blanca.d@school.edu",
-          "username": "blanca.doud",
-          "password": "Gold8347"
+          "id": "at341",
+          "firstname": "David",
+          "lastname": "Gartner",
+          "email": "david.g@school.edu",
+          "username": "david.gartner",
+          "password": "Yellow7842"
         },
         {
-          "id": "ls792",
-          "firstname": "Teddy",
-          "lastname": "Jones",
-          "email": "teddy.j@school.edu",
-          "username": "teddy.jones",
-          "password": "Green9390"
+          "id": "uh204",
+          "firstname": "Jessica",
+          "lastname": "Bergstrom",
+          "email": "jessica.b@school.edu",
+          "username": "jessica.bergstrom",
+          "password": "Yellow7824"
         },
         {
-          "id": "zr583",
-          "firstname": "Karen",
-          "lastname": "Longshore",
-          "email": "karen.l@school.edu",
-          "username": "karen.longshore",
-          "password": "Blue0216"
+          "id": "ei103",
+          "firstname": "Gordon",
+          "lastname": "Harris",
+          "email": "gordon.h@school.edu",
+          "username": "gordon.harris",
+          "password": "Blue9197"
         },
         {
-          "id": "ow614",
-          "firstname": "Sean",
-          "lastname": "Petrey",
-          "email": "sean.p@school.edu",
-          "username": "sean.petrey",
-          "password": "Gold0666"
+          "id": "gh532",
+          "firstname": "Clarence",
+          "lastname": "Ison",
+          "email": "clarence.i@school.edu",
+          "username": "clarence.ison",
+          "password": "Green7025"
         }
       ],
       "students": [
         {
-          "id": "vc619",
-          "firstname": "George",
-          "lastname": "Carbajal",
-          "email": "george.c@school.edu",
-          "username": "george.carbajal",
-          "password": "Silver1954"
+          "id": "gs268",
+          "firstname": "Rosa",
+          "lastname": "Mann",
+          "email": "rosa.m@school.edu",
+          "username": "rosa.mann",
+          "password": "Gold2816"
         },
         {
-          "id": "eo447",
-          "firstname": "Deborah",
-          "lastname": "Freeman",
-          "email": "deborah.f@school.edu",
-          "username": "deborah.freeman",
-          "password": "Blue3647"
+          "id": "kb360",
+          "firstname": "Ray",
+          "lastname": "Rawson",
+          "email": "ray.r@school.edu",
+          "username": "ray.rawson",
+          "password": "Silver6548"
         },
         {
-          "id": "bg992",
-          "firstname": "Thomas",
-          "lastname": "Moss",
-          "email": "thomas.m@school.edu",
-          "username": "thomas.moss",
-          "password": "Silver7962"
+          "id": "fd292",
+          "firstname": "Ann",
+          "lastname": "Guymon",
+          "email": "ann.g@school.edu",
+          "username": "ann.guymon",
+          "password": "Purple1555"
         },
         {
-          "id": "ov467",
-          "firstname": "Shawn",
-          "lastname": "Diven",
-          "email": "shawn.d@school.edu",
-          "username": "shawn.diven",
-          "password": "Gold6539"
+          "id": "nt346",
+          "firstname": "Arlene",
+          "lastname": "Joseph",
+          "email": "arlene.j@school.edu",
+          "username": "arlene.joseph",
+          "password": "Purple4214"
         },
         {
-          "id": "jd805",
-          "firstname": "Ira",
-          "lastname": "Wyatt",
-          "email": "ira.w@school.edu",
-          "username": "ira.wyatt",
-          "password": "Red5879"
+          "id": "qe833",
+          "firstname": "Sabrina",
+          "lastname": "Lassiter",
+          "email": "sabrina.l@school.edu",
+          "username": "sabrina.lassiter",
+          "password": "Purple6843"
         },
         {
-          "id": "cz825",
-          "firstname": "Deborah",
-          "lastname": "Files",
-          "email": "deborah.f@school.edu",
-          "username": "deborah.files",
-          "password": "Green7639"
+          "id": "gf466",
+          "firstname": "Yvonne",
+          "lastname": "Ennen",
+          "email": "yvonne.e@school.edu",
+          "username": "yvonne.ennen",
+          "password": "Purple0251"
         },
         {
-          "id": "mr763",
-          "firstname": "Martin",
-          "lastname": "Pyle",
-          "email": "martin.p@school.edu",
-          "username": "martin.pyle",
-          "password": "Gold9081"
+          "id": "sr148",
+          "firstname": "Dorothy",
+          "lastname": "Sinclair",
+          "email": "dorothy.s@school.edu",
+          "username": "dorothy.sinclair",
+          "password": "Silver9138"
         },
         {
-          "id": "kv622",
-          "firstname": "Laurie",
-          "lastname": "Aaron",
-          "email": "laurie.a@school.edu",
-          "username": "laurie.aaron",
-          "password": "Gold1766"
+          "id": "yv176",
+          "firstname": "Edward",
+          "lastname": "Maldonado",
+          "email": "edward.m@school.edu",
+          "username": "edward.maldonado",
+          "password": "Red0998"
         },
         {
-          "id": "am365",
-          "firstname": "Sheila",
-          "lastname": "Perrier",
-          "email": "sheila.p@school.edu",
-          "username": "sheila.perrier",
-          "password": "Silver1837"
+          "id": "xc903",
+          "firstname": "Chelsea",
+          "lastname": "Tardiff",
+          "email": "chelsea.t@school.edu",
+          "username": "chelsea.tardiff",
+          "password": "Gold5304"
         },
         {
-          "id": "ph278",
-          "firstname": "Anne",
-          "lastname": "Currier",
-          "email": "anne.c@school.edu",
-          "username": "anne.currier",
-          "password": "Yellow9729"
+          "id": "bt296",
+          "firstname": "Vilma",
+          "lastname": "Welch",
+          "email": "vilma.w@school.edu",
+          "username": "vilma.welch",
+          "password": "Blue9679"
         },
         {
-          "id": "vz518",
-          "firstname": "Nettie",
-          "lastname": "Hendrix",
-          "email": "nettie.h@school.edu",
-          "username": "nettie.hendrix",
-          "password": "Silver3179"
+          "id": "nf276",
+          "firstname": "Darryl",
+          "lastname": "Reveles",
+          "email": "darryl.r@school.edu",
+          "username": "darryl.reveles",
+          "password": "Red5212"
         },
         {
-          "id": "pd155",
-          "firstname": "Rose",
-          "lastname": "Langhorne",
-          "email": "rose.l@school.edu",
-          "username": "rose.langhorne",
-          "password": "Blue2023"
-        },
-        {
-          "id": "ta991",
-          "firstname": "Jolie",
-          "lastname": "Williams",
-          "email": "jolie.w@school.edu",
-          "username": "jolie.williams",
-          "password": "Green3406"
-        },
-        {
-          "id": "vq109",
-          "firstname": "Hazel",
-          "lastname": "Lo",
-          "email": "hazel.l@school.edu",
-          "username": "hazel.lo",
-          "password": "Yellow7136"
-        },
-        {
-          "id": "pm342",
-          "firstname": "Katie",
-          "lastname": "Crouch",
-          "email": "katie.c@school.edu",
-          "username": "katie.crouch",
-          "password": "Gold1050"
-        },
-        {
-          "id": "qs675",
-          "firstname": "Bobbie",
-          "lastname": "Thomas",
-          "email": "bobbie.t@school.edu",
-          "username": "bobbie.thomas",
-          "password": "Gold3321"
-        },
-        {
-          "id": "qc494",
-          "firstname": "Mary",
-          "lastname": "Kinsey",
-          "email": "mary.k@school.edu",
-          "username": "mary.kinsey",
-          "password": "Purple2129"
-        },
-        {
-          "id": "xt719",
-          "firstname": "Marjorie",
-          "lastname": "Barone",
-          "email": "marjorie.b@school.edu",
-          "username": "marjorie.barone",
-          "password": "Gold4836"
-        },
-        {
-          "id": "ii504",
-          "firstname": "Danielle",
-          "lastname": "Fiedler",
-          "email": "danielle.f@school.edu",
-          "username": "danielle.fiedler",
-          "password": "Yellow0327"
-        },
-        {
-          "id": "vz867",
-          "firstname": "James",
-          "lastname": "Mcdonald",
-          "email": "james.m@school.edu",
-          "username": "james.mcdonald",
-          "password": "Blue1354"
-        },
-        {
-          "id": "ne230",
-          "firstname": "Tommy",
-          "lastname": "Gregory",
-          "email": "tommy.g@school.edu",
-          "username": "tommy.gregory",
-          "password": "Red1490"
-        },
-        {
-          "id": "wa717",
-          "firstname": "Larry",
-          "lastname": "Dickey",
-          "email": "larry.d@school.edu",
-          "username": "larry.dickey",
-          "password": "Silver2346"
-        },
-        {
-          "id": "tz344",
-          "firstname": "William",
-          "lastname": "Roberts",
-          "email": "william.r@school.edu",
-          "username": "william.roberts",
-          "password": "Blue3853"
-        },
-        {
-          "id": "fw727",
-          "firstname": "Joshua",
-          "lastname": "Flemmons",
-          "email": "joshua.f@school.edu",
-          "username": "joshua.flemmons",
-          "password": "Silver5050"
-        },
-        {
-          "id": "zm374",
-          "firstname": "Gloria",
-          "lastname": "Palma",
-          "email": "gloria.p@school.edu",
-          "username": "gloria.palma",
-          "password": "Silver1343"
-        },
-        {
-          "id": "st173",
-          "firstname": "Jennie",
-          "lastname": "Zeigler",
-          "email": "jennie.z@school.edu",
-          "username": "jennie.zeigler",
-          "password": "Gold2996"
-        },
-        {
-          "id": "tv916",
-          "firstname": "Seth",
-          "lastname": "Williams",
-          "email": "seth.w@school.edu",
-          "username": "seth.williams",
-          "password": "Gold3960"
-        },
-        {
-          "id": "kl984",
-          "firstname": "Joy",
-          "lastname": "Karn",
-          "email": "joy.k@school.edu",
-          "username": "joy.karn",
-          "password": "Yellow1074"
-        },
-        {
-          "id": "zy510",
-          "firstname": "Donald",
-          "lastname": "Murray",
-          "email": "donald.m@school.edu",
-          "username": "donald.murray",
-          "password": "Blue8762"
-        },
-        {
-          "id": "gn801",
-          "firstname": "Jane",
-          "lastname": "Moore",
-          "email": "jane.m@school.edu",
-          "username": "jane.moore",
-          "password": "Red0946"
-        },
-        {
-          "id": "aj684",
-          "firstname": "Silas",
-          "lastname": "Sutton",
-          "email": "silas.s@school.edu",
-          "username": "silas.sutton",
-          "password": "Purple8560"
-        },
-        {
-          "id": "ec946",
-          "firstname": "Angela",
-          "lastname": "Magar",
-          "email": "angela.m@school.edu",
-          "username": "angela.magar",
-          "password": "Yellow8204"
-        },
-        {
-          "id": "wg473",
-          "firstname": "Edna",
-          "lastname": "Bramble",
-          "email": "edna.b@school.edu",
-          "username": "edna.bramble",
-          "password": "Gold3341"
-        },
-        {
-          "id": "bc613",
-          "firstname": "Omar",
-          "lastname": "Hardy",
-          "email": "omar.h@school.edu",
-          "username": "omar.hardy",
-          "password": "Blue6326"
-        },
-        {
-          "id": "tl268",
-          "firstname": "John",
-          "lastname": "Knarr",
-          "email": "john.k@school.edu",
-          "username": "john.knarr",
-          "password": "Orange8503"
-        },
-        {
-          "id": "hy530",
-          "firstname": "Nicholas",
-          "lastname": "Smith",
-          "email": "nicholas.s@school.edu",
-          "username": "nicholas.smith",
-          "password": "Purple1483"
-        },
-        {
-          "id": "yi237",
-          "firstname": "Donald",
-          "lastname": "Calvillo",
-          "email": "donald.c@school.edu",
-          "username": "donald.calvillo",
-          "password": "Blue1957"
-        },
-        {
-          "id": "lp492",
-          "firstname": "Carl",
-          "lastname": "Harrold",
-          "email": "carl.h@school.edu",
-          "username": "carl.harrold",
-          "password": "Yellow3286"
-        },
-        {
-          "id": "jc944",
+          "id": "gj472",
           "firstname": "Karen",
-          "lastname": "Teal",
-          "email": "karen.t@school.edu",
-          "username": "karen.teal",
-          "password": "Gold1097"
+          "lastname": "Smith",
+          "email": "karen.s@school.edu",
+          "username": "karen.smith",
+          "password": "Green0357"
         },
         {
-          "id": "lw408",
-          "firstname": "Charles",
-          "lastname": "Fernandez",
-          "email": "charles.f@school.edu",
-          "username": "charles.fernandez",
-          "password": "Gold0385"
+          "id": "lx985",
+          "firstname": "Deborah",
+          "lastname": "Kennedy",
+          "email": "deborah.k@school.edu",
+          "username": "deborah.kennedy",
+          "password": "Red2715"
+        },
+        {
+          "id": "be187",
+          "firstname": "Valencia",
+          "lastname": "Specht",
+          "email": "valencia.s@school.edu",
+          "username": "valencia.specht",
+          "password": "Purple5925"
+        },
+        {
+          "id": "in611",
+          "firstname": "Flora",
+          "lastname": "Courtney",
+          "email": "flora.c@school.edu",
+          "username": "flora.courtney",
+          "password": "Orange0261"
+        },
+        {
+          "id": "rj588",
+          "firstname": "Toccara",
+          "lastname": "Hubbard",
+          "email": "toccara.h@school.edu",
+          "username": "toccara.hubbard",
+          "password": "Yellow9832"
+        },
+        {
+          "id": "qv521",
+          "firstname": "Kelly",
+          "lastname": "Dupree",
+          "email": "kelly.d@school.edu",
+          "username": "kelly.dupree",
+          "password": "Orange8975"
+        },
+        {
+          "id": "yn540",
+          "firstname": "Cindy",
+          "lastname": "Carter",
+          "email": "cindy.c@school.edu",
+          "username": "cindy.carter",
+          "password": "Purple3024"
+        },
+        {
+          "id": "nx438",
+          "firstname": "Robert",
+          "lastname": "Czech",
+          "email": "robert.c@school.edu",
+          "username": "robert.czech",
+          "password": "Gold3295"
+        },
+        {
+          "id": "xl747",
+          "firstname": "Kimberly",
+          "lastname": "Faucette",
+          "email": "kimberly.f@school.edu",
+          "username": "kimberly.faucette",
+          "password": "Silver3822"
+        },
+        {
+          "id": "db157",
+          "firstname": "Cynthia",
+          "lastname": "Tomlinson",
+          "email": "cynthia.t@school.edu",
+          "username": "cynthia.tomlinson",
+          "password": "Orange9037"
+        },
+        {
+          "id": "yz364",
+          "firstname": "Mary",
+          "lastname": "Simpkins",
+          "email": "mary.s@school.edu",
+          "username": "mary.simpkins",
+          "password": "Red5188"
+        },
+        {
+          "id": "rc854",
+          "firstname": "Justin",
+          "lastname": "Hilton",
+          "email": "justin.h@school.edu",
+          "username": "justin.hilton",
+          "password": "Yellow9291"
+        },
+        {
+          "id": "cl166",
+          "firstname": "Katherine",
+          "lastname": "Blackmon",
+          "email": "katherine.b@school.edu",
+          "username": "katherine.blackmon",
+          "password": "Purple1136"
+        },
+        {
+          "id": "kz229",
+          "firstname": "Rosie",
+          "lastname": "Hedman",
+          "email": "rosie.h@school.edu",
+          "username": "rosie.hedman",
+          "password": "Blue0386"
+        },
+        {
+          "id": "qo767",
+          "firstname": "William",
+          "lastname": "Burch",
+          "email": "william.b@school.edu",
+          "username": "william.burch",
+          "password": "Orange7535"
+        },
+        {
+          "id": "bz620",
+          "firstname": "Rosemary",
+          "lastname": "Scott",
+          "email": "rosemary.s@school.edu",
+          "username": "rosemary.scott",
+          "password": "Green4323"
+        },
+        {
+          "id": "wn513",
+          "firstname": "Kenneth",
+          "lastname": "Vue",
+          "email": "kenneth.v@school.edu",
+          "username": "kenneth.vue",
+          "password": "Purple9542"
+        },
+        {
+          "id": "sw698",
+          "firstname": "Lillian",
+          "lastname": "Rodriguez",
+          "email": "lillian.r@school.edu",
+          "username": "lillian.rodriguez",
+          "password": "Green9528"
+        },
+        {
+          "id": "qa927",
+          "firstname": "Dale",
+          "lastname": "Wang",
+          "email": "dale.w@school.edu",
+          "username": "dale.wang",
+          "password": "Gold1047"
+        },
+        {
+          "id": "zb911",
+          "firstname": "John",
+          "lastname": "Lannon",
+          "email": "john.l@school.edu",
+          "username": "john.lannon",
+          "password": "Blue0554"
+        },
+        {
+          "id": "zn933",
+          "firstname": "Christopher",
+          "lastname": "Brumit",
+          "email": "christopher.b@school.edu",
+          "username": "christopher.brumit",
+          "password": "Yellow3475"
+        },
+        {
+          "id": "ro199",
+          "firstname": "Donald",
+          "lastname": "Gresham",
+          "email": "donald.g@school.edu",
+          "username": "donald.gresham",
+          "password": "Purple4513"
+        },
+        {
+          "id": "nc967",
+          "firstname": "Gloria",
+          "lastname": "Johnson",
+          "email": "gloria.j@school.edu",
+          "username": "gloria.johnson",
+          "password": "Red7991"
+        },
+        {
+          "id": "cs669",
+          "firstname": "Mike",
+          "lastname": "Shoop",
+          "email": "mike.s@school.edu",
+          "username": "mike.shoop",
+          "password": "Purple3379"
+        },
+        {
+          "id": "tz641",
+          "firstname": "Esperanza",
+          "lastname": "Lewellen",
+          "email": "esperanza.l@school.edu",
+          "username": "esperanza.lewellen",
+          "password": "Gold5426"
+        },
+        {
+          "id": "ra792",
+          "firstname": "Lenora",
+          "lastname": "Huang",
+          "email": "lenora.h@school.edu",
+          "username": "lenora.huang",
+          "password": "Yellow7975"
+        },
+        {
+          "id": "ee449",
+          "firstname": "Caroline",
+          "lastname": "Licht",
+          "email": "caroline.l@school.edu",
+          "username": "caroline.licht",
+          "password": "Yellow7461"
+        },
+        {
+          "id": "rt364",
+          "firstname": "Jennifer",
+          "lastname": "Owens",
+          "email": "jennifer.o@school.edu",
+          "username": "jennifer.owens",
+          "password": "Gold9393"
+        },
+        {
+          "id": "xx661",
+          "firstname": "Roberta",
+          "lastname": "Roberson",
+          "email": "roberta.r@school.edu",
+          "username": "roberta.roberson",
+          "password": "Orange6155"
         }
       ],
       "classrooms": [
         {
-          "id": "s4447-Lab462",
-          "title": "Lab 462",
-          "instructor": "uz706",
+          "id": "s3221-Lab732",
+          "title": "Lab 732",
+          "instructor": "xk630",
           "courses": [
             {
-              "id": "c5477",
-              "period": 4,
-              "title": "Math Math Connections 2",
-              "grade_level": 6,
-              "category": "Math Connections",
-              "subject": "Math",
-              "classroom": "s4447-Lab462",
-              "instructor": "uz706",
-              "enrolled_students": [
-                "cz825",
-                "pm342",
-                "zm374"
-              ]
-            },
-            {
-              "id": "c7271",
-              "period": 1,
-              "title": "Math IPLs 3",
-              "grade_level": 9,
-              "category": "IPLs",
-              "subject": "Math",
-              "classroom": "s4447-Lab462",
-              "instructor": "uz706",
-              "enrolled_students": [
-                "fw727",
-                "zy510",
-                "ec946"
-              ]
-            },
-            {
-              "id": "c9225",
-              "period": 3,
-              "title": "Math Expeditions 1",
-              "grade_level": 7,
-              "category": "Expeditions",
-              "subject": "Math",
-              "classroom": "s4447-Lab462",
-              "instructor": "uz706",
-              "enrolled_students": [
-                "eo447",
-                "am365",
-                "aj684"
-              ]
-            }
-          ],
-          "students": [
-            "eo447",
-            "cz825",
-            "am365",
-            "pm342",
-            "fw727",
-            "zm374",
-            "zy510",
-            "aj684",
-            "ec946"
-          ]
-        },
-        {
-          "id": "s4447-Room809",
-          "title": "Room 809",
-          "instructor": "zs862",
-          "courses": [
-            {
-              "id": "c6051",
-              "period": 1,
-              "title": "Math Math Connections 1",
-              "grade_level": 7,
-              "category": "Math Connections",
-              "subject": "Math",
-              "classroom": "s4447-Room809",
-              "instructor": "zs862",
-              "enrolled_students": [
-                "tz344"
-              ]
-            },
-            {
-              "id": "c4760",
-              "period": 8,
-              "title": "Math Steps/iLearn 2",
-              "grade_level": 9,
-              "category": "Steps/iLearn",
-              "subject": "Math",
-              "classroom": "s4447-Room809",
-              "instructor": "zs862",
-              "enrolled_students": [
-                "mr763"
-              ]
-            },
-            {
-              "id": "c5693",
+              "id": "c7300",
               "period": 7,
-              "title": "Math Steps/iLearn 2",
+              "title": "Science Modules 4",
               "grade_level": 9,
-              "category": "Steps/iLearn",
-              "subject": "Math",
-              "classroom": "s4447-Room809",
-              "instructor": "zs862",
-              "enrolled_students": [
-                "ii504",
-                "lw408"
-              ]
-            },
-            {
-              "id": "c5582",
-              "period": 2,
-              "title": "Math Expeditions 1",
-              "grade_level": 9,
-              "category": "Expeditions",
-              "subject": "Math",
-              "classroom": "s4447-Room809",
-              "instructor": "zs862",
-              "enrolled_students": [
-                "vq109"
-              ]
-            },
-            {
-              "id": "c7856",
-              "period": 4,
-              "title": "Science Expeditions 5",
-              "grade_level": 7,
-              "category": "Expeditions",
+              "category": "Modules",
               "subject": "Science",
-              "classroom": "s4447-Room809",
-              "instructor": "zs862",
+              "classroom": "s3221-Lab732",
+              "instructor": "xk630",
               "enrolled_students": [
-                "ov467",
-                "xt719"
+                "kb360",
+                "lx985",
+                "qv521",
+                "kz229",
+                "nc967",
+                "tz641"
               ]
             },
             {
-              "id": "c2291",
-              "period": 3,
-              "title": "Math IPLs 5",
-              "grade_level": 7,
-              "category": "IPLs",
-              "subject": "Math",
-              "classroom": "s4447-Room809",
-              "instructor": "zs862",
-              "enrolled_students": [
-                "pd155",
-                "vz867",
-                "yi237"
-              ]
-            }
-          ],
-          "students": [
-            "ov467",
-            "mr763",
-            "pd155",
-            "vq109",
-            "xt719",
-            "ii504",
-            "vz867",
-            "tz344",
-            "yi237",
-            "lw408"
-          ]
-        },
-        {
-          "id": "s4447-Room131",
-          "title": "Room 131",
-          "instructor": "kh298",
-          "courses": [
-            {
-              "id": "c9621",
-              "period": 3,
-              "title": "Science Modules 3",
+              "id": "c7812",
+              "period": 1,
+              "title": "Science Expeditions 1",
               "grade_level": 8,
-              "category": "Modules",
+              "category": "Expeditions",
               "subject": "Science",
-              "classroom": "s4447-Room131",
-              "instructor": "kh298",
+              "classroom": "s3221-Lab732",
+              "instructor": "xk630",
               "enrolled_students": [
-                "yi237"
+                "yv176",
+                "nf276",
+                "cl166",
+                "bz620",
+                "wn513",
+                "sw698",
+                "ra792"
               ]
             },
             {
-              "id": "c2882",
-              "period": 8,
-              "title": "Science Modules 2",
-              "grade_level": 7,
-              "category": "Modules",
-              "subject": "Science",
-              "classroom": "s4447-Room131",
-              "instructor": "kh298",
-              "enrolled_students": []
-            },
-            {
-              "id": "c9756",
+              "id": "c9917",
               "period": 6,
               "title": "Science Modules 3",
-              "grade_level": 8,
+              "grade_level": 9,
               "category": "Modules",
               "subject": "Science",
-              "classroom": "s4447-Room131",
-              "instructor": "kh298",
+              "classroom": "s3221-Lab732",
+              "instructor": "xk630",
+              "enrolled_students": [
+                "xc903",
+                "gj472",
+                "xl747",
+                "qa927",
+                "ro199",
+                "rt364"
+              ]
+            }
+          ],
+          "students": [
+            "kb360",
+            "yv176",
+            "xc903",
+            "nf276",
+            "gj472",
+            "lx985",
+            "qv521",
+            "xl747",
+            "cl166",
+            "kz229",
+            "bz620",
+            "wn513",
+            "sw698",
+            "qa927",
+            "ro199",
+            "nc967",
+            "tz641",
+            "ra792",
+            "rt364"
+          ]
+        },
+        {
+          "id": "s3221-Lab611",
+          "title": "Lab 611",
+          "instructor": "ei103",
+          "courses": [
+            {
+              "id": "c5181",
+              "period": 7,
+              "title": "Math Modules 1",
+              "grade_level": 8,
+              "category": "Modules",
+              "subject": "Math",
+              "classroom": "s3221-Lab611",
+              "instructor": "ei103",
               "enrolled_students": []
             },
             {
-              "id": "c3198",
-              "period": 1,
-              "title": "Math Math Connections 4",
+              "id": "c4359",
+              "period": 4,
+              "title": "Math Math Connections 3",
               "grade_level": 9,
               "category": "Math Connections",
               "subject": "Math",
-              "classroom": "s4447-Room131",
-              "instructor": "kh298",
+              "classroom": "s3221-Lab611",
+              "instructor": "ei103",
               "enrolled_students": [
-                "qs675",
-                "lp492"
+                "nf276",
+                "lx985",
+                "ra792"
               ]
             },
             {
-              "id": "c7687",
-              "period": 7,
-              "title": "Science Modules 3",
+              "id": "c6858",
+              "period": 3,
+              "title": "Math Math Connections 2",
+              "grade_level": 7,
+              "category": "Math Connections",
+              "subject": "Math",
+              "classroom": "s3221-Lab611",
+              "instructor": "ei103",
+              "enrolled_students": [
+                "qo767",
+                "bz620"
+              ]
+            },
+            {
+              "id": "c7413",
+              "period": 1,
+              "title": "Math Steps/iLearn 4",
+              "grade_level": 7,
+              "category": "Steps/iLearn",
+              "subject": "Math",
+              "classroom": "s3221-Lab611",
+              "instructor": "ei103",
+              "enrolled_students": [
+                "be187",
+                "nc967"
+              ]
+            }
+          ],
+          "students": [
+            "nf276",
+            "lx985",
+            "be187",
+            "qo767",
+            "bz620",
+            "nc967",
+            "ra792"
+          ]
+        },
+        {
+          "id": "s3221-Lab323",
+          "title": "Lab 323",
+          "instructor": "ei103",
+          "courses": [
+            {
+              "id": "c5548",
+              "period": 3,
+              "title": "Math Expeditions 2",
               "grade_level": 8,
-              "category": "Modules",
-              "subject": "Science",
-              "classroom": "s4447-Room131",
-              "instructor": "kh298",
+              "category": "Expeditions",
+              "subject": "Math",
+              "classroom": "s3221-Lab323",
+              "instructor": "ei103",
               "enrolled_students": [
-                "ph278"
+                "kb360",
+                "fd292",
+                "rj588",
+                "wn513"
               ]
             },
             {
-              "id": "c5848",
-              "period": 4,
+              "id": "c4509",
+              "period": 8,
               "title": "Math Expeditions 5",
               "grade_level": 7,
               "category": "Expeditions",
               "subject": "Math",
-              "classroom": "s4447-Room131",
-              "instructor": "kh298",
+              "classroom": "s3221-Lab323",
+              "instructor": "ei103",
               "enrolled_students": [
-                "ph278",
-                "bc613"
+                "zn933"
               ]
-            }
-          ],
-          "students": [
-            "ph278",
-            "qs675",
-            "bc613",
-            "yi237",
-            "lp492"
-          ]
-        },
-        {
-          "id": "s4447-Room741",
-          "title": "Room 741",
-          "instructor": "kq226",
-          "courses": [
+            },
             {
-              "id": "c7195",
-              "period": 5,
+              "id": "c5167",
+              "period": 4,
               "title": "Math Modules 5",
-              "grade_level": 7,
-              "category": "Modules",
-              "subject": "Math",
-              "classroom": "s4447-Room741",
-              "instructor": "kq226",
-              "enrolled_students": [
-                "ov467",
-                "ta991",
-                "qc494",
-                "xt719",
-                "wg473"
-              ]
-            },
-            {
-              "id": "c3294",
-              "period": 6,
-              "title": "Math Modules 3",
-              "grade_level": 7,
-              "category": "Modules",
-              "subject": "Math",
-              "classroom": "s4447-Room741",
-              "instructor": "kq226",
-              "enrolled_students": [
-                "wa717",
-                "tl268"
-              ]
-            },
-            {
-              "id": "c1665",
-              "period": 3,
-              "title": "Science Expeditions 4",
-              "grade_level": 7,
-              "category": "Expeditions",
-              "subject": "Science",
-              "classroom": "s4447-Room741",
-              "instructor": "kq226",
-              "enrolled_students": [
-                "fw727",
-                "kl984"
-              ]
-            },
-            {
-              "id": "c2425",
-              "period": 2,
-              "title": "Math Math Connections 2",
-              "grade_level": 8,
-              "category": "Math Connections",
-              "subject": "Math",
-              "classroom": "s4447-Room741",
-              "instructor": "kq226",
-              "enrolled_students": []
-            }
-          ],
-          "students": [
-            "ov467",
-            "ta991",
-            "qc494",
-            "xt719",
-            "wa717",
-            "fw727",
-            "kl984",
-            "wg473",
-            "tl268"
-          ]
-        },
-        {
-          "id": "s4447-Room488",
-          "title": "Room 488",
-          "instructor": "dj450",
-          "courses": [
-            {
-              "id": "c6541",
-              "period": 5,
-              "title": "Science Expeditions 1",
-              "grade_level": 6,
-              "category": "Expeditions",
-              "subject": "Science",
-              "classroom": "s4447-Room488",
-              "instructor": "dj450",
-              "enrolled_students": [
-                "jd805",
-                "pm342"
-              ]
-            },
-            {
-              "id": "c4549",
-              "period": 7,
-              "title": "Math Expeditions 5",
               "grade_level": 9,
-              "category": "Expeditions",
-              "subject": "Math",
-              "classroom": "s4447-Room488",
-              "instructor": "dj450",
-              "enrolled_students": []
-            },
-            {
-              "id": "c4502",
-              "period": 3,
-              "title": "Science Modules 1",
-              "grade_level": 8,
               "category": "Modules",
-              "subject": "Science",
-              "classroom": "s4447-Room488",
-              "instructor": "dj450",
-              "enrolled_students": [
-                "qc494",
-                "gn801",
-                "tl268"
-              ]
-            },
-            {
-              "id": "c2682",
-              "period": 1,
-              "title": "Science Modules 2",
-              "grade_level": 8,
-              "category": "Modules",
-              "subject": "Science",
-              "classroom": "s4447-Room488",
-              "instructor": "dj450",
-              "enrolled_students": [
-                "mr763",
-                "tv916"
-              ]
-            },
-            {
-              "id": "c9049",
-              "period": 6,
-              "title": "Math Steps/iLearn 1",
-              "grade_level": 6,
-              "category": "Steps/iLearn",
               "subject": "Math",
-              "classroom": "s4447-Room488",
-              "instructor": "dj450",
+              "classroom": "s3221-Lab323",
+              "instructor": "ei103",
               "enrolled_students": [
-                "vc619",
-                "bg992",
-                "kv622",
-                "kl984"
+                "xl747",
+                "qa927",
+                "zb911",
+                "rt364"
               ]
             }
           ],
           "students": [
-            "vc619",
-            "bg992",
-            "jd805",
-            "mr763",
-            "kv622",
-            "pm342",
-            "qc494",
-            "tv916",
-            "kl984",
-            "gn801",
-            "tl268"
+            "kb360",
+            "fd292",
+            "rj588",
+            "xl747",
+            "wn513",
+            "qa927",
+            "zb911",
+            "zn933",
+            "rt364"
           ]
         },
         {
-          "id": "s4447-Room985",
-          "title": "Room 985",
-          "instructor": "ls792",
+          "id": "s3221-Room694",
+          "title": "Room 694",
+          "instructor": "ei103",
           "courses": [
             {
-              "id": "c7487",
-              "period": 2,
-              "title": "Science Modules 1",
-              "grade_level": 7,
-              "category": "Modules",
-              "subject": "Science",
-              "classroom": "s4447-Room985",
-              "instructor": "ls792",
-              "enrolled_students": [
-                "kv622",
-                "vz867",
-                "jc944"
-              ]
-            },
-            {
-              "id": "c3055",
-              "period": 1,
-              "title": "Science Expeditions 3",
-              "grade_level": 6,
-              "category": "Expeditions",
-              "subject": "Science",
-              "classroom": "s4447-Room985",
-              "instructor": "ls792",
-              "enrolled_students": [
-                "eo447",
-                "pd155",
-                "ta991",
-                "ne230",
-                "zy510",
-                "ec946",
-                "hy530"
-              ]
-            },
-            {
-              "id": "c3519",
-              "period": 6,
-              "title": "Science Modules 1",
-              "grade_level": 7,
-              "category": "Modules",
-              "subject": "Science",
-              "classroom": "s4447-Room985",
-              "instructor": "ls792",
-              "enrolled_students": [
-                "vz518"
-              ]
-            },
-            {
-              "id": "c7389",
-              "period": 3,
-              "title": "Science Modules 2",
-              "grade_level": 8,
-              "category": "Modules",
-              "subject": "Science",
-              "classroom": "s4447-Room985",
-              "instructor": "ls792",
-              "enrolled_students": [
-                "zm374"
-              ]
-            }
-          ],
-          "students": [
-            "eo447",
-            "kv622",
-            "vz518",
-            "pd155",
-            "ta991",
-            "vz867",
-            "ne230",
-            "zm374",
-            "zy510",
-            "ec946",
-            "hy530",
-            "jc944"
-          ]
-        },
-        {
-          "id": "s4447-Studio908",
-          "title": "Studio 908",
-          "instructor": "zr583",
-          "courses": [
-            {
-              "id": "c6188",
-              "period": 8,
-              "title": "Science Modules 3",
-              "grade_level": 6,
-              "category": "Modules",
-              "subject": "Science",
-              "classroom": "s4447-Studio908",
-              "instructor": "zr583",
-              "enrolled_students": []
-            },
-            {
-              "id": "c2417",
-              "period": 1,
-              "title": "Science Modules 1",
-              "grade_level": 7,
-              "category": "Modules",
-              "subject": "Science",
-              "classroom": "s4447-Studio908",
-              "instructor": "zr583",
-              "enrolled_students": [
-                "vc619",
-                "cz825",
-                "wa717"
-              ]
-            },
-            {
-              "id": "c2419",
-              "period": 4,
-              "title": "Science Expeditions 1",
-              "grade_level": 8,
-              "category": "Expeditions",
-              "subject": "Science",
-              "classroom": "s4447-Studio908",
-              "instructor": "zr583",
-              "enrolled_students": [
-                "qs675",
-                "aj684"
-              ]
-            },
-            {
-              "id": "c3779",
-              "period": 5,
-              "title": "Math Steps/iLearn 2",
-              "grade_level": 6,
-              "category": "Steps/iLearn",
-              "subject": "Math",
-              "classroom": "s4447-Studio908",
-              "instructor": "zr583",
-              "enrolled_students": [
-                "jd805",
-                "vz518",
-                "ne230",
-                "hy530",
-                "jc944"
-              ]
-            },
-            {
-              "id": "c2084",
-              "period": 3,
-              "title": "Science Modules 3",
-              "grade_level": 9,
-              "category": "Modules",
-              "subject": "Science",
-              "classroom": "s4447-Studio908",
-              "instructor": "zr583",
-              "enrolled_students": [
-                "vq109",
-                "wg473",
-                "bc613"
-              ]
-            },
-            {
-              "id": "c7958",
-              "period": 6,
-              "title": "Science Modules 2",
-              "grade_level": 9,
-              "category": "Modules",
-              "subject": "Science",
-              "classroom": "s4447-Studio908",
-              "instructor": "zr583",
-              "enrolled_students": [
-                "bg992",
-                "am365",
-                "st173",
-                "lp492",
-                "lw408"
-              ]
-            }
-          ],
-          "students": [
-            "vc619",
-            "bg992",
-            "jd805",
-            "cz825",
-            "am365",
-            "vz518",
-            "vq109",
-            "qs675",
-            "ne230",
-            "wa717",
-            "st173",
-            "aj684",
-            "wg473",
-            "bc613",
-            "hy530",
-            "lp492",
-            "jc944",
-            "lw408"
-          ]
-        },
-        {
-          "id": "s4447-Lab568",
-          "title": "Lab 568",
-          "instructor": "ow614",
-          "courses": [
-            {
-              "id": "c5798",
-              "period": 1,
-              "title": "Science Expeditions 3",
-              "grade_level": 9,
-              "category": "Expeditions",
-              "subject": "Science",
-              "classroom": "s4447-Lab568",
-              "instructor": "ow614",
-              "enrolled_students": []
-            },
-            {
-              "id": "c6593",
-              "period": 8,
-              "title": "Math IPLs 1",
-              "grade_level": 7,
-              "category": "IPLs",
-              "subject": "Math",
-              "classroom": "s4447-Lab568",
-              "instructor": "ow614",
-              "enrolled_students": [
-                "st173",
-                "tv916"
-              ]
-            },
-            {
-              "id": "c2388",
+              "id": "c1858",
               "period": 3,
               "title": "Math Steps/iLearn 4",
               "grade_level": 9,
               "category": "Steps/iLearn",
               "subject": "Math",
-              "classroom": "s4447-Lab568",
-              "instructor": "ow614",
+              "classroom": "s3221-Room694",
+              "instructor": "ei103",
               "enrolled_students": [
-                "gn801"
+                "qv521",
+                "cs669"
               ]
             },
             {
-              "id": "c1269",
-              "period": 2,
-              "title": "Science Modules 2",
-              "grade_level": 9,
-              "category": "Modules",
-              "subject": "Science",
-              "classroom": "s4447-Lab568",
-              "instructor": "ow614",
+              "id": "c5568",
+              "period": 6,
+              "title": "Math Expeditions 1",
+              "grade_level": 7,
+              "category": "Expeditions",
+              "subject": "Math",
+              "classroom": "s3221-Room694",
+              "instructor": "ei103",
+              "enrolled_students": []
+            },
+            {
+              "id": "c4546",
+              "period": 5,
+              "title": "Math Expeditions 4",
+              "grade_level": 6,
+              "category": "Expeditions",
+              "subject": "Math",
+              "classroom": "s3221-Room694",
+              "instructor": "ei103",
+              "enrolled_students": []
+            }
+          ],
+          "students": [
+            "qv521",
+            "cs669"
+          ]
+        },
+        {
+          "id": "s3221-Lab207",
+          "title": "Lab 207",
+          "instructor": "ei103",
+          "courses": [
+            {
+              "id": "c6303",
+              "period": 1,
+              "title": "Math Expeditions 3",
+              "grade_level": 8,
+              "category": "Expeditions",
+              "subject": "Math",
+              "classroom": "s3221-Lab207",
+              "instructor": "ei103",
               "enrolled_students": [
-                "ii504",
-                "tz344"
+                "yn540",
+                "tz641"
+              ]
+            },
+            {
+              "id": "c9794",
+              "period": 2,
+              "title": "Math Modules 4",
+              "grade_level": 8,
+              "category": "Modules",
+              "subject": "Math",
+              "classroom": "s3221-Lab207",
+              "instructor": "ei103",
+              "enrolled_students": [
+                "rc854",
+                "cl166",
+                "xx661"
+              ]
+            },
+            {
+              "id": "c4287",
+              "period": 4,
+              "title": "Math IPLs 2",
+              "grade_level": 8,
+              "category": "IPLs",
+              "subject": "Math",
+              "classroom": "s3221-Lab207",
+              "instructor": "ei103",
+              "enrolled_students": []
+            },
+            {
+              "id": "c4561",
+              "period": 8,
+              "title": "Math Expeditions 4",
+              "grade_level": 6,
+              "category": "Expeditions",
+              "subject": "Math",
+              "classroom": "s3221-Lab207",
+              "instructor": "ei103",
+              "enrolled_students": [
+                "qe833",
+                "sr148",
+                "gj472",
+                "ee449"
               ]
             }
           ],
           "students": [
-            "ii504",
-            "tz344",
-            "st173",
-            "tv916",
-            "gn801"
+            "qe833",
+            "sr148",
+            "gj472",
+            "yn540",
+            "rc854",
+            "cl166",
+            "tz641",
+            "ee449",
+            "xx661"
+          ]
+        },
+        {
+          "id": "s3221-Studio254",
+          "title": "Studio 254",
+          "instructor": "ei103",
+          "courses": [
+            {
+              "id": "c3728",
+              "period": 4,
+              "title": "Math Steps/iLearn 2",
+              "grade_level": 9,
+              "category": "Steps/iLearn",
+              "subject": "Math",
+              "classroom": "s3221-Studio254",
+              "instructor": "ei103",
+              "enrolled_students": [
+                "yz364",
+                "ro199"
+              ]
+            },
+            {
+              "id": "c9996",
+              "period": 6,
+              "title": "Math Steps/iLearn 5",
+              "grade_level": 6,
+              "category": "Steps/iLearn",
+              "subject": "Math",
+              "classroom": "s3221-Studio254",
+              "instructor": "ei103",
+              "enrolled_students": [
+                "nt346"
+              ]
+            },
+            {
+              "id": "c2833",
+              "period": 5,
+              "title": "Math IPLs 5",
+              "grade_level": 9,
+              "category": "IPLs",
+              "subject": "Math",
+              "classroom": "s3221-Studio254",
+              "instructor": "ei103",
+              "enrolled_students": [
+                "xc903",
+                "kz229"
+              ]
+            }
+          ],
+          "students": [
+            "nt346",
+            "xc903",
+            "yz364",
+            "kz229",
+            "ro199"
+          ]
+        },
+        {
+          "id": "s3221-Lab827",
+          "title": "Lab 827",
+          "instructor": "ei103",
+          "courses": [
+            {
+              "id": "c2635",
+              "period": 4,
+              "title": "Math IPLs 3",
+              "grade_level": 6,
+              "category": "IPLs",
+              "subject": "Math",
+              "classroom": "s3221-Lab827",
+              "instructor": "ei103",
+              "enrolled_students": [
+                "gf466",
+                "in611",
+                "nx438",
+                "db157"
+              ]
+            },
+            {
+              "id": "c7666",
+              "period": 7,
+              "title": "Math IPLs 5",
+              "grade_level": 6,
+              "category": "IPLs",
+              "subject": "Math",
+              "classroom": "s3221-Lab827",
+              "instructor": "ei103",
+              "enrolled_students": [
+                "gs268",
+                "bt296"
+              ]
+            },
+            {
+              "id": "c1567",
+              "period": 3,
+              "title": "Math Modules 5",
+              "grade_level": 7,
+              "category": "Modules",
+              "subject": "Math",
+              "classroom": "s3221-Lab827",
+              "instructor": "ei103",
+              "enrolled_students": [
+                "yv176",
+                "sw698"
+              ]
+            }
+          ],
+          "students": [
+            "gs268",
+            "gf466",
+            "yv176",
+            "bt296",
+            "in611",
+            "nx438",
+            "db157",
+            "sw698"
+          ]
+        },
+        {
+          "id": "s3221-Room156",
+          "title": "Room 156",
+          "instructor": "xk630",
+          "courses": [
+            {
+              "id": "c6921",
+              "period": 3,
+              "title": "Science Modules 4",
+              "grade_level": 7,
+              "category": "Modules",
+              "subject": "Science",
+              "classroom": "s3221-Room156",
+              "instructor": "xk630",
+              "enrolled_students": [
+                "qe833",
+                "bt296",
+                "in611",
+                "yn540",
+                "qo767",
+                "zb911",
+                "zn933",
+                "cs669",
+                "ee449"
+              ]
+            },
+            {
+              "id": "c6739",
+              "period": 6,
+              "title": "Science Modules 1",
+              "grade_level": 9,
+              "category": "Modules",
+              "subject": "Science",
+              "classroom": "s3221-Room156",
+              "instructor": "xk630",
+              "enrolled_students": [
+                "gs268",
+                "fd292",
+                "nt346",
+                "gf466",
+                "sr148",
+                "be187",
+                "rj588",
+                "nx438",
+                "db157",
+                "yz364",
+                "rc854",
+                "xx661"
+              ]
+            }
+          ],
+          "students": [
+            "gs268",
+            "fd292",
+            "nt346",
+            "qe833",
+            "gf466",
+            "sr148",
+            "bt296",
+            "be187",
+            "in611",
+            "rj588",
+            "yn540",
+            "nx438",
+            "db157",
+            "yz364",
+            "rc854",
+            "qo767",
+            "zb911",
+            "zn933",
+            "cs669",
+            "ee449",
+            "xx661"
           ]
         }
       ]
