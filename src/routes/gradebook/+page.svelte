@@ -159,62 +159,49 @@
   const detailCellRendererParams = {
     detailGridOptions: {
       columnDefs: [
-
         {
           field: "title",
           headerName: "Class Name",
           flex: 1,
+          minWidth: 200,
           suppressMenu: true,
-
         },
         {
           field: "grade",
           headerName: "Current Grade",
-          flex: 0.7,
           suppressMenu: true,
           valueFormatter: (params: any) => {
-            const grade =
-              params.data.student_grades[params.data.enrolled_students[0]];
+            const grade = params.data.student_grades[params.data.enrolled_students[0]];
             return grade ? `${grade}%` : "0%";
           },
         },
         {
           field: "progress",
           headerName: "Progress",
-          flex: 0.7,
           suppressMenu: true,
           valueFormatter: (params: any) => {
-            const progress =
-              params.data.student_progress[params.data.enrolled_students[0]];
+            const progress = params.data.student_progress[params.data.enrolled_students[0]];
             return progress ? `${progress}%` : "0%";
           },
         },
-
-
         {
           field: "subject",
           headerName: "Subject",
-          flex: 1,
           suppressMenu: true,
         },
         {
           field: "grade_level",
           headerName: "Grade Level",
-          flex: 0.7,
           suppressMenu: true,
         },
-
         {
           field: "category",
-          headerName: "Category",
-          flex: 1,
+          headerName: "Category", 
           suppressMenu: true,
         },
-
         {
           field: "classroom",
           headerName: "Classroom",
-          flex: 1,
           suppressMenu: true,
           valueGetter: (params: any) => {
             const classroom = currentSchool?.classrooms.find(
@@ -226,7 +213,6 @@
         {
           field: "instructor",
           headerName: "Instructor",
-          flex: 1,
           suppressMenu: true,
           valueGetter: (params: any) => {
             const instructor = currentSchool?.instructors.find(
@@ -240,7 +226,6 @@
         {
           field: "period",
           headerName: "Period",
-          flex: 0.5,
           suppressMenu: true,
           sort: "asc",
           sortIndex: 0,
@@ -249,7 +234,19 @@
       defaultColDef: {
         sortable: true,
         resizable: true,
+        suppressSizeToFit: false,
         minWidth: 100,
+      },
+      autoSizeStrategy: {
+        type: 'fitCellContents',
+      },
+      onGridReady: (params: any) => {
+        params.api.sizeColumnsToFit();
+        const allColumnIds: string[] = [];
+        params.columnApi.getAllColumns().forEach((column: any) => {
+          allColumnIds.push(column.getId());
+        });
+        params.api.autoSizeColumns(allColumnIds);
       },
     },
     getDetailRowData: (params: any) => {
