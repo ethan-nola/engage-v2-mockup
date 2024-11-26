@@ -1,6 +1,6 @@
-# Engage Learning Management System
+# Engage Learning Management System - Version 2 Mockup
 
-Everything you need to build the next iteration of our "Engage" Learning Management System, powered by [`sv`](https://github.com/sveltejs/cli).
+Everything you need to build the next iteration of our "Engage" Learning Management System, powered by SvelteKit [`sv`](https://github.com/sveltejs/cli).
 
 ## Project Overview
 
