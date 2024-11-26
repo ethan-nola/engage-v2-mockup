@@ -17,31 +17,47 @@ CONFIG = {
         datetime(2024, 1, 18)
     ],
     "subjects": {
-        "Mathematics": ["Math Modules", "Math Connections", "Steps", "IPLs"],
-        "Science": ["Science Modules", "Expeditions"],
-        "English": ["Voyager"],
-        "Social Studies": ["TCI"],
+        "IPL": ["IPL Series"],
+        "Expedition": ["Expedition Rotational Schedule"],
+        "Science": ["Science Module Rotational Schedule"],
+        "Mathematics": ["Math Module Rotational Schedule"],
+        "Module": ["Module / Expedition Rotational Schedule", 
+                  "Whole Class Assignment - Module"],
+        "Assignment": ["Whole Class Assignment - Expedition"],
+        "Dyad": ["Dyad Schedule"]
     },
     "output_path": "../../src/routes/gradebook/mock-data.json"
 }
 
 # After the existing CONFIG definition, add these fixed mappings
 CONFIG["subject_mappings"] = {
-    "Mathematics": {
+    "IPL": {
         "classroom": "Room 201",
         "instructor": "John Smith"
     },
-    "Science": {
+    "Expedition": {
         "classroom": "Lab A",
         "instructor": "Marie Curie"
     },
-    "English": {
-        "classroom": "Room 101",
-        "instructor": "Jane Austen"
+    "Science": {
+        "classroom": "Room 301",
+        "instructor": "Albert Einstein"
     },
-    "Social Studies": {
+    "Mathematics": {
+        "classroom": "Room 101",
+        "instructor": "Ada Lovelace"
+    },
+    "Module": {
         "classroom": "Room 401",
-        "instructor": "Howard Zinn"
+        "instructor": "Grace Hopper"
+    },
+    "Assignment": {
+        "classroom": "Room 501",
+        "instructor": "Richard Feynman"
+    },
+    "Dyad": {
+        "classroom": "Room 601",
+        "instructor": "Katherine Johnson"
     }
 }
 
