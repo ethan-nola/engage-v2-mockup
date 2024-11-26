@@ -283,7 +283,7 @@
         animateRows: true,
         suppressMenuHide: true,
         masterDetail: true,
-        detailRowHeight: 300,
+        detailRowAutoHeight: true,
         detailCellRendererParams,
         onGridReady: (params: GridReadyEvent<Person>) => {
           gridApi = params.api;
@@ -470,11 +470,17 @@
     background: rgb(248, 250, 252);
   }
 
+  :global(.ag-theme-alpine .ag-details-grid .ag-center-cols-viewport),
+  :global(.ag-theme-alpine .ag-details-grid .ag-center-cols-container) {
+    min-height: unset !important;
+  }
+
   :global(.ag-theme-alpine .ag-details-grid) {
     background-color: white;
     border: 1px solid rgb(241, 245, 249);
     border-radius: 8px;
     box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1);
+    overflow: hidden;
   }
 
   :global(.ag-theme-alpine .ag-details-grid .ag-header) {
