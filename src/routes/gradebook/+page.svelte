@@ -34,6 +34,8 @@
     firstname: string;
     lastname: string;
     email: string;
+    username: string;
+    password: string;
   };
 
   type School = {
@@ -70,6 +72,18 @@
       suppressMenu: true,
       sort: 'asc',
       sortIndex: 0
+    },
+    { 
+      field: 'username',
+      headerName: 'Username',
+      width: 150,
+      suppressMenu: true
+    },
+    { 
+      field: 'password',
+      headerName: 'Password',
+      width: 120,
+      suppressMenu: true
     },
     { 
       field: 'id',

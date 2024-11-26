@@ -40,11 +40,20 @@ def generate_email(firstname, lastname, domain="school.edu"):
 def generate_person():
     firstname = names.get_first_name()
     lastname = names.get_last_name()
+    username = f"{firstname.lower()}.{lastname.lower()}"
+    
+    # Generate a mock password that looks like "Word####"
+    password_word = random.choice(['Blue', 'Red', 'Green', 'Yellow', 'Purple', 'Orange', 'Silver', 'Gold'])
+    password_numbers = ''.join([str(random.randint(0,9)) for _ in range(4)])
+    password = f"{password_word}{password_numbers}"
+    
     return {
         "id": f"{random.choice('abcdefghijklmnopqrstuvwxyz')}{random.choice('abcdefghijklmnopqrstuvwxyz')}{random.randint(100,999)}",
         "firstname": firstname,
         "lastname": lastname,
-        "email": generate_email(firstname, lastname)
+        "email": generate_email(firstname, lastname),
+        "username": username,
+        "password": password
     }
 
 def generate_course(classroom, instructor, period):
