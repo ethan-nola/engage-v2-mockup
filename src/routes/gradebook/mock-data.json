@@ -1,3714 +1,1908 @@
 {
-  "students": [
+  "title": "Sample School District",
+  "schools": [
     {
-      "studentid": "yr205",
-      "firstname": "Billy",
-      "lastname": "Cousin",
-      "email": "billy.c@school.edu",
-      "enrollments": [
-        {
-          "enrollmentid": 1,
-          "period": 6,
-          "subject": "Mathematics",
-          "classname": "Math Module Rotational Schedule",
-          "classroom": "Room 101",
-          "instructor": "Ada Lovelace",
-          "progress": 49,
-          "averageGrade": 95,
-          "enrollmentdate": "2024-01-16",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 2,
-          "period": 7,
-          "subject": "IPL",
-          "classname": "IPL Series",
-          "classroom": "Room 201",
-          "instructor": "John Smith",
-          "progress": 73,
-          "averageGrade": 85,
-          "enrollmentdate": "2024-01-16",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 3,
-          "period": 3,
-          "subject": "Dyad",
-          "classname": "Dyad Schedule",
-          "classroom": "Room 601",
-          "instructor": "Katherine Johnson",
-          "progress": 80,
-          "averageGrade": 84,
-          "enrollmentdate": "2024-01-16",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 4,
-          "period": 5,
-          "subject": "Expedition",
-          "classname": "Expedition Rotational Schedule",
-          "classroom": "Lab A",
-          "instructor": "Marie Curie",
-          "progress": 63,
-          "averageGrade": 87,
-          "enrollmentdate": "2024-01-16",
-          "status": "Active"
-        }
-      ]
-    },
-    {
-      "studentid": "sa938",
-      "firstname": "Stanley",
-      "lastname": "Mitchell",
-      "email": "stanley.m@school.edu",
-      "enrollments": [
-        {
-          "enrollmentid": 5,
-          "period": 2,
-          "subject": "Dyad",
-          "classname": "Dyad Schedule",
-          "classroom": "Room 601",
-          "instructor": "Katherine Johnson",
-          "progress": 59,
-          "averageGrade": 65,
-          "enrollmentdate": "2024-01-18",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 6,
-          "period": 4,
-          "subject": "Assignment",
-          "classname": "Whole Class Assignment - Expedition",
-          "classroom": "Room 501",
-          "instructor": "Richard Feynman",
-          "progress": 79,
-          "averageGrade": 69,
-          "enrollmentdate": "2024-01-18",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 7,
-          "period": 5,
-          "subject": "Expedition",
-          "classname": "Expedition Rotational Schedule",
-          "classroom": "Lab A",
-          "instructor": "Marie Curie",
-          "progress": 57,
-          "averageGrade": 86,
-          "enrollmentdate": "2024-01-18",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 8,
-          "period": 3,
-          "subject": "Mathematics",
-          "classname": "Math Module Rotational Schedule",
-          "classroom": "Room 101",
-          "instructor": "Ada Lovelace",
-          "progress": 37,
-          "averageGrade": 86,
-          "enrollmentdate": "2024-01-18",
-          "status": "Active"
-        }
-      ]
-    },
-    {
-      "studentid": "uk999",
-      "firstname": "David",
-      "lastname": "Fox",
-      "email": "david.f@school.edu",
-      "enrollments": [
-        {
-          "enrollmentid": 9,
-          "period": 1,
-          "subject": "Science",
-          "classname": "Science Module Rotational Schedule",
-          "classroom": "Room 301",
-          "instructor": "Albert Einstein",
-          "progress": 62,
-          "averageGrade": 94,
-          "enrollmentdate": "2024-01-18",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 10,
-          "period": 8,
-          "subject": "Mathematics",
-          "classname": "Math Module Rotational Schedule",
-          "classroom": "Room 101",
-          "instructor": "Ada Lovelace",
-          "progress": 32,
-          "averageGrade": 98,
-          "enrollmentdate": "2024-01-18",
-          "status": "Active"
-        }
-      ]
-    },
-    {
-      "studentid": "la939",
-      "firstname": "Mary",
-      "lastname": "Frame",
-      "email": "mary.f@school.edu",
-      "enrollments": [
-        {
-          "enrollmentid": 11,
-          "period": 1,
-          "subject": "Expedition",
-          "classname": "Expedition Rotational Schedule",
-          "classroom": "Lab A",
-          "instructor": "Marie Curie",
-          "progress": 67,
-          "averageGrade": 89,
-          "enrollmentdate": "2024-01-17",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 12,
-          "period": 4,
-          "subject": "Science",
-          "classname": "Science Module Rotational Schedule",
-          "classroom": "Room 301",
-          "instructor": "Albert Einstein",
-          "progress": 94,
-          "averageGrade": 92,
-          "enrollmentdate": "2024-01-17",
-          "status": "Active"
-        }
-      ]
-    },
-    {
-      "studentid": "uo245",
-      "firstname": "Luther",
-      "lastname": "Gonzalez",
-      "email": "luther.g@school.edu",
-      "enrollments": [
-        {
-          "enrollmentid": 13,
-          "period": 5,
-          "subject": "Mathematics",
-          "classname": "Math Module Rotational Schedule",
-          "classroom": "Room 101",
-          "instructor": "Ada Lovelace",
-          "progress": 74,
-          "averageGrade": 71,
-          "enrollmentdate": "2024-01-18",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 14,
-          "period": 1,
-          "subject": "Expedition",
-          "classname": "Expedition Rotational Schedule",
-          "classroom": "Lab A",
-          "instructor": "Marie Curie",
-          "progress": 68,
-          "averageGrade": 69,
-          "enrollmentdate": "2024-01-18",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 15,
-          "period": 4,
-          "subject": "Science",
-          "classname": "Science Module Rotational Schedule",
-          "classroom": "Room 301",
-          "instructor": "Albert Einstein",
-          "progress": 62,
-          "averageGrade": 98,
-          "enrollmentdate": "2024-01-18",
-          "status": "Active"
-        }
-      ]
-    },
-    {
-      "studentid": "ca445",
-      "firstname": "Tiesha",
-      "lastname": "Garcia",
-      "email": "tiesha.g@school.edu",
-      "enrollments": [
-        {
-          "enrollmentid": 16,
-          "period": 6,
-          "subject": "Expedition",
-          "classname": "Expedition Rotational Schedule",
-          "classroom": "Lab A",
-          "instructor": "Marie Curie",
-          "progress": 87,
-          "averageGrade": 66,
-          "enrollmentdate": "2024-01-17",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 17,
-          "period": 3,
-          "subject": "IPL",
-          "classname": "IPL Series",
-          "classroom": "Room 201",
-          "instructor": "John Smith",
-          "progress": 43,
-          "averageGrade": 79,
-          "enrollmentdate": "2024-01-17",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 18,
-          "period": 7,
-          "subject": "Mathematics",
-          "classname": "Math Module Rotational Schedule",
-          "classroom": "Room 101",
-          "instructor": "Ada Lovelace",
-          "progress": 95,
-          "averageGrade": 72,
-          "enrollmentdate": "2024-01-17",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 19,
-          "period": 2,
-          "subject": "Dyad",
-          "classname": "Dyad Schedule",
-          "classroom": "Room 601",
-          "instructor": "Katherine Johnson",
-          "progress": 55,
-          "averageGrade": 92,
-          "enrollmentdate": "2024-01-17",
-          "status": "Active"
-        }
-      ]
-    },
-    {
-      "studentid": "ec139",
-      "firstname": "Luke",
-      "lastname": "Fischer",
-      "email": "luke.f@school.edu",
-      "enrollments": [
-        {
-          "enrollmentid": 20,
-          "period": 5,
-          "subject": "Assignment",
-          "classname": "Whole Class Assignment - Expedition",
-          "classroom": "Room 501",
-          "instructor": "Richard Feynman",
-          "progress": 96,
-          "averageGrade": 68,
-          "enrollmentdate": "2024-01-17",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 21,
-          "period": 2,
-          "subject": "Science",
-          "classname": "Science Module Rotational Schedule",
-          "classroom": "Room 301",
-          "instructor": "Albert Einstein",
-          "progress": 30,
-          "averageGrade": 74,
-          "enrollmentdate": "2024-01-17",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 22,
-          "period": 7,
-          "subject": "Mathematics",
-          "classname": "Math Module Rotational Schedule",
-          "classroom": "Room 101",
-          "instructor": "Ada Lovelace",
-          "progress": 99,
-          "averageGrade": 76,
-          "enrollmentdate": "2024-01-17",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 23,
-          "period": 4,
-          "subject": "Expedition",
-          "classname": "Expedition Rotational Schedule",
-          "classroom": "Lab A",
-          "instructor": "Marie Curie",
-          "progress": 35,
-          "averageGrade": 80,
-          "enrollmentdate": "2024-01-17",
-          "status": "Active"
-        }
-      ]
-    },
-    {
-      "studentid": "xl615",
-      "firstname": "Douglas",
-      "lastname": "Gomez",
-      "email": "douglas.g@school.edu",
-      "enrollments": [
-        {
-          "enrollmentid": 24,
-          "period": 1,
-          "subject": "Dyad",
-          "classname": "Dyad Schedule",
-          "classroom": "Room 601",
-          "instructor": "Katherine Johnson",
-          "progress": 82,
-          "averageGrade": 75,
-          "enrollmentdate": "2024-01-15",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 25,
-          "period": 2,
-          "subject": "Science",
-          "classname": "Science Module Rotational Schedule",
-          "classroom": "Room 301",
-          "instructor": "Albert Einstein",
-          "progress": 65,
-          "averageGrade": 66,
-          "enrollmentdate": "2024-01-15",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 26,
-          "period": 5,
-          "subject": "Module",
-          "classname": "Module / Expedition Rotational Schedule",
-          "classroom": "Room 401",
-          "instructor": "Grace Hopper",
-          "progress": 94,
-          "averageGrade": 93,
-          "enrollmentdate": "2024-01-15",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 27,
-          "period": 4,
-          "subject": "Assignment",
-          "classname": "Whole Class Assignment - Expedition",
-          "classroom": "Room 501",
-          "instructor": "Richard Feynman",
-          "progress": 73,
-          "averageGrade": 89,
-          "enrollmentdate": "2024-01-15",
-          "status": "Active"
-        }
-      ]
-    },
-    {
-      "studentid": "pq747",
-      "firstname": "Mark",
-      "lastname": "Schiffer",
-      "email": "mark.s@school.edu",
-      "enrollments": [
-        {
-          "enrollmentid": 28,
-          "period": 2,
-          "subject": "Module",
-          "classname": "Module / Expedition Rotational Schedule",
-          "classroom": "Room 401",
-          "instructor": "Grace Hopper",
-          "progress": 97,
-          "averageGrade": 98,
-          "enrollmentdate": "2024-01-16",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 29,
-          "period": 1,
-          "subject": "Dyad",
-          "classname": "Dyad Schedule",
-          "classroom": "Room 601",
-          "instructor": "Katherine Johnson",
-          "progress": 83,
-          "averageGrade": 81,
-          "enrollmentdate": "2024-01-16",
-          "status": "Active"
-        }
-      ]
-    },
-    {
-      "studentid": "pc252",
-      "firstname": "Tasha",
-      "lastname": "Burke",
-      "email": "tasha.b@school.edu",
-      "enrollments": [
-        {
-          "enrollmentid": 30,
-          "period": 2,
-          "subject": "Science",
-          "classname": "Science Module Rotational Schedule",
-          "classroom": "Room 301",
-          "instructor": "Albert Einstein",
-          "progress": 73,
-          "averageGrade": 97,
-          "enrollmentdate": "2024-01-18",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 31,
-          "period": 1,
-          "subject": "Mathematics",
-          "classname": "Math Module Rotational Schedule",
-          "classroom": "Room 101",
-          "instructor": "Ada Lovelace",
-          "progress": 88,
-          "averageGrade": 96,
-          "enrollmentdate": "2024-01-18",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 32,
-          "period": 6,
-          "subject": "IPL",
-          "classname": "IPL Series",
-          "classroom": "Room 201",
-          "instructor": "John Smith",
-          "progress": 96,
-          "averageGrade": 92,
-          "enrollmentdate": "2024-01-18",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 33,
-          "period": 5,
-          "subject": "Module",
-          "classname": "Whole Class Assignment - Module",
-          "classroom": "Room 401",
-          "instructor": "Grace Hopper",
-          "progress": 76,
-          "averageGrade": 93,
-          "enrollmentdate": "2024-01-18",
-          "status": "Active"
-        }
-      ]
-    },
-    {
-      "studentid": "ox287",
-      "firstname": "Ruth",
-      "lastname": "Hawkins",
-      "email": "ruth.h@school.edu",
-      "enrollments": [
-        {
-          "enrollmentid": 34,
-          "period": 1,
-          "subject": "Mathematics",
-          "classname": "Math Module Rotational Schedule",
-          "classroom": "Room 101",
-          "instructor": "Ada Lovelace",
-          "progress": 85,
-          "averageGrade": 78,
-          "enrollmentdate": "2024-01-15",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 35,
-          "period": 7,
-          "subject": "Science",
-          "classname": "Science Module Rotational Schedule",
-          "classroom": "Room 301",
-          "instructor": "Albert Einstein",
-          "progress": 82,
-          "averageGrade": 85,
-          "enrollmentdate": "2024-01-15",
-          "status": "Active"
-        }
-      ]
-    },
-    {
-      "studentid": "nx718",
-      "firstname": "Mary",
-      "lastname": "Lanzillo",
-      "email": "mary.l@school.edu",
-      "enrollments": [
-        {
-          "enrollmentid": 36,
-          "period": 2,
-          "subject": "IPL",
-          "classname": "IPL Series",
-          "classroom": "Room 201",
-          "instructor": "John Smith",
-          "progress": 49,
-          "averageGrade": 91,
-          "enrollmentdate": "2024-01-18",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 37,
-          "period": 4,
-          "subject": "Science",
-          "classname": "Science Module Rotational Schedule",
-          "classroom": "Room 301",
-          "instructor": "Albert Einstein",
-          "progress": 74,
-          "averageGrade": 98,
-          "enrollmentdate": "2024-01-18",
-          "status": "Active"
-        }
-      ]
-    },
-    {
-      "studentid": "co263",
-      "firstname": "Jose",
-      "lastname": "Sanders",
-      "email": "jose.s@school.edu",
-      "enrollments": [
-        {
-          "enrollmentid": 38,
-          "period": 8,
-          "subject": "Expedition",
-          "classname": "Expedition Rotational Schedule",
-          "classroom": "Lab A",
-          "instructor": "Marie Curie",
-          "progress": 83,
-          "averageGrade": 85,
-          "enrollmentdate": "2024-01-15",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 39,
-          "period": 7,
-          "subject": "Science",
-          "classname": "Science Module Rotational Schedule",
-          "classroom": "Room 301",
-          "instructor": "Albert Einstein",
-          "progress": 36,
-          "averageGrade": 76,
-          "enrollmentdate": "2024-01-15",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 40,
-          "period": 6,
-          "subject": "Assignment",
-          "classname": "Whole Class Assignment - Expedition",
-          "classroom": "Room 501",
-          "instructor": "Richard Feynman",
-          "progress": 93,
-          "averageGrade": 65,
-          "enrollmentdate": "2024-01-15",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 41,
-          "period": 3,
-          "subject": "Dyad",
-          "classname": "Dyad Schedule",
-          "classroom": "Room 601",
-          "instructor": "Katherine Johnson",
-          "progress": 40,
-          "averageGrade": 84,
-          "enrollmentdate": "2024-01-15",
-          "status": "Active"
-        }
-      ]
-    },
-    {
-      "studentid": "gp750",
-      "firstname": "Ken",
-      "lastname": "Shelton",
-      "email": "ken.s@school.edu",
-      "enrollments": [
-        {
-          "enrollmentid": 42,
-          "period": 6,
-          "subject": "Science",
-          "classname": "Science Module Rotational Schedule",
-          "classroom": "Room 301",
-          "instructor": "Albert Einstein",
-          "progress": 63,
-          "averageGrade": 86,
-          "enrollmentdate": "2024-01-16",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 43,
-          "period": 1,
-          "subject": "Dyad",
-          "classname": "Dyad Schedule",
-          "classroom": "Room 601",
-          "instructor": "Katherine Johnson",
-          "progress": 58,
-          "averageGrade": 78,
-          "enrollmentdate": "2024-01-16",
-          "status": "Active"
-        }
-      ]
-    },
-    {
-      "studentid": "zk356",
-      "firstname": "Raymond",
-      "lastname": "Menden",
-      "email": "raymond.m@school.edu",
-      "enrollments": [
-        {
-          "enrollmentid": 44,
-          "period": 8,
-          "subject": "Module",
-          "classname": "Whole Class Assignment - Module",
-          "classroom": "Room 401",
-          "instructor": "Grace Hopper",
-          "progress": 53,
-          "averageGrade": 81,
-          "enrollmentdate": "2024-01-17",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 45,
-          "period": 3,
-          "subject": "Expedition",
-          "classname": "Expedition Rotational Schedule",
-          "classroom": "Lab A",
-          "instructor": "Marie Curie",
-          "progress": 83,
-          "averageGrade": 77,
-          "enrollmentdate": "2024-01-17",
-          "status": "Active"
-        }
-      ]
-    },
-    {
-      "studentid": "rh846",
-      "firstname": "Ethel",
-      "lastname": "Ramiez",
-      "email": "ethel.r@school.edu",
-      "enrollments": [
-        {
-          "enrollmentid": 46,
-          "period": 8,
-          "subject": "Assignment",
-          "classname": "Whole Class Assignment - Expedition",
-          "classroom": "Room 501",
-          "instructor": "Richard Feynman",
-          "progress": 90,
-          "averageGrade": 69,
-          "enrollmentdate": "2024-01-15",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 47,
-          "period": 3,
-          "subject": "Dyad",
-          "classname": "Dyad Schedule",
-          "classroom": "Room 601",
-          "instructor": "Katherine Johnson",
-          "progress": 99,
-          "averageGrade": 98,
-          "enrollmentdate": "2024-01-15",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 48,
-          "period": 7,
-          "subject": "Science",
-          "classname": "Science Module Rotational Schedule",
-          "classroom": "Room 301",
-          "instructor": "Albert Einstein",
-          "progress": 83,
-          "averageGrade": 88,
-          "enrollmentdate": "2024-01-15",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 49,
-          "period": 4,
-          "subject": "Expedition",
-          "classname": "Expedition Rotational Schedule",
-          "classroom": "Lab A",
-          "instructor": "Marie Curie",
-          "progress": 80,
-          "averageGrade": 94,
-          "enrollmentdate": "2024-01-15",
-          "status": "Active"
-        }
-      ]
-    },
-    {
-      "studentid": "lu337",
-      "firstname": "Nickolas",
-      "lastname": "Graves",
-      "email": "nickolas.g@school.edu",
-      "enrollments": [
-        {
-          "enrollmentid": 50,
-          "period": 6,
-          "subject": "Dyad",
-          "classname": "Dyad Schedule",
-          "classroom": "Room 601",
-          "instructor": "Katherine Johnson",
-          "progress": 68,
-          "averageGrade": 90,
-          "enrollmentdate": "2024-01-15",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 51,
-          "period": 1,
-          "subject": "Science",
-          "classname": "Science Module Rotational Schedule",
-          "classroom": "Room 301",
-          "instructor": "Albert Einstein",
-          "progress": 92,
-          "averageGrade": 81,
-          "enrollmentdate": "2024-01-15",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 52,
-          "period": 5,
-          "subject": "Mathematics",
-          "classname": "Math Module Rotational Schedule",
-          "classroom": "Room 101",
-          "instructor": "Ada Lovelace",
-          "progress": 93,
-          "averageGrade": 91,
-          "enrollmentdate": "2024-01-15",
-          "status": "Active"
-        }
-      ]
-    },
-    {
-      "studentid": "qu206",
-      "firstname": "Kyle",
-      "lastname": "Jones",
-      "email": "kyle.j@school.edu",
-      "enrollments": [
-        {
-          "enrollmentid": 53,
-          "period": 4,
-          "subject": "Expedition",
-          "classname": "Expedition Rotational Schedule",
-          "classroom": "Lab A",
-          "instructor": "Marie Curie",
-          "progress": 77,
-          "averageGrade": 76,
-          "enrollmentdate": "2024-01-17",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 54,
-          "period": 6,
-          "subject": "Dyad",
-          "classname": "Dyad Schedule",
-          "classroom": "Room 601",
-          "instructor": "Katherine Johnson",
-          "progress": 31,
-          "averageGrade": 70,
-          "enrollmentdate": "2024-01-17",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 55,
-          "period": 8,
-          "subject": "Science",
-          "classname": "Science Module Rotational Schedule",
-          "classroom": "Room 301",
-          "instructor": "Albert Einstein",
-          "progress": 71,
-          "averageGrade": 90,
-          "enrollmentdate": "2024-01-17",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 56,
-          "period": 2,
-          "subject": "Mathematics",
-          "classname": "Math Module Rotational Schedule",
-          "classroom": "Room 101",
-          "instructor": "Ada Lovelace",
-          "progress": 76,
-          "averageGrade": 86,
-          "enrollmentdate": "2024-01-17",
-          "status": "Active"
-        }
-      ]
-    },
-    {
-      "studentid": "kt366",
-      "firstname": "Chris",
-      "lastname": "Mackey",
-      "email": "chris.m@school.edu",
-      "enrollments": [
-        {
-          "enrollmentid": 57,
-          "period": 2,
-          "subject": "Assignment",
-          "classname": "Whole Class Assignment - Expedition",
-          "classroom": "Room 501",
-          "instructor": "Richard Feynman",
-          "progress": 67,
-          "averageGrade": 89,
-          "enrollmentdate": "2024-01-18",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 58,
-          "period": 8,
-          "subject": "Module",
-          "classname": "Module / Expedition Rotational Schedule",
-          "classroom": "Room 401",
-          "instructor": "Grace Hopper",
-          "progress": 74,
-          "averageGrade": 82,
-          "enrollmentdate": "2024-01-18",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 59,
-          "period": 1,
-          "subject": "Expedition",
-          "classname": "Expedition Rotational Schedule",
-          "classroom": "Lab A",
-          "instructor": "Marie Curie",
-          "progress": 52,
-          "averageGrade": 69,
-          "enrollmentdate": "2024-01-18",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 60,
-          "period": 5,
-          "subject": "Mathematics",
-          "classname": "Math Module Rotational Schedule",
-          "classroom": "Room 101",
-          "instructor": "Ada Lovelace",
-          "progress": 49,
-          "averageGrade": 81,
-          "enrollmentdate": "2024-01-18",
-          "status": "Active"
-        }
-      ]
-    },
-    {
-      "studentid": "il278",
-      "firstname": "Vance",
-      "lastname": "Garcia",
-      "email": "vance.g@school.edu",
-      "enrollments": [
-        {
-          "enrollmentid": 61,
-          "period": 4,
-          "subject": "Assignment",
-          "classname": "Whole Class Assignment - Expedition",
-          "classroom": "Room 501",
-          "instructor": "Richard Feynman",
-          "progress": 32,
-          "averageGrade": 73,
-          "enrollmentdate": "2024-01-16",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 62,
-          "period": 5,
-          "subject": "Dyad",
-          "classname": "Dyad Schedule",
-          "classroom": "Room 601",
-          "instructor": "Katherine Johnson",
-          "progress": 59,
-          "averageGrade": 86,
-          "enrollmentdate": "2024-01-16",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 63,
-          "period": 3,
-          "subject": "Mathematics",
-          "classname": "Math Module Rotational Schedule",
-          "classroom": "Room 101",
-          "instructor": "Ada Lovelace",
-          "progress": 42,
-          "averageGrade": 93,
-          "enrollmentdate": "2024-01-16",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 64,
-          "period": 7,
-          "subject": "Module",
-          "classname": "Module / Expedition Rotational Schedule",
-          "classroom": "Room 401",
-          "instructor": "Grace Hopper",
-          "progress": 60,
-          "averageGrade": 76,
-          "enrollmentdate": "2024-01-16",
-          "status": "Active"
-        }
-      ]
-    },
-    {
-      "studentid": "hl327",
-      "firstname": "Steven",
-      "lastname": "Rains",
-      "email": "steven.r@school.edu",
-      "enrollments": [
-        {
-          "enrollmentid": 65,
-          "period": 7,
-          "subject": "Assignment",
-          "classname": "Whole Class Assignment - Expedition",
-          "classroom": "Room 501",
-          "instructor": "Richard Feynman",
-          "progress": 52,
-          "averageGrade": 67,
-          "enrollmentdate": "2024-01-18",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 66,
-          "period": 6,
-          "subject": "IPL",
-          "classname": "IPL Series",
-          "classroom": "Room 201",
-          "instructor": "John Smith",
-          "progress": 78,
-          "averageGrade": 89,
-          "enrollmentdate": "2024-01-18",
-          "status": "Active"
-        }
-      ]
-    },
-    {
-      "studentid": "ck971",
-      "firstname": "Sidney",
-      "lastname": "Wheeler",
-      "email": "sidney.w@school.edu",
-      "enrollments": [
-        {
-          "enrollmentid": 67,
-          "period": 3,
-          "subject": "Expedition",
-          "classname": "Expedition Rotational Schedule",
-          "classroom": "Lab A",
-          "instructor": "Marie Curie",
-          "progress": 91,
-          "averageGrade": 70,
-          "enrollmentdate": "2024-01-18",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 68,
-          "period": 8,
-          "subject": "Mathematics",
-          "classname": "Math Module Rotational Schedule",
-          "classroom": "Room 101",
-          "instructor": "Ada Lovelace",
-          "progress": 72,
-          "averageGrade": 87,
-          "enrollmentdate": "2024-01-18",
-          "status": "Active"
-        }
-      ]
-    },
-    {
-      "studentid": "ix373",
-      "firstname": "Lisa",
-      "lastname": "Cantell",
-      "email": "lisa.c@school.edu",
-      "enrollments": [
-        {
-          "enrollmentid": 69,
-          "period": 5,
-          "subject": "Expedition",
-          "classname": "Expedition Rotational Schedule",
-          "classroom": "Lab A",
-          "instructor": "Marie Curie",
-          "progress": 79,
-          "averageGrade": 90,
-          "enrollmentdate": "2024-01-17",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 70,
-          "period": 6,
-          "subject": "Module",
-          "classname": "Whole Class Assignment - Module",
-          "classroom": "Room 401",
-          "instructor": "Grace Hopper",
-          "progress": 36,
-          "averageGrade": 66,
-          "enrollmentdate": "2024-01-17",
-          "status": "Active"
-        }
-      ]
-    },
-    {
-      "studentid": "lb979",
-      "firstname": "James",
-      "lastname": "Haskins",
-      "email": "james.h@school.edu",
-      "enrollments": [
-        {
-          "enrollmentid": 71,
-          "period": 7,
-          "subject": "Dyad",
-          "classname": "Dyad Schedule",
-          "classroom": "Room 601",
-          "instructor": "Katherine Johnson",
-          "progress": 51,
-          "averageGrade": 92,
-          "enrollmentdate": "2024-01-18",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 72,
-          "period": 3,
-          "subject": "IPL",
-          "classname": "IPL Series",
-          "classroom": "Room 201",
-          "instructor": "John Smith",
-          "progress": 73,
-          "averageGrade": 91,
-          "enrollmentdate": "2024-01-18",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 73,
-          "period": 2,
-          "subject": "Science",
-          "classname": "Science Module Rotational Schedule",
-          "classroom": "Room 301",
-          "instructor": "Albert Einstein",
-          "progress": 34,
-          "averageGrade": 67,
-          "enrollmentdate": "2024-01-18",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 74,
-          "period": 1,
-          "subject": "Mathematics",
-          "classname": "Math Module Rotational Schedule",
-          "classroom": "Room 101",
-          "instructor": "Ada Lovelace",
-          "progress": 72,
-          "averageGrade": 77,
-          "enrollmentdate": "2024-01-18",
-          "status": "Active"
-        }
-      ]
-    },
-    {
-      "studentid": "qz505",
-      "firstname": "Joan",
-      "lastname": "Roby",
-      "email": "joan.r@school.edu",
-      "enrollments": [
-        {
-          "enrollmentid": 75,
-          "period": 2,
-          "subject": "Module",
-          "classname": "Whole Class Assignment - Module",
-          "classroom": "Room 401",
-          "instructor": "Grace Hopper",
-          "progress": 92,
-          "averageGrade": 77,
-          "enrollmentdate": "2024-01-15",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 76,
-          "period": 3,
-          "subject": "Mathematics",
-          "classname": "Math Module Rotational Schedule",
-          "classroom": "Room 101",
-          "instructor": "Ada Lovelace",
-          "progress": 66,
-          "averageGrade": 92,
-          "enrollmentdate": "2024-01-15",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 77,
-          "period": 4,
-          "subject": "Assignment",
-          "classname": "Whole Class Assignment - Expedition",
-          "classroom": "Room 501",
-          "instructor": "Richard Feynman",
-          "progress": 33,
-          "averageGrade": 65,
-          "enrollmentdate": "2024-01-15",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 78,
-          "period": 5,
-          "subject": "Science",
-          "classname": "Science Module Rotational Schedule",
-          "classroom": "Room 301",
-          "instructor": "Albert Einstein",
-          "progress": 80,
-          "averageGrade": 85,
-          "enrollmentdate": "2024-01-15",
-          "status": "Active"
-        }
-      ]
-    },
-    {
-      "studentid": "uz792",
-      "firstname": "Chad",
-      "lastname": "Fink",
-      "email": "chad.f@school.edu",
-      "enrollments": [
-        {
-          "enrollmentid": 79,
-          "period": 4,
-          "subject": "Science",
-          "classname": "Science Module Rotational Schedule",
-          "classroom": "Room 301",
-          "instructor": "Albert Einstein",
-          "progress": 33,
-          "averageGrade": 75,
-          "enrollmentdate": "2024-01-18",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 80,
-          "period": 8,
-          "subject": "Module",
-          "classname": "Module / Expedition Rotational Schedule",
-          "classroom": "Room 401",
-          "instructor": "Grace Hopper",
-          "progress": 82,
-          "averageGrade": 97,
-          "enrollmentdate": "2024-01-18",
-          "status": "Active"
-        }
-      ]
-    },
-    {
-      "studentid": "eb359",
-      "firstname": "Charles",
-      "lastname": "Puckett",
-      "email": "charles.p@school.edu",
-      "enrollments": [
-        {
-          "enrollmentid": 81,
-          "period": 5,
-          "subject": "Assignment",
-          "classname": "Whole Class Assignment - Expedition",
-          "classroom": "Room 501",
-          "instructor": "Richard Feynman",
-          "progress": 86,
-          "averageGrade": 98,
-          "enrollmentdate": "2024-01-15",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 82,
-          "period": 3,
-          "subject": "Dyad",
-          "classname": "Dyad Schedule",
-          "classroom": "Room 601",
-          "instructor": "Katherine Johnson",
-          "progress": 30,
-          "averageGrade": 92,
-          "enrollmentdate": "2024-01-15",
-          "status": "Active"
-        }
-      ]
-    },
-    {
-      "studentid": "ub356",
-      "firstname": "Mary",
-      "lastname": "Saxon",
-      "email": "mary.s@school.edu",
-      "enrollments": [
-        {
-          "enrollmentid": 83,
-          "period": 4,
-          "subject": "Dyad",
-          "classname": "Dyad Schedule",
-          "classroom": "Room 601",
-          "instructor": "Katherine Johnson",
-          "progress": 86,
-          "averageGrade": 73,
-          "enrollmentdate": "2024-01-16",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 84,
-          "period": 7,
-          "subject": "Module",
-          "classname": "Whole Class Assignment - Module",
-          "classroom": "Room 401",
-          "instructor": "Grace Hopper",
-          "progress": 72,
-          "averageGrade": 76,
-          "enrollmentdate": "2024-01-16",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 85,
-          "period": 8,
-          "subject": "Expedition",
-          "classname": "Expedition Rotational Schedule",
-          "classroom": "Lab A",
-          "instructor": "Marie Curie",
-          "progress": 75,
-          "averageGrade": 77,
-          "enrollmentdate": "2024-01-16",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 86,
-          "period": 3,
-          "subject": "Science",
-          "classname": "Science Module Rotational Schedule",
-          "classroom": "Room 301",
-          "instructor": "Albert Einstein",
-          "progress": 99,
-          "averageGrade": 72,
-          "enrollmentdate": "2024-01-16",
-          "status": "Active"
-        }
-      ]
-    },
-    {
-      "studentid": "ux965",
-      "firstname": "Lori",
-      "lastname": "Harwell",
-      "email": "lori.h@school.edu",
-      "enrollments": [
-        {
-          "enrollmentid": 87,
-          "period": 6,
-          "subject": "Assignment",
-          "classname": "Whole Class Assignment - Expedition",
-          "classroom": "Room 501",
-          "instructor": "Richard Feynman",
-          "progress": 74,
-          "averageGrade": 74,
-          "enrollmentdate": "2024-01-15",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 88,
-          "period": 8,
-          "subject": "Science",
-          "classname": "Science Module Rotational Schedule",
-          "classroom": "Room 301",
-          "instructor": "Albert Einstein",
-          "progress": 87,
-          "averageGrade": 83,
-          "enrollmentdate": "2024-01-15",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 89,
-          "period": 2,
-          "subject": "Dyad",
-          "classname": "Dyad Schedule",
-          "classroom": "Room 601",
-          "instructor": "Katherine Johnson",
-          "progress": 62,
-          "averageGrade": 69,
-          "enrollmentdate": "2024-01-15",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 90,
-          "period": 4,
-          "subject": "Expedition",
-          "classname": "Expedition Rotational Schedule",
-          "classroom": "Lab A",
-          "instructor": "Marie Curie",
-          "progress": 65,
-          "averageGrade": 70,
-          "enrollmentdate": "2024-01-15",
-          "status": "Active"
-        }
-      ]
-    },
-    {
-      "studentid": "bl916",
-      "firstname": "Gilberto",
-      "lastname": "Smith",
-      "email": "gilberto.s@school.edu",
-      "enrollments": [
-        {
-          "enrollmentid": 91,
-          "period": 1,
-          "subject": "Module",
-          "classname": "Whole Class Assignment - Module",
-          "classroom": "Room 401",
-          "instructor": "Grace Hopper",
-          "progress": 50,
-          "averageGrade": 79,
-          "enrollmentdate": "2024-01-18",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 92,
-          "period": 7,
-          "subject": "IPL",
-          "classname": "IPL Series",
-          "classroom": "Room 201",
-          "instructor": "John Smith",
-          "progress": 55,
-          "averageGrade": 84,
-          "enrollmentdate": "2024-01-18",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 93,
-          "period": 5,
-          "subject": "Mathematics",
-          "classname": "Math Module Rotational Schedule",
-          "classroom": "Room 101",
-          "instructor": "Ada Lovelace",
-          "progress": 84,
-          "averageGrade": 66,
-          "enrollmentdate": "2024-01-18",
-          "status": "Active"
-        }
-      ]
-    },
-    {
-      "studentid": "xj731",
-      "firstname": "Daniel",
-      "lastname": "Davis",
-      "email": "daniel.d@school.edu",
-      "enrollments": [
-        {
-          "enrollmentid": 94,
-          "period": 2,
-          "subject": "IPL",
-          "classname": "IPL Series",
-          "classroom": "Room 201",
-          "instructor": "John Smith",
-          "progress": 46,
-          "averageGrade": 65,
-          "enrollmentdate": "2024-01-16",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 95,
-          "period": 6,
-          "subject": "Mathematics",
-          "classname": "Math Module Rotational Schedule",
-          "classroom": "Room 101",
-          "instructor": "Ada Lovelace",
-          "progress": 75,
-          "averageGrade": 87,
-          "enrollmentdate": "2024-01-16",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 96,
-          "period": 5,
-          "subject": "Assignment",
-          "classname": "Whole Class Assignment - Expedition",
-          "classroom": "Room 501",
-          "instructor": "Richard Feynman",
-          "progress": 74,
-          "averageGrade": 93,
-          "enrollmentdate": "2024-01-16",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 97,
-          "period": 7,
-          "subject": "Dyad",
-          "classname": "Dyad Schedule",
-          "classroom": "Room 601",
-          "instructor": "Katherine Johnson",
-          "progress": 47,
-          "averageGrade": 93,
-          "enrollmentdate": "2024-01-16",
-          "status": "Active"
-        }
-      ]
-    },
-    {
-      "studentid": "hk461",
-      "firstname": "Kristin",
-      "lastname": "Mitchell",
-      "email": "kristin.m@school.edu",
-      "enrollments": [
-        {
-          "enrollmentid": 98,
-          "period": 8,
-          "subject": "Dyad",
-          "classname": "Dyad Schedule",
-          "classroom": "Room 601",
-          "instructor": "Katherine Johnson",
-          "progress": 30,
-          "averageGrade": 77,
-          "enrollmentdate": "2024-01-16",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 99,
-          "period": 2,
-          "subject": "Expedition",
-          "classname": "Expedition Rotational Schedule",
-          "classroom": "Lab A",
-          "instructor": "Marie Curie",
-          "progress": 93,
-          "averageGrade": 77,
-          "enrollmentdate": "2024-01-16",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 100,
-          "period": 4,
-          "subject": "Science",
-          "classname": "Science Module Rotational Schedule",
-          "classroom": "Room 301",
-          "instructor": "Albert Einstein",
-          "progress": 51,
-          "averageGrade": 97,
-          "enrollmentdate": "2024-01-16",
-          "status": "Active"
-        }
-      ]
-    },
-    {
-      "studentid": "hx699",
-      "firstname": "Javier",
-      "lastname": "Harry",
-      "email": "javier.h@school.edu",
-      "enrollments": [
-        {
-          "enrollmentid": 101,
-          "period": 8,
-          "subject": "IPL",
-          "classname": "IPL Series",
-          "classroom": "Room 201",
-          "instructor": "John Smith",
-          "progress": 66,
-          "averageGrade": 71,
-          "enrollmentdate": "2024-01-17",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 102,
-          "period": 3,
-          "subject": "Module",
-          "classname": "Whole Class Assignment - Module",
-          "classroom": "Room 401",
-          "instructor": "Grace Hopper",
-          "progress": 88,
-          "averageGrade": 90,
-          "enrollmentdate": "2024-01-17",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 103,
-          "period": 1,
-          "subject": "Dyad",
-          "classname": "Dyad Schedule",
-          "classroom": "Room 601",
-          "instructor": "Katherine Johnson",
-          "progress": 75,
-          "averageGrade": 84,
-          "enrollmentdate": "2024-01-17",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 104,
-          "period": 4,
-          "subject": "Science",
-          "classname": "Science Module Rotational Schedule",
-          "classroom": "Room 301",
-          "instructor": "Albert Einstein",
-          "progress": 100,
-          "averageGrade": 86,
-          "enrollmentdate": "2024-01-17",
-          "status": "Active"
-        }
-      ]
-    },
-    {
-      "studentid": "ns855",
-      "firstname": "Sandra",
-      "lastname": "Boswell",
-      "email": "sandra.b@school.edu",
-      "enrollments": [
-        {
-          "enrollmentid": 105,
-          "period": 8,
-          "subject": "Science",
-          "classname": "Science Module Rotational Schedule",
-          "classroom": "Room 301",
-          "instructor": "Albert Einstein",
-          "progress": 95,
-          "averageGrade": 77,
-          "enrollmentdate": "2024-01-17",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 106,
-          "period": 2,
-          "subject": "Assignment",
-          "classname": "Whole Class Assignment - Expedition",
-          "classroom": "Room 501",
-          "instructor": "Richard Feynman",
-          "progress": 71,
-          "averageGrade": 79,
-          "enrollmentdate": "2024-01-17",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 107,
-          "period": 5,
-          "subject": "IPL",
-          "classname": "IPL Series",
-          "classroom": "Room 201",
-          "instructor": "John Smith",
-          "progress": 90,
-          "averageGrade": 70,
-          "enrollmentdate": "2024-01-17",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 108,
-          "period": 6,
-          "subject": "Dyad",
-          "classname": "Dyad Schedule",
-          "classroom": "Room 601",
-          "instructor": "Katherine Johnson",
-          "progress": 87,
-          "averageGrade": 98,
-          "enrollmentdate": "2024-01-17",
-          "status": "Active"
-        }
-      ]
-    },
-    {
-      "studentid": "hd495",
-      "firstname": "Agnes",
-      "lastname": "Miller",
-      "email": "agnes.m@school.edu",
-      "enrollments": [
-        {
-          "enrollmentid": 109,
-          "period": 7,
-          "subject": "Module",
-          "classname": "Whole Class Assignment - Module",
-          "classroom": "Room 401",
-          "instructor": "Grace Hopper",
-          "progress": 30,
-          "averageGrade": 76,
-          "enrollmentdate": "2024-01-18",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 110,
-          "period": 5,
-          "subject": "Science",
-          "classname": "Science Module Rotational Schedule",
-          "classroom": "Room 301",
-          "instructor": "Albert Einstein",
-          "progress": 50,
-          "averageGrade": 79,
-          "enrollmentdate": "2024-01-18",
-          "status": "Active"
-        }
-      ]
-    },
-    {
-      "studentid": "cp934",
-      "firstname": "Christine",
-      "lastname": "Brown",
-      "email": "christine.b@school.edu",
-      "enrollments": [
-        {
-          "enrollmentid": 111,
-          "period": 8,
-          "subject": "IPL",
-          "classname": "IPL Series",
-          "classroom": "Room 201",
-          "instructor": "John Smith",
-          "progress": 39,
-          "averageGrade": 96,
-          "enrollmentdate": "2024-01-16",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 112,
-          "period": 5,
-          "subject": "Science",
-          "classname": "Science Module Rotational Schedule",
-          "classroom": "Room 301",
-          "instructor": "Albert Einstein",
-          "progress": 98,
-          "averageGrade": 67,
-          "enrollmentdate": "2024-01-16",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 113,
-          "period": 3,
-          "subject": "Dyad",
-          "classname": "Dyad Schedule",
-          "classroom": "Room 601",
-          "instructor": "Katherine Johnson",
-          "progress": 94,
-          "averageGrade": 73,
-          "enrollmentdate": "2024-01-16",
-          "status": "Active"
-        }
-      ]
-    },
-    {
-      "studentid": "vp805",
-      "firstname": "Jeanette",
-      "lastname": "Broadfoot",
-      "email": "jeanette.b@school.edu",
-      "enrollments": [
-        {
-          "enrollmentid": 114,
-          "period": 5,
-          "subject": "Mathematics",
-          "classname": "Math Module Rotational Schedule",
-          "classroom": "Room 101",
-          "instructor": "Ada Lovelace",
-          "progress": 89,
-          "averageGrade": 92,
-          "enrollmentdate": "2024-01-16",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 115,
-          "period": 6,
-          "subject": "Assignment",
-          "classname": "Whole Class Assignment - Expedition",
-          "classroom": "Room 501",
-          "instructor": "Richard Feynman",
-          "progress": 63,
-          "averageGrade": 92,
-          "enrollmentdate": "2024-01-16",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 116,
-          "period": 1,
-          "subject": "IPL",
-          "classname": "IPL Series",
-          "classroom": "Room 201",
-          "instructor": "John Smith",
-          "progress": 62,
-          "averageGrade": 82,
-          "enrollmentdate": "2024-01-16",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 117,
-          "period": 4,
-          "subject": "Module",
-          "classname": "Module / Expedition Rotational Schedule",
-          "classroom": "Room 401",
-          "instructor": "Grace Hopper",
-          "progress": 38,
-          "averageGrade": 76,
-          "enrollmentdate": "2024-01-16",
-          "status": "Active"
-        }
-      ]
-    },
-    {
-      "studentid": "ji908",
-      "firstname": "Elmer",
-      "lastname": "Brand",
-      "email": "elmer.b@school.edu",
-      "enrollments": [
-        {
-          "enrollmentid": 118,
-          "period": 2,
-          "subject": "Mathematics",
-          "classname": "Math Module Rotational Schedule",
-          "classroom": "Room 101",
-          "instructor": "Ada Lovelace",
-          "progress": 77,
-          "averageGrade": 84,
-          "enrollmentdate": "2024-01-17",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 119,
-          "period": 4,
-          "subject": "Expedition",
-          "classname": "Expedition Rotational Schedule",
-          "classroom": "Lab A",
-          "instructor": "Marie Curie",
-          "progress": 30,
-          "averageGrade": 66,
-          "enrollmentdate": "2024-01-17",
-          "status": "Active"
-        }
-      ]
-    },
-    {
-      "studentid": "jy674",
-      "firstname": "Christina",
-      "lastname": "Bequette",
-      "email": "christina.b@school.edu",
-      "enrollments": [
-        {
-          "enrollmentid": 120,
-          "period": 2,
-          "subject": "IPL",
-          "classname": "IPL Series",
-          "classroom": "Room 201",
-          "instructor": "John Smith",
-          "progress": 48,
-          "averageGrade": 74,
-          "enrollmentdate": "2024-01-17",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 121,
-          "period": 8,
-          "subject": "Mathematics",
-          "classname": "Math Module Rotational Schedule",
-          "classroom": "Room 101",
-          "instructor": "Ada Lovelace",
-          "progress": 85,
-          "averageGrade": 77,
-          "enrollmentdate": "2024-01-17",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 122,
-          "period": 4,
-          "subject": "Expedition",
-          "classname": "Expedition Rotational Schedule",
-          "classroom": "Lab A",
-          "instructor": "Marie Curie",
-          "progress": 66,
-          "averageGrade": 92,
-          "enrollmentdate": "2024-01-17",
-          "status": "Active"
-        }
-      ]
-    },
-    {
-      "studentid": "fh381",
-      "firstname": "Shirley",
-      "lastname": "Crowley",
-      "email": "shirley.c@school.edu",
-      "enrollments": [
-        {
-          "enrollmentid": 123,
-          "period": 2,
-          "subject": "Mathematics",
-          "classname": "Math Module Rotational Schedule",
-          "classroom": "Room 101",
-          "instructor": "Ada Lovelace",
-          "progress": 50,
-          "averageGrade": 75,
-          "enrollmentdate": "2024-01-18",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 124,
-          "period": 1,
-          "subject": "Dyad",
-          "classname": "Dyad Schedule",
-          "classroom": "Room 601",
-          "instructor": "Katherine Johnson",
-          "progress": 74,
-          "averageGrade": 70,
-          "enrollmentdate": "2024-01-18",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 125,
-          "period": 5,
-          "subject": "Module",
-          "classname": "Whole Class Assignment - Module",
-          "classroom": "Room 401",
-          "instructor": "Grace Hopper",
-          "progress": 63,
-          "averageGrade": 72,
-          "enrollmentdate": "2024-01-18",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 126,
-          "period": 6,
-          "subject": "Science",
-          "classname": "Science Module Rotational Schedule",
-          "classroom": "Room 301",
-          "instructor": "Albert Einstein",
-          "progress": 34,
-          "averageGrade": 82,
-          "enrollmentdate": "2024-01-18",
-          "status": "Active"
-        }
-      ]
-    },
-    {
-      "studentid": "hj357",
-      "firstname": "Dorothy",
-      "lastname": "Ragland",
-      "email": "dorothy.r@school.edu",
-      "enrollments": [
-        {
-          "enrollmentid": 127,
-          "period": 7,
-          "subject": "Module",
-          "classname": "Module / Expedition Rotational Schedule",
-          "classroom": "Room 401",
-          "instructor": "Grace Hopper",
-          "progress": 65,
-          "averageGrade": 97,
-          "enrollmentdate": "2024-01-17",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 128,
-          "period": 1,
-          "subject": "Mathematics",
-          "classname": "Math Module Rotational Schedule",
-          "classroom": "Room 101",
-          "instructor": "Ada Lovelace",
-          "progress": 39,
-          "averageGrade": 77,
-          "enrollmentdate": "2024-01-17",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 129,
-          "period": 5,
-          "subject": "Assignment",
-          "classname": "Whole Class Assignment - Expedition",
-          "classroom": "Room 501",
-          "instructor": "Richard Feynman",
-          "progress": 94,
-          "averageGrade": 92,
-          "enrollmentdate": "2024-01-17",
-          "status": "Active"
-        }
-      ]
-    },
-    {
-      "studentid": "of630",
-      "firstname": "Catherine",
-      "lastname": "Allen",
-      "email": "catherine.a@school.edu",
-      "enrollments": [
-        {
-          "enrollmentid": 130,
-          "period": 3,
-          "subject": "Mathematics",
-          "classname": "Math Module Rotational Schedule",
-          "classroom": "Room 101",
-          "instructor": "Ada Lovelace",
-          "progress": 96,
-          "averageGrade": 88,
-          "enrollmentdate": "2024-01-18",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 131,
-          "period": 7,
-          "subject": "Science",
-          "classname": "Science Module Rotational Schedule",
-          "classroom": "Room 301",
-          "instructor": "Albert Einstein",
-          "progress": 91,
-          "averageGrade": 70,
-          "enrollmentdate": "2024-01-18",
-          "status": "Active"
-        }
-      ]
-    },
-    {
-      "studentid": "cx414",
-      "firstname": "Charles",
-      "lastname": "Williams",
-      "email": "charles.w@school.edu",
-      "enrollments": [
-        {
-          "enrollmentid": 132,
-          "period": 4,
-          "subject": "Dyad",
-          "classname": "Dyad Schedule",
-          "classroom": "Room 601",
-          "instructor": "Katherine Johnson",
-          "progress": 71,
-          "averageGrade": 96,
-          "enrollmentdate": "2024-01-17",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 133,
-          "period": 3,
-          "subject": "Science",
-          "classname": "Science Module Rotational Schedule",
-          "classroom": "Room 301",
-          "instructor": "Albert Einstein",
-          "progress": 34,
-          "averageGrade": 88,
-          "enrollmentdate": "2024-01-17",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 134,
-          "period": 2,
-          "subject": "Expedition",
-          "classname": "Expedition Rotational Schedule",
-          "classroom": "Lab A",
-          "instructor": "Marie Curie",
-          "progress": 70,
-          "averageGrade": 89,
-          "enrollmentdate": "2024-01-17",
-          "status": "Active"
-        }
-      ]
-    },
-    {
-      "studentid": "qj535",
-      "firstname": "Linda",
-      "lastname": "Holley",
-      "email": "linda.h@school.edu",
-      "enrollments": [
-        {
-          "enrollmentid": 135,
-          "period": 5,
-          "subject": "Expedition",
-          "classname": "Expedition Rotational Schedule",
-          "classroom": "Lab A",
-          "instructor": "Marie Curie",
-          "progress": 47,
-          "averageGrade": 75,
-          "enrollmentdate": "2024-01-16",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 136,
-          "period": 7,
-          "subject": "Science",
-          "classname": "Science Module Rotational Schedule",
-          "classroom": "Room 301",
-          "instructor": "Albert Einstein",
-          "progress": 33,
-          "averageGrade": 94,
-          "enrollmentdate": "2024-01-16",
-          "status": "Active"
-        }
-      ]
-    },
-    {
-      "studentid": "dh301",
-      "firstname": "Melanie",
-      "lastname": "Beckett",
-      "email": "melanie.b@school.edu",
-      "enrollments": [
-        {
-          "enrollmentid": 137,
-          "period": 2,
-          "subject": "Mathematics",
-          "classname": "Math Module Rotational Schedule",
-          "classroom": "Room 101",
-          "instructor": "Ada Lovelace",
-          "progress": 78,
-          "averageGrade": 92,
-          "enrollmentdate": "2024-01-18",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 138,
-          "period": 4,
-          "subject": "Expedition",
-          "classname": "Expedition Rotational Schedule",
-          "classroom": "Lab A",
-          "instructor": "Marie Curie",
-          "progress": 71,
-          "averageGrade": 96,
-          "enrollmentdate": "2024-01-18",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 139,
-          "period": 3,
-          "subject": "Module",
-          "classname": "Whole Class Assignment - Module",
-          "classroom": "Room 401",
-          "instructor": "Grace Hopper",
-          "progress": 99,
-          "averageGrade": 96,
-          "enrollmentdate": "2024-01-18",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 140,
-          "period": 5,
-          "subject": "Science",
-          "classname": "Science Module Rotational Schedule",
-          "classroom": "Room 301",
-          "instructor": "Albert Einstein",
-          "progress": 59,
-          "averageGrade": 95,
-          "enrollmentdate": "2024-01-18",
-          "status": "Active"
-        }
-      ]
-    },
-    {
-      "studentid": "jt904",
-      "firstname": "Frank",
-      "lastname": "Lewis",
-      "email": "frank.l@school.edu",
-      "enrollments": [
-        {
-          "enrollmentid": 141,
-          "period": 1,
-          "subject": "Module",
-          "classname": "Module / Expedition Rotational Schedule",
-          "classroom": "Room 401",
-          "instructor": "Grace Hopper",
-          "progress": 66,
-          "averageGrade": 76,
-          "enrollmentdate": "2024-01-16",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 142,
-          "period": 4,
-          "subject": "Science",
-          "classname": "Science Module Rotational Schedule",
-          "classroom": "Room 301",
-          "instructor": "Albert Einstein",
-          "progress": 67,
-          "averageGrade": 92,
-          "enrollmentdate": "2024-01-16",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 143,
-          "period": 5,
-          "subject": "IPL",
-          "classname": "IPL Series",
-          "classroom": "Room 201",
-          "instructor": "John Smith",
-          "progress": 80,
-          "averageGrade": 97,
-          "enrollmentdate": "2024-01-16",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 144,
-          "period": 8,
-          "subject": "Dyad",
-          "classname": "Dyad Schedule",
-          "classroom": "Room 601",
-          "instructor": "Katherine Johnson",
-          "progress": 46,
-          "averageGrade": 92,
-          "enrollmentdate": "2024-01-16",
-          "status": "Active"
-        }
-      ]
-    },
-    {
-      "studentid": "wt489",
-      "firstname": "Earl",
-      "lastname": "Peoples",
-      "email": "earl.p@school.edu",
-      "enrollments": [
-        {
-          "enrollmentid": 145,
-          "period": 2,
-          "subject": "Expedition",
-          "classname": "Expedition Rotational Schedule",
-          "classroom": "Lab A",
-          "instructor": "Marie Curie",
-          "progress": 99,
-          "averageGrade": 67,
-          "enrollmentdate": "2024-01-18",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 146,
-          "period": 1,
-          "subject": "Module",
-          "classname": "Whole Class Assignment - Module",
-          "classroom": "Room 401",
-          "instructor": "Grace Hopper",
-          "progress": 54,
-          "averageGrade": 93,
-          "enrollmentdate": "2024-01-18",
-          "status": "Active"
-        }
-      ]
-    },
-    {
-      "studentid": "hi322",
-      "firstname": "Charles",
-      "lastname": "Ramage",
-      "email": "charles.r@school.edu",
-      "enrollments": [
-        {
-          "enrollmentid": 147,
-          "period": 2,
-          "subject": "Dyad",
-          "classname": "Dyad Schedule",
-          "classroom": "Room 601",
-          "instructor": "Katherine Johnson",
-          "progress": 100,
-          "averageGrade": 86,
-          "enrollmentdate": "2024-01-15",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 148,
-          "period": 5,
-          "subject": "Mathematics",
-          "classname": "Math Module Rotational Schedule",
-          "classroom": "Room 101",
-          "instructor": "Ada Lovelace",
-          "progress": 86,
-          "averageGrade": 92,
-          "enrollmentdate": "2024-01-15",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 149,
-          "period": 8,
-          "subject": "Expedition",
-          "classname": "Expedition Rotational Schedule",
-          "classroom": "Lab A",
-          "instructor": "Marie Curie",
-          "progress": 43,
-          "averageGrade": 98,
-          "enrollmentdate": "2024-01-15",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 150,
-          "period": 4,
-          "subject": "Science",
-          "classname": "Science Module Rotational Schedule",
-          "classroom": "Room 301",
-          "instructor": "Albert Einstein",
-          "progress": 95,
-          "averageGrade": 71,
-          "enrollmentdate": "2024-01-15",
-          "status": "Active"
-        }
-      ]
-    },
-    {
-      "studentid": "ls922",
-      "firstname": "Gina",
-      "lastname": "Botello",
-      "email": "gina.b@school.edu",
-      "enrollments": [
-        {
-          "enrollmentid": 151,
-          "period": 5,
-          "subject": "IPL",
-          "classname": "IPL Series",
-          "classroom": "Room 201",
-          "instructor": "John Smith",
-          "progress": 40,
-          "averageGrade": 91,
-          "enrollmentdate": "2024-01-17",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 152,
-          "period": 8,
-          "subject": "Science",
-          "classname": "Science Module Rotational Schedule",
-          "classroom": "Room 301",
-          "instructor": "Albert Einstein",
-          "progress": 38,
-          "averageGrade": 67,
-          "enrollmentdate": "2024-01-17",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 153,
-          "period": 7,
-          "subject": "Expedition",
-          "classname": "Expedition Rotational Schedule",
-          "classroom": "Lab A",
-          "instructor": "Marie Curie",
-          "progress": 64,
-          "averageGrade": 71,
-          "enrollmentdate": "2024-01-17",
-          "status": "Active"
-        }
-      ]
-    },
-    {
-      "studentid": "gb896",
-      "firstname": "Kenneth",
-      "lastname": "Nguyen",
-      "email": "kenneth.n@school.edu",
-      "enrollments": [
-        {
-          "enrollmentid": 154,
-          "period": 4,
-          "subject": "Mathematics",
-          "classname": "Math Module Rotational Schedule",
-          "classroom": "Room 101",
-          "instructor": "Ada Lovelace",
-          "progress": 64,
-          "averageGrade": 65,
-          "enrollmentdate": "2024-01-15",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 155,
-          "period": 2,
-          "subject": "Science",
-          "classname": "Science Module Rotational Schedule",
-          "classroom": "Room 301",
-          "instructor": "Albert Einstein",
-          "progress": 63,
-          "averageGrade": 70,
-          "enrollmentdate": "2024-01-15",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 156,
-          "period": 3,
-          "subject": "Expedition",
-          "classname": "Expedition Rotational Schedule",
-          "classroom": "Lab A",
-          "instructor": "Marie Curie",
-          "progress": 98,
-          "averageGrade": 93,
-          "enrollmentdate": "2024-01-15",
-          "status": "Active"
-        }
-      ]
-    },
-    {
-      "studentid": "hx778",
-      "firstname": "Kevin",
-      "lastname": "Russell",
-      "email": "kevin.r@school.edu",
-      "enrollments": [
-        {
-          "enrollmentid": 157,
-          "period": 4,
-          "subject": "Dyad",
-          "classname": "Dyad Schedule",
-          "classroom": "Room 601",
-          "instructor": "Katherine Johnson",
-          "progress": 32,
-          "averageGrade": 80,
-          "enrollmentdate": "2024-01-17",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 158,
-          "period": 1,
-          "subject": "Assignment",
-          "classname": "Whole Class Assignment - Expedition",
-          "classroom": "Room 501",
-          "instructor": "Richard Feynman",
-          "progress": 88,
-          "averageGrade": 69,
-          "enrollmentdate": "2024-01-17",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 159,
-          "period": 7,
-          "subject": "Science",
-          "classname": "Science Module Rotational Schedule",
-          "classroom": "Room 301",
-          "instructor": "Albert Einstein",
-          "progress": 62,
-          "averageGrade": 69,
-          "enrollmentdate": "2024-01-17",
-          "status": "Active"
-        }
-      ]
-    },
-    {
-      "studentid": "ae996",
-      "firstname": "Zachary",
-      "lastname": "Hargrove",
-      "email": "zachary.h@school.edu",
-      "enrollments": [
-        {
-          "enrollmentid": 160,
-          "period": 8,
-          "subject": "Assignment",
-          "classname": "Whole Class Assignment - Expedition",
-          "classroom": "Room 501",
-          "instructor": "Richard Feynman",
-          "progress": 80,
-          "averageGrade": 67,
-          "enrollmentdate": "2024-01-17",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 161,
-          "period": 7,
-          "subject": "Dyad",
-          "classname": "Dyad Schedule",
-          "classroom": "Room 601",
-          "instructor": "Katherine Johnson",
-          "progress": 86,
-          "averageGrade": 67,
-          "enrollmentdate": "2024-01-17",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 162,
-          "period": 1,
-          "subject": "Science",
-          "classname": "Science Module Rotational Schedule",
-          "classroom": "Room 301",
-          "instructor": "Albert Einstein",
-          "progress": 47,
-          "averageGrade": 95,
-          "enrollmentdate": "2024-01-17",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 163,
-          "period": 3,
-          "subject": "Expedition",
-          "classname": "Expedition Rotational Schedule",
-          "classroom": "Lab A",
-          "instructor": "Marie Curie",
-          "progress": 61,
-          "averageGrade": 70,
-          "enrollmentdate": "2024-01-17",
-          "status": "Active"
-        }
-      ]
-    },
-    {
-      "studentid": "gz911",
-      "firstname": "Jason",
-      "lastname": "Jones",
-      "email": "jason.j@school.edu",
-      "enrollments": [
-        {
-          "enrollmentid": 164,
-          "period": 7,
-          "subject": "IPL",
-          "classname": "IPL Series",
-          "classroom": "Room 201",
-          "instructor": "John Smith",
-          "progress": 60,
-          "averageGrade": 93,
-          "enrollmentdate": "2024-01-18",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 165,
-          "period": 5,
-          "subject": "Dyad",
-          "classname": "Dyad Schedule",
-          "classroom": "Room 601",
-          "instructor": "Katherine Johnson",
-          "progress": 81,
-          "averageGrade": 96,
-          "enrollmentdate": "2024-01-18",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 166,
-          "period": 8,
-          "subject": "Expedition",
-          "classname": "Expedition Rotational Schedule",
-          "classroom": "Lab A",
-          "instructor": "Marie Curie",
-          "progress": 55,
-          "averageGrade": 78,
-          "enrollmentdate": "2024-01-18",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 167,
-          "period": 1,
-          "subject": "Science",
-          "classname": "Science Module Rotational Schedule",
-          "classroom": "Room 301",
-          "instructor": "Albert Einstein",
-          "progress": 40,
-          "averageGrade": 82,
-          "enrollmentdate": "2024-01-18",
-          "status": "Active"
-        }
-      ]
-    },
-    {
-      "studentid": "eh526",
-      "firstname": "Tracy",
-      "lastname": "Losada",
-      "email": "tracy.l@school.edu",
-      "enrollments": [
-        {
-          "enrollmentid": 168,
-          "period": 6,
-          "subject": "Assignment",
-          "classname": "Whole Class Assignment - Expedition",
-          "classroom": "Room 501",
-          "instructor": "Richard Feynman",
-          "progress": 76,
-          "averageGrade": 92,
-          "enrollmentdate": "2024-01-16",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 169,
-          "period": 1,
-          "subject": "IPL",
-          "classname": "IPL Series",
-          "classroom": "Room 201",
-          "instructor": "John Smith",
-          "progress": 84,
-          "averageGrade": 74,
-          "enrollmentdate": "2024-01-16",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 170,
-          "period": 3,
-          "subject": "Expedition",
-          "classname": "Expedition Rotational Schedule",
-          "classroom": "Lab A",
-          "instructor": "Marie Curie",
-          "progress": 64,
-          "averageGrade": 92,
-          "enrollmentdate": "2024-01-16",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 171,
-          "period": 7,
-          "subject": "Module",
-          "classname": "Whole Class Assignment - Module",
-          "classroom": "Room 401",
-          "instructor": "Grace Hopper",
-          "progress": 91,
-          "averageGrade": 82,
-          "enrollmentdate": "2024-01-16",
-          "status": "Active"
-        }
-      ]
-    },
-    {
-      "studentid": "vs560",
-      "firstname": "Dennis",
-      "lastname": "Swinney",
-      "email": "dennis.s@school.edu",
-      "enrollments": [
-        {
-          "enrollmentid": 172,
-          "period": 2,
-          "subject": "IPL",
-          "classname": "IPL Series",
-          "classroom": "Room 201",
-          "instructor": "John Smith",
-          "progress": 94,
-          "averageGrade": 82,
-          "enrollmentdate": "2024-01-17",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 173,
-          "period": 7,
-          "subject": "Module",
-          "classname": "Module / Expedition Rotational Schedule",
-          "classroom": "Room 401",
-          "instructor": "Grace Hopper",
-          "progress": 38,
-          "averageGrade": 85,
-          "enrollmentdate": "2024-01-17",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 174,
-          "period": 5,
-          "subject": "Expedition",
-          "classname": "Expedition Rotational Schedule",
-          "classroom": "Lab A",
-          "instructor": "Marie Curie",
-          "progress": 100,
-          "averageGrade": 81,
-          "enrollmentdate": "2024-01-17",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 175,
-          "period": 1,
-          "subject": "Science",
-          "classname": "Science Module Rotational Schedule",
-          "classroom": "Room 301",
-          "instructor": "Albert Einstein",
-          "progress": 61,
-          "averageGrade": 83,
-          "enrollmentdate": "2024-01-17",
-          "status": "Active"
-        }
-      ]
-    },
-    {
-      "studentid": "sh324",
-      "firstname": "Ethel",
-      "lastname": "Steadman",
-      "email": "ethel.s@school.edu",
-      "enrollments": [
-        {
-          "enrollmentid": 176,
-          "period": 1,
-          "subject": "Module",
-          "classname": "Whole Class Assignment - Module",
-          "classroom": "Room 401",
-          "instructor": "Grace Hopper",
-          "progress": 59,
-          "averageGrade": 93,
-          "enrollmentdate": "2024-01-18",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 177,
-          "period": 6,
-          "subject": "Mathematics",
-          "classname": "Math Module Rotational Schedule",
-          "classroom": "Room 101",
-          "instructor": "Ada Lovelace",
-          "progress": 37,
-          "averageGrade": 79,
-          "enrollmentdate": "2024-01-18",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 178,
-          "period": 8,
-          "subject": "Assignment",
-          "classname": "Whole Class Assignment - Expedition",
-          "classroom": "Room 501",
-          "instructor": "Richard Feynman",
-          "progress": 35,
-          "averageGrade": 87,
-          "enrollmentdate": "2024-01-18",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 179,
-          "period": 3,
-          "subject": "Expedition",
-          "classname": "Expedition Rotational Schedule",
-          "classroom": "Lab A",
-          "instructor": "Marie Curie",
-          "progress": 99,
-          "averageGrade": 81,
-          "enrollmentdate": "2024-01-18",
-          "status": "Active"
-        }
-      ]
-    },
-    {
-      "studentid": "lt365",
-      "firstname": "Anthony",
-      "lastname": "Dunn",
-      "email": "anthony.d@school.edu",
-      "enrollments": [
-        {
-          "enrollmentid": 180,
-          "period": 5,
-          "subject": "Science",
-          "classname": "Science Module Rotational Schedule",
-          "classroom": "Room 301",
-          "instructor": "Albert Einstein",
-          "progress": 82,
-          "averageGrade": 87,
-          "enrollmentdate": "2024-01-15",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 181,
-          "period": 4,
-          "subject": "Mathematics",
-          "classname": "Math Module Rotational Schedule",
-          "classroom": "Room 101",
-          "instructor": "Ada Lovelace",
-          "progress": 74,
-          "averageGrade": 89,
-          "enrollmentdate": "2024-01-15",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 182,
-          "period": 7,
-          "subject": "Assignment",
-          "classname": "Whole Class Assignment - Expedition",
-          "classroom": "Room 501",
-          "instructor": "Richard Feynman",
-          "progress": 64,
-          "averageGrade": 94,
-          "enrollmentdate": "2024-01-15",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 183,
-          "period": 2,
-          "subject": "Expedition",
-          "classname": "Expedition Rotational Schedule",
-          "classroom": "Lab A",
-          "instructor": "Marie Curie",
-          "progress": 93,
-          "averageGrade": 65,
-          "enrollmentdate": "2024-01-15",
-          "status": "Active"
-        }
-      ]
-    },
-    {
-      "studentid": "dk180",
-      "firstname": "Lynn",
-      "lastname": "Mcintosh",
-      "email": "lynn.m@school.edu",
-      "enrollments": [
-        {
-          "enrollmentid": 184,
-          "period": 4,
-          "subject": "Science",
-          "classname": "Science Module Rotational Schedule",
-          "classroom": "Room 301",
-          "instructor": "Albert Einstein",
-          "progress": 51,
-          "averageGrade": 94,
-          "enrollmentdate": "2024-01-17",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 185,
-          "period": 8,
-          "subject": "Dyad",
-          "classname": "Dyad Schedule",
-          "classroom": "Room 601",
-          "instructor": "Katherine Johnson",
-          "progress": 52,
-          "averageGrade": 93,
-          "enrollmentdate": "2024-01-17",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 186,
-          "period": 2,
-          "subject": "Assignment",
-          "classname": "Whole Class Assignment - Expedition",
-          "classroom": "Room 501",
-          "instructor": "Richard Feynman",
-          "progress": 44,
-          "averageGrade": 89,
-          "enrollmentdate": "2024-01-17",
-          "status": "Active"
-        }
-      ]
-    },
-    {
-      "studentid": "yy851",
-      "firstname": "Billy",
-      "lastname": "Mcfadden",
-      "email": "billy.m@school.edu",
-      "enrollments": [
-        {
-          "enrollmentid": 187,
-          "period": 3,
-          "subject": "Dyad",
-          "classname": "Dyad Schedule",
-          "classroom": "Room 601",
-          "instructor": "Katherine Johnson",
-          "progress": 94,
-          "averageGrade": 84,
-          "enrollmentdate": "2024-01-16",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 188,
-          "period": 5,
-          "subject": "Expedition",
-          "classname": "Expedition Rotational Schedule",
-          "classroom": "Lab A",
-          "instructor": "Marie Curie",
-          "progress": 68,
-          "averageGrade": 82,
-          "enrollmentdate": "2024-01-16",
-          "status": "Active"
-        }
-      ]
-    },
-    {
-      "studentid": "cd753",
-      "firstname": "Daniel",
-      "lastname": "Noblett",
-      "email": "daniel.n@school.edu",
-      "enrollments": [
-        {
-          "enrollmentid": 189,
-          "period": 7,
-          "subject": "Assignment",
-          "classname": "Whole Class Assignment - Expedition",
-          "classroom": "Room 501",
-          "instructor": "Richard Feynman",
-          "progress": 50,
-          "averageGrade": 76,
-          "enrollmentdate": "2024-01-15",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 190,
-          "period": 2,
-          "subject": "IPL",
-          "classname": "IPL Series",
-          "classroom": "Room 201",
-          "instructor": "John Smith",
-          "progress": 83,
-          "averageGrade": 73,
-          "enrollmentdate": "2024-01-15",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 191,
-          "period": 8,
-          "subject": "Dyad",
-          "classname": "Dyad Schedule",
-          "classroom": "Room 601",
-          "instructor": "Katherine Johnson",
-          "progress": 65,
-          "averageGrade": 98,
-          "enrollmentdate": "2024-01-15",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 192,
-          "period": 4,
-          "subject": "Science",
-          "classname": "Science Module Rotational Schedule",
-          "classroom": "Room 301",
-          "instructor": "Albert Einstein",
-          "progress": 94,
-          "averageGrade": 93,
-          "enrollmentdate": "2024-01-15",
-          "status": "Active"
-        }
-      ]
-    },
-    {
-      "studentid": "kh597",
-      "firstname": "Alexandria",
-      "lastname": "Johnson",
-      "email": "alexandria.j@school.edu",
-      "enrollments": [
-        {
-          "enrollmentid": 193,
-          "period": 1,
-          "subject": "Assignment",
-          "classname": "Whole Class Assignment - Expedition",
-          "classroom": "Room 501",
-          "instructor": "Richard Feynman",
-          "progress": 35,
-          "averageGrade": 80,
-          "enrollmentdate": "2024-01-17",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 194,
-          "period": 3,
-          "subject": "Science",
-          "classname": "Science Module Rotational Schedule",
-          "classroom": "Room 301",
-          "instructor": "Albert Einstein",
-          "progress": 83,
-          "averageGrade": 88,
-          "enrollmentdate": "2024-01-17",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 195,
-          "period": 7,
-          "subject": "Expedition",
-          "classname": "Expedition Rotational Schedule",
-          "classroom": "Lab A",
-          "instructor": "Marie Curie",
-          "progress": 96,
-          "averageGrade": 73,
-          "enrollmentdate": "2024-01-17",
-          "status": "Active"
-        }
-      ]
-    },
-    {
-      "studentid": "sz104",
-      "firstname": "Ashley",
-      "lastname": "Freeman",
-      "email": "ashley.f@school.edu",
-      "enrollments": [
-        {
-          "enrollmentid": 196,
-          "period": 2,
-          "subject": "Expedition",
-          "classname": "Expedition Rotational Schedule",
-          "classroom": "Lab A",
-          "instructor": "Marie Curie",
-          "progress": 73,
-          "averageGrade": 85,
-          "enrollmentdate": "2024-01-18",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 197,
-          "period": 4,
-          "subject": "IPL",
-          "classname": "IPL Series",
-          "classroom": "Room 201",
-          "instructor": "John Smith",
-          "progress": 56,
-          "averageGrade": 82,
-          "enrollmentdate": "2024-01-18",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 198,
-          "period": 1,
-          "subject": "Assignment",
-          "classname": "Whole Class Assignment - Expedition",
-          "classroom": "Room 501",
-          "instructor": "Richard Feynman",
-          "progress": 51,
-          "averageGrade": 87,
-          "enrollmentdate": "2024-01-18",
-          "status": "Active"
-        }
-      ]
-    },
-    {
-      "studentid": "xi953",
-      "firstname": "Dianna",
-      "lastname": "Garcia",
-      "email": "dianna.g@school.edu",
-      "enrollments": [
-        {
-          "enrollmentid": 199,
-          "period": 3,
-          "subject": "Module",
-          "classname": "Module / Expedition Rotational Schedule",
-          "classroom": "Room 401",
-          "instructor": "Grace Hopper",
-          "progress": 67,
-          "averageGrade": 94,
-          "enrollmentdate": "2024-01-16",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 200,
-          "period": 2,
-          "subject": "Mathematics",
-          "classname": "Math Module Rotational Schedule",
-          "classroom": "Room 101",
-          "instructor": "Ada Lovelace",
-          "progress": 41,
-          "averageGrade": 90,
-          "enrollmentdate": "2024-01-16",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 201,
-          "period": 7,
-          "subject": "IPL",
-          "classname": "IPL Series",
-          "classroom": "Room 201",
-          "instructor": "John Smith",
-          "progress": 91,
-          "averageGrade": 69,
-          "enrollmentdate": "2024-01-16",
-          "status": "Active"
-        }
-      ]
-    },
-    {
-      "studentid": "lc613",
-      "firstname": "Donald",
-      "lastname": "Walker",
-      "email": "donald.w@school.edu",
-      "enrollments": [
-        {
-          "enrollmentid": 202,
-          "period": 7,
-          "subject": "Expedition",
-          "classname": "Expedition Rotational Schedule",
-          "classroom": "Lab A",
-          "instructor": "Marie Curie",
-          "progress": 64,
-          "averageGrade": 79,
-          "enrollmentdate": "2024-01-16",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 203,
-          "period": 1,
-          "subject": "Assignment",
-          "classname": "Whole Class Assignment - Expedition",
-          "classroom": "Room 501",
-          "instructor": "Richard Feynman",
-          "progress": 83,
-          "averageGrade": 94,
-          "enrollmentdate": "2024-01-16",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 204,
-          "period": 3,
-          "subject": "Dyad",
-          "classname": "Dyad Schedule",
-          "classroom": "Room 601",
-          "instructor": "Katherine Johnson",
-          "progress": 58,
-          "averageGrade": 82,
-          "enrollmentdate": "2024-01-16",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 205,
-          "period": 2,
-          "subject": "Module",
-          "classname": "Module / Expedition Rotational Schedule",
-          "classroom": "Room 401",
-          "instructor": "Grace Hopper",
-          "progress": 45,
-          "averageGrade": 90,
-          "enrollmentdate": "2024-01-16",
-          "status": "Active"
-        }
-      ]
-    },
-    {
-      "studentid": "ny228",
-      "firstname": "Anna",
-      "lastname": "Dickow",
-      "email": "anna.d@school.edu",
-      "enrollments": [
-        {
-          "enrollmentid": 206,
-          "period": 5,
-          "subject": "Science",
-          "classname": "Science Module Rotational Schedule",
-          "classroom": "Room 301",
-          "instructor": "Albert Einstein",
-          "progress": 70,
-          "averageGrade": 87,
-          "enrollmentdate": "2024-01-15",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 207,
-          "period": 4,
-          "subject": "IPL",
-          "classname": "IPL Series",
-          "classroom": "Room 201",
-          "instructor": "John Smith",
-          "progress": 86,
-          "averageGrade": 93,
-          "enrollmentdate": "2024-01-15",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 208,
-          "period": 6,
-          "subject": "Module",
-          "classname": "Module / Expedition Rotational Schedule",
-          "classroom": "Room 401",
-          "instructor": "Grace Hopper",
-          "progress": 55,
-          "averageGrade": 65,
-          "enrollmentdate": "2024-01-15",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 209,
-          "period": 8,
-          "subject": "Expedition",
-          "classname": "Expedition Rotational Schedule",
-          "classroom": "Lab A",
-          "instructor": "Marie Curie",
-          "progress": 54,
-          "averageGrade": 96,
-          "enrollmentdate": "2024-01-15",
-          "status": "Active"
-        }
-      ]
-    },
-    {
-      "studentid": "pf993",
-      "firstname": "Nelson",
-      "lastname": "Montero",
-      "email": "nelson.m@school.edu",
-      "enrollments": [
-        {
-          "enrollmentid": 210,
-          "period": 3,
-          "subject": "Module",
-          "classname": "Whole Class Assignment - Module",
-          "classroom": "Room 401",
-          "instructor": "Grace Hopper",
-          "progress": 62,
-          "averageGrade": 75,
-          "enrollmentdate": "2024-01-18",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 211,
-          "period": 7,
-          "subject": "Mathematics",
-          "classname": "Math Module Rotational Schedule",
-          "classroom": "Room 101",
-          "instructor": "Ada Lovelace",
-          "progress": 46,
-          "averageGrade": 86,
-          "enrollmentdate": "2024-01-18",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 212,
-          "period": 1,
-          "subject": "IPL",
-          "classname": "IPL Series",
-          "classroom": "Room 201",
-          "instructor": "John Smith",
-          "progress": 50,
-          "averageGrade": 80,
-          "enrollmentdate": "2024-01-18",
-          "status": "Active"
-        }
-      ]
-    },
-    {
-      "studentid": "ly109",
-      "firstname": "Constance",
-      "lastname": "Sawyer",
-      "email": "constance.s@school.edu",
-      "enrollments": [
-        {
-          "enrollmentid": 213,
-          "period": 8,
-          "subject": "Assignment",
-          "classname": "Whole Class Assignment - Expedition",
-          "classroom": "Room 501",
-          "instructor": "Richard Feynman",
-          "progress": 100,
-          "averageGrade": 89,
-          "enrollmentdate": "2024-01-17",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 214,
-          "period": 5,
-          "subject": "Expedition",
-          "classname": "Expedition Rotational Schedule",
-          "classroom": "Lab A",
-          "instructor": "Marie Curie",
-          "progress": 75,
-          "averageGrade": 71,
-          "enrollmentdate": "2024-01-17",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 215,
-          "period": 1,
-          "subject": "Dyad",
-          "classname": "Dyad Schedule",
-          "classroom": "Room 601",
-          "instructor": "Katherine Johnson",
-          "progress": 89,
-          "averageGrade": 73,
-          "enrollmentdate": "2024-01-17",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 216,
-          "period": 7,
-          "subject": "Mathematics",
-          "classname": "Math Module Rotational Schedule",
-          "classroom": "Room 101",
-          "instructor": "Ada Lovelace",
-          "progress": 65,
-          "averageGrade": 84,
-          "enrollmentdate": "2024-01-17",
-          "status": "Active"
-        }
-      ]
-    },
-    {
-      "studentid": "yj532",
-      "firstname": "George",
-      "lastname": "Rodriguez",
-      "email": "george.r@school.edu",
-      "enrollments": [
-        {
-          "enrollmentid": 217,
-          "period": 8,
-          "subject": "Expedition",
-          "classname": "Expedition Rotational Schedule",
-          "classroom": "Lab A",
-          "instructor": "Marie Curie",
-          "progress": 44,
-          "averageGrade": 72,
-          "enrollmentdate": "2024-01-17",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 218,
-          "period": 6,
-          "subject": "Science",
-          "classname": "Science Module Rotational Schedule",
-          "classroom": "Room 301",
-          "instructor": "Albert Einstein",
-          "progress": 75,
-          "averageGrade": 76,
-          "enrollmentdate": "2024-01-17",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 219,
-          "period": 7,
-          "subject": "Dyad",
-          "classname": "Dyad Schedule",
-          "classroom": "Room 601",
-          "instructor": "Katherine Johnson",
-          "progress": 69,
-          "averageGrade": 85,
-          "enrollmentdate": "2024-01-17",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 220,
-          "period": 5,
-          "subject": "Mathematics",
-          "classname": "Math Module Rotational Schedule",
-          "classroom": "Room 101",
-          "instructor": "Ada Lovelace",
-          "progress": 63,
-          "averageGrade": 73,
-          "enrollmentdate": "2024-01-17",
-          "status": "Active"
-        }
-      ]
-    },
-    {
-      "studentid": "ck357",
-      "firstname": "James",
-      "lastname": "Ross",
-      "email": "james.r@school.edu",
-      "enrollments": [
-        {
-          "enrollmentid": 221,
-          "period": 4,
-          "subject": "Mathematics",
-          "classname": "Math Module Rotational Schedule",
-          "classroom": "Room 101",
-          "instructor": "Ada Lovelace",
-          "progress": 33,
-          "averageGrade": 75,
-          "enrollmentdate": "2024-01-18",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 222,
-          "period": 3,
-          "subject": "Module",
-          "classname": "Whole Class Assignment - Module",
-          "classroom": "Room 401",
-          "instructor": "Grace Hopper",
-          "progress": 99,
-          "averageGrade": 74,
-          "enrollmentdate": "2024-01-18",
-          "status": "Active"
-        }
-      ]
-    },
-    {
-      "studentid": "oe242",
-      "firstname": "Clarence",
-      "lastname": "Gammon",
-      "email": "clarence.g@school.edu",
-      "enrollments": [
-        {
-          "enrollmentid": 223,
-          "period": 6,
-          "subject": "Science",
-          "classname": "Science Module Rotational Schedule",
-          "classroom": "Room 301",
-          "instructor": "Albert Einstein",
-          "progress": 63,
-          "averageGrade": 83,
-          "enrollmentdate": "2024-01-16",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 224,
-          "period": 8,
-          "subject": "Mathematics",
-          "classname": "Math Module Rotational Schedule",
-          "classroom": "Room 101",
-          "instructor": "Ada Lovelace",
-          "progress": 32,
-          "averageGrade": 68,
-          "enrollmentdate": "2024-01-16",
-          "status": "Active"
-        }
-      ]
-    },
-    {
-      "studentid": "fp597",
-      "firstname": "John",
-      "lastname": "Robinson",
-      "email": "john.r@school.edu",
-      "enrollments": [
-        {
-          "enrollmentid": 225,
-          "period": 7,
-          "subject": "Science",
-          "classname": "Science Module Rotational Schedule",
-          "classroom": "Room 301",
-          "instructor": "Albert Einstein",
-          "progress": 85,
-          "averageGrade": 94,
-          "enrollmentdate": "2024-01-16",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 226,
-          "period": 2,
-          "subject": "Dyad",
-          "classname": "Dyad Schedule",
-          "classroom": "Room 601",
-          "instructor": "Katherine Johnson",
-          "progress": 40,
-          "averageGrade": 74,
-          "enrollmentdate": "2024-01-16",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 227,
-          "period": 6,
-          "subject": "IPL",
-          "classname": "IPL Series",
-          "classroom": "Room 201",
-          "instructor": "John Smith",
-          "progress": 98,
-          "averageGrade": 82,
-          "enrollmentdate": "2024-01-16",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 228,
-          "period": 5,
-          "subject": "Mathematics",
-          "classname": "Math Module Rotational Schedule",
-          "classroom": "Room 101",
-          "instructor": "Ada Lovelace",
-          "progress": 32,
-          "averageGrade": 75,
-          "enrollmentdate": "2024-01-16",
-          "status": "Active"
-        }
-      ]
-    },
-    {
-      "studentid": "vf980",
-      "firstname": "Joshua",
-      "lastname": "Violette",
-      "email": "joshua.v@school.edu",
-      "enrollments": [
-        {
-          "enrollmentid": 229,
-          "period": 5,
-          "subject": "Mathematics",
-          "classname": "Math Module Rotational Schedule",
-          "classroom": "Room 101",
-          "instructor": "Ada Lovelace",
-          "progress": 41,
-          "averageGrade": 91,
-          "enrollmentdate": "2024-01-17",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 230,
-          "period": 4,
-          "subject": "Expedition",
-          "classname": "Expedition Rotational Schedule",
-          "classroom": "Lab A",
-          "instructor": "Marie Curie",
-          "progress": 80,
-          "averageGrade": 88,
-          "enrollmentdate": "2024-01-17",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 231,
-          "period": 2,
-          "subject": "IPL",
-          "classname": "IPL Series",
-          "classroom": "Room 201",
-          "instructor": "John Smith",
-          "progress": 95,
-          "averageGrade": 91,
-          "enrollmentdate": "2024-01-17",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 232,
-          "period": 3,
-          "subject": "Dyad",
-          "classname": "Dyad Schedule",
-          "classroom": "Room 601",
-          "instructor": "Katherine Johnson",
-          "progress": 100,
-          "averageGrade": 93,
-          "enrollmentdate": "2024-01-17",
-          "status": "Active"
-        }
-      ]
-    },
-    {
-      "studentid": "ru459",
-      "firstname": "Melvin",
-      "lastname": "Rochford",
-      "email": "melvin.r@school.edu",
-      "enrollments": [
-        {
-          "enrollmentid": 233,
-          "period": 2,
-          "subject": "IPL",
-          "classname": "IPL Series",
-          "classroom": "Room 201",
-          "instructor": "John Smith",
-          "progress": 74,
-          "averageGrade": 84,
-          "enrollmentdate": "2024-01-15",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 234,
-          "period": 7,
-          "subject": "Mathematics",
-          "classname": "Math Module Rotational Schedule",
-          "classroom": "Room 101",
-          "instructor": "Ada Lovelace",
-          "progress": 93,
-          "averageGrade": 84,
-          "enrollmentdate": "2024-01-15",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 235,
-          "period": 8,
-          "subject": "Dyad",
-          "classname": "Dyad Schedule",
-          "classroom": "Room 601",
-          "instructor": "Katherine Johnson",
-          "progress": 76,
-          "averageGrade": 88,
-          "enrollmentdate": "2024-01-15",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 236,
-          "period": 6,
-          "subject": "Module",
-          "classname": "Module / Expedition Rotational Schedule",
-          "classroom": "Room 401",
-          "instructor": "Grace Hopper",
-          "progress": 38,
-          "averageGrade": 87,
-          "enrollmentdate": "2024-01-15",
-          "status": "Active"
-        }
-      ]
-    },
-    {
-      "studentid": "yk305",
-      "firstname": "Denise",
-      "lastname": "Williams",
-      "email": "denise.w@school.edu",
-      "enrollments": [
-        {
-          "enrollmentid": 237,
-          "period": 8,
-          "subject": "Expedition",
-          "classname": "Expedition Rotational Schedule",
-          "classroom": "Lab A",
-          "instructor": "Marie Curie",
-          "progress": 94,
-          "averageGrade": 83,
-          "enrollmentdate": "2024-01-16",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 238,
-          "period": 7,
-          "subject": "Mathematics",
-          "classname": "Math Module Rotational Schedule",
-          "classroom": "Room 101",
-          "instructor": "Ada Lovelace",
-          "progress": 47,
-          "averageGrade": 68,
-          "enrollmentdate": "2024-01-16",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 239,
-          "period": 1,
-          "subject": "Dyad",
-          "classname": "Dyad Schedule",
-          "classroom": "Room 601",
-          "instructor": "Katherine Johnson",
-          "progress": 62,
-          "averageGrade": 65,
-          "enrollmentdate": "2024-01-16",
-          "status": "Active"
-        }
-      ]
-    },
-    {
-      "studentid": "sp964",
-      "firstname": "Stephen",
-      "lastname": "Gilliard",
-      "email": "stephen.g@school.edu",
-      "enrollments": [
-        {
-          "enrollmentid": 240,
-          "period": 1,
-          "subject": "Mathematics",
-          "classname": "Math Module Rotational Schedule",
-          "classroom": "Room 101",
-          "instructor": "Ada Lovelace",
-          "progress": 52,
-          "averageGrade": 74,
-          "enrollmentdate": "2024-01-15",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 241,
-          "period": 5,
-          "subject": "Assignment",
-          "classname": "Whole Class Assignment - Expedition",
-          "classroom": "Room 501",
-          "instructor": "Richard Feynman",
-          "progress": 74,
-          "averageGrade": 77,
-          "enrollmentdate": "2024-01-15",
-          "status": "Active"
-        }
-      ]
-    },
-    {
-      "studentid": "tm589",
-      "firstname": "Frances",
-      "lastname": "Santos",
-      "email": "frances.s@school.edu",
-      "enrollments": [
-        {
-          "enrollmentid": 242,
-          "period": 5,
-          "subject": "Mathematics",
-          "classname": "Math Module Rotational Schedule",
-          "classroom": "Room 101",
-          "instructor": "Ada Lovelace",
-          "progress": 55,
-          "averageGrade": 68,
-          "enrollmentdate": "2024-01-16",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 243,
-          "period": 4,
-          "subject": "Assignment",
-          "classname": "Whole Class Assignment - Expedition",
-          "classroom": "Room 501",
-          "instructor": "Richard Feynman",
-          "progress": 79,
-          "averageGrade": 82,
-          "enrollmentdate": "2024-01-16",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 244,
-          "period": 6,
-          "subject": "Science",
-          "classname": "Science Module Rotational Schedule",
-          "classroom": "Room 301",
-          "instructor": "Albert Einstein",
-          "progress": 52,
-          "averageGrade": 89,
-          "enrollmentdate": "2024-01-16",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 245,
-          "period": 8,
-          "subject": "Dyad",
-          "classname": "Dyad Schedule",
-          "classroom": "Room 601",
-          "instructor": "Katherine Johnson",
-          "progress": 81,
-          "averageGrade": 83,
-          "enrollmentdate": "2024-01-16",
-          "status": "Active"
-        }
-      ]
-    },
-    {
-      "studentid": "aw338",
-      "firstname": "Lee",
-      "lastname": "Brown",
-      "email": "lee.b@school.edu",
-      "enrollments": [
-        {
-          "enrollmentid": 246,
-          "period": 8,
-          "subject": "Science",
-          "classname": "Science Module Rotational Schedule",
-          "classroom": "Room 301",
-          "instructor": "Albert Einstein",
-          "progress": 96,
-          "averageGrade": 86,
-          "enrollmentdate": "2024-01-18",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 247,
-          "period": 1,
-          "subject": "Mathematics",
-          "classname": "Math Module Rotational Schedule",
-          "classroom": "Room 101",
-          "instructor": "Ada Lovelace",
-          "progress": 83,
-          "averageGrade": 78,
-          "enrollmentdate": "2024-01-18",
-          "status": "Active"
-        }
-      ]
-    },
-    {
-      "studentid": "sc582",
-      "firstname": "Bruce",
-      "lastname": "Brown",
-      "email": "bruce.b@school.edu",
-      "enrollments": [
-        {
-          "enrollmentid": 248,
-          "period": 7,
-          "subject": "Module",
-          "classname": "Module / Expedition Rotational Schedule",
-          "classroom": "Room 401",
-          "instructor": "Grace Hopper",
-          "progress": 52,
-          "averageGrade": 71,
-          "enrollmentdate": "2024-01-16",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 249,
-          "period": 1,
-          "subject": "Expedition",
-          "classname": "Expedition Rotational Schedule",
-          "classroom": "Lab A",
-          "instructor": "Marie Curie",
-          "progress": 86,
-          "averageGrade": 73,
-          "enrollmentdate": "2024-01-16",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 250,
-          "period": 8,
-          "subject": "Mathematics",
-          "classname": "Math Module Rotational Schedule",
-          "classroom": "Room 101",
-          "instructor": "Ada Lovelace",
-          "progress": 32,
-          "averageGrade": 80,
-          "enrollmentdate": "2024-01-16",
-          "status": "Active"
+      "id": "s4778",
+      "title": "West Academy",
+      "address": "3342 Education Ave",
+      "administrators": [
+        {
+          "id": "xn887",
+          "firstname": "Sabrina",
+          "lastname": "Bone",
+          "email": "sabrina.b@school.edu"
+        },
+        {
+          "id": "fp552",
+          "firstname": "Sharon",
+          "lastname": "Scheumann",
+          "email": "sharon.s@school.edu"
         }
-      ]
-    },
-    {
-      "studentid": "bs419",
-      "firstname": "Jamie",
-      "lastname": "Beaulieu",
-      "email": "jamie.b@school.edu",
-      "enrollments": [
-        {
-          "enrollmentid": 251,
-          "period": 7,
-          "subject": "Dyad",
-          "classname": "Dyad Schedule",
-          "classroom": "Room 601",
-          "instructor": "Katherine Johnson",
-          "progress": 38,
-          "averageGrade": 72,
-          "enrollmentdate": "2024-01-16",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 252,
-          "period": 2,
-          "subject": "IPL",
-          "classname": "IPL Series",
-          "classroom": "Room 201",
-          "instructor": "John Smith",
-          "progress": 76,
-          "averageGrade": 94,
-          "enrollmentdate": "2024-01-16",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 253,
-          "period": 5,
-          "subject": "Expedition",
-          "classname": "Expedition Rotational Schedule",
-          "classroom": "Lab A",
-          "instructor": "Marie Curie",
-          "progress": 71,
-          "averageGrade": 74,
-          "enrollmentdate": "2024-01-16",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 254,
-          "period": 6,
-          "subject": "Module",
-          "classname": "Module / Expedition Rotational Schedule",
-          "classroom": "Room 401",
-          "instructor": "Grace Hopper",
-          "progress": 60,
-          "averageGrade": 80,
-          "enrollmentdate": "2024-01-16",
-          "status": "Active"
+      ],
+      "instructors": [
+        {
+          "id": "iy961",
+          "firstname": "Francisco",
+          "lastname": "Gandara",
+          "email": "francisco.g@school.edu"
+        },
+        {
+          "id": "ui938",
+          "firstname": "Darryl",
+          "lastname": "Brown",
+          "email": "darryl.b@school.edu"
+        },
+        {
+          "id": "kc301",
+          "firstname": "Ruby",
+          "lastname": "Bently",
+          "email": "ruby.b@school.edu"
+        },
+        {
+          "id": "gr162",
+          "firstname": "Angelo",
+          "lastname": "Simms",
+          "email": "angelo.s@school.edu"
+        },
+        {
+          "id": "ji283",
+          "firstname": "Adam",
+          "lastname": "Null",
+          "email": "adam.n@school.edu"
+        },
+        {
+          "id": "fy804",
+          "firstname": "Demetria",
+          "lastname": "Hilliard",
+          "email": "demetria.h@school.edu"
+        },
+        {
+          "id": "xv865",
+          "firstname": "Kimberley",
+          "lastname": "Brune",
+          "email": "kimberley.b@school.edu"
+        },
+        {
+          "id": "so928",
+          "firstname": "Joseph",
+          "lastname": "Junkins",
+          "email": "joseph.j@school.edu"
         }
-      ]
-    },
-    {
-      "studentid": "uf193",
-      "firstname": "Gilbert",
-      "lastname": "Butler",
-      "email": "gilbert.b@school.edu",
-      "enrollments": [
-        {
-          "enrollmentid": 255,
-          "period": 8,
-          "subject": "Mathematics",
-          "classname": "Math Module Rotational Schedule",
-          "classroom": "Room 101",
-          "instructor": "Ada Lovelace",
-          "progress": 93,
-          "averageGrade": 70,
-          "enrollmentdate": "2024-01-18",
-          "status": "Active"
-        },
-        {
-          "enrollmentid": 256,
-          "period": 1,
-          "subject": "Science",
-          "classname": "Science Module Rotational Schedule",
-          "classroom": "Room 301",
-          "instructor": "Albert Einstein",
-          "progress": 80,
-          "averageGrade": 76,
-          "enrollmentdate": "2024-01-18",
-          "status": "Active"
+      ],
+      "students": [
+        {
+          "id": "mj325",
+          "firstname": "Tonya",
+          "lastname": "Acosta",
+          "email": "tonya.a@school.edu"
+        },
+        {
+          "id": "pi253",
+          "firstname": "Bruce",
+          "lastname": "Chan",
+          "email": "bruce.c@school.edu"
+        },
+        {
+          "id": "ys200",
+          "firstname": "Tamar",
+          "lastname": "Henderson",
+          "email": "tamar.h@school.edu"
+        },
+        {
+          "id": "gc491",
+          "firstname": "Steven",
+          "lastname": "Koster",
+          "email": "steven.k@school.edu"
+        },
+        {
+          "id": "rx503",
+          "firstname": "Paul",
+          "lastname": "Rider",
+          "email": "paul.r@school.edu"
+        },
+        {
+          "id": "ru735",
+          "firstname": "Jenny",
+          "lastname": "Blechman",
+          "email": "jenny.b@school.edu"
+        },
+        {
+          "id": "eq242",
+          "firstname": "Linda",
+          "lastname": "Anderson",
+          "email": "linda.a@school.edu"
+        },
+        {
+          "id": "yg987",
+          "firstname": "Steven",
+          "lastname": "Violette",
+          "email": "steven.v@school.edu"
+        },
+        {
+          "id": "pr952",
+          "firstname": "Gloria",
+          "lastname": "Esquivel",
+          "email": "gloria.e@school.edu"
+        },
+        {
+          "id": "vj993",
+          "firstname": "Robert",
+          "lastname": "Voorhees",
+          "email": "robert.v@school.edu"
+        },
+        {
+          "id": "tw447",
+          "firstname": "Jeffrey",
+          "lastname": "Hunt",
+          "email": "jeffrey.h@school.edu"
+        },
+        {
+          "id": "ff433",
+          "firstname": "Mary",
+          "lastname": "Petersen",
+          "email": "mary.p@school.edu"
+        },
+        {
+          "id": "ud909",
+          "firstname": "Nellie",
+          "lastname": "Aranda",
+          "email": "nellie.a@school.edu"
+        },
+        {
+          "id": "wg816",
+          "firstname": "Erica",
+          "lastname": "Vanoy",
+          "email": "erica.v@school.edu"
+        },
+        {
+          "id": "wx946",
+          "firstname": "Benjamin",
+          "lastname": "Smith",
+          "email": "benjamin.s@school.edu"
+        },
+        {
+          "id": "pv991",
+          "firstname": "Joel",
+          "lastname": "Bussard",
+          "email": "joel.b@school.edu"
+        },
+        {
+          "id": "xf293",
+          "firstname": "Charles",
+          "lastname": "Rosado",
+          "email": "charles.r@school.edu"
+        },
+        {
+          "id": "ij971",
+          "firstname": "Stacey",
+          "lastname": "Schwenke",
+          "email": "stacey.s@school.edu"
+        },
+        {
+          "id": "bg704",
+          "firstname": "Jinny",
+          "lastname": "Fata",
+          "email": "jinny.f@school.edu"
+        },
+        {
+          "id": "mr535",
+          "firstname": "John",
+          "lastname": "Saxman",
+          "email": "john.s@school.edu"
+        },
+        {
+          "id": "az596",
+          "firstname": "Ruben",
+          "lastname": "Teruel",
+          "email": "ruben.t@school.edu"
+        },
+        {
+          "id": "rn256",
+          "firstname": "Golda",
+          "lastname": "Walden",
+          "email": "golda.w@school.edu"
+        },
+        {
+          "id": "qe545",
+          "firstname": "Tim",
+          "lastname": "Jackson",
+          "email": "tim.j@school.edu"
+        },
+        {
+          "id": "vx670",
+          "firstname": "Yvonne",
+          "lastname": "Jones",
+          "email": "yvonne.j@school.edu"
+        },
+        {
+          "id": "vp168",
+          "firstname": "Kathleen",
+          "lastname": "Johnson",
+          "email": "kathleen.j@school.edu"
+        },
+        {
+          "id": "ud823",
+          "firstname": "Natalie",
+          "lastname": "Larson",
+          "email": "natalie.l@school.edu"
+        },
+        {
+          "id": "pd136",
+          "firstname": "Sidney",
+          "lastname": "Johnson",
+          "email": "sidney.j@school.edu"
+        },
+        {
+          "id": "sv117",
+          "firstname": "Fannie",
+          "lastname": "Christensen",
+          "email": "fannie.c@school.edu"
+        },
+        {
+          "id": "la615",
+          "firstname": "Sandy",
+          "lastname": "Rajan",
+          "email": "sandy.r@school.edu"
+        },
+        {
+          "id": "qj699",
+          "firstname": "Emil",
+          "lastname": "Miller",
+          "email": "emil.m@school.edu"
+        },
+        {
+          "id": "yl698",
+          "firstname": "Annette",
+          "lastname": "Clack",
+          "email": "annette.c@school.edu"
+        },
+        {
+          "id": "ca880",
+          "firstname": "Tina",
+          "lastname": "Rubio",
+          "email": "tina.r@school.edu"
+        },
+        {
+          "id": "na996",
+          "firstname": "Christopher",
+          "lastname": "Gaines",
+          "email": "christopher.g@school.edu"
+        },
+        {
+          "id": "yo272",
+          "firstname": "Alma",
+          "lastname": "Baker",
+          "email": "alma.b@school.edu"
+        },
+        {
+          "id": "kn671",
+          "firstname": "Janet",
+          "lastname": "Mcphearson",
+          "email": "janet.m@school.edu"
+        },
+        {
+          "id": "ej455",
+          "firstname": "Robert",
+          "lastname": "Robinson",
+          "email": "robert.r@school.edu"
+        },
+        {
+          "id": "jf626",
+          "firstname": "Jared",
+          "lastname": "Wilson",
+          "email": "jared.w@school.edu"
+        },
+        {
+          "id": "so270",
+          "firstname": "Rebecca",
+          "lastname": "Sanders",
+          "email": "rebecca.s@school.edu"
+        },
+        {
+          "id": "us509",
+          "firstname": "James",
+          "lastname": "Martinez",
+          "email": "james.m@school.edu"
+        },
+        {
+          "id": "wd682",
+          "firstname": "Kyle",
+          "lastname": "Morales",
+          "email": "kyle.m@school.edu"
+        }
+      ],
+      "classrooms": [
+        {
+          "id": "s4778-Lab462",
+          "title": "Lab 462",
+          "instructor": "iy961",
+          "courses": [
+            {
+              "id": "c4497",
+              "period": 7,
+              "title": "Science Expeditions 4",
+              "grade_level": 9,
+              "category": "Expeditions",
+              "subject": "Science",
+              "classroom": "s4778-Lab462",
+              "instructor": "iy961",
+              "enrolled_students": [
+                "gc491",
+                "mr535",
+                "la615"
+              ]
+            },
+            {
+              "id": "c2812",
+              "period": 6,
+              "title": "Math Steps/iLearn 5",
+              "grade_level": 7,
+              "category": "Steps/iLearn",
+              "subject": "Math",
+              "classroom": "s4778-Lab462",
+              "instructor": "iy961",
+              "enrolled_students": []
+            },
+            {
+              "id": "c7342",
+              "period": 2,
+              "title": "Science Modules 2",
+              "grade_level": 8,
+              "category": "Modules",
+              "subject": "Science",
+              "classroom": "s4778-Lab462",
+              "instructor": "iy961",
+              "enrolled_students": []
+            },
+            {
+              "id": "c2574",
+              "period": 3,
+              "title": "Math Expeditions 5",
+              "grade_level": 8,
+              "category": "Expeditions",
+              "subject": "Math",
+              "classroom": "s4778-Lab462",
+              "instructor": "iy961",
+              "enrolled_students": [
+                "vj993",
+                "vp168",
+                "so270"
+              ]
+            },
+            {
+              "id": "c4356",
+              "period": 8,
+              "title": "Science Expeditions 3",
+              "grade_level": 6,
+              "category": "Expeditions",
+              "subject": "Science",
+              "classroom": "s4778-Lab462",
+              "instructor": "iy961",
+              "enrolled_students": [
+                "pi253",
+                "ca880",
+                "ej455"
+              ]
+            }
+          ],
+          "students": [
+            "pi253",
+            "gc491",
+            "vj993",
+            "mr535",
+            "vp168",
+            "la615",
+            "ca880",
+            "ej455",
+            "so270"
+          ]
+        },
+        {
+          "id": "s4778-Studio265",
+          "title": "Studio 265",
+          "instructor": "ui938",
+          "courses": [
+            {
+              "id": "c1507",
+              "period": 5,
+              "title": "Science Expeditions 2",
+              "grade_level": 7,
+              "category": "Expeditions",
+              "subject": "Science",
+              "classroom": "s4778-Studio265",
+              "instructor": "ui938",
+              "enrolled_students": [
+                "eq242",
+                "ff433"
+              ]
+            },
+            {
+              "id": "c7470",
+              "period": 7,
+              "title": "Math Steps/iLearn 1",
+              "grade_level": 8,
+              "category": "Steps/iLearn",
+              "subject": "Math",
+              "classroom": "s4778-Studio265",
+              "instructor": "ui938",
+              "enrolled_students": [
+                "la615",
+                "kn671"
+              ]
+            },
+            {
+              "id": "c6991",
+              "period": 3,
+              "title": "Science Expeditions 2",
+              "grade_level": 7,
+              "category": "Expeditions",
+              "subject": "Science",
+              "classroom": "s4778-Studio265",
+              "instructor": "ui938",
+              "enrolled_students": [
+                "mj325",
+                "rx503",
+                "yg987"
+              ]
+            },
+            {
+              "id": "c6259",
+              "period": 8,
+              "title": "Science Expeditions 1",
+              "grade_level": 9,
+              "category": "Expeditions",
+              "subject": "Science",
+              "classroom": "s4778-Studio265",
+              "instructor": "ui938",
+              "enrolled_students": [
+                "vj993",
+                "ij971",
+                "vp168",
+                "ud823",
+                "yo272",
+                "kn671",
+                "us509"
+              ]
+            }
+          ],
+          "students": [
+            "mj325",
+            "rx503",
+            "eq242",
+            "yg987",
+            "vj993",
+            "ff433",
+            "ij971",
+            "vp168",
+            "ud823",
+            "la615",
+            "yo272",
+            "kn671",
+            "us509"
+          ]
+        },
+        {
+          "id": "s4778-Studio951",
+          "title": "Studio 951",
+          "instructor": "kc301",
+          "courses": [
+            {
+              "id": "c7173",
+              "period": 6,
+              "title": "Science Expeditions 1",
+              "grade_level": 8,
+              "category": "Expeditions",
+              "subject": "Science",
+              "classroom": "s4778-Studio951",
+              "instructor": "kc301",
+              "enrolled_students": [
+                "ud909",
+                "wg816",
+                "bg704",
+                "rn256",
+                "pd136"
+              ]
+            },
+            {
+              "id": "c5876",
+              "period": 4,
+              "title": "Math Math Connections 5",
+              "grade_level": 7,
+              "category": "Math Connections",
+              "subject": "Math",
+              "classroom": "s4778-Studio951",
+              "instructor": "kc301",
+              "enrolled_students": [
+                "mj325",
+                "yg987"
+              ]
+            },
+            {
+              "id": "c7897",
+              "period": 2,
+              "title": "Science Expeditions 2",
+              "grade_level": 6,
+              "category": "Expeditions",
+              "subject": "Science",
+              "classroom": "s4778-Studio951",
+              "instructor": "kc301",
+              "enrolled_students": [
+                "tw447",
+                "xf293",
+                "qe545",
+                "vx670",
+                "jf626"
+              ]
+            }
+          ],
+          "students": [
+            "mj325",
+            "yg987",
+            "tw447",
+            "ud909",
+            "wg816",
+            "xf293",
+            "bg704",
+            "rn256",
+            "qe545",
+            "vx670",
+            "pd136",
+            "jf626"
+          ]
+        },
+        {
+          "id": "s4778-Studio302",
+          "title": "Studio 302",
+          "instructor": "gr162",
+          "courses": [
+            {
+              "id": "c4228",
+              "period": 8,
+              "title": "Math Math Connections 2",
+              "grade_level": 7,
+              "category": "Math Connections",
+              "subject": "Math",
+              "classroom": "s4778-Studio302",
+              "instructor": "gr162",
+              "enrolled_students": [
+                "mr535",
+                "qe545"
+              ]
+            },
+            {
+              "id": "c7471",
+              "period": 3,
+              "title": "Math IPLs 4",
+              "grade_level": 7,
+              "category": "IPLs",
+              "subject": "Math",
+              "classroom": "s4778-Studio302",
+              "instructor": "gr162",
+              "enrolled_students": [
+                "tw447",
+                "ij971",
+                "vx670",
+                "ud823",
+                "yl698",
+                "na996",
+                "wd682"
+              ]
+            },
+            {
+              "id": "c7119",
+              "period": 5,
+              "title": "Math Modules 3",
+              "grade_level": 8,
+              "category": "Modules",
+              "subject": "Math",
+              "classroom": "s4778-Studio302",
+              "instructor": "gr162",
+              "enrolled_students": []
+            }
+          ],
+          "students": [
+            "tw447",
+            "ij971",
+            "mr535",
+            "qe545",
+            "vx670",
+            "ud823",
+            "yl698",
+            "na996",
+            "wd682"
+          ]
+        },
+        {
+          "id": "s4778-Studio433",
+          "title": "Studio 433",
+          "instructor": "ji283",
+          "courses": [
+            {
+              "id": "c3816",
+              "period": 6,
+              "title": "Math Expeditions 3",
+              "grade_level": 7,
+              "category": "Expeditions",
+              "subject": "Math",
+              "classroom": "s4778-Studio433",
+              "instructor": "ji283",
+              "enrolled_students": [
+                "gc491"
+              ]
+            },
+            {
+              "id": "c6406",
+              "period": 8,
+              "title": "Math Expeditions 3",
+              "grade_level": 8,
+              "category": "Expeditions",
+              "subject": "Math",
+              "classroom": "s4778-Studio433",
+              "instructor": "ji283",
+              "enrolled_students": [
+                "az596"
+              ]
+            },
+            {
+              "id": "c1506",
+              "period": 1,
+              "title": "Science Modules 1",
+              "grade_level": 6,
+              "category": "Modules",
+              "subject": "Science",
+              "classroom": "s4778-Studio433",
+              "instructor": "ji283",
+              "enrolled_students": [
+                "wx946",
+                "sv117",
+                "na996"
+              ]
+            }
+          ],
+          "students": [
+            "gc491",
+            "wx946",
+            "az596",
+            "sv117",
+            "na996"
+          ]
+        },
+        {
+          "id": "s4778-Room526",
+          "title": "Room 526",
+          "instructor": "fy804",
+          "courses": [
+            {
+              "id": "c1777",
+              "period": 3,
+              "title": "Science Modules 4",
+              "grade_level": 8,
+              "category": "Modules",
+              "subject": "Science",
+              "classroom": "s4778-Room526",
+              "instructor": "fy804",
+              "enrolled_students": [
+                "yl698"
+              ]
+            },
+            {
+              "id": "c9871",
+              "period": 6,
+              "title": "Science Modules 2",
+              "grade_level": 7,
+              "category": "Modules",
+              "subject": "Science",
+              "classroom": "s4778-Room526",
+              "instructor": "fy804",
+              "enrolled_students": [
+                "ru735",
+                "pr952",
+                "az596"
+              ]
+            },
+            {
+              "id": "c7741",
+              "period": 1,
+              "title": "Math Modules 5",
+              "grade_level": 6,
+              "category": "Modules",
+              "subject": "Math",
+              "classroom": "s4778-Room526",
+              "instructor": "fy804",
+              "enrolled_students": [
+                "ys200",
+                "sv117"
+              ]
+            },
+            {
+              "id": "c3666",
+              "period": 7,
+              "title": "Science Modules 5",
+              "grade_level": 6,
+              "category": "Modules",
+              "subject": "Science",
+              "classroom": "s4778-Room526",
+              "instructor": "fy804",
+              "enrolled_students": []
+            },
+            {
+              "id": "c2804",
+              "period": 2,
+              "title": "Math Math Connections 1",
+              "grade_level": 8,
+              "category": "Math Connections",
+              "subject": "Math",
+              "classroom": "s4778-Room526",
+              "instructor": "fy804",
+              "enrolled_students": [
+                "ud909",
+                "qj699",
+                "ej455"
+              ]
+            }
+          ],
+          "students": [
+            "ys200",
+            "ru735",
+            "pr952",
+            "ud909",
+            "az596",
+            "sv117",
+            "qj699",
+            "yl698",
+            "ej455"
+          ]
+        },
+        {
+          "id": "s4778-Lab291",
+          "title": "Lab 291",
+          "instructor": "xv865",
+          "courses": [
+            {
+              "id": "c8615",
+              "period": 1,
+              "title": "Math Steps/iLearn 2",
+              "grade_level": 6,
+              "category": "Steps/iLearn",
+              "subject": "Math",
+              "classroom": "s4778-Lab291",
+              "instructor": "xv865",
+              "enrolled_students": [
+                "eq242",
+                "pr952",
+                "wg816",
+                "ca880"
+              ]
+            },
+            {
+              "id": "c1298",
+              "period": 8,
+              "title": "Math Math Connections 1",
+              "grade_level": 8,
+              "category": "Math Connections",
+              "subject": "Math",
+              "classroom": "s4778-Lab291",
+              "instructor": "xv865",
+              "enrolled_students": [
+                "pv991",
+                "xf293",
+                "pd136"
+              ]
+            },
+            {
+              "id": "c5512",
+              "period": 3,
+              "title": "Math Expeditions 1",
+              "grade_level": 6,
+              "category": "Expeditions",
+              "subject": "Math",
+              "classroom": "s4778-Lab291",
+              "instructor": "xv865",
+              "enrolled_students": [
+                "rx503",
+                "wx946",
+                "rn256"
+              ]
+            },
+            {
+              "id": "c8487",
+              "period": 2,
+              "title": "Science Expeditions 3",
+              "grade_level": 7,
+              "category": "Expeditions",
+              "subject": "Science",
+              "classroom": "s4778-Lab291",
+              "instructor": "xv865",
+              "enrolled_students": [
+                "pv991",
+                "qj699",
+                "wd682"
+              ]
+            }
+          ],
+          "students": [
+            "rx503",
+            "eq242",
+            "pr952",
+            "wg816",
+            "wx946",
+            "pv991",
+            "xf293",
+            "rn256",
+            "pd136",
+            "qj699",
+            "ca880",
+            "wd682"
+          ]
+        },
+        {
+          "id": "s4778-Lab462",
+          "title": "Lab 462",
+          "instructor": "so928",
+          "courses": [
+            {
+              "id": "c8371",
+              "period": 7,
+              "title": "Science Expeditions 5",
+              "grade_level": 8,
+              "category": "Expeditions",
+              "subject": "Science",
+              "classroom": "s4778-Lab462",
+              "instructor": "so928",
+              "enrolled_students": [
+                "ys200",
+                "so270"
+              ]
+            },
+            {
+              "id": "c7676",
+              "period": 5,
+              "title": "Math Modules 4",
+              "grade_level": 6,
+              "category": "Modules",
+              "subject": "Math",
+              "classroom": "s4778-Lab462",
+              "instructor": "so928",
+              "enrolled_students": [
+                "pi253",
+                "bg704",
+                "yo272",
+                "jf626",
+                "us509"
+              ]
+            },
+            {
+              "id": "c6893",
+              "period": 4,
+              "title": "Math Expeditions 3",
+              "grade_level": 8,
+              "category": "Expeditions",
+              "subject": "Math",
+              "classroom": "s4778-Lab462",
+              "instructor": "so928",
+              "enrolled_students": [
+                "ff433"
+              ]
+            },
+            {
+              "id": "c2141",
+              "period": 1,
+              "title": "Math Modules 1",
+              "grade_level": 7,
+              "category": "Modules",
+              "subject": "Math",
+              "classroom": "s4778-Lab462",
+              "instructor": "so928",
+              "enrolled_students": [
+                "ru735"
+              ]
+            }
+          ],
+          "students": [
+            "pi253",
+            "ys200",
+            "ru735",
+            "ff433",
+            "bg704",
+            "yo272",
+            "jf626",
+            "so270",
+            "us509"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "s4848",
+      "title": "West Middle School",
+      "address": "1722 Education Ave",
+      "administrators": [
+        {
+          "id": "ei665",
+          "firstname": "James",
+          "lastname": "Carlson",
+          "email": "james.c@school.edu"
+        },
+        {
+          "id": "vh365",
+          "firstname": "Leslie",
+          "lastname": "Mcfadden",
+          "email": "leslie.m@school.edu"
+        }
+      ],
+      "instructors": [
+        {
+          "id": "mc466",
+          "firstname": "Daniel",
+          "lastname": "Johnson",
+          "email": "daniel.j@school.edu"
+        },
+        {
+          "id": "xa594",
+          "firstname": "Mary",
+          "lastname": "Glover",
+          "email": "mary.g@school.edu"
+        },
+        {
+          "id": "dd851",
+          "firstname": "Leona",
+          "lastname": "Cutrona",
+          "email": "leona.c@school.edu"
+        },
+        {
+          "id": "lv155",
+          "firstname": "Vanessa",
+          "lastname": "Moorman",
+          "email": "vanessa.m@school.edu"
+        },
+        {
+          "id": "vi877",
+          "firstname": "Michael",
+          "lastname": "Butler",
+          "email": "michael.b@school.edu"
+        },
+        {
+          "id": "nj600",
+          "firstname": "Charles",
+          "lastname": "Black",
+          "email": "charles.b@school.edu"
+        },
+        {
+          "id": "ca694",
+          "firstname": "Philip",
+          "lastname": "Blind",
+          "email": "philip.b@school.edu"
+        },
+        {
+          "id": "vp785",
+          "firstname": "Dena",
+          "lastname": "Hodge",
+          "email": "dena.h@school.edu"
+        }
+      ],
+      "students": [
+        {
+          "id": "dq344",
+          "firstname": "Heath",
+          "lastname": "Braegelmann",
+          "email": "heath.b@school.edu"
+        },
+        {
+          "id": "ox331",
+          "firstname": "Lupe",
+          "lastname": "Cardwell",
+          "email": "lupe.c@school.edu"
+        },
+        {
+          "id": "pm231",
+          "firstname": "Kristine",
+          "lastname": "Taylor",
+          "email": "kristine.t@school.edu"
+        },
+        {
+          "id": "qx920",
+          "firstname": "Janet",
+          "lastname": "Culver",
+          "email": "janet.c@school.edu"
+        },
+        {
+          "id": "ut754",
+          "firstname": "Steven",
+          "lastname": "Amin",
+          "email": "steven.a@school.edu"
+        },
+        {
+          "id": "bs497",
+          "firstname": "Mark",
+          "lastname": "Macduff",
+          "email": "mark.m@school.edu"
+        },
+        {
+          "id": "wu697",
+          "firstname": "Miguel",
+          "lastname": "Guerrero",
+          "email": "miguel.g@school.edu"
+        },
+        {
+          "id": "gn250",
+          "firstname": "David",
+          "lastname": "Case",
+          "email": "david.c@school.edu"
+        },
+        {
+          "id": "pu883",
+          "firstname": "Anita",
+          "lastname": "Dahlen",
+          "email": "anita.d@school.edu"
+        },
+        {
+          "id": "uw504",
+          "firstname": "Eddie",
+          "lastname": "Silva",
+          "email": "eddie.s@school.edu"
+        },
+        {
+          "id": "gd284",
+          "firstname": "Judith",
+          "lastname": "Scaife",
+          "email": "judith.s@school.edu"
+        },
+        {
+          "id": "aq493",
+          "firstname": "Karen",
+          "lastname": "Albertson",
+          "email": "karen.a@school.edu"
+        },
+        {
+          "id": "zu271",
+          "firstname": "John",
+          "lastname": "Fulmer",
+          "email": "john.f@school.edu"
+        },
+        {
+          "id": "gj312",
+          "firstname": "Deborah",
+          "lastname": "Corchado",
+          "email": "deborah.c@school.edu"
+        },
+        {
+          "id": "my700",
+          "firstname": "Linda",
+          "lastname": "Enriquez",
+          "email": "linda.e@school.edu"
+        },
+        {
+          "id": "eb476",
+          "firstname": "Jason",
+          "lastname": "Collinsworth",
+          "email": "jason.c@school.edu"
+        },
+        {
+          "id": "ws565",
+          "firstname": "Jaime",
+          "lastname": "Morales",
+          "email": "jaime.m@school.edu"
+        },
+        {
+          "id": "qd841",
+          "firstname": "Douglas",
+          "lastname": "Raney",
+          "email": "douglas.r@school.edu"
+        },
+        {
+          "id": "an661",
+          "firstname": "Raymond",
+          "lastname": "Keith",
+          "email": "raymond.k@school.edu"
+        },
+        {
+          "id": "tp712",
+          "firstname": "Rosalyn",
+          "lastname": "Mills",
+          "email": "rosalyn.m@school.edu"
+        },
+        {
+          "id": "ku939",
+          "firstname": "Daniel",
+          "lastname": "Robinson",
+          "email": "daniel.r@school.edu"
+        },
+        {
+          "id": "ym410",
+          "firstname": "Darlene",
+          "lastname": "Tom",
+          "email": "darlene.t@school.edu"
+        },
+        {
+          "id": "nk616",
+          "firstname": "Mary",
+          "lastname": "Richardson",
+          "email": "mary.r@school.edu"
+        },
+        {
+          "id": "jh266",
+          "firstname": "Johnnie",
+          "lastname": "Evans",
+          "email": "johnnie.e@school.edu"
+        },
+        {
+          "id": "pf181",
+          "firstname": "Summer",
+          "lastname": "Wright",
+          "email": "summer.w@school.edu"
+        },
+        {
+          "id": "ph738",
+          "firstname": "Patricia",
+          "lastname": "Deemer",
+          "email": "patricia.d@school.edu"
+        },
+        {
+          "id": "yk768",
+          "firstname": "Wayne",
+          "lastname": "Braxton",
+          "email": "wayne.b@school.edu"
+        },
+        {
+          "id": "ch353",
+          "firstname": "Joyce",
+          "lastname": "Miller",
+          "email": "joyce.m@school.edu"
+        },
+        {
+          "id": "ls572",
+          "firstname": "Michael",
+          "lastname": "Grimes",
+          "email": "michael.g@school.edu"
+        },
+        {
+          "id": "ey728",
+          "firstname": "Virginia",
+          "lastname": "Cook",
+          "email": "virginia.c@school.edu"
+        },
+        {
+          "id": "ij670",
+          "firstname": "Hilda",
+          "lastname": "Arrey",
+          "email": "hilda.a@school.edu"
+        },
+        {
+          "id": "xv694",
+          "firstname": "Frances",
+          "lastname": "Bailey",
+          "email": "frances.b@school.edu"
+        },
+        {
+          "id": "mc216",
+          "firstname": "Susan",
+          "lastname": "Liebert",
+          "email": "susan.l@school.edu"
+        },
+        {
+          "id": "pd176",
+          "firstname": "Samuel",
+          "lastname": "Sullivan",
+          "email": "samuel.s@school.edu"
+        },
+        {
+          "id": "ru934",
+          "firstname": "Lorene",
+          "lastname": "Yusef",
+          "email": "lorene.y@school.edu"
+        },
+        {
+          "id": "rw324",
+          "firstname": "Robert",
+          "lastname": "Whigham",
+          "email": "robert.w@school.edu"
+        },
+        {
+          "id": "dg114",
+          "firstname": "Mitchell",
+          "lastname": "Mcmanis",
+          "email": "mitchell.m@school.edu"
+        },
+        {
+          "id": "ps663",
+          "firstname": "Edgar",
+          "lastname": "Nash",
+          "email": "edgar.n@school.edu"
+        },
+        {
+          "id": "li147",
+          "firstname": "Elizabeth",
+          "lastname": "Reiss",
+          "email": "elizabeth.r@school.edu"
+        },
+        {
+          "id": "wk718",
+          "firstname": "Faustino",
+          "lastname": "Laxton",
+          "email": "faustino.l@school.edu"
+        }
+      ],
+      "classrooms": [
+        {
+          "id": "s4848-Lab896",
+          "title": "Lab 896",
+          "instructor": "mc466",
+          "courses": [
+            {
+              "id": "c8817",
+              "period": 5,
+              "title": "Math IPLs 4",
+              "grade_level": 9,
+              "category": "IPLs",
+              "subject": "Math",
+              "classroom": "s4848-Lab896",
+              "instructor": "mc466",
+              "enrolled_students": [
+                "ym410",
+                "xv694"
+              ]
+            },
+            {
+              "id": "c5148",
+              "period": 7,
+              "title": "Math IPLs 5",
+              "grade_level": 8,
+              "category": "IPLs",
+              "subject": "Math",
+              "classroom": "s4848-Lab896",
+              "instructor": "mc466",
+              "enrolled_students": [
+                "mc216"
+              ]
+            },
+            {
+              "id": "c5790",
+              "period": 8,
+              "title": "Math Expeditions 2",
+              "grade_level": 6,
+              "category": "Expeditions",
+              "subject": "Math",
+              "classroom": "s4848-Lab896",
+              "instructor": "mc466",
+              "enrolled_students": [
+                "dq344",
+                "gn250"
+              ]
+            }
+          ],
+          "students": [
+            "dq344",
+            "gn250",
+            "ym410",
+            "xv694",
+            "mc216"
+          ]
+        },
+        {
+          "id": "s4848-Room306",
+          "title": "Room 306",
+          "instructor": "xa594",
+          "courses": [
+            {
+              "id": "c5386",
+              "period": 8,
+              "title": "Math Steps/iLearn 3",
+              "grade_level": 7,
+              "category": "Steps/iLearn",
+              "subject": "Math",
+              "classroom": "s4848-Room306",
+              "instructor": "xa594",
+              "enrolled_students": [
+                "pm231",
+                "uw504",
+                "tp712",
+                "ij670",
+                "ps663"
+              ]
+            },
+            {
+              "id": "c3565",
+              "period": 5,
+              "title": "Math Math Connections 4",
+              "grade_level": 9,
+              "category": "Math Connections",
+              "subject": "Math",
+              "classroom": "s4848-Room306",
+              "instructor": "xa594",
+              "enrolled_students": [
+                "nk616",
+                "ey728"
+              ]
+            },
+            {
+              "id": "c1704",
+              "period": 7,
+              "title": "Science Modules 4",
+              "grade_level": 8,
+              "category": "Modules",
+              "subject": "Science",
+              "classroom": "s4848-Room306",
+              "instructor": "xa594",
+              "enrolled_students": [
+                "gj312",
+                "my700",
+                "ym410"
+              ]
+            },
+            {
+              "id": "c3033",
+              "period": 1,
+              "title": "Math Expeditions 2",
+              "grade_level": 9,
+              "category": "Expeditions",
+              "subject": "Math",
+              "classroom": "s4848-Room306",
+              "instructor": "xa594",
+              "enrolled_students": []
+            }
+          ],
+          "students": [
+            "pm231",
+            "uw504",
+            "gj312",
+            "my700",
+            "tp712",
+            "ym410",
+            "nk616",
+            "ey728",
+            "ij670",
+            "ps663"
+          ]
+        },
+        {
+          "id": "s4848-Studio958",
+          "title": "Studio 958",
+          "instructor": "dd851",
+          "courses": [
+            {
+              "id": "c5926",
+              "period": 6,
+              "title": "Math Math Connections 3",
+              "grade_level": 8,
+              "category": "Math Connections",
+              "subject": "Math",
+              "classroom": "s4848-Studio958",
+              "instructor": "dd851",
+              "enrolled_students": []
+            },
+            {
+              "id": "c8806",
+              "period": 3,
+              "title": "Math Steps/iLearn 3",
+              "grade_level": 9,
+              "category": "Steps/iLearn",
+              "subject": "Math",
+              "classroom": "s4848-Studio958",
+              "instructor": "dd851",
+              "enrolled_students": []
+            },
+            {
+              "id": "c8570",
+              "period": 4,
+              "title": "Science Expeditions 3",
+              "grade_level": 6,
+              "category": "Expeditions",
+              "subject": "Science",
+              "classroom": "s4848-Studio958",
+              "instructor": "dd851",
+              "enrolled_students": [
+                "qx920",
+                "zu271",
+                "ku939",
+                "yk768"
+              ]
+            },
+            {
+              "id": "c6954",
+              "period": 8,
+              "title": "Math Modules 4",
+              "grade_level": 9,
+              "category": "Modules",
+              "subject": "Math",
+              "classroom": "s4848-Studio958",
+              "instructor": "dd851",
+              "enrolled_students": [
+                "rw324"
+              ]
+            },
+            {
+              "id": "c6255",
+              "period": 1,
+              "title": "Math IPLs 5",
+              "grade_level": 7,
+              "category": "IPLs",
+              "subject": "Math",
+              "classroom": "s4848-Studio958",
+              "instructor": "dd851",
+              "enrolled_students": [
+                "aq493",
+                "an661"
+              ]
+            },
+            {
+              "id": "c9666",
+              "period": 7,
+              "title": "Math Modules 5",
+              "grade_level": 7,
+              "category": "Modules",
+              "subject": "Math",
+              "classroom": "s4848-Studio958",
+              "instructor": "dd851",
+              "enrolled_students": [
+                "zu271"
+              ]
+            }
+          ],
+          "students": [
+            "qx920",
+            "aq493",
+            "zu271",
+            "an661",
+            "ku939",
+            "yk768",
+            "rw324"
+          ]
+        },
+        {
+          "id": "s4848-Room911",
+          "title": "Room 911",
+          "instructor": "lv155",
+          "courses": [
+            {
+              "id": "c6141",
+              "period": 8,
+              "title": "Science Expeditions 1",
+              "grade_level": 7,
+              "category": "Expeditions",
+              "subject": "Science",
+              "classroom": "s4848-Room911",
+              "instructor": "lv155",
+              "enrolled_students": [
+                "dg114"
+              ]
+            },
+            {
+              "id": "c1397",
+              "period": 1,
+              "title": "Math Expeditions 4",
+              "grade_level": 9,
+              "category": "Expeditions",
+              "subject": "Math",
+              "classroom": "s4848-Room911",
+              "instructor": "lv155",
+              "enrolled_students": [
+                "pu883"
+              ]
+            },
+            {
+              "id": "c9407",
+              "period": 3,
+              "title": "Math Modules 1",
+              "grade_level": 8,
+              "category": "Modules",
+              "subject": "Math",
+              "classroom": "s4848-Room911",
+              "instructor": "lv155",
+              "enrolled_students": [
+                "qx920",
+                "gj312",
+                "ch353"
+              ]
+            },
+            {
+              "id": "c3161",
+              "period": 5,
+              "title": "Math Math Connections 2",
+              "grade_level": 6,
+              "category": "Math Connections",
+              "subject": "Math",
+              "classroom": "s4848-Room911",
+              "instructor": "lv155",
+              "enrolled_students": [
+                "pf181",
+                "ph738"
+              ]
+            },
+            {
+              "id": "c4736",
+              "period": 7,
+              "title": "Science Modules 2",
+              "grade_level": 6,
+              "category": "Modules",
+              "subject": "Science",
+              "classroom": "s4848-Room911",
+              "instructor": "lv155",
+              "enrolled_students": [
+                "wu697",
+                "ph738",
+                "ij670",
+                "xv694"
+              ]
+            }
+          ],
+          "students": [
+            "qx920",
+            "wu697",
+            "pu883",
+            "gj312",
+            "pf181",
+            "ph738",
+            "ch353",
+            "ij670",
+            "xv694",
+            "dg114"
+          ]
+        },
+        {
+          "id": "s4848-Lab166",
+          "title": "Lab 166",
+          "instructor": "vi877",
+          "courses": [
+            {
+              "id": "c1412",
+              "period": 8,
+              "title": "Math Steps/iLearn 5",
+              "grade_level": 7,
+              "category": "Steps/iLearn",
+              "subject": "Math",
+              "classroom": "s4848-Lab166",
+              "instructor": "vi877",
+              "enrolled_students": [
+                "eb476"
+              ]
+            },
+            {
+              "id": "c8671",
+              "period": 6,
+              "title": "Science Modules 1",
+              "grade_level": 6,
+              "category": "Modules",
+              "subject": "Science",
+              "classroom": "s4848-Lab166",
+              "instructor": "vi877",
+              "enrolled_students": [
+                "qd841"
+              ]
+            },
+            {
+              "id": "c2455",
+              "period": 7,
+              "title": "Science Modules 5",
+              "grade_level": 6,
+              "category": "Modules",
+              "subject": "Science",
+              "classroom": "s4848-Lab166",
+              "instructor": "vi877",
+              "enrolled_students": [
+                "pm231",
+                "ut754",
+                "tp712"
+              ]
+            },
+            {
+              "id": "c5014",
+              "period": 1,
+              "title": "Science Modules 2",
+              "grade_level": 8,
+              "category": "Modules",
+              "subject": "Science",
+              "classroom": "s4848-Lab166",
+              "instructor": "vi877",
+              "enrolled_students": [
+                "gd284",
+                "jh266",
+                "ls572",
+                "ru934"
+              ]
+            }
+          ],
+          "students": [
+            "pm231",
+            "ut754",
+            "gd284",
+            "eb476",
+            "qd841",
+            "tp712",
+            "jh266",
+            "ls572",
+            "ru934"
+          ]
+        },
+        {
+          "id": "s4848-Studio146",
+          "title": "Studio 146",
+          "instructor": "nj600",
+          "courses": [
+            {
+              "id": "c7305",
+              "period": 7,
+              "title": "Math Modules 2",
+              "grade_level": 6,
+              "category": "Modules",
+              "subject": "Math",
+              "classroom": "s4848-Studio146",
+              "instructor": "nj600",
+              "enrolled_students": [
+                "bs497",
+                "ru934",
+                "li147"
+              ]
+            },
+            {
+              "id": "c8193",
+              "period": 2,
+              "title": "Math Math Connections 1",
+              "grade_level": 7,
+              "category": "Math Connections",
+              "subject": "Math",
+              "classroom": "s4848-Studio146",
+              "instructor": "nj600",
+              "enrolled_students": [
+                "wu697",
+                "gd284",
+                "qd841"
+              ]
+            },
+            {
+              "id": "c2843",
+              "period": 6,
+              "title": "Science Modules 5",
+              "grade_level": 9,
+              "category": "Modules",
+              "subject": "Science",
+              "classroom": "s4848-Studio146",
+              "instructor": "nj600",
+              "enrolled_students": [
+                "pu883",
+                "ey728"
+              ]
+            },
+            {
+              "id": "c5626",
+              "period": 1,
+              "title": "Science Expeditions 4",
+              "grade_level": 7,
+              "category": "Expeditions",
+              "subject": "Science",
+              "classroom": "s4848-Studio146",
+              "instructor": "nj600",
+              "enrolled_students": [
+                "gn250",
+                "aq493",
+                "ws565",
+                "an661",
+                "pd176",
+                "wk718"
+              ]
+            },
+            {
+              "id": "c9270",
+              "period": 5,
+              "title": "Science Expeditions 5",
+              "grade_level": 6,
+              "category": "Expeditions",
+              "subject": "Science",
+              "classroom": "s4848-Studio146",
+              "instructor": "nj600",
+              "enrolled_students": [
+                "nk616"
+              ]
+            }
+          ],
+          "students": [
+            "bs497",
+            "wu697",
+            "gn250",
+            "pu883",
+            "gd284",
+            "aq493",
+            "ws565",
+            "qd841",
+            "an661",
+            "nk616",
+            "ey728",
+            "pd176",
+            "ru934",
+            "li147",
+            "wk718"
+          ]
+        },
+        {
+          "id": "s4848-Room928",
+          "title": "Room 928",
+          "instructor": "ca694",
+          "courses": [
+            {
+              "id": "c9315",
+              "period": 1,
+              "title": "Math Steps/iLearn 3",
+              "grade_level": 7,
+              "category": "Steps/iLearn",
+              "subject": "Math",
+              "classroom": "s4848-Room928",
+              "instructor": "ca694",
+              "enrolled_students": [
+                "ox331",
+                "ws565",
+                "jh266",
+                "yk768",
+                "pd176"
+              ]
+            },
+            {
+              "id": "c3653",
+              "period": 3,
+              "title": "Math Modules 2",
+              "grade_level": 8,
+              "category": "Modules",
+              "subject": "Math",
+              "classroom": "s4848-Room928",
+              "instructor": "ca694",
+              "enrolled_students": [
+                "ls572"
+              ]
+            },
+            {
+              "id": "c8495",
+              "period": 4,
+              "title": "Science Modules 5",
+              "grade_level": 7,
+              "category": "Modules",
+              "subject": "Science",
+              "classroom": "s4848-Room928",
+              "instructor": "ca694",
+              "enrolled_students": [
+                "ch353",
+                "li147"
+              ]
+            },
+            {
+              "id": "c5328",
+              "period": 6,
+              "title": "Science Expeditions 1",
+              "grade_level": 9,
+              "category": "Expeditions",
+              "subject": "Science",
+              "classroom": "s4848-Room928",
+              "instructor": "ca694",
+              "enrolled_students": [
+                "bs497",
+                "eb476"
+              ]
+            },
+            {
+              "id": "c5095",
+              "period": 2,
+              "title": "Math Expeditions 1",
+              "grade_level": 7,
+              "category": "Expeditions",
+              "subject": "Math",
+              "classroom": "s4848-Room928",
+              "instructor": "ca694",
+              "enrolled_students": [
+                "ut754",
+                "my700",
+                "wk718"
+              ]
+            },
+            {
+              "id": "c4201",
+              "period": 7,
+              "title": "Math Expeditions 5",
+              "grade_level": 9,
+              "category": "Expeditions",
+              "subject": "Math",
+              "classroom": "s4848-Room928",
+              "instructor": "ca694",
+              "enrolled_students": []
+            }
+          ],
+          "students": [
+            "ox331",
+            "ut754",
+            "bs497",
+            "my700",
+            "eb476",
+            "ws565",
+            "jh266",
+            "yk768",
+            "ch353",
+            "ls572",
+            "pd176",
+            "li147",
+            "wk718"
+          ]
+        },
+        {
+          "id": "s4848-Studio410",
+          "title": "Studio 410",
+          "instructor": "vp785",
+          "courses": [
+            {
+              "id": "c9840",
+              "period": 4,
+              "title": "Science Expeditions 1",
+              "grade_level": 9,
+              "category": "Expeditions",
+              "subject": "Science",
+              "classroom": "s4848-Studio410",
+              "instructor": "vp785",
+              "enrolled_students": [
+                "ox331",
+                "uw504",
+                "mc216"
+              ]
+            },
+            {
+              "id": "c9789",
+              "period": 6,
+              "title": "Math Steps/iLearn 1",
+              "grade_level": 8,
+              "category": "Steps/iLearn",
+              "subject": "Math",
+              "classroom": "s4848-Studio410",
+              "instructor": "vp785",
+              "enrolled_students": [
+                "ku939"
+              ]
+            },
+            {
+              "id": "c7154",
+              "period": 1,
+              "title": "Science Modules 5",
+              "grade_level": 9,
+              "category": "Modules",
+              "subject": "Science",
+              "classroom": "s4848-Studio410",
+              "instructor": "vp785",
+              "enrolled_students": [
+                "dq344",
+                "pf181",
+                "rw324",
+                "ps663"
+              ]
+            },
+            {
+              "id": "c3786",
+              "period": 8,
+              "title": "Math Modules 3",
+              "grade_level": 6,
+              "category": "Modules",
+              "subject": "Math",
+              "classroom": "s4848-Studio410",
+              "instructor": "vp785",
+              "enrolled_students": [
+                "dg114"
+              ]
+            },
+            {
+              "id": "c6641",
+              "period": 7,
+              "title": "Math Steps/iLearn 1",
+              "grade_level": 7,
+              "category": "Steps/iLearn",
+              "subject": "Math",
+              "classroom": "s4848-Studio410",
+              "instructor": "vp785",
+              "enrolled_students": []
+            }
+          ],
+          "students": [
+            "dq344",
+            "ox331",
+            "uw504",
+            "ku939",
+            "pf181",
+            "mc216",
+            "rw324",
+            "dg114",
+            "ps663"
+          ]
         }
       ]
     }

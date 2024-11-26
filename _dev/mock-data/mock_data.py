@@ -5,140 +5,145 @@ import names  # you'll need to pip install names
 
 # Configuration settings
 CONFIG = {
-    "num_students": 80,
-    "enrollment_range": (2, 4),  # min and max enrollments per student
-    "periods_range": (1, 8),     # available periods
-    "grade_range": (65, 98),     # min and max grades
-    "progress_range": (30, 100), # min and max progress values
+    "district": {
+        "title": "Sample School District",
+        "num_schools": 2,
+        "school_name_prefix": ["North", "South", "East", "West", "Central"],
+        "school_name_suffix": ["Middle School", "High School", "Academy"]
+    },
+    "courses": {
+        "periods_range": (1, 8),
+        "grade_levels": [6, 7, 8, 9],
+        "categories": ["Modules", "Expeditions", "IPLs", "Math Connections", "Steps / iLearn"],
+        "subjects": {
+            "Math": ["Modules", "Expeditions", "IPLs", "Steps/iLearn", "Math Connections"],
+            "Science": ["Modules", "Expeditions"]
+        }
+    },
+    "classroom_prefix": ["Room", "Lab", "Studio"],
+    "num_students_per_school": 40,
+    "num_instructors_per_school": 8,
+    "num_administrators_per_school": 2,
+    "enrollments_per_student": (2, 4),
     "start_dates": [
         datetime(2024, 1, 15),
         datetime(2024, 1, 16),
         datetime(2024, 1, 17),
         datetime(2024, 1, 18)
     ],
-    "subjects": {
-        "IPL": ["IPL Series"],
-        "Expedition": ["Expedition Rotational Schedule"],
-        "Science": ["Science Module Rotational Schedule"],
-        "Mathematics": ["Math Module Rotational Schedule"],
-        "Module": ["Module / Expedition Rotational Schedule", 
-                  "Whole Class Assignment - Module"],
-        "Assignment": ["Whole Class Assignment - Expedition"],
-        "Dyad": ["Dyad Schedule"]
-    },
     "output_path": "../../src/routes/gradebook/mock-data.json"
 }
 
-# After the existing CONFIG definition, add these fixed mappings
-CONFIG["subject_mappings"] = {
-    "IPL": {
-        "classroom": "Room 201",
-        "instructor": "John Smith"
-    },
-    "Expedition": {
-        "classroom": "Lab A",
-        "instructor": "Marie Curie"
-    },
-    "Science": {
-        "classroom": "Room 301",
-        "instructor": "Albert Einstein"
-    },
-    "Mathematics": {
-        "classroom": "Room 101",
-        "instructor": "Ada Lovelace"
-    },
-    "Module": {
-        "classroom": "Room 401",
-        "instructor": "Grace Hopper"
-    },
-    "Assignment": {
-        "classroom": "Room 501",
-        "instructor": "Richard Feynman"
-    },
-    "Dyad": {
-        "classroom": "Room 601",
-        "instructor": "Katherine Johnson"
-    }
-}
+def generate_email(firstname, lastname, domain="school.edu"):
+    return f"{firstname.lower()}.{lastname[0].lower()}@{domain}"
 
-# Generate classroom numbers and special rooms
-CONFIG["classrooms"] = [f"Room {i}" for i in range(100, 400)] + ["Lab A", "Lab B", "Studio 1", "Studio 2"]
-
-def generate_email(firstname, lastname):
-    return f"{firstname.lower()}.{lastname[0].lower()}@school.edu"
-
-def generate_enrollment(enrollment_id, start_date):
-    subject = random.choice(list(CONFIG["subjects"].keys()))
-    classname = random.choice(CONFIG["subjects"][subject])
-    subject_info = CONFIG["subject_mappings"][subject]
+def generate_person():
+    firstname = names.get_first_name()
+    lastname = names.get_last_name()
     return {
-        "enrollmentid": enrollment_id,
-        "period": random.randint(*CONFIG["periods_range"]),
+        "id": f"{random.choice('abcdefghijklmnopqrstuvwxyz')}{random.choice('abcdefghijklmnopqrstuvwxyz')}{random.randint(100,999)}",
+        "firstname": firstname,
+        "lastname": lastname,
+        "email": generate_email(firstname, lastname)
+    }
+
+def generate_course(classroom, instructor, period):
+    subject = random.choice(list(CONFIG["courses"]["subjects"].keys()))
+    allowed_categories = CONFIG["courses"]["subjects"][subject]
+    category = random.choice(allowed_categories)
+    
+    return {
+        "id": f"c{random.randint(1000,9999)}",
+        "period": period,
+        "title": f"{subject} {category} {random.randint(1,5)}",
+        "grade_level": random.choice(CONFIG["courses"]["grade_levels"]),
+        "category": category,
         "subject": subject,
-        "classname": classname,
-        "classroom": subject_info["classroom"],  # Use fixed classroom for this subject
-        "instructor": subject_info["instructor"],  # Use fixed instructor for this subject
-        "progress": random.randint(*CONFIG["progress_range"]),
-        "averageGrade": random.randint(*CONFIG["grade_range"]),
-        "enrollmentdate": start_date.strftime("%Y-%m-%d"),
-        "status": "Active"
+        "classroom": classroom["id"],
+        "instructor": instructor["id"],
+        "enrolled_students": []
+    }
+
+def generate_classroom(school_id):
+    prefix = random.choice(CONFIG["classroom_prefix"])
+    number = random.randint(100, 999)
+    return {
+        "id": f"{school_id}-{prefix}{number}",
+        "title": f"{prefix} {number}",
+        "instructor": None,
+        "courses": [],
+        "students": []
+    }
+
+def generate_school():
+    name = f"{random.choice(CONFIG['district']['school_name_prefix'])} {random.choice(CONFIG['district']['school_name_suffix'])}"
+    school_id = f"s{random.randint(1000,9999)}"
+    
+    # Generate staff
+    administrators = [generate_person() for _ in range(CONFIG["num_administrators_per_school"])]
+    instructors = [generate_person() for _ in range(CONFIG["num_instructors_per_school"])]
+    students = [generate_person() for _ in range(CONFIG["num_students_per_school"])]
+    
+    # Generate classrooms
+    classrooms = [generate_classroom(school_id) for _ in range(CONFIG["num_instructors_per_school"])]
+    
+    # Assign instructors to classrooms
+    for instructor, classroom in zip(instructors, classrooms):
+        classroom["instructor"] = instructor["id"]
+        
+        # Generate courses for each period
+        available_periods = list(range(1, CONFIG["courses"]["periods_range"][1] + 1))
+        random.shuffle(available_periods)
+        num_courses = random.randint(3, 6)
+        
+        for period in available_periods[:num_courses]:
+            course = generate_course(classroom, instructor, period)
+            classroom["courses"].append(course)
+    
+    # Create lists of available Math and Science courses
+    math_courses = [(classroom, course) 
+                   for classroom in classrooms 
+                   for course in classroom["courses"]
+                   if course["subject"] == "Math"]
+    
+    science_courses = [(classroom, course) 
+                      for classroom in classrooms 
+                      for course in classroom["courses"]
+                      if course["subject"] == "Science"]
+    
+    # Assign students to exactly one Math and one Science course
+    for student in students:
+        # Select one Math course
+        if math_courses:
+            math_classroom, math_course = random.choice(math_courses)
+            math_course["enrolled_students"].append(student["id"])
+            if student["id"] not in math_classroom["students"]:
+                math_classroom["students"].append(student["id"])
+        
+        # Select one Science course
+        if science_courses:
+            science_classroom, science_course = random.choice(science_courses)
+            science_course["enrolled_students"].append(student["id"])
+            if student["id"] not in science_classroom["students"]:
+                science_classroom["students"].append(student["id"])
+    
+    return {
+        "id": school_id,
+        "title": name,
+        "address": f"{random.randint(100,9999)} Education Ave",
+        "administrators": administrators,
+        "instructors": instructors,
+        "students": students,
+        "classrooms": classrooms
     }
 
 def generate_mock_data():
-    current_enrollment_id = 1
-    students = []
-
-    for i in range(CONFIG["num_students"]):
-        firstname = names.get_first_name()
-        lastname = names.get_last_name()
-        
-        # Generate random number of enrollments for each student
-        num_enrollments = random.randint(*CONFIG["enrollment_range"])
-        enrollments = []
-        
-        start_date = random.choice(CONFIG["start_dates"])
-        
-        # Create a list of available periods and randomly select from it
-        available_periods = list(range(CONFIG["periods_range"][0], CONFIG["periods_range"][1] + 1))
-        random.shuffle(available_periods)
-        
-        # Get a random selection of subjects (no duplicates)
-        available_subjects = list(CONFIG["subjects"].keys())
-        random.shuffle(available_subjects)
-        selected_subjects = available_subjects[:num_enrollments]
-        
-        # Take only the first num_enrollments periods
-        selected_periods = available_periods[:num_enrollments]
-        
-        # Create enrollments using unique subjects and periods
-        for period, subject in zip(selected_periods, selected_subjects):
-            subject_info = CONFIG["subject_mappings"][subject]
-            enrollment = {
-                "enrollmentid": current_enrollment_id,
-                "period": period,
-                "subject": subject,
-                "classname": random.choice(CONFIG["subjects"][subject]),
-                "classroom": subject_info["classroom"],  # Use fixed classroom for this subject
-                "instructor": subject_info["instructor"],  # Use fixed instructor for this subject
-                "progress": random.randint(*CONFIG["progress_range"]),
-                "averageGrade": random.randint(*CONFIG["grade_range"]),
-                "enrollmentdate": start_date.strftime("%Y-%m-%d"),
-                "status": "Active"
-            }
-            enrollments.append(enrollment)
-            current_enrollment_id += 1
-
-        student = {
-            "studentid": f"{random.choice('abcdefghijklmnopqrstuvwxyz')}{random.choice('abcdefghijklmnopqrstuvwxyz')}{random.randint(100,999)}",
-            "firstname": firstname,
-            "lastname": lastname,
-            "email": generate_email(firstname, lastname),
-            "enrollments": enrollments
-        }
-        
-        students.append(student)
-
-    return {"students": students}
+    district = {
+        "title": CONFIG["district"]["title"],
+        "schools": [generate_school() for _ in range(CONFIG["district"]["num_schools"])]
+    }
+    
+    return district
 
 if __name__ == "__main__":
     # Generate the mock data
@@ -148,5 +153,5 @@ if __name__ == "__main__":
     with open(CONFIG["output_path"], 'w', encoding='utf-8') as f:
         json.dump(mock_data, f, indent=2)
     
-    print(f"Generated mock data for {len(mock_data['students'])} students")
+    print(f"Generated mock data for {len(mock_data['schools'])} schools")
     print(f"Data written to {CONFIG['output_path']}")
