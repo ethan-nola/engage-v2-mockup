@@ -1,12 +1,22 @@
 <script lang="ts">
-  import { Card, CardContent, CardHeader, CardTitle } from "$lib/components/ui/card";
-  import { onMount, tick } from 'svelte';
-  import 'ag-grid-enterprise';
-  import { createGrid, type ColDef, type GridApi, type GridReadyEvent } from 'ag-grid-community';
-  import 'ag-grid-community/styles/ag-grid.css';
-  import 'ag-grid-community/styles/ag-theme-alpine.css';
-  import mockData from './mock-data.json';
-  import type { ICellRendererParams } from 'ag-grid-community';
+  import {
+    Card,
+    CardContent,
+    CardHeader,
+    CardTitle,
+  } from "$lib/components/ui/card";
+  import { onMount, tick } from "svelte";
+  import "ag-grid-enterprise";
+  import {
+    createGrid,
+    type ColDef,
+    type GridApi,
+    type GridReadyEvent,
+  } from "ag-grid-community";
+  import "ag-grid-community/styles/ag-grid.css";
+  import "ag-grid-community/styles/ag-theme-alpine.css";
+  import mockData from "./mock-data.json";
+  import type { ICellRendererParams } from "ag-grid-community";
   import { Button } from "$lib/components/ui/button";
 
   type Course = {
@@ -19,6 +29,8 @@
     classroom: string;
     instructor: string;
     enrolled_students: string[];
+    student_progress: Record<string, number>;
+    student_grades: Record<string, number>;
   };
 
   type Classroom = {
@@ -54,157 +66,215 @@
   let currentSchool: School;
 
   const columnDefs: ColDef<Person>[] = [
-    { 
-      field: 'firstname',
-      headerName: 'First Name',
-      cellRenderer: 'agGroupCellRenderer',
-      sortable: true, 
-      filter: true,
-      width: 120,
-      suppressMenu: true
-    },
-    { 
-      field: 'lastname',
-      headerName: 'Last Name',
-      sortable: true, 
+    {
+      field: "firstname",
+      headerName: "First Name",
+      cellRenderer: "agGroupCellRenderer",
+      sortable: true,
       filter: true,
       width: 120,
       suppressMenu: true,
-      sort: 'asc',
-      sortIndex: 0
     },
-    { 
-      field: 'username',
-      headerName: 'Username',
+    {
+      field: "lastname",
+      headerName: "Last Name",
+      sortable: true,
+      filter: true,
+      width: 120,
+      suppressMenu: true,
+      sort: "asc",
+      sortIndex: 0,
+    },
+    {
+      field: "username",
+      headerName: "Username",
       width: 150,
-      suppressMenu: true
+      suppressMenu: true,
     },
-    { 
-      field: 'password',
-      headerName: 'Password',
+    {
+      field: "password",
+      headerName: "Password",
       width: 120,
       suppressMenu: true,
       cellRenderer: (params: ICellRendererParams<Person>) => {
-        const container = document.createElement('div');
-        container.className = 'password-cell';
-        container.title = 'Hover to reveal password';
+        const container = document.createElement("div");
+        container.className = "password-cell";
+        container.title = "Hover to reveal password";
         container.dataset.password = params.value;
         return container;
-      }
+      },
     },
-    { 
-      field: 'id',
-      headerName: 'Student ID',
+    {
+      field: "id",
+      headerName: "Student ID",
       width: 120,
-      suppressMenu: true
+      suppressMenu: true,
     },
-    { 
-      field: 'courses',
-      headerName: 'Classes',
+    {
+      field: "courses",
+      headerName: "Enrollments",
       valueGetter: (params) => {
         const student = params.data;
         if (!student || !currentSchool) return 0;
-        
+
         return currentSchool.classrooms.reduce((count, classroom) => {
-          return count + classroom.courses.filter(course => 
-            course.enrolled_students.includes(student.id)
-          ).length;
+          return (
+            count +
+            classroom.courses.filter((course) =>
+              course.enrolled_students.includes(student.id)
+            ).length
+          );
         }, 0);
       },
       width: 100,
       suppressMenu: true,
       cellRenderer: (params: ICellRendererParams<Person>) => {
         const count = params.value;
-        return `<span>${count} ${count === 1 ? 'class' : 'classes'}</span>`;
-      }
+        return `<span>${count} ${count === 1 ? "class" : "classes"}</span>`;
+      },
     },
-    { 
-      headerName: 'Actions',
+    {
+      headerName: "Actions",
       width: 100,
       suppressMenu: true,
       suppressSizeToFit: true,
       cellRenderer: (params: ICellRendererParams<Person>) => {
-        const button = document.createElement('button');
-        button.innerHTML = 'Export';
-        button.className = 'px-3 py-1 bg-primary text-primary-foreground rounded-md text-sm hover:bg-primary/90';
+        const button = document.createElement("button");
+        button.innerHTML = "Export";
+        button.className =
+          "px-3 py-1 bg-primary text-primary-foreground rounded-md text-sm hover:bg-primary/90";
         button.onclick = () => exportStudentData(params.data);
         return button;
-      }
-    }
+      },
+    },
   ];
 
   const defaultColDef: ColDef<Person> = {
     minWidth: 100,
     resizable: true,
     sortable: true,
-    filter: true
+    filter: true,
   };
 
   const detailCellRendererParams = {
     detailGridOptions: {
       columnDefs: [
-        { 
-          field: 'period', 
-          headerName: 'Period', 
-          flex: 0.5, 
+        {
+          field: "period",
+          headerName: "Period",
+          flex: 0.5,
           suppressMenu: true,
-          sort: 'asc',
-          sortIndex: 0
+          sort: "asc",
+          sortIndex: 0,
         },
-        { field: 'subject', headerName: 'Subject', flex: 1, suppressMenu: true },
-        { field: 'title', headerName: 'Class Name', flex: 1, suppressMenu: true },
-        { field: 'category', headerName: 'Category', flex: 1, suppressMenu: true },
-        { field: 'grade_level', headerName: 'Grade Level', flex: 0.7, suppressMenu: true },
-        { 
-          field: 'classroom',
-          headerName: 'Classroom',
+        {
+          field: "title",
+          headerName: "Class Name",
+          flex: 1,
+          suppressMenu: true,
+        },
+        {
+          field: "progress",
+          headerName: "Progress",
+          flex: 0.7,
+          suppressMenu: true,
+          valueFormatter: (params: any) => {
+            const progress =
+              params.data.student_progress[params.data.enrolled_students[0]];
+            return progress ? `${progress}%` : "0%";
+          },
+        },
+        {
+          field: "grade",
+          headerName: "Current Grade",
+          flex: 0.7,
+          suppressMenu: true,
+          valueFormatter: (params: any) => {
+            const grade =
+              params.data.student_grades[params.data.enrolled_students[0]];
+            return grade ? `${grade}%` : "0%";
+          },
+        },
+
+        {
+          field: "subject",
+          headerName: "Subject",
+          flex: 1,
+          suppressMenu: true,
+        },
+        {
+          field: "grade_level",
+          headerName: "Grade Level",
+          flex: 0.7,
+          suppressMenu: true,
+        },
+
+        {
+          field: "category",
+          headerName: "Category",
+          flex: 1,
+          suppressMenu: true,
+        },
+
+        {
+          field: "classroom",
+          headerName: "Classroom",
           flex: 1,
           suppressMenu: true,
           valueGetter: (params: any) => {
-            const classroom = currentSchool?.classrooms.find(c => c.id === params.data.classroom);
+            const classroom = currentSchool?.classrooms.find(
+              (c) => c.id === params.data.classroom
+            );
             return classroom?.title || params.data.classroom;
-          }
+          },
         },
-        { 
-          field: 'instructor',
-          headerName: 'Instructor',
+        {
+          field: "instructor",
+          headerName: "Instructor",
           flex: 1,
           suppressMenu: true,
           valueGetter: (params: any) => {
-            const instructor = currentSchool?.instructors.find(i => i.id === params.data.instructor);
-            return instructor ? `${instructor.firstname} ${instructor.lastname}` : params.data.instructor;
-          }
-        }
+            const instructor = currentSchool?.instructors.find(
+              (i) => i.id === params.data.instructor
+            );
+            return instructor
+              ? `${instructor.firstname} ${instructor.lastname}`
+              : params.data.instructor;
+          },
+        },
       ],
       defaultColDef: {
         sortable: true,
         resizable: true,
-        minWidth: 100
-      }
+        minWidth: 100,
+      },
     },
     getDetailRowData: (params: any) => {
-      const studentCourses = currentSchool.classrooms.reduce((courses: Course[], classroom) => {
-        return courses.concat(
-          classroom.courses.filter(course => 
-            course.enrolled_students.includes(params.data.id)
-          )
-        );
-      }, []);
-      
+      const studentCourses = currentSchool.classrooms.reduce(
+        (courses: Course[], classroom) => {
+          return courses.concat(
+            classroom.courses.filter((course) =>
+              course.enrolled_students.includes(params.data.id)
+            )
+          );
+        },
+        []
+      );
+
       params.successCallback(studentCourses);
-    }
+    },
   };
 
   async function loadMockData() {
-    await new Promise(resolve => setTimeout(resolve, 500));
+    await new Promise((resolve) => setTimeout(resolve, 500));
     // For now, just use the first school's data
     currentSchool = mockData.schools[0];
     return currentSchool.students;
   }
 
   async function initializeGrid() {
-    const gridDiv = document.querySelector('#myGrid');
-    
+    const gridDiv = document.querySelector("#myGrid");
+
     if (gridDiv && rowData.length > 0) {
       const grid = createGrid(gridDiv as HTMLElement, {
         columnDefs,
@@ -219,65 +289,78 @@
           gridApi = params.api;
           params.api.sizeColumnsToFit();
           params.api.applyColumnState({
-            state: [{ colId: 'lastname', sort: 'asc' }]
+            state: [{ colId: "lastname", sort: "asc" }],
           });
-        }
+        },
       });
     }
   }
 
   function exportStudentData(student: Person | undefined) {
     if (!student || !currentSchool) return;
-    
-    const studentCourses = currentSchool.classrooms.reduce((courses: Course[], classroom) => {
-      return courses.concat(
-        classroom.courses.filter(course => 
-          course.enrolled_students.includes(student.id)
-        )
-      );
-    }, []);
+
+    const studentCourses = currentSchool.classrooms.reduce(
+      (courses: Course[], classroom) => {
+        return courses.concat(
+          classroom.courses.filter((course) =>
+            course.enrolled_students.includes(student.id)
+          )
+        );
+      },
+      []
+    );
 
     type ExportRow = Record<string, string | number>;
-    const exportData: ExportRow[] = studentCourses.map(course => {
-      const classroom = currentSchool.classrooms.find(c => c.id === course.classroom);
-      const instructor = currentSchool.instructors.find(i => i.id === course.instructor);
-      
+    const exportData: ExportRow[] = studentCourses.map((course) => {
+      const classroom = currentSchool.classrooms.find(
+        (c) => c.id === course.classroom
+      );
+      const instructor = currentSchool.instructors.find(
+        (i) => i.id === course.instructor
+      );
+
       return {
-        'Period': course.period,
-        'Subject': course.subject,
-        'Class Name': course.title,
-        'Category': course.category,
-        'Grade Level': course.grade_level,
-        'Classroom': classroom?.title || course.classroom,
-        'Instructor': instructor ? `${instructor.firstname} ${instructor.lastname}` : course.instructor
+        Period: course.period,
+        Subject: course.subject,
+        "Class Name": course.title,
+        Category: course.category,
+        "Grade Level": course.grade_level,
+        Classroom: classroom?.title || course.classroom,
+        Instructor: instructor
+          ? `${instructor.firstname} ${instructor.lastname}`
+          : course.instructor,
+        Progress: `${course.student_progress[student.id] || 0}%`,
+        "Current Grade": `${course.student_grades[student.id] || 0}%`,
       };
     });
 
-    const tmpGridDiv = document.createElement('div');
-    tmpGridDiv.style.display = 'none';
+    const tmpGridDiv = document.createElement("div");
+    tmpGridDiv.style.display = "none";
     document.body.appendChild(tmpGridDiv);
 
-    const currentDate = new Date().toISOString().split('T')[0];
+    const currentDate = new Date().toISOString().split("T")[0];
 
     const tmpGrid = createGrid(tmpGridDiv, {
       columnDefs: [
-        { field: 'Period', width: 100 },
-        { field: 'Subject', width: 150 },
-        { field: 'Class Name', width: 200 },
-        { field: 'Category', width: 150 },
-        { field: 'Grade Level', width: 120 },
-        { field: 'Classroom', width: 150 },
-        { field: 'Instructor', width: 200 }
+        { field: "Period", width: 100 },
+        { field: "Subject", width: 150 },
+        { field: "Class Name", width: 200 },
+        { field: "Category", width: 150 },
+        { field: "Grade Level", width: 120 },
+        { field: "Classroom", width: 150 },
+        { field: "Instructor", width: 200 },
+        { field: "Progress", width: 120 },
+        { field: "Current Grade", width: 120 },
       ],
       rowData: exportData,
       onGridReady: (params) => {
         params.api.exportDataAsExcel({
           fileName: `${student.firstname}_${student.lastname}_${student.id}_${currentDate}.xlsx`,
-          sheetName: 'Class Enrollments'
+          sheetName: "Class Enrollments",
         });
-        
+
         document.body.removeChild(tmpGridDiv);
-      }
+      },
     });
   }
 
@@ -300,10 +383,7 @@
           Loading gradebook data...
         </div>
       {:else}
-        <div 
-          id="myGrid" 
-          class="ag-theme-alpine w-full flex-1"
-        ></div>
+        <div id="myGrid" class="ag-theme-alpine w-full flex-1"></div>
       {/if}
     </CardContent>
   </Card>
@@ -319,7 +399,7 @@
     --ag-cell-horizontal-padding: 1rem;
     --ag-borders: none;
     --ag-row-hover-color: rgb(248, 250, 252);
-    
+
     /* Font settings */
     --ag-font-size: 14px;
     --ag-font-family: inherit;
@@ -414,7 +494,7 @@
   }
 
   :global(.password-cell::before) {
-    content: '••••••••';
+    content: "••••••••";
   }
 
   :global(.password-cell:hover::before) {
@@ -424,4 +504,4 @@
   :global(.password-cell:hover) {
     cursor: pointer;
   }
-</style> 
+</style>

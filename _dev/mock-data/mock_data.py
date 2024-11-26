@@ -31,7 +31,11 @@ CONFIG = {
         datetime(2024, 1, 17),
         datetime(2024, 1, 18)
     ],
-    "output_path": "../../src/routes/gradebook/mock-data.json"
+    "output_path": "../../src/routes/gradebook/mock-data.json",
+    "grades": {
+        "progress_range": (0, 100),
+        "grade_range": (60, 100)
+    }
 }
 
 def generate_email(firstname, lastname, domain="school.edu"):
@@ -70,7 +74,9 @@ def generate_course(classroom, instructor, period):
         "subject": subject,
         "classroom": classroom["id"],
         "instructor": instructor["id"],
-        "enrolled_students": []
+        "enrolled_students": [],
+        "student_progress": {},
+        "student_grades": {}
     }
 
 def generate_classroom(school_id):
@@ -148,6 +154,14 @@ def generate_school():
         if math_courses:
             math_classroom, math_course = random.choice(math_courses)
             math_course["enrolled_students"].append(student["id"])
+            math_course["student_progress"][student["id"]] = random.randint(
+                CONFIG["grades"]["progress_range"][0],
+                CONFIG["grades"]["progress_range"][1]
+            )
+            math_course["student_grades"][student["id"]] = random.randint(
+                CONFIG["grades"]["grade_range"][0],
+                CONFIG["grades"]["grade_range"][1]
+            )
             if student["id"] not in math_classroom["students"]:
                 math_classroom["students"].append(student["id"])
         
@@ -155,6 +169,14 @@ def generate_school():
         if science_courses:
             science_classroom, science_course = random.choice(science_courses)
             science_course["enrolled_students"].append(student["id"])
+            science_course["student_progress"][student["id"]] = random.randint(
+                CONFIG["grades"]["progress_range"][0],
+                CONFIG["grades"]["progress_range"][1]
+            )
+            science_course["student_grades"][student["id"]] = random.randint(
+                CONFIG["grades"]["grade_range"][0],
+                CONFIG["grades"]["grade_range"][1]
+            )
             if student["id"] not in science_classroom["students"]:
                 science_classroom["students"].append(student["id"])
     
