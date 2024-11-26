@@ -159,30 +159,13 @@
   const detailCellRendererParams = {
     detailGridOptions: {
       columnDefs: [
-        {
-          field: "period",
-          headerName: "Period",
-          flex: 0.5,
-          suppressMenu: true,
-          sort: "asc",
-          sortIndex: 0,
-        },
+
         {
           field: "title",
           headerName: "Class Name",
           flex: 1,
           suppressMenu: true,
-        },
-        {
-          field: "progress",
-          headerName: "Progress",
-          flex: 0.7,
-          suppressMenu: true,
-          valueFormatter: (params: any) => {
-            const progress =
-              params.data.student_progress[params.data.enrolled_students[0]];
-            return progress ? `${progress}%` : "0%";
-          },
+
         },
         {
           field: "grade",
@@ -195,6 +178,18 @@
             return grade ? `${grade}%` : "0%";
           },
         },
+        {
+          field: "progress",
+          headerName: "Progress",
+          flex: 0.7,
+          suppressMenu: true,
+          valueFormatter: (params: any) => {
+            const progress =
+              params.data.student_progress[params.data.enrolled_students[0]];
+            return progress ? `${progress}%` : "0%";
+          },
+        },
+
 
         {
           field: "subject",
@@ -241,6 +236,14 @@
               ? `${instructor.firstname} ${instructor.lastname}`
               : params.data.instructor;
           },
+        },
+        {
+          field: "period",
+          headerName: "Period",
+          flex: 0.5,
+          suppressMenu: true,
+          sort: "asc",
+          sortIndex: 0,
         },
       ],
       defaultColDef: {
