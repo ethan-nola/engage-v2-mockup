@@ -83,7 +83,14 @@
       field: 'password',
       headerName: 'Password',
       width: 120,
-      suppressMenu: true
+      suppressMenu: true,
+      cellRenderer: (params: ICellRendererParams<Person>) => {
+        const container = document.createElement('div');
+        container.className = 'password-cell';
+        container.title = 'Hover to reveal password';
+        container.dataset.password = params.value;
+        return container;
+      }
     },
     { 
       field: 'id',
@@ -396,5 +403,25 @@
 
   :global(.ag-theme-alpine .ag-row-selected) {
     background-color: rgb(243, 244, 246) !important;
+  }
+
+  :global(.password-cell) {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  :global(.password-cell::before) {
+    content: '••••••••';
+  }
+
+  :global(.password-cell:hover::before) {
+    content: attr(data-password);
+  }
+
+  :global(.password-cell:hover) {
+    cursor: pointer;
   }
 </style> 
