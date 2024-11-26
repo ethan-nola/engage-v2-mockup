@@ -18,7 +18,7 @@
   import mockData from "./mock-data.json";
   import type { ICellRendererParams } from "ag-grid-community";
   import { Button } from "$lib/components/ui/button";
-  import Download from "lucide-svelte/icons/download";
+  import Icon from "$lib/components/Icon.svelte";
 
   type Course = {
     id: string;
@@ -71,6 +71,31 @@
       field: "firstname",
       headerName: "First Name",
       cellRenderer: "agGroupCellRenderer",
+      cellRendererParams: {
+        innerRenderer: (params: ICellRendererParams<Person>) => {
+          const container = document.createElement("div");
+          container.className = "flex items-center gap-4";
+          
+          const iconWrapper = document.createElement("div");
+          iconWrapper.className = "text-star-blue";
+          
+          new Icon({
+            target: iconWrapper,
+            props: {
+              name: "person",
+              size: "md"
+            }
+          });
+          
+          const nameSpan = document.createElement("span");
+          nameSpan.textContent = params.value;
+          
+          container.appendChild(iconWrapper);
+          container.appendChild(nameSpan);
+          
+          return container;
+        },
+      },
       sortable: true,
       filter: true,
       width: 120,
@@ -147,14 +172,18 @@
         button.className = "size-9 inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium text-slate-700 hover:bg-slate-100 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50";
         button.onclick = () => exportStudentData(params.data);
         
-        button.innerHTML = `
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="size-4 stroke-current">
-            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
-            <polyline points="7 10 12 15 17 10"/>
-            <line x1="12" x2="12" y1="15" y2="3"/>
-          </svg>
-        `;
+        const iconWrapper = document.createElement("div");
+        iconWrapper.className = "size-4";
         
+        new Icon({
+          target: iconWrapper,
+          props: {
+            name: "insert_chart",
+            size: "md"
+          }
+        });
+        
+        button.appendChild(iconWrapper);
         container.appendChild(button);
         return container;
       },
@@ -175,8 +204,31 @@
           field: "title",
           headerName: "Class Name",
           flex: 1,
-          minWidth: 200,
+          minWidth: 240,
           suppressMenu: true,
+          cellRenderer: (params: ICellRendererParams) => {
+            const container = document.createElement("div");
+            container.className = "flex items-center gap-4";
+            
+            const iconWrapper = document.createElement("div");
+            iconWrapper.className = "text-star-blue";
+            
+            new Icon({
+              target: iconWrapper,
+              props: {
+                name: "library_books",
+                size: "md"
+              }
+            });
+            
+            const titleSpan = document.createElement("span");
+            titleSpan.textContent = params.value;
+            
+            container.appendChild(iconWrapper);
+            container.appendChild(titleSpan);
+            
+            return container;
+          },
         },
         {
           field: "grade",
@@ -404,6 +456,7 @@
 <style>
   :global(.ag-theme-alpine) {
     --ag-header-height: 48px;
+    --ag-row-height: 60px;
     --ag-header-foreground-color: rgb(100, 116, 139);
     --ag-header-background-color: transparent;
     --ag-row-border-color: rgb(241, 245, 249);
