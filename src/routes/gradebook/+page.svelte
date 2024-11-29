@@ -330,7 +330,7 @@
   };
 
   async function loadMockData() {
-    await new Promise((resolve) => setTimeout(resolve, 500));
+    // await new Promise((resolve) => setTimeout(resolve, 500));
     // For now, just use the first school's data
     currentSchool = mockData.schools[0];
     return currentSchool.students;
