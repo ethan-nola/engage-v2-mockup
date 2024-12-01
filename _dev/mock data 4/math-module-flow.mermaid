@@ -1,0 +1,47 @@
+flowchart TD
+    Start(Unit Start) --> S1[Session 1\nRCA + Presentation]
+    S1 --> S2[Session 2\nRCA + Presentation]
+    S2 --> S3[Session 3\nRCA + Presentation]
+    S3 --> S4[Session 4\nRCA + Presentation]
+    S4 --> D1{Diagnostic Day 1}
+    
+    subgraph Group1 [Diagnostic Group 1]
+        D1A[Diagnostic 1] --> |Score < 100%| L1[Lesson 1]
+        D1A --> |Score = 100%| D2A
+        L1 --> M1A[Mastery 1a]
+        M1A --> |Score < 100%| M1B[Mastery 1b]
+        M1A --> |Score = 100%| D2A
+        M1B --> |Score < 100%| Lock1[Instructor Intervention]
+        M1B --> |Score = 100%| D2A
+    end
+    
+    subgraph Group2 [Diagnostic Group 2]
+        D2A[Diagnostic 2] --> |Score < 100%| L2[Lesson 2]
+        D2A --> |Score = 100%| D3A
+        L2 --> M2A[Mastery 2a]
+        M2A --> |Score < 100%| M2B[Mastery 2b]
+        M2A --> |Score = 100%| D3A
+        M2B --> |Score < 100%| Lock2[Instructor Intervention]
+        M2B --> |Score = 100%| D3A
+    end
+    
+    Lock1 -.-> D2A
+    Lock2 -.-> D3A
+    
+    D3A[Continue to Groups 3 & 4] --> S5[Session 5\nRCA + Presentation]
+    
+    S5 --> S6[Session 6\nPresentation Only]
+    S6 --> S7[Session 7\nPost-test + Presentation]
+    S7 --> D2{Diagnostic Day 2}
+    D2 --> |Similar structure to Diagnostic Day 1| S10
+    S10[Session 10\nEnrichment] --> End(Unit Complete)
+
+    classDef session fill:#a8d5e5,stroke:#178bb3,stroke-width:2px
+    classDef diagnostic fill:#ffdab9,stroke:#ff8c00,stroke-width:2px
+    classDef decision fill:#d3d3d3,stroke:#808080,stroke-width:2px
+    classDef endpoint fill:#98fb98,stroke:#228b22,stroke-width:2px
+    
+    class S1,S2,S3,S4,S5,S6,S7,S10 session
+    class D1A,D2A,D3A,L1,L2,M1A,M1B,M2A,M2B diagnostic
+    class D1,D2 decision
+    class Start,End endpoint
