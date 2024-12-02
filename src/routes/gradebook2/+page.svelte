@@ -1,182 +1,33 @@
 <script lang="ts">
   import { onMount, tick } from "svelte";
   import "ag-grid-enterprise";
-  import {
-    createGrid,
-    type ColDef,
-    type GridApi,
-    type GridReadyEvent,
-  } from "ag-grid-community";
+  import { createGrid, type GridApi, type GridReadyEvent } from "ag-grid-community";
+  import { createColumnDefs } from "./gridConfigService";
+  import type { BaseStudent, GridConfiguration } from "./types";
   import "ag-grid-community/styles/ag-grid.css";
   import "ag-grid-community/styles/ag-theme-alpine.css";
-
-  type Person = {
-    id: string;
-    firstname: string;
-    lastname: string;
-    unit1: number;
-    unit1_lesson1: number;
-    unit1_lesson2: number;
-    unit1_lesson3: number;
-    unit1_lesson4: number;
-    unit1_lesson5: number;
-    unit1_lesson6: number;
-    unit1_lesson7: number;
-    unit1_lesson8: number;
-    unit1_lesson9: number;
-    unit1_lesson10: number;
-    unit2: number;
-    unit2_lesson1: number;
-    unit2_lesson2: number;
-    unit2_lesson3: number;
-    unit2_lesson4: number;
-    unit2_lesson5: number;
-    unit2_lesson6: number;
-    unit2_lesson7: number;
-    unit2_lesson8: number;
-    unit2_lesson9: number;
-    unit2_lesson10: number;
-    unit3: number;
-    unit3_lesson1: number;
-    unit3_lesson2: number;
-    unit3_lesson3: number;
-    unit3_lesson4: number;
-    unit3_lesson5: number;
-    unit3_lesson6: number;
-    unit3_lesson7: number;
-    unit3_lesson8: number;
-    unit3_lesson9: number;
-    unit3_lesson10: number;
-    unit4: number;
-    unit4_lesson1: number;
-    unit4_lesson2: number;
-    unit4_lesson3: number;
-    unit4_lesson4: number;
-    unit4_lesson5: number;
-    unit4_lesson6: number;
-    unit4_lesson7: number;
-    unit4_lesson8: number;
-    unit4_lesson9: number;
-    unit4_lesson10: number;
-    unit5: number;
-    unit5_lesson1: number;
-    unit5_lesson2: number;
-    unit5_lesson3: number;
-    unit5_lesson4: number;
-    unit5_lesson5: number;
-    unit5_lesson6: number;
-    unit5_lesson7: number;
-    unit5_lesson8: number;
-    unit5_lesson9: number;
-    unit5_lesson10: number;
-    unit6: number;
-    unit6_lesson1: number;
-    unit6_lesson2: number;
-    unit6_lesson3: number;
-    unit6_lesson4: number;
-    unit6_lesson5: number;
-    unit6_lesson6: number;
-    unit6_lesson7: number;
-    unit6_lesson8: number;
-    unit6_lesson9: number;
-    unit6_lesson10: number;
-    unit7: number;
-    unit7_lesson1: number;
-    unit7_lesson2: number;
-    unit7_lesson3: number;
-    unit7_lesson4: number;
-    unit7_lesson5: number;
-    unit7_lesson6: number;
-    unit7_lesson7: number;
-    unit7_lesson8: number;
-    unit7_lesson9: number;
-    unit7_lesson10: number;
-    unit8: number;
-    unit8_lesson1: number;
-    unit8_lesson2: number;
-    unit8_lesson3: number;
-    unit8_lesson4: number;
-    unit8_lesson5: number;
-    unit8_lesson6: number;
-    unit8_lesson7: number;
-    unit8_lesson8: number;
-    unit8_lesson9: number;
-    unit8_lesson10: number;
-    unit9: number;
-    unit9_lesson1: number;
-    unit9_lesson2: number;
-    unit9_lesson3: number;
-    unit9_lesson4: number;
-    unit9_lesson5: number;
-    unit9_lesson6: number;
-    unit9_lesson7: number;
-    unit9_lesson8: number;
-    unit9_lesson9: number;
-    unit9_lesson10: number;
-    unit10: number;
-    unit10_lesson1: number;
-    unit10_lesson2: number;
-    unit10_lesson3: number;
-    unit10_lesson4: number;
-    unit10_lesson5: number;
-    unit10_lesson6: number;
-    unit10_lesson7: number;
-    unit10_lesson8: number;
-    unit10_lesson9: number;
-    unit10_lesson10: number;
-  };
 
   /** @type {import('./$types').PageData} */
   export let data;
   
-  let rowData: Person[] = [];
-  let gridApi: GridApi<Person>;
+  let rowData: BaseStudent[] = [];
+  let gridApi: GridApi<BaseStudent>;
 
-  function createUnitColumn(unitNumber: number): ColDef<Person> {
-    return {
-      headerName: `Unit ${unitNumber}`,
-      marryChildren: true,
-      children: [
-        {
-          field: `unit${unitNumber}`,
-          headerName: "Overall",
-          sortable: true,
-          minWidth: 90,
-          valueGetter: (params) => {
-            const lessonGrades = Array.from({ length: 10 }, (_, i) => 
-              params.data?.[`unit${unitNumber}_lesson${i + 1}`] as number
-            );
-            return Math.round(lessonGrades.reduce((sum, grade) => sum + grade, 0) / lessonGrades.length);
-          }
-        },
-        ...Array.from({ length: 10 }, (_, i) => ({
-          field: `unit${unitNumber}_lesson${i + 1}`,
-          headerName: `Lesson ${i + 1}`,
-          sortable: true,
-          minWidth: 90,
-          columnGroupShow: 'open'
-        }))
-      ]
-    };
-  }
+  // Example configuration for units/lessons structure
+  const gridConfig: GridConfiguration = {
+    sections: Array.from({ length: 10 }, (_, i) => ({
+      name: `Unit ${i + 1}`,
+      field: `unit${i + 1}`,
+      subsections: Array.from({ length: 10 }, (_, j) => ({
+        name: `Lesson ${j + 1}`,
+        field: `unit${i + 1}_lesson${j + 1}`
+      }))
+    })),
+    calculateSectionAverage: (values) => 
+      Math.round(values.reduce((sum, grade) => sum + (grade as number), 0) / values.length)
+  };
 
-  const columnDefs: ColDef<Person>[] = [
-    { 
-      field: "firstname", 
-      headerName: "First Name", 
-      sortable: true,
-      minWidth: 120,
-      pinned: 'left'
-    },
-    { 
-      field: "lastname", 
-      headerName: "Last Name", 
-      sortable: true,
-      minWidth: 120,
-      pinned: 'left'
-    },
-    ...Array.from({ length: 10 }, (_, i) => createUnitColumn(i + 1))
-  ];
+  const columnDefs = createColumnDefs(gridConfig);
 
   async function initializeGrid() {
     const gridDiv = document.querySelector("#myGrid");
@@ -191,7 +42,7 @@
           suppressSizeToFit: false,
           suppressHeaderMenuButton: true
         },
-        onGridReady: (params: GridReadyEvent<Person>) => {
+        onGridReady: (params: GridReadyEvent<BaseStudent>) => {
           gridApi = params.api;
           params.api.autoSizeAllColumns();
         },
