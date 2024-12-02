@@ -1,3 +1,5 @@
+// Mock data generation
+
 import { faker } from '@faker-js/faker';
 
 /** @type {Array<string>} */
