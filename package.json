@@ -36,6 +36,7 @@
 		"@tailwindcss/forms": "^0.5.9",
 		"@tailwindcss/typography": "^0.5.15",
 		"ag-grid-community": "^32.3.3",
-		"ag-grid-enterprise": "^32.3.3"
+		"ag-grid-enterprise": "^32.3.3",
+		"ag-grid-svelte": "^0.3.0"
 	}
 }
