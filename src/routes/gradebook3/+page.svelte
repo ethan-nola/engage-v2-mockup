@@ -21,6 +21,8 @@
             rowData: data.rowData,
             columnDefs: data.columnDefs,
             popupParent: document.body,
+            groupDisplayType: 'columnGroupCells',
+            columnHideDefaultValue: false,
             autoSizeStrategy: {
                 type: 'fitCellContents',
                 skipHeader: false,

@@ -1,14 +1,20 @@
 interface StudentRow {
     firstName: string;
     lastName: string;
-    [key: string]: string | number;  // Allow dynamic grade properties
+    [key: string]: string | number;
 }
 
 interface ColumnDef {
-    field: string;
+    field?: string;
     headerName: string;
     autoSize?: boolean;
     width?: number;
+    pinned?: string;
+    children?: ColumnDef[];
+    valueGetter?: (params: any) => number;
+    openByDefault?: boolean;
+    columnGroupShow?: string;
+    groupId?: string;
 }
 
 function generateMockData() {
@@ -38,28 +44,59 @@ function generateMockData() {
 export function load() {
     const rowData = generateMockData();
     
-    // Generate column definitions
     const columnDefs: ColumnDef[] = [
         { 
             field: 'firstName', 
             headerName: 'First Name',
             autoSize: true,
-            pinned: 'left'  // Freeze column to the left
+            pinned: 'left'
         },
         { 
             field: 'lastName', 
             headerName: 'Last Name',
             autoSize: true,
-            pinned: 'left'  // Freeze column to the left
+            pinned: 'left'
         }
     ];
     
-    // Add numbered grade columns
-    for (let i = 1; i <= 100; i++) {
+    // Create grouped grade columns
+    for (let unit = 0; unit < 10; unit++) {
+        const startGrade = unit * 10 + 1;
+        const endGrade = startGrade + 9;
+        
+        const children: ColumnDef[] = [];
+        for (let grade = startGrade; grade <= endGrade; grade++) {
+            children.push({
+                field: `grade${grade}`,
+                headerName: `${grade}`,
+                width: 100,
+                columnGroupShow: 'open'
+            });
+        }
+        
         columnDefs.push({
-            field: `grade${i}`,
-            headerName: `${i}`,
-            width: 100
+            headerName: `Unit ${unit + 1}`,
+            groupId: `unit${unit + 1}`,
+            children: children,
+            children: [
+                {
+                    headerName: 'Average',
+                    valueGetter: (params) => {
+                        const grades = [];
+                        for (let grade = startGrade; grade <= endGrade; grade++) {
+                            const value = params.data[`grade${grade}`];
+                            if (value !== undefined) {
+                                grades.push(value);
+                            }
+                        }
+                        return grades.length > 0 
+                            ? Math.round(grades.reduce((sum, grade) => sum + grade, 0) / grades.length) 
+                            : 0;
+                    },
+                    columnGroupShow: 'closed'
+                },
+                ...children
+            ]
         });
     }
     
