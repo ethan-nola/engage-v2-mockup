@@ -1,5 +1,7 @@
 export type GradeValue = number | string;
 
+export type CompletionStatus = 'Not started' | 'In progress' | 'Complete';
+
 export interface BaseStudent {
   id: string;
   firstname: string;

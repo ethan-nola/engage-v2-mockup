@@ -1,17 +1,17 @@
 import type { ColDef } from "ag-grid-community";
-import type { BaseStudent, GridConfiguration } from "./types";
+import type { BaseStudent, GridConfiguration, CompletionStatus } from "./types";
 
 export function createColumnDefs<T extends BaseStudent>(config: GridConfiguration): ColDef<T>[] {
   const baseColumns: ColDef<T>[] = [
     {
-      field: "firstname",
+      field: 'firstname' as keyof T,
       headerName: "First Name",
       sortable: true,
       minWidth: 120,
       pinned: 'left'
     },
     {
-      field: "lastname",
+      field: 'lastname' as keyof T,
       headerName: "Last Name",
       sortable: true,
       minWidth: 120,
@@ -24,7 +24,7 @@ export function createColumnDefs<T extends BaseStudent>(config: GridConfiguratio
     children: [
       {
         field: section.field,
-        headerName: "Overall",
+        headerName: "Grade",
         sortable: true,
         minWidth: 90,
         valueGetter: (params: any) => {
@@ -41,7 +41,7 @@ export function createColumnDefs<T extends BaseStudent>(config: GridConfiguratio
         children: [
           {
             field: subsection.field,
-            headerName: "Overall",
+            headerName: "Grade",
             sortable: true,
             minWidth: 90,
             valueGetter: (params: any) => {
@@ -58,7 +58,13 @@ export function createColumnDefs<T extends BaseStudent>(config: GridConfiguratio
             headerName: detail.name,
             sortable: true,
             minWidth: 90,
-            columnGroupShow: 'open'
+            columnGroupShow: 'open',
+            ...(detail.name === 'Completion' ? {
+              cellEditor: 'agSelectCellEditor',
+              cellEditorParams: {
+                values: ['Not started', 'In progress', 'Complete']
+              }
+            } : {})
           })) || [])
         ],
         columnGroupShow: 'open'

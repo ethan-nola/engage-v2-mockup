@@ -36,8 +36,8 @@
     calculateSectionAverage: (values) => 
       Math.round(values.reduce((sum, grade) => sum + (grade as number), 0) / values.length),
     calculateSubsectionAverage: (values) => {
-      const [completion, grade] = values as number[];
-      return completion === 0 ? 0 : grade;
+      const [completion, grade] = values;
+      return completion === 'Not started' ? 0 : grade as number;
     }
   };
 
@@ -56,7 +56,6 @@
           suppressSizeToFit: false,
           suppressHeaderMenuButton: true
         },
-        suppressColumnGroupExpanding: false,
         groupDisplayType: 'multiColumn',
         onGridReady: (params: GridReadyEvent<BaseStudent>) => {
           gridApi = params.api;
@@ -99,9 +98,21 @@
     border-bottom: 1px solid rgb(241, 245, 249);
   }
 
-  :global(.ag-theme-alpine .ag-header-cell) {
+  /* Top level - Unit headers */
+  :global(.ag-theme-alpine .ag-header-row-column-group:first-child .ag-header-group-cell) {
+    font-size: 1.125rem;
+    font-weight: 700;
+  }
+
+  /* Middle level - Lesson headers */
+  :global(.ag-theme-alpine .ag-header-row-column-group:nth-child(2) .ag-header-group-cell) {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  /* Bottom level - Detail headers (Completion, Grade) */
+  :global(.ag-theme-alpine .ag-header-cell:not(.ag-header-group-cell)) {
     font-size: 0.875rem;
     font-weight: 500;
-    text-transform: none;
   }
 </style>

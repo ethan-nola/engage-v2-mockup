@@ -12,12 +12,14 @@ export function load() {
     // Add lesson scores
     for (let unit = 1; unit <= 10; unit++) {
       for (let lesson = 1; lesson <= 10; lesson++) {
-        const completion = faker.number.int({ min: 0, max: 100 });
-        const grade = faker.number.int({ min: 60, max: 100 });
+        // Replace numeric completion with status
+        const completionStatuses = ['Not started', 'In progress', 'Complete'];
+        const completion = faker.helpers.arrayElement(completionStatuses);
+        const grade = faker.number.int({ min: 40, max: 100 });
         
         person[`unit${unit}_lesson${lesson}_completion`] = completion;
         person[`unit${unit}_lesson${lesson}_grade`] = grade;
-        person[`unit${unit}_lesson${lesson}`] = completion === 0 ? 0 : grade;
+        person[`unit${unit}_lesson${lesson}`] = completion === 'Not started' ? 0 : grade;
       }
     }
 
