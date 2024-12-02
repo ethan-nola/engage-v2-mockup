@@ -15,8 +15,8 @@
 
   // Example configuration for units/lessons structure
   const gridConfig: GridConfiguration = {
-    sections: Array.from({ length: 10 }, (_, i) => ({
-      name: `Unit ${i + 1}`,
+    sections: Array.from({ length: data.unitTitles.length }, (_, i) => ({
+      name: data.unitTitles[i],
       field: `unit${i + 1}`,
       subsections: Array.from({ length: 10 }, (_, j) => ({
         name: `Lesson ${j + 1}`,
@@ -33,11 +33,17 @@
         ]
       }))
     })),
-    calculateSectionAverage: (values) => 
-      Math.round(values.reduce((sum, grade) => sum + (grade as number), 0) / values.length),
+    calculateSectionAverage: (values) => {
+      const grades = values.map(val => {
+        const lessonData = val as { grade: number };
+        return lessonData.grade;
+      }).filter(grade => typeof grade === 'number');
+      
+      return Math.round(grades.reduce((sum, grade) => sum + grade, 0) / grades.length);
+    },
     calculateSubsectionAverage: (values) => {
-      const [completion, grade] = values;
-      return completion === 'Not started' ? 0 : grade as number;
+      const [_, grade] = values;
+      return grade as number;
     }
   };
 
@@ -60,9 +66,7 @@
         onGridReady: (params: GridReadyEvent<BaseStudent>) => {
           gridApi = params.api;
           params.api.autoSizeAllColumns();
-        },
-        autoSizeStrategy: {
-          type: 'fitCellContents'
+          params.api.sizeColumnsToFit();
         }
       });
     }

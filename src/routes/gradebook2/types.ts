@@ -30,4 +30,9 @@ export interface GridConfiguration {
   sections: GridSection[];
   calculateSectionAverage?: (sectionFields: GradeValue[]) => GradeValue;
   calculateSubsectionAverage?: (detailFields: GradeValue[]) => GradeValue;
+}
+
+export interface PageData {
+  people: BaseStudent[];
+  unitTitles: string[];
 } 
