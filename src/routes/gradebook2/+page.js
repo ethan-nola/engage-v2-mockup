@@ -16,32 +16,47 @@ const unitTitles = [
   "Home Makeover"
 ];
 
-function generateUnitData(isCompleteUnit) {
+/** @type {(isCompleteUnit: boolean, isInProgress: boolean) => Array<{completion: CompletionStatus, grade: number | null}>} */
+function generateUnitData(isCompleteUnit, isInProgress) {
   const lessonCount = 10;
-  // If it's a complete unit, all lessons will be done
-  // Otherwise, generate a random number of completed lessons (0 to 9)
-  const completedLessons = isCompleteUnit ? lessonCount : faker.number.int({ min: 0, max: 9 });
   
-  const lessons = [];
-  for (let lesson = 1; lesson <= lessonCount; lesson++) {
-    // Lessons must be completed in order
-    const isLessonComplete = lesson <= completedLessons;
-    // For incomplete units, the last incomplete lesson might be "in progress"
-    const isInProgress = !isLessonComplete && lesson === completedLessons + 1;
+  if (isCompleteUnit) {
+    // Complete unit - all lessons done with grades
+    return Array.from({ length: lessonCount }, () => ({
+      completion: 'Complete',
+      grade: faker.number.int({ min: 60, max: 100 })
+    }));
+  }
+  
+  if (isInProgress) {
+    // In Progress unit - some lessons complete, one in progress, rest not started
+    const completedLessons = faker.number.int({ min: 0, max: 8 });
     
-    const status = isLessonComplete ? 'Complete' : 
-                   isInProgress ? 'In progress' : 
-                   'Not started';
-                   
-    // Only completed lessons have grades
-    const grade = isLessonComplete ? faker.number.int({ min: 60, max: 100 }) : null;
-    
-    lessons.push({
-      completion: status,
-      grade: grade
+    return Array.from({ length: lessonCount }, (_, index) => {
+      if (index < completedLessons) {
+        return {
+          completion: 'Complete',
+          grade: faker.number.int({ min: 60, max: 100 })
+        };
+      } else if (index === completedLessons) {
+        return {
+          completion: 'In progress',
+          grade: null
+        };
+      } else {
+        return {
+          completion: 'Not started',
+          grade: null
+        };
+      }
     });
   }
-  return lessons;
+  
+  // Not started unit - all lessons not started
+  return Array.from({ length: lessonCount }, () => ({
+    completion: 'Not started',
+    grade: null
+  }));
 }
 
 /** @type {import('./$types').PageLoad} */
@@ -53,7 +68,12 @@ export function load() {
     
     // Randomly select which units are complete (can be in any order)
     const unitIndices = Array.from({ length: unitTitles.length }, (_, i) => i);
-    const completedUnitIndices = faker.helpers.shuffle(unitIndices).slice(0, completedUnitCount);
+    const shuffledUnits = faker.helpers.shuffle([...unitIndices]);
+    const completedUnitIndices = shuffledUnits.slice(0, completedUnitCount);
+    
+    // If they haven't completed all units, pick the next unit to be in progress
+    const inProgressUnitIndex = completedUnitCount < unitTitles.length ? 
+      shuffledUnits[completedUnitCount] : null;
     
     /** @type {import('./types').BaseStudent} */
     const person = {
@@ -66,7 +86,9 @@ export function load() {
     for (let unitIndex = 0; unitIndex < unitTitles.length; unitIndex++) {
       const unitNumber = unitIndex + 1;
       const isCompleteUnit = completedUnitIndices.includes(unitIndex);
-      const lessons = generateUnitData(isCompleteUnit);
+      const isInProgress = unitIndex === inProgressUnitIndex;
+      
+      const lessons = generateUnitData(isCompleteUnit, isInProgress);
       
       // Add lesson data to person object
       lessons.forEach((lesson, lessonIndex) => {
@@ -75,7 +97,6 @@ export function load() {
         
         person[`${baseField}_completion`] = lesson.completion;
         person[`${baseField}_grade`] = lesson.grade;
-        // The lesson field itself is only populated for completed lessons
         person[`${baseField}`] = lesson.completion === 'Complete' ? lesson.grade : null;
       });
     }
