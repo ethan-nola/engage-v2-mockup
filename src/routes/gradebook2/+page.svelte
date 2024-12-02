@@ -189,7 +189,7 @@
           sortable: true,
           resizable: true,
           suppressSizeToFit: false,
-          suppressMenu: true
+          suppressHeaderMenuButton: true
         },
         onGridReady: (params: GridReadyEvent<Person>) => {
           gridApi = params.api;
