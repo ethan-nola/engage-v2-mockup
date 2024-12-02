@@ -45,6 +45,20 @@ const CONFIG = {
     }
 };
 
+// Add this constant at the top with the other CONFIG
+const UNIT_NAMES = [
+    "Forensic Math",
+    "Environmental Math", 
+    "Properties of Math",
+    "Chemical Math",
+    "Math Behind Your Meals",
+    "Geometric Packing",
+    "Factoring & Polynomials",
+    "Laser Geometry",
+    "Gravity of Algebra",
+    "Home Makeover"
+];
+
 function generateRandomGrade(): number {
     const rand = Math.random();
     let cumulativeWeight = 0;
@@ -169,7 +183,7 @@ export function load() {
         }
         
         columnDefs.push({
-            headerName: `Unit ${unit + 1}`,
+            headerName: UNIT_NAMES[unit],
             groupId: `unit${unit + 1}`,
             children: [
                 {
