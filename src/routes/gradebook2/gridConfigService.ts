@@ -21,33 +21,48 @@ export function createColumnDefs<T extends BaseStudent>(config: GridConfiguratio
 
   const sectionColumns = config.sections.map(section => ({
     headerName: section.name,
-    marryChildren: true,
     children: [
-      ...(section.subsections ? [{
+      {
         field: section.field,
         headerName: "Overall",
         sortable: true,
         minWidth: 90,
-        valueGetter: (params) => {
+        valueGetter: (params: any) => {
           if (!section.subsections || !config.calculateSectionAverage) return null;
           const values = section.subsections.map(sub => 
             params.data?.[sub.field] as number
           );
           return config.calculateSectionAverage(values);
-        }
-      }] : []),
+        },
+        columnGroupShow: 'closed'
+      },
       ...(section.subsections?.map(subsection => ({
-        field: subsection.field,
         headerName: subsection.name,
-        sortable: true,
-        minWidth: 90,
+        children: [
+          {
+            field: subsection.field,
+            headerName: "Overall",
+            sortable: true,
+            minWidth: 90,
+            valueGetter: (params: any) => {
+              if (!subsection.details || !config.calculateSubsectionAverage) return null;
+              const values = subsection.details.map(detail => 
+                params.data?.[detail.field] as number
+              );
+              return config.calculateSubsectionAverage(values);
+            },
+            columnGroupShow: 'closed'
+          },
+          ...(subsection.details?.map(detail => ({
+            field: detail.field,
+            headerName: detail.name,
+            sortable: true,
+            minWidth: 90,
+            columnGroupShow: 'open'
+          })) || [])
+        ],
         columnGroupShow: 'open'
-      })) || [{
-        field: section.field,
-        headerName: section.name,
-        sortable: true,
-        minWidth: 90
-      }])
+      })) || [])
     ]
   }));
 

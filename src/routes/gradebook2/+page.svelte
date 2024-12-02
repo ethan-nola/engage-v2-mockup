@@ -20,11 +20,25 @@
       field: `unit${i + 1}`,
       subsections: Array.from({ length: 10 }, (_, j) => ({
         name: `Lesson ${j + 1}`,
-        field: `unit${i + 1}_lesson${j + 1}`
+        field: `unit${i + 1}_lesson${j + 1}`,
+        details: [
+          {
+            name: "Completion",
+            field: `unit${i + 1}_lesson${j + 1}_completion`
+          },
+          {
+            name: "Grade",
+            field: `unit${i + 1}_lesson${j + 1}_grade`
+          }
+        ]
       }))
     })),
     calculateSectionAverage: (values) => 
-      Math.round(values.reduce((sum, grade) => sum + (grade as number), 0) / values.length)
+      Math.round(values.reduce((sum, grade) => sum + (grade as number), 0) / values.length),
+    calculateSubsectionAverage: (values) => {
+      const [completion, grade] = values as number[];
+      return completion === 0 ? 0 : grade;
+    }
   };
 
   const columnDefs = createColumnDefs(gridConfig);
@@ -42,6 +56,8 @@
           suppressSizeToFit: false,
           suppressHeaderMenuButton: true
         },
+        suppressColumnGroupExpanding: false,
+        groupDisplayType: 'multiColumn',
         onGridReady: (params: GridReadyEvent<BaseStudent>) => {
           gridApi = params.api;
           params.api.autoSizeAllColumns();
