@@ -43,12 +43,14 @@ export function load() {
         { 
             field: 'firstName', 
             headerName: 'First Name',
-            autoSize: true
+            autoSize: true,
+            pinned: 'left'  // Freeze column to the left
         },
         { 
             field: 'lastName', 
             headerName: 'Last Name',
-            autoSize: true
+            autoSize: true,
+            pinned: 'left'  // Freeze column to the left
         }
     ];
     

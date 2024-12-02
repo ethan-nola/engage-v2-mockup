@@ -7,6 +7,7 @@
     export let data;
     
     let gridDiv;
+    let grid;
     
     onMount(() => {
         const gridOptions = {
@@ -19,10 +20,23 @@
             },
             rowData: data.rowData,
             columnDefs: data.columnDefs,
-            popupParent: document.body
+            popupParent: document.body,
+            autoSizeStrategy: {
+                type: 'fitCellContents',
+                skipHeader: false,
+                columnLimits: [
+                    { colId: 'firstName' },
+                    { colId: 'lastName' }
+                ]
+            },
+            suppressColumnVirtualisation: true,
+            onFirstDataRendered: (params) => {
+                const nameColumns = ['firstName', 'lastName'];
+                params.columnApi.autoSizeColumns(nameColumns);
+            }
         };
         
-        new Grid(gridDiv, gridOptions);
+        grid = new Grid(gridDiv, gridOptions);
     });
 </script>
 
