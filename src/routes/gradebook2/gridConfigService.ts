@@ -13,6 +13,22 @@ function calculateAverageGrade(params: any, gradeFields: string[]): number | nul
   return Math.round(grades.reduce((sum, grade) => sum + grade, 0) / grades.length);
 }
 
+function getUnitStatus(params: any, subsections: GridSubsection[] | undefined): CompletionStatus {
+  if (!subsections) return 'Not started';
+  
+  // Check completion status of all lessons in the unit
+  const lessonStatuses = subsections.map(sub => 
+    params.data?.[`${sub.field}_completion`]
+  );
+  
+  // If any lesson is complete or in progress, the unit is in progress
+  if (lessonStatuses.some(status => status === 'Complete' || status === 'In progress')) {
+    return 'In progress';
+  }
+  
+  return 'Not started';
+}
+
 export function createColumnDefs<T extends BaseStudent>(config: GridConfiguration): ColDef<T>[] {
   // Base columns (pinned to left)
   const baseColumns: ColDef<T>[] = [
@@ -43,11 +59,27 @@ export function createColumnDefs<T extends BaseStudent>(config: GridConfiguratio
         sortable: true,
         minWidth: 200,
         valueGetter: (params: any) => {
-          // Get all lesson grade fields for this unit
+          // Get all lesson completion statuses for this unit
+          const allComplete = section.subsections?.every(sub => 
+            params.data?.[`${sub.field}_completion`] === 'Complete'
+          ) ?? false;
+
+          if (!allComplete) {
+            return getUnitStatus(params, section.subsections);
+          }
+
+          // If all lessons are complete, calculate the average grade
           const lessonGradeFields = section.subsections?.map(sub => 
             `${sub.field}_grade`
           ) || [];
           return calculateAverageGrade(params, lessonGradeFields);
+        },
+        // Add cell renderer to style status messages
+        cellRenderer: (params: any) => {
+          if (typeof params.value === 'string') {
+            return `<span class="text-slate-500 italic">${params.value}</span>`;
+          }
+          return params.value;
         },
         columnGroupShow: 'closed'
       },
