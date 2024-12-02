@@ -15,15 +15,115 @@
     firstname: string;
     lastname: string;
     unit1: number;
+    unit1_lesson1: number;
+    unit1_lesson2: number;
+    unit1_lesson3: number;
+    unit1_lesson4: number;
+    unit1_lesson5: number;
+    unit1_lesson6: number;
+    unit1_lesson7: number;
+    unit1_lesson8: number;
+    unit1_lesson9: number;
+    unit1_lesson10: number;
     unit2: number;
+    unit2_lesson1: number;
+    unit2_lesson2: number;
+    unit2_lesson3: number;
+    unit2_lesson4: number;
+    unit2_lesson5: number;
+    unit2_lesson6: number;
+    unit2_lesson7: number;
+    unit2_lesson8: number;
+    unit2_lesson9: number;
+    unit2_lesson10: number;
     unit3: number;
+    unit3_lesson1: number;
+    unit3_lesson2: number;
+    unit3_lesson3: number;
+    unit3_lesson4: number;
+    unit3_lesson5: number;
+    unit3_lesson6: number;
+    unit3_lesson7: number;
+    unit3_lesson8: number;
+    unit3_lesson9: number;
+    unit3_lesson10: number;
     unit4: number;
+    unit4_lesson1: number;
+    unit4_lesson2: number;
+    unit4_lesson3: number;
+    unit4_lesson4: number;
+    unit4_lesson5: number;
+    unit4_lesson6: number;
+    unit4_lesson7: number;
+    unit4_lesson8: number;
+    unit4_lesson9: number;
+    unit4_lesson10: number;
     unit5: number;
+    unit5_lesson1: number;
+    unit5_lesson2: number;
+    unit5_lesson3: number;
+    unit5_lesson4: number;
+    unit5_lesson5: number;
+    unit5_lesson6: number;
+    unit5_lesson7: number;
+    unit5_lesson8: number;
+    unit5_lesson9: number;
+    unit5_lesson10: number;
     unit6: number;
+    unit6_lesson1: number;
+    unit6_lesson2: number;
+    unit6_lesson3: number;
+    unit6_lesson4: number;
+    unit6_lesson5: number;
+    unit6_lesson6: number;
+    unit6_lesson7: number;
+    unit6_lesson8: number;
+    unit6_lesson9: number;
+    unit6_lesson10: number;
     unit7: number;
+    unit7_lesson1: number;
+    unit7_lesson2: number;
+    unit7_lesson3: number;
+    unit7_lesson4: number;
+    unit7_lesson5: number;
+    unit7_lesson6: number;
+    unit7_lesson7: number;
+    unit7_lesson8: number;
+    unit7_lesson9: number;
+    unit7_lesson10: number;
     unit8: number;
+    unit8_lesson1: number;
+    unit8_lesson2: number;
+    unit8_lesson3: number;
+    unit8_lesson4: number;
+    unit8_lesson5: number;
+    unit8_lesson6: number;
+    unit8_lesson7: number;
+    unit8_lesson8: number;
+    unit8_lesson9: number;
+    unit8_lesson10: number;
     unit9: number;
+    unit9_lesson1: number;
+    unit9_lesson2: number;
+    unit9_lesson3: number;
+    unit9_lesson4: number;
+    unit9_lesson5: number;
+    unit9_lesson6: number;
+    unit9_lesson7: number;
+    unit9_lesson8: number;
+    unit9_lesson9: number;
+    unit9_lesson10: number;
     unit10: number;
+    unit10_lesson1: number;
+    unit10_lesson2: number;
+    unit10_lesson3: number;
+    unit10_lesson4: number;
+    unit10_lesson5: number;
+    unit10_lesson6: number;
+    unit10_lesson7: number;
+    unit10_lesson8: number;
+    unit10_lesson9: number;
+    unit10_lesson10: number;
   };
 
   /** @type {import('./$types').PageData} */
@@ -32,19 +132,50 @@
   let rowData: Person[] = [];
   let gridApi: GridApi<Person>;
 
+  function createUnitColumn(unitNumber: number): ColDef<Person> {
+    return {
+      headerName: `Unit ${unitNumber}`,
+      marryChildren: true,
+      children: [
+        {
+          field: `unit${unitNumber}`,
+          headerName: "Overall",
+          sortable: true,
+          minWidth: 90,
+          valueGetter: (params) => {
+            const lessonGrades = Array.from({ length: 10 }, (_, i) => 
+              params.data?.[`unit${unitNumber}_lesson${i + 1}`] as number
+            );
+            return Math.round(lessonGrades.reduce((sum, grade) => sum + grade, 0) / lessonGrades.length);
+          }
+        },
+        ...Array.from({ length: 10 }, (_, i) => ({
+          field: `unit${unitNumber}_lesson${i + 1}`,
+          headerName: `Lesson ${i + 1}`,
+          sortable: true,
+          minWidth: 90,
+          columnGroupShow: 'open'
+        }))
+      ]
+    };
+  }
+
   const columnDefs: ColDef<Person>[] = [
-    { field: "firstname", headerName: "First Name", sortable: true, filter: true },
-    { field: "lastname", headerName: "Last Name", sortable: true, filter: true },
-    { field: "unit1", headerName: "Unit 1", sortable: true, filter: true },
-    { field: "unit2", headerName: "Unit 2", sortable: true, filter: true },
-    { field: "unit3", headerName: "Unit 3", sortable: true, filter: true },
-    { field: "unit4", headerName: "Unit 4", sortable: true, filter: true },
-    { field: "unit5", headerName: "Unit 5", sortable: true, filter: true },
-    { field: "unit6", headerName: "Unit 6", sortable: true, filter: true },
-    { field: "unit7", headerName: "Unit 7", sortable: true, filter: true },
-    { field: "unit8", headerName: "Unit 8", sortable: true, filter: true },
-    { field: "unit9", headerName: "Unit 9", sortable: true, filter: true },
-    { field: "unit10", headerName: "Unit 10", sortable: true, filter: true },
+    { 
+      field: "firstname", 
+      headerName: "First Name", 
+      sortable: true,
+      minWidth: 120,
+      pinned: 'left'
+    },
+    { 
+      field: "lastname", 
+      headerName: "Last Name", 
+      sortable: true,
+      minWidth: 120,
+      pinned: 'left'
+    },
+    ...Array.from({ length: 10 }, (_, i) => createUnitColumn(i + 1))
   ];
 
   async function initializeGrid() {
@@ -57,11 +188,16 @@
         defaultColDef: {
           sortable: true,
           resizable: true,
+          suppressSizeToFit: false,
+          suppressMenu: true
         },
         onGridReady: (params: GridReadyEvent<Person>) => {
           gridApi = params.api;
-          params.api.sizeColumnsToFit();
+          params.api.autoSizeAllColumns();
         },
+        autoSizeStrategy: {
+          type: 'fitCellContents'
+        }
       });
     }
   }
@@ -73,7 +209,7 @@
   });
 </script>
 
-<div class="h-full flex flex-col">
+<div class="h-full flex flex-col overflow-x-auto">
   <div class="ag-theme-alpine w-full flex-1" id="myGrid"></div>
 </div>
 
