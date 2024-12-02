@@ -1,4 +1,4 @@
-export type GradeValue = number | string;
+export type GradeValue = number | string | null;
 
 export type CompletionStatus = 'Not started' | 'In progress' | 'Complete';
 

@@ -60,8 +60,23 @@ export function createColumnDefs<T extends BaseStudent>(config: GridConfiguratio
             headerName: "Grade",
             sortable: true,
             valueGetter: (params: any) => {
-              // For lesson, just show the grade value
-              return params.data?.[`${subsection.field}_grade`];
+              const completion = params.data?.[`${subsection.field}_completion`];
+              const grade = params.data?.[`${subsection.field}_grade`];
+              
+              // If the lesson isn't complete, show the status
+              if (completion !== 'Complete') {
+                return completion;
+              }
+              
+              // Otherwise show the grade
+              return grade;
+            },
+            // Add a cell renderer to style the status text differently from grades
+            cellRenderer: (params: any) => {
+              if (typeof params.value === 'string') {
+                return `<span class="text-slate-500 italic">${params.value}</span>`;
+              }
+              return params.value;
             },
             columnGroupShow: 'closed'
           },
