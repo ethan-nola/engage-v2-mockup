@@ -115,4 +115,38 @@
     font-size: 0.875rem;
     font-weight: 500;
   }
+
+  /* Update these styles */
+  :global(.ag-theme-alpine .ag-header-cell-label) {
+    height: 100%;
+    padding: 0 !important;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+
+  :global(.ag-theme-alpine .ag-header-group-cell-label) {
+    height: 100%;
+    padding: 0 !important;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+
+  /* Add these new styles for the chevron alignment */
+  :global(.ag-theme-alpine .ag-header-expand-icon) {
+    margin-bottom: 0.5rem;
+  }
+
+  :global(.ag-theme-alpine .ag-header-cell-comp-wrapper) {
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  /* Adjust bottom padding to fine-tune the spacing */
+  :global(.ag-theme-alpine .ag-header-cell-text),
+  :global(.ag-theme-alpine .ag-header-group-text) {
+    padding-bottom: 0.5rem;
+  }
 </style>
