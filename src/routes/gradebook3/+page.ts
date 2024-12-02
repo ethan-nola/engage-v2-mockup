@@ -15,6 +15,7 @@ interface ColumnDef {
     openByDefault?: boolean;
     columnGroupShow?: string;
     groupId?: string;
+    valueFormatter?: (params: any) => string;
 }
 
 function generateMockData() {
@@ -23,14 +24,11 @@ function generateMockData() {
     
     const rows = [];
     
-    // Generate 80 rows
     for (let i = 0; i < 80; i++) {
-        // Create row as a plain object without type constraints
         const row = Object.create(null);
         row.firstName = firstNames[Math.floor(Math.random() * firstNames.length)];
         row.lastName = lastNames[Math.floor(Math.random() * lastNames.length)];
         
-        // Add 100 grade columns
         for (let j = 1; j <= 100; j++) {
             row[`grade${j}`] = Math.floor(Math.random() * 101);
         }
@@ -59,25 +57,27 @@ export function load() {
         }
     ];
     
-    // Create grouped grade columns
     for (let unit = 0; unit < 10; unit++) {
         const startGrade = unit * 10 + 1;
         const endGrade = startGrade + 9;
         
         const children: ColumnDef[] = [];
         for (let grade = startGrade; grade <= endGrade; grade++) {
+            const lessonNumber = ((grade - 1) % 10) + 1;
             children.push({
                 field: `grade${grade}`,
-                headerName: `${grade}`,
+                headerName: `L${lessonNumber}`,
                 width: 100,
-                columnGroupShow: 'open'
+                columnGroupShow: 'open',
+                valueFormatter: (params) => {
+                    return params.value != null ? params.value + '%' : '';
+                }
             });
         }
         
         columnDefs.push({
             headerName: `Unit ${unit + 1}`,
             groupId: `unit${unit + 1}`,
-            children: children,
             children: [
                 {
                     headerName: 'Average',
@@ -90,8 +90,11 @@ export function load() {
                             }
                         }
                         return grades.length > 0 
-                            ? Math.round(grades.reduce((sum, grade) => sum + grade, 0) / grades.length) 
+                            ? Math.round(grades.reduce((sum, grade) => sum + grade, 0) / grades.length)
                             : 0;
+                    },
+                    valueFormatter: (params) => {
+                        return params.value != null ? params.value + '%' : '';
                     },
                     columnGroupShow: 'closed'
                 },
