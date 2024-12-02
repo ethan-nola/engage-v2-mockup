@@ -6,9 +6,9 @@ import pandas as pd
 # Configuration object for mock data generation
 CONFIG = {
     # Basic structure
-    'num_students': 30,
+    'num_students': 20,
     'num_units': 10,
-    'num_workstations': 5,  # Multiple units can be assigned to same workstation
+    'num_workstations': 10,  # Multiple units can be assigned to same workstation
     
     # Time parameters
     'semester_start_date': '2024-01-15',
@@ -16,7 +16,7 @@ CONFIG = {
     
     # Student progress parameters
     'min_units_completed': 3,  # Minimum units any student should have completed
-    'max_concurrent_units': 2,  # Maximum units a student can be working on simultaneously
+    'max_concurrent_units': 1,  # Maximum units a student can be working on simultaneously
     
     # Score generation
     'score_distribution': {
