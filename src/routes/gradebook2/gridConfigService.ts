@@ -1,6 +1,18 @@
 import type { ColDef } from "ag-grid-community";
 import type { BaseStudent, GridConfiguration, CompletionStatus } from "./types";
 
+function calculateAverageGrade(params: any, gradeFields: string[]): number {
+  // Get all numeric grade values from the specified fields
+  const grades = gradeFields
+    .map(field => params.data?.[field])
+    .filter(grade => typeof grade === 'number') as number[];
+    
+  if (grades.length === 0) return 0;
+  
+  // Calculate average
+  return Math.round(grades.reduce((sum, grade) => sum + grade, 0) / grades.length);
+}
+
 export function createColumnDefs<T extends BaseStudent>(config: GridConfiguration): ColDef<T>[] {
   // Base columns (pinned to left)
   const baseColumns: ColDef<T>[] = [
@@ -25,47 +37,41 @@ export function createColumnDefs<T extends BaseStudent>(config: GridConfiguratio
     headerName: section.name,
     children: [
       {
-        // TOP LEVEL - Unit Grade Column (shown when collapsed)
+        // Unit Grade (collapsed)
         field: section.field,
         headerName: "Grade",
         sortable: true,
-        minWidth: 200,  // Minimum width for collapsed unit view
+        minWidth: 200,
         valueGetter: (params: any) => {
-          if (!section.subsections || !config.calculateSectionAverage) return null;
-          const values = section.subsections.map(sub => ({
-            grade: params.data?.[`${sub.field}_grade`]
-          }));
-          return config.calculateSectionAverage(values);
+          // Get all lesson grade fields for this unit
+          const lessonGradeFields = section.subsections?.map(sub => 
+            `${sub.field}_grade`
+          ) || [];
+          return calculateAverageGrade(params, lessonGradeFields);
         },
         columnGroupShow: 'closed'
       },
       ...(section.subsections?.map(subsection => ({
-        // MIDDLE LEVEL - Lesson headers
         headerName: subsection.name,
         children: [
           {
-            // Lesson Grade Column (shown when lesson is collapsed)
+            // Lesson Grade (collapsed)
             field: subsection.field,
             headerName: "Grade",
             sortable: true,
-            // No minWidth here - will auto-size to content
             valueGetter: (params: any) => {
-              if (!subsection.details || !config.calculateSubsectionAverage) return null;
-              const values = subsection.details.map(detail => 
-                params.data?.[detail.field] as number
-              );
-              return config.calculateSubsectionAverage(values);
+              // For lesson, just show the grade value
+              return params.data?.[`${subsection.field}_grade`];
             },
             columnGroupShow: 'closed'
           },
           ...(subsection.details?.map(detail => ({
-            // BOTTOM LEVEL - Detail columns (Completion & Grade)
+            // Detail columns (Completion & Grade)
             field: detail.field,
             headerName: detail.name,
             sortable: true,
-            // No minWidth here - will auto-size to content
             columnGroupShow: 'open',
-            ...(detail.name === 'Completion' ? {
+            ...(detail.name === 'Status' ? {
               cellEditor: 'agSelectCellEditor',
               cellEditorParams: {
                 values: ['Not started', 'In progress', 'Complete']

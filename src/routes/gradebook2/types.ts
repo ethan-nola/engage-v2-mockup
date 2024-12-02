@@ -35,4 +35,9 @@ export interface GridConfiguration {
 export interface PageData {
   people: BaseStudent[];
   unitTitles: string[];
+}
+
+export interface GridValueGetter {
+  field: string;
+  children?: string[]; // Array of child grade fields to average
 } 

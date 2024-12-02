@@ -23,7 +23,7 @@
         field: `unit${i + 1}_lesson${j + 1}`,
         details: [
           {
-            name: "Completion",
+            name: "Status",
             field: `unit${i + 1}_lesson${j + 1}_completion`
           },
           {
