@@ -1,13 +1,13 @@
 import type { ColDef } from "ag-grid-community";
 import type { BaseStudent, GridConfiguration, CompletionStatus } from "./types";
 
-function calculateAverageGrade(params: any, gradeFields: string[]): number {
+function calculateAverageGrade(params: any, gradeFields: string[]): number | null {
   // Get all numeric grade values from the specified fields
   const grades = gradeFields
     .map(field => params.data?.[field])
-    .filter(grade => typeof grade === 'number') as number[];
+    .filter(grade => grade !== null && typeof grade === 'number') as number[];
     
-  if (grades.length === 0) return 0;
+  if (grades.length === 0) return null;
   
   // Calculate average
   return Math.round(grades.reduce((sum, grade) => sum + grade, 0) / grades.length);
