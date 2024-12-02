@@ -85,17 +85,22 @@
     --ag-row-height: 60px;
     --ag-header-foreground-color: rgb(100, 116, 139);
     --ag-header-background-color: transparent;
-    --ag-row-border-color: rgb(241, 245, 249);
-    --ag-border-color: transparent;
+    --ag-row-border-color: rgb(229, 231, 235);
+    --ag-border-color: rgb(229, 231, 235);
+    --ag-borders: solid;
+    --ag-borders-critical: solid;
+    --ag-row-border-style: solid;
+    --ag-border-radius: 0px;
+    --ag-row-border-width: 1px;
+    --ag-cell-horizontal-border: solid rgb(229, 231, 235);
     --ag-cell-horizontal-padding: 1rem;
-    --ag-borders: none;
     --ag-row-hover-color: rgb(248, 250, 252);
     --ag-font-size: 14px;
     --ag-font-family: inherit;
   }
 
   :global(.ag-theme-alpine .ag-header) {
-    border-bottom: 1px solid rgb(241, 245, 249);
+    border-bottom: 1px solid rgb(229, 231, 235);
   }
 
   /* Top level - Unit headers */
@@ -114,39 +119,5 @@
   :global(.ag-theme-alpine .ag-header-cell:not(.ag-header-group-cell)) {
     font-size: 0.875rem;
     font-weight: 500;
-  }
-
-  /* Update these styles */
-  :global(.ag-theme-alpine .ag-header-cell-label) {
-    height: 100%;
-    padding: 0 !important;
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-  }
-
-  :global(.ag-theme-alpine .ag-header-group-cell-label) {
-    height: 100%;
-    padding: 0 !important;
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-  }
-
-  /* Add these new styles for the chevron alignment */
-  :global(.ag-theme-alpine .ag-header-expand-icon) {
-    margin-bottom: 0.5rem;
-  }
-
-  :global(.ag-theme-alpine .ag-header-cell-comp-wrapper) {
-    height: 100%;
-    display: flex;
-    align-items: flex-end;
-  }
-
-  /* Adjust bottom padding to fine-tune the spacing */
-  :global(.ag-theme-alpine .ag-header-cell-text),
-  :global(.ag-theme-alpine .ag-header-group-text) {
-    padding-bottom: 0.5rem;
   }
 </style>
