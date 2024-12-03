@@ -11,6 +11,7 @@
     
     onMount(() => {
         const gridOptions = {
+            rowHeight: 38,
             // Default settings applied to all columns unless overridden
             defaultColDef: {
                 sortable: true,      // Enable sorting for all columns
@@ -82,6 +83,25 @@
         /* Set hover colors to standard AG Grid light blue */
         --ag-row-hover-color: rgb(33, 150, 243, 0.1);  /* Light blue with 10% opacity */
         --ag-column-hover-color: rgb(33, 150, 243, 0.1);  /* Light blue with 10% opacity */
+    }
+
+    /* Center cell contents vertically */
+    :global(.ag-theme-balham .ag-cell) {
+        display: flex;
+        align-items: center;
+    }
+
+    /* Replace the student-name-cell style with emphasized-text */
+    :global(.emphasized-text) {
+        font-size: 13px;
+        font-weight: 500;
+        color: rgba(0, 0, 0, 1);
+    }
+
+    /* Ensure the header class is applied correctly */
+    :global(.ag-header-cell.emphasized-text .ag-header-cell-text) {
+        font-size: 13px;
+        font-weight: 500;
     }
 </style>
 

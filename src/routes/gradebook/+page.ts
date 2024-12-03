@@ -22,6 +22,8 @@ interface ColumnDef {
     valueFormatter?: (params: any) => string;  // Format displayed values
     maxWidth?: number;          // Maximum width for column
     sort?: string;  // Add missing sort property to fix linter error
+    cellClass?: string;          // Add missing cellClass property to fix linter error
+    headerClass?: string;        // Add missing headerClass property to fix linter error
 }
 
 // Add this near the top with other interfaces
@@ -163,23 +165,20 @@ export function load() {
     
     // Define the column structure
     const columnDefs: ColumnDef[] = [
-        // Fixed columns on the left
+        // Single name column on the left
         { 
-            field: 'firstName', 
-            headerName: 'First Name',
-            autoSize: true,
-            pinned: 'left'
-        },
-        { 
-            field: 'lastName', 
-            headerName: 'Last Name',
+            headerName: 'Student Name',
+            valueGetter: (params) => {
+                return `${params.data.firstName} ${params.data.lastName}`;
+            },
             autoSize: true,
             pinned: 'left',
-            sort: 'asc'
+            sort: 'asc',
+            cellClass: 'emphasized-text'
         },
         // Overall grade column
         {
-            headerName: 'Course Grade',
+            headerName: 'Grade',
             pinned: 'left',
             valueGetter: (params) => {
                 const unitGrades = [];
@@ -374,6 +373,7 @@ export function load() {
             headerName: UNIT_NAMES[unit],
             groupId: `unit${unit + 1}`,
             openByDefault: false,  // Make sure unit starts collapsed
+            headerClass: 'emphasized-text',
             children: [
                 // Unit average grade column
                 {
