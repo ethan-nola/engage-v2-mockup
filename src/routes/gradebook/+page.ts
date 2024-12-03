@@ -15,7 +15,7 @@ interface ColumnDef {
     width?: number;              // Fixed width (if not auto-sized)
     pinned?: string;            // Pin column to 'left' or 'right'
     children?: ColumnDef[];      // Nested columns for grouping
-    valueGetter?: (params: any) => number;  // Custom value calculation
+    valueGetter?: (params: any) => number | string | undefined;  // Updated return type
     openByDefault?: boolean;     // Default expanded state
     columnGroupShow?: string;    // Show column when group is 'open' or 'closed'
     groupId?: string;           // Identifier for column group
@@ -171,7 +171,7 @@ export function load() {
             valueGetter: (params) => {
                 return `${params.data.firstName} ${params.data.lastName}`;
             },
-            autoSize: true,
+            suppressSizeToFit: false,
             pinned: 'left',
             sort: 'asc',
             cellClass: 'emphasized-text'
@@ -204,10 +204,10 @@ export function load() {
                 
                 return unitGrades.length > 0
                     ? Math.round(unitGrades.reduce((sum, avg) => sum + avg, 0) / unitGrades.length)
-                    : undefined;
+                    : 0;
             },
             valueFormatter: (params) => {
-                return params.value != null ? params.value + '%' : '';
+                return params.value !== 0 ? params.value + '%' : '';
             }
         }
     ];
@@ -242,16 +242,16 @@ export function load() {
             // Define column structure for each lesson
             children.push({
                 headerName: lessonLabel,
-                autoSize: true,
+                suppressSizeToFit: false,
                 columnGroupShow: 'open',
                 children: [
                     // Average grade column (shown when collapsed)
                     {
                         headerName: 'Lesson Grade',
                         valueGetter: (params: any) => {
-                            return calculateLessonGrade(params, grade, lessonIndex);
+                            return calculateLessonGrade(params, grade, lessonIndex) ?? 0;
                         },
-                        valueFormatter: (params: any) => params.value != null ? params.value + '%' : '',
+                        valueFormatter: (params: any) => params.value !== 0 ? params.value + '%' : '',
                         columnGroupShow: 'closed'
                     },
                     // Detailed columns (shown when expanded)
@@ -389,10 +389,10 @@ export function load() {
                         }
                         return grades.length > 0 
                             ? Math.round(grades.reduce((sum, grade) => sum + grade, 0) / grades.length)
-                            : undefined;
+                            : 0;
                     },
                     valueFormatter: (params: any) => {
-                        return params.value != null ? params.value + '%' : '';
+                        return params.value !== 0 ? params.value + '%' : '';
                     },
                     columnGroupShow: 'closed'
                 },

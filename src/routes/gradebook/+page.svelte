@@ -1,70 +1,60 @@
 <script>
+    import { onDestroy, onMount } from 'svelte';
+    import { createGrid } from 'ag-grid-community';
     import 'ag-grid-community/styles/ag-grid.css';
     import 'ag-grid-community/styles/ag-theme-balham.css';
-    import { Grid } from 'ag-grid-community';
-    import { onMount } from 'svelte';
     
     export let data;
     
     let gridDiv;
-    let grid;
+    let gridApi;
     
     onMount(() => {
         const gridOptions = {
             rowHeight: 38,
-            // Default settings applied to all columns - removed filter option
             defaultColDef: {
-                sortable: true,      // Keep sorting enabled
-                resizable: true,     // Keep column resizing
-                minWidth: 80,        // Keep minimum width
-                editable: true,      // Keep cell editing
-                autoSize: true       // Keep automatic column sizing
-                // Removed filter: true to disable filtering
+                sortable: true,
+                resizable: true,
+                minWidth: 80,
+                editable: true,
+                suppressSizeToFit: false
             },
 
-            // Enable column hover highlighting
-            columnHoverHighlight: true,  // This enables column highlighting on hover
+            columnHoverHighlight: true,
+            rowData: data.rowData,
+            columnDefs: data.columnDefs,
+            popupParent: document.body,
+            groupDisplayType: 'columnGroupCells',
 
-            // Data configuration
-            rowData: data.rowData,           // The actual grid data
-            columnDefs: data.columnDefs,     // Column definitions and structure
-
-            // Grid UI configuration
-            popupParent: document.body,      // Where to render popups (filters, etc)
-            groupDisplayType: 'columnGroupCells',  // How grouped columns are displayed
-            columnHideDefaultValue: false,    // Default visibility state for columns
-
-            // Auto-sizing configuration
             autoSizeStrategy: {
-                type: 'fitCellContents',     // Size columns to fit their contents
-                skipHeader: false,           // Include headers in size calculations
-                // Specific column width constraints
+                type: 'fitCellContents',
+                skipHeader: false,
                 columnLimits: [
-                    // Prevent name columns from getting too wide
                     { colId: 'firstName', maxWidth: 120 },
                     { colId: 'lastName', maxWidth: 120 }
                 ]
             },
 
-            // Performance configuration
-            suppressColumnVirtualisation: true,  // Disable column virtualization for smoother scrolling
+            suppressColumnVirtualisation: true,
 
-            // Event Handlers
             onFirstDataRendered: (params) => {
-                // Auto-size all columns when grid first loads
                 params.columnApi.autoSizeAllColumns();
             },
 
-            // Handle column visibility changes (when expanding/collapsing groups)
             onColumnVisible: (params) => {
                 if (params.visible) {
-                    // Auto-size column when it becomes visible
                     params.columnApi.autoSizeColumn(params.column);
                 }
             }
         };
         
-        grid = new Grid(gridDiv, gridOptions);
+        gridApi = createGrid(gridDiv, gridOptions);
+    });
+
+    onDestroy(() => {
+        if (gridApi) {
+            gridApi.destroy();
+        }
     });
 </script>
 
