@@ -1,51 +1,54 @@
+// Type definitions for grid data structure
 interface StudentRow {
     firstName: string;
     lastName: string;
-    [key: string]: string | number;
+    [key: string]: string | number;  // Allow dynamic grade fields
 }
 
+// Type definition for AG Grid column configuration
 interface ColumnDef {
-    field?: string;
-    headerName: string;
-    autoSize?: boolean;
-    width?: number;
-    pinned?: string;
-    children?: ColumnDef[];
-    valueGetter?: (params: any) => number;
-    openByDefault?: boolean;
-    columnGroupShow?: string;
-    groupId?: string;
-    valueFormatter?: (params: any) => string;
+    field?: string;              // Data field to display
+    headerName: string;          // Column header text
+    autoSize?: boolean;          // Enable auto-sizing for column
+    width?: number;              // Fixed width (if not auto-sized)
+    pinned?: string;            // Pin column to 'left' or 'right'
+    children?: ColumnDef[];      // Nested columns for grouping
+    valueGetter?: (params: any) => number;  // Custom value calculation
+    openByDefault?: boolean;     // Default expanded state
+    columnGroupShow?: string;    // Show column when group is 'open' or 'closed'
+    groupId?: string;           // Identifier for column group
+    valueFormatter?: (params: any) => string;  // Format displayed values
+    maxWidth?: number;          // Maximum width for column
 }
 
-// Configuration options for mock data generation
+// Configuration settings for mock data generation
 const CONFIG = {
     // Grade generation settings
     grades: {
         min: 0,
         max: 100,
-        // Optionally add some randomness to make data more realistic
+        // Distribution weights for more realistic grade patterns
         distribution: {
-            excellent: { min: 90, max: 100, weight: 0.2 },  // 10% of grades
-            good: { min: 75, max: 89, weight: 0.3},        // 30% of grades
-            average: { min: 60, max: 74, weight: 0.4 },     // 40% of grades
-            poor: { min: 0, max: 59, weight: 0.1 }          // 20% of grades
+            excellent: { min: 90, max: 100, weight: 0.2 },  // 20% excellent grades
+            good: { min: 75, max: 89, weight: 0.3 },        // 30% good grades
+            average: { min: 60, max: 74, weight: 0.4 },     // 40% average grades
+            poor: { min: 0, max: 59, weight: 0.1 }          // 10% poor grades
         }
     },
-    // Data size settings
+    // Mock data size configuration
     data: {
-        studentCount: 80,
-        unitsCount: 10,
-        lessonsPerUnit: 10
+        studentCount: 80,        // Number of students to generate
+        unitsCount: 10,         // Number of units
+        lessonsPerUnit: 10      // Lessons per unit
     },
-    // Sample names for generation
+    // Sample names for random generation
     names: {
         first: ['John', 'Jane', 'Michael', 'Emily', 'David', 'Sarah', 'James', 'Emma', 'William', 'Olivia'],
         last: ['Smith', 'Johnson', 'Williams', 'Brown', 'Jones', 'Garcia', 'Miller', 'Davis', 'Rodriguez', 'Martinez']
     }
 };
 
-// Add this constant at the top with the other CONFIG
+// Names for each unit
 const UNIT_NAMES = [
     "Forensic Math",
     "Environmental Math", 
@@ -59,11 +62,12 @@ const UNIT_NAMES = [
     "Home Makeover"
 ];
 
+// Generate a random grade based on weighted distribution
 function generateRandomGrade(): number {
     const rand = Math.random();
     let cumulativeWeight = 0;
     
-    // Use the distribution weights to generate more realistic grades
+    // Use distribution weights for realistic grade patterns
     for (const level of Object.values(CONFIG.grades.distribution)) {
         cumulativeWeight += level.weight;
         if (rand <= cumulativeWeight) {
@@ -75,19 +79,21 @@ function generateRandomGrade(): number {
     return Math.floor(Math.random() * (CONFIG.grades.max - CONFIG.grades.min + 1)) + CONFIG.grades.min;
 }
 
+// Generate mock student data
 function generateMockData() {
     const { first: firstNames, last: lastNames } = CONFIG.names;
     const rows = [];
     
+    // Generate data for each student
     for (let i = 0; i < CONFIG.data.studentCount; i++) {
         const row = Object.create(null);
         row.firstName = firstNames[Math.floor(Math.random() * firstNames.length)];
         row.lastName = lastNames[Math.floor(Math.random() * lastNames.length)];
         
-        // Generate grades for all units, lessons, and assessments
+        // Generate grades for each lesson
         const totalLessons = CONFIG.data.unitsCount * CONFIG.data.lessonsPerUnit;
         for (let j = 1; j <= totalLessons; j++) {
-            // Generate two assessment grades for each lesson
+            // Two assessments per lesson
             row[`grade${j}_A1`] = generateRandomGrade();
             row[`grade${j}_A2`] = generateRandomGrade();
         }
@@ -98,10 +104,13 @@ function generateMockData() {
     return rows;
 }
 
+// Main load function for the page
 export function load() {
     const rowData = generateMockData();
     
+    // Define the column structure
     const columnDefs: ColumnDef[] = [
+        // Fixed columns on the left
         { 
             field: 'firstName', 
             headerName: 'First Name',
@@ -114,16 +123,19 @@ export function load() {
             autoSize: true,
             pinned: 'left'
         },
+        // Overall grade column
         {
             headerName: 'Grade',
             pinned: 'left',
             valueGetter: (params) => {
+                // Calculate overall grade as average of unit averages
                 const unitAverages = [];
                 for (let unit = 0; unit < 10; unit++) {
                     const startGrade = unit * 10 + 1;
                     const endGrade = startGrade + 9;
                     const grades = [];
                     
+                    // Calculate average for each lesson in unit
                     for (let grade = startGrade; grade <= endGrade; grade++) {
                         const a1 = params.data[`grade${grade}_A1`];
                         const a2 = params.data[`grade${grade}_A2`];
@@ -149,34 +161,40 @@ export function load() {
         }
     ];
     
+    // Generate unit columns
     for (let unit = 0; unit < 10; unit++) {
         const startGrade = unit * 10 + 1;
         const endGrade = startGrade + 9;
         
+        // Generate lesson columns for each unit
         const children: ColumnDef[] = [];
         for (let grade = startGrade; grade <= endGrade; grade++) {
             const lessonIndex = ((grade - 1) % 10) + 1;
+            
+            // Get lesson label based on index
             const lessonLabel = (() => {
                 switch(lessonIndex) {
-                    case 1: return 'S1';
-                    case 2: return 'S2';
-                    case 3: return 'S3';
-                    case 4: return 'S4';
-                    case 5: return 'D1';
-                    case 6: return 'S5';
-                    case 7: return 'S6';
-                    case 8: return 'S7';
-                    case 9: return 'D2';
-                    case 10: return 'E';
+                    case 1: return 'Session 1';
+                    case 2: return 'Session 2';
+                    case 3: return 'Session 3';
+                    case 4: return 'Session 4';
+                    case 5: return 'Diagnostic Day 1';
+                    case 6: return 'Session 5';
+                    case 7: return 'Session 6';
+                    case 8: return 'Session 7';
+                    case 9: return 'Diagnostic Day 2';
+                    case 10: return 'Enrichments';
                     default: return '';
                 }
             })();
 
+            // Define column structure for each lesson
             children.push({
                 headerName: lessonLabel,
-                width: 100,
+                autoSize: true,
                 columnGroupShow: 'open',
                 children: [
+                    // Average grade column (shown when collapsed)
                     {
                         headerName: 'Grade',
                         valueGetter: (params) => {
@@ -187,13 +205,14 @@ export function load() {
                         valueFormatter: (params) => {
                             return params.value != null ? params.value + '%' : '';
                         },
-                        width: 100,
+                        autoSize: true,
                         columnGroupShow: 'closed'
                     },
+                    // Individual assessment columns (shown when expanded)
                     {
                         field: `grade${grade}_A1`,
                         headerName: 'A1',
-                        width: 100,
+                        autoSize: true,
                         columnGroupShow: 'open',
                         valueFormatter: (params) => {
                             return params.value != null ? params.value + '%' : '';
@@ -202,7 +221,7 @@ export function load() {
                     {
                         field: `grade${grade}_A2`,
                         headerName: 'A2',
-                        width: 100,
+                        autoSize: true,
                         columnGroupShow: 'open',
                         valueFormatter: (params) => {
                             return params.value != null ? params.value + '%' : '';
@@ -212,10 +231,12 @@ export function load() {
             });
         }
         
+        // Add unit column with its lessons
         columnDefs.push({
             headerName: UNIT_NAMES[unit],
             groupId: `unit${unit + 1}`,
             children: [
+                // Unit average grade column
                 {
                     headerName: 'Unit Grade',
                     valueGetter: (params) => {

@@ -11,30 +11,55 @@
     
     onMount(() => {
         const gridOptions = {
+            // Default settings applied to all columns unless overridden
             defaultColDef: {
-                sortable: true,
-                filter: true,
-                resizable: true,
-                minWidth: 80,
-                editable: true
+                sortable: true,      // Enable sorting for all columns
+                filter: true,        // Enable filtering for all columns
+                resizable: true,     // Allow column resizing
+                minWidth: 80,        // Minimum width any column can be
+                editable: true,      // Allow cell editing
+                autoSize: true       // Enable automatic column sizing
             },
-            rowData: data.rowData,
-            columnDefs: data.columnDefs,
-            popupParent: document.body,
-            groupDisplayType: 'columnGroupCells',
-            columnHideDefaultValue: false,
+
+            // Enable column hover highlighting
+            columnHoverHighlight: true,  // This enables column highlighting on hover
+
+            // Data configuration
+            rowData: data.rowData,           // The actual grid data
+            columnDefs: data.columnDefs,     // Column definitions and structure
+
+            // Grid UI configuration
+            popupParent: document.body,      // Where to render popups (filters, etc)
+            groupDisplayType: 'columnGroupCells',  // How grouped columns are displayed
+            columnHideDefaultValue: false,    // Default visibility state for columns
+
+            // Auto-sizing configuration
             autoSizeStrategy: {
-                type: 'fitCellContents',
-                skipHeader: false,
+                type: 'fitCellContents',     // Size columns to fit their contents
+                skipHeader: false,           // Include headers in size calculations
+                // Specific column width constraints
                 columnLimits: [
-                    { colId: 'firstName' },
-                    { colId: 'lastName' }
+                    // Prevent name columns from getting too wide
+                    { colId: 'firstName', maxWidth: 120 },
+                    { colId: 'lastName', maxWidth: 120 }
                 ]
             },
-            suppressColumnVirtualisation: true,
+
+            // Performance configuration
+            suppressColumnVirtualisation: true,  // Disable column virtualization for smoother scrolling
+
+            // Event Handlers
             onFirstDataRendered: (params) => {
-                const nameColumns = ['firstName', 'lastName'];
-                params.columnApi.autoSizeColumns(nameColumns);
+                // Auto-size all columns when grid first loads
+                params.columnApi.autoSizeAllColumns();
+            },
+
+            // Handle column visibility changes (when expanding/collapsing groups)
+            onColumnVisible: (params) => {
+                if (params.visible) {
+                    // Auto-size column when it becomes visible
+                    params.columnApi.autoSizeColumn(params.column);
+                }
             }
         };
         
@@ -42,13 +67,16 @@
     });
 </script>
 
+<!-- Grid Container -->
 <div class="h-full w-full flex flex-col relative">
     <div class="flex-grow relative">
+        <!-- AG Grid container with Alpine theme -->
         <div bind:this={gridDiv} class="ag-theme-alpine h-full w-full"></div>
     </div>
 </div>
 
 <style>
+    /* Ensure grid takes full height of container */
     :global(.ag-theme-alpine) {
         height: 100% !important;
     }
