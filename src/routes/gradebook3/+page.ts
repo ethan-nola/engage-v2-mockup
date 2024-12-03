@@ -89,8 +89,10 @@ function generateMockData() {
         // Generate grades for each lesson
         const totalLessons = CONFIG.data.unitsCount * CONFIG.data.lessonsPerUnit;
         for (let j = 1; j <= totalLessons; j++) {
-            row[`grade${j}_A1`] = generateRandomGrade();
-            row[`grade${j}_A2`] = generateRandomGrade();
+            // Generate 12 assessments instead of 2
+            for (let k = 1; k <= 12; k++) {
+                row[`grade${j}_A${k}`] = generateRandomGrade();
+            }
         }
         
         rows.push(row);
@@ -124,7 +126,6 @@ export function load() {
             headerName: 'Grade',
             pinned: 'left',
             valueGetter: (params) => {
-                // Calculate overall grade as average of unit averages
                 const unitAverages = [];
                 for (let unit = 0; unit < 10; unit++) {
                     const startGrade = unit * 10 + 1;
@@ -133,10 +134,18 @@ export function load() {
                     
                     // Calculate average for each lesson in unit
                     for (let grade = startGrade; grade <= endGrade; grade++) {
-                        const a1 = params.data[`grade${grade}_A1`];
-                        const a2 = params.data[`grade${grade}_A2`];
-                        if (a1 !== undefined && a2 !== undefined) {
-                            grades.push((a1 + a2) / 2);
+                        // Calculate average of all 12 assessments
+                        const assessments = [];
+                        for (let k = 1; k <= 12; k++) {
+                            const value = params.data[`grade${grade}_A${k}`];
+                            if (value !== undefined) {
+                                assessments.push(value);
+                            }
+                        }
+                        if (assessments.length > 0) {
+                            grades.push(
+                                assessments.reduce((sum, grade) => sum + grade, 0) / assessments.length
+                            );
                         }
                     }
                     
@@ -194,9 +203,17 @@ export function load() {
                     {
                         headerName: 'Grade',
                         valueGetter: (params) => {
-                            const a1 = params.data[`grade${grade}_A1`];
-                            const a2 = params.data[`grade${grade}_A2`];
-                            return Math.round((a1 + a2) / 2);
+                            // Calculate average of all 12 assessments
+                            const grades = [];
+                            for (let k = 1; k <= 12; k++) {
+                                const value = params.data[`grade${grade}_A${k}`];
+                                if (value !== undefined) {
+                                    grades.push(value);
+                                }
+                            }
+                            return grades.length > 0
+                                ? Math.round(grades.reduce((sum, grade) => sum + grade, 0) / grades.length)
+                                : 0;
                         },
                         valueFormatter: (params) => {
                             return params.value != null ? params.value + '%' : '';
@@ -204,25 +221,16 @@ export function load() {
                         autoSize: true,
                         columnGroupShow: 'closed'
                     },
-                    // Individual assessment columns (shown when expanded)
-                    {
-                        field: `grade${grade}_A1`,
-                        headerName: 'A1',
+                    // Generate all 12 assessment columns
+                    ...Array.from({ length: 12 }, (_, i) => ({
+                        field: `grade${grade}_A${i + 1}`,
+                        headerName: `A${i + 1}`,
                         autoSize: true,
                         columnGroupShow: 'open',
                         valueFormatter: (params) => {
                             return params.value != null ? params.value + '%' : '';
                         }
-                    },
-                    {
-                        field: `grade${grade}_A2`,
-                        headerName: 'A2',
-                        autoSize: true,
-                        columnGroupShow: 'open',
-                        valueFormatter: (params) => {
-                            return params.value != null ? params.value + '%' : '';
-                        }
-                    }
+                    }))
                 ]
             });
         }
