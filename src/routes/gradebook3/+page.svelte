@@ -79,6 +79,9 @@
     /* Ensure grid takes full height of container */
     :global(.ag-theme-balham) {
         height: 100% !important;
+        /* Set hover colors to standard AG Grid light blue */
+        --ag-row-hover-color: rgb(33, 150, 243, 0.1);  /* Light blue with 10% opacity */
+        --ag-column-hover-color: rgb(33, 150, 243, 0.1);  /* Light blue with 10% opacity */
     }
 </style>
 
