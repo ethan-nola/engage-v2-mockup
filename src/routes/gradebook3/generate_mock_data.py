@@ -8,10 +8,9 @@ from enum import Enum
 fake = Faker()
 
 class StudentProgress(Enum):
-    NOT_STARTED = "not_started"
-    FIRST_UNIT = "first_unit"
-    MULTIPLE_UNITS = "multiple_units"
-    COMPLETED_ALL = "completed_all"
+    FIRST_UNIT = "first_unit"           # Working on first unit
+    MULTIPLE_UNITS = "multiple_units"    # Completed some units, working on next
+    COMPLETED_ALL = "completed_all"      # Completed all units
 
 # Configuration
 CONFIG = {
@@ -31,10 +30,9 @@ CONFIG = {
         "lessonsPerUnit": 10
     },
     "progress_distribution": {
-        StudentProgress.NOT_STARTED: 0.1,      # 10% haven't started
-        StudentProgress.FIRST_UNIT: 0.3,       # 30% in first unit
-        StudentProgress.MULTIPLE_UNITS: 0.5,   # 50% completed some units
-        StudentProgress.COMPLETED_ALL: 0.1     # 10% completed all units
+        StudentProgress.FIRST_UNIT: 0.4,        # 40% in first unit
+        StudentProgress.MULTIPLE_UNITS: 0.5,    # 50% completed some units
+        StudentProgress.COMPLETED_ALL: 0.1      # 10% completed all units
     }
 }
 
@@ -56,7 +54,7 @@ def get_student_progress_type() -> StudentProgress:
         cumulative += weight
         if rand <= cumulative:
             return progress_type
-    return StudentProgress.NOT_STARTED
+    return StudentProgress.FIRST_UNIT  # Default to first unit if something goes wrong
 
 def generate_unit_data(unit_num: int, lesson_count: int, completion_status: str) -> Dict:
     """Generate data for a single unit based on completion status"""
@@ -70,7 +68,8 @@ def generate_unit_data(unit_num: int, lesson_count: int, completion_status: str)
         lessons_complete = random.randint(1, lesson_count - 1)
         
         for lesson in range(1, lesson_count + 1):
-            base_grade = unit_num * 10 + lesson
+            # Fix: Adjust base_grade calculation to match TypeScript
+            base_grade = ((unit_num - 1) * 10) + lesson
             
             if lesson <= lessons_complete:
                 # Complete lesson
@@ -85,7 +84,8 @@ def generate_unit_data(unit_num: int, lesson_count: int, completion_status: str)
     elif completion_status == "completed":
         # All lessons complete
         for lesson in range(1, lesson_count + 1):
-            base_grade = unit_num * 10 + lesson
+            # Fix: Adjust base_grade calculation to match TypeScript
+            base_grade = ((unit_num - 1) * 10) + lesson
             unit_data.update(generate_lesson_data(base_grade, "completed"))
     
     return unit_data
@@ -148,22 +148,15 @@ def generate_mock_data() -> List[Dict[str, Union[str, int]]]:
     rows = []
     
     for _ in range(CONFIG["data"]["studentCount"]):
-        # Start with student info
         row = {
             "firstName": fake.first_name(),
             "lastName": fake.last_name()
         }
         
-        # Determine student's overall progress
         progress_type = get_student_progress_type()
         
-        if progress_type == StudentProgress.NOT_STARTED:
-            # Generate empty data for all units
-            for unit in range(CONFIG["data"]["unitsCount"]):
-                row.update(generate_unit_data(unit + 1, CONFIG["data"]["lessonsPerUnit"], "not_started"))
-        
-        elif progress_type == StudentProgress.FIRST_UNIT:
-            # First unit in progress, rest not started
+        if progress_type == StudentProgress.FIRST_UNIT:
+            # First unit in progress (with at least one lesson completed)
             row.update(generate_unit_data(1, CONFIG["data"]["lessonsPerUnit"], "in_progress"))
             for unit in range(2, CONFIG["data"]["unitsCount"] + 1):
                 row.update(generate_unit_data(unit, CONFIG["data"]["lessonsPerUnit"], "not_started"))
