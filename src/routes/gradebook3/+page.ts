@@ -1,4 +1,4 @@
-import { faker } from '@faker-js/faker';
+import mockData from './mock_data.json';
 
 // Type definitions for grid data structure
 interface StudentRow {
@@ -26,28 +26,6 @@ interface ColumnDef {
 // Add this near the top with other interfaces
 type PresentationStatus = 'Not Started' | 'In Progress' | 'Completed';
 
-// Configuration settings for mock data generation
-const CONFIG = {
-    // Grade generation settings
-    grades: {
-        min: 0,
-        max: 100,
-        // Distribution weights for more realistic grade patterns
-        distribution: {
-            excellent: { min: 90, max: 100, weight: 0.2 },  // 20% excellent grades
-            good: { min: 75, max: 89, weight: 0.3 },        // 30% good grades
-            average: { min: 60, max: 74, weight: 0.4 },     // 40% average grades
-            poor: { min: 0, max: 59, weight: 0.1 }          // 10% poor grades
-        }
-    },
-    // Mock data size configuration
-    data: {
-        studentCount: 80,        // Number of students to generate
-        unitsCount: 10,         // Number of units
-        lessonsPerUnit: 10      // Lessons per unit
-    }
-};
-
 // Names for each unit
 const UNIT_NAMES = [
     "Forensic Math",
@@ -62,59 +40,10 @@ const UNIT_NAMES = [
     "Home Makeover"
 ];
 
-// Generate a random grade based on weighted distribution
-function generateRandomGrade(): number {
-    const rand = Math.random();
-    let cumulativeWeight = 0;
-    
-    // Use distribution weights for realistic grade patterns
-    for (const level of Object.values(CONFIG.grades.distribution)) {
-        cumulativeWeight += level.weight;
-        if (rand <= cumulativeWeight) {
-            return Math.floor(Math.random() * (level.max - level.min + 1)) + level.min;
-        }
-    }
-    
-    // Fallback to simple random between min and max
-    return Math.floor(Math.random() * (CONFIG.grades.max - CONFIG.grades.min + 1)) + CONFIG.grades.min;
-}
-
-// Add this helper function after the generateRandomGrade function
-function generateRandomPresentationStatus(): PresentationStatus {
-    const rand = Math.random();
-    if (rand < 0.33) return 'Not Started';
-    if (rand < 0.66) return 'In Progress';
-    return 'Completed';
-}
-
-// Generate mock student data
-function generateMockData() {
-    const rows = [];
-    
-    for (let i = 0; i < CONFIG.data.studentCount; i++) {
-        const row = Object.create(null);
-        row.firstName = faker.person.firstName();
-        row.lastName = faker.person.lastName();
-        
-        const totalLessons = CONFIG.data.unitsCount * CONFIG.data.lessonsPerUnit;
-        for (let j = 1; j <= totalLessons; j++) {
-            // Add presentation status
-            row[`grade${j}_presentation`] = generateRandomPresentationStatus();
-            // Generate the 12 assessments
-            for (let k = 1; k <= 12; k++) {
-                row[`grade${j}_A${k}`] = generateRandomGrade();
-            }
-        }
-        
-        rows.push(row);
-    }
-    
-    return rows;
-}
-
 // Main load function for the page
 export function load() {
-    const rowData = generateMockData();
+    // Use the pre-generated mock data
+    const rowData = mockData.rowData;
     
     // Define the column structure
     const columnDefs: ColumnDef[] = [
