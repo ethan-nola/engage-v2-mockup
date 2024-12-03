@@ -42,9 +42,7 @@ Progression Rules:
      * All components must be completed in sequence
 
 3. Student Progress Types:
-   - First Unit (40%): Working on their first unit
-   - Multiple Units (50%): Completed some units, working on next
-   - Completed All (10%): Finished all units
+   - Working on Sixth (100%): All students working on 6th unit
 
 Grade Distribution:
 ------------------
@@ -64,9 +62,7 @@ from enum import Enum
 fake = Faker()
 
 class StudentProgress(Enum):
-    FIRST_UNIT = "first_unit"           # Working on first unit
-    MULTIPLE_UNITS = "multiple_units"    # Completed some units, working on next
-    COMPLETED_ALL = "completed_all"      # Completed all units
+    WORKING_ON_SIXTH = "working_on_sixth"  # All students working on 6th unit
 
 # Configuration
 CONFIG = {
@@ -86,9 +82,7 @@ CONFIG = {
         "lessonsPerUnit": 10
     },
     "progress_distribution": {
-        StudentProgress.FIRST_UNIT: 0.4,        # 40% in first unit
-        StudentProgress.MULTIPLE_UNITS: 0.5,    # 50% completed some units
-        StudentProgress.COMPLETED_ALL: 0.1      # 10% completed all units
+        StudentProgress.WORKING_ON_SIXTH: 1.0,  # 100% of students
     }
 }
 
@@ -110,7 +104,7 @@ def get_student_progress_type() -> StudentProgress:
         cumulative += weight
         if rand <= cumulative:
             return progress_type
-    return StudentProgress.FIRST_UNIT  # Default to first unit if something goes wrong
+    return StudentProgress.WORKING_ON_SIXTH  # Default to working on sixth unit if something goes wrong
 
 def generate_unit_data(unit_num: int, lesson_count: int, completion_status: str, is_first_unit: bool = False) -> Dict:
     """Generate data for a single unit based on completion status"""
@@ -313,46 +307,23 @@ def generate_mock_data() -> List[Dict[str, Union[str, int]]]:
             "lastName": fake.last_name()
         }
         
-        progress_type = get_student_progress_type()
+        # Randomly select 5 units to be completed
+        available_units = list(range(1, CONFIG["data"]["unitsCount"] + 1))
+        completed_units = random.sample(available_units, 5)
         
-        if progress_type == StudentProgress.FIRST_UNIT:
-            # Pick a random unit to be the student's first unit
-            current_unit = random.randint(1, CONFIG["data"]["unitsCount"])
-            
-            # Generate data for the current unit, marking it as first unit
-            row.update(generate_unit_data(current_unit, CONFIG["data"]["lessonsPerUnit"], "in_progress", is_first_unit=True))
-            
-            # All other units are not started
-            for unit in range(1, CONFIG["data"]["unitsCount"] + 1):
-                if unit != current_unit:
-                    row.update(generate_unit_data(unit, CONFIG["data"]["lessonsPerUnit"], "not_started"))
+        # Pick one of the remaining units to be in progress (6th unit)
+        remaining_units = [u for u in available_units if u not in completed_units]
+        current_unit = random.choice(remaining_units)
+        remaining_units.remove(current_unit)
         
-        elif progress_type == StudentProgress.MULTIPLE_UNITS:
-            # Decide how many units are complete
-            units_to_complete = random.randint(1, CONFIG["data"]["unitsCount"] - 2)
-            
-            # Randomly select which units are complete
-            available_units = list(range(1, CONFIG["data"]["unitsCount"] + 1))
-            completed_units = random.sample(available_units, units_to_complete)
-            
-            # Pick one of the remaining units to be in progress
-            remaining_units = [u for u in available_units if u not in completed_units]
-            current_unit = random.choice(remaining_units)
-            remaining_units.remove(current_unit)
-            
-            # Generate the data
-            for unit in range(1, CONFIG["data"]["unitsCount"] + 1):
-                if unit in completed_units:
-                    row.update(generate_unit_data(unit, CONFIG["data"]["lessonsPerUnit"], "completed"))
-                elif unit == current_unit:
-                    row.update(generate_unit_data(unit, CONFIG["data"]["lessonsPerUnit"], "in_progress"))
-                else:
-                    row.update(generate_unit_data(unit, CONFIG["data"]["lessonsPerUnit"], "not_started"))
-        
-        elif progress_type == StudentProgress.COMPLETED_ALL:
-            # All units complete
-            for unit in range(1, CONFIG["data"]["unitsCount"] + 1):
+        # Generate the data
+        for unit in range(1, CONFIG["data"]["unitsCount"] + 1):
+            if unit in completed_units:
                 row.update(generate_unit_data(unit, CONFIG["data"]["lessonsPerUnit"], "completed"))
+            elif unit == current_unit:
+                row.update(generate_unit_data(unit, CONFIG["data"]["lessonsPerUnit"], "in_progress"))
+            else:
+                row.update(generate_unit_data(unit, CONFIG["data"]["lessonsPerUnit"], "not_started"))
         
         rows.append(row)
     
