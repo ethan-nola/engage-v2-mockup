@@ -12,14 +12,14 @@
     onMount(() => {
         const gridOptions = {
             rowHeight: 38,
-            // Default settings applied to all columns unless overridden
+            // Default settings applied to all columns - removed filter option
             defaultColDef: {
-                sortable: true,      // Enable sorting for all columns
-                filter: true,        // Enable filtering for all columns
-                resizable: true,     // Allow column resizing
-                minWidth: 80,        // Minimum width any column can be
-                editable: true,      // Allow cell editing
-                autoSize: true       // Enable automatic column sizing
+                sortable: true,      // Keep sorting enabled
+                resizable: true,     // Keep column resizing
+                minWidth: 80,        // Keep minimum width
+                editable: true,      // Keep cell editing
+                autoSize: true       // Keep automatic column sizing
+                // Removed filter: true to disable filtering
             },
 
             // Enable column hover highlighting

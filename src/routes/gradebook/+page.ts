@@ -167,7 +167,7 @@ export function load() {
     const columnDefs: ColumnDef[] = [
         // Single name column on the left
         { 
-            headerName: 'Student Name',
+            headerName: 'Student',
             valueGetter: (params) => {
                 return `${params.data.firstName} ${params.data.lastName}`;
             },
