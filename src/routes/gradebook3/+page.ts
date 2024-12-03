@@ -23,6 +23,9 @@ interface ColumnDef {
     maxWidth?: number;          // Maximum width for column
 }
 
+// Add this near the top with other interfaces
+type PresentationStatus = 'Not Started' | 'In Progress' | 'Completed';
+
 // Configuration settings for mock data generation
 const CONFIG = {
     // Grade generation settings
@@ -76,20 +79,28 @@ function generateRandomGrade(): number {
     return Math.floor(Math.random() * (CONFIG.grades.max - CONFIG.grades.min + 1)) + CONFIG.grades.min;
 }
 
+// Add this helper function after the generateRandomGrade function
+function generateRandomPresentationStatus(): PresentationStatus {
+    const rand = Math.random();
+    if (rand < 0.33) return 'Not Started';
+    if (rand < 0.66) return 'In Progress';
+    return 'Completed';
+}
+
 // Generate mock student data
 function generateMockData() {
     const rows = [];
     
-    // Generate data for each student
     for (let i = 0; i < CONFIG.data.studentCount; i++) {
         const row = Object.create(null);
         row.firstName = faker.person.firstName();
         row.lastName = faker.person.lastName();
         
-        // Generate grades for each lesson
         const totalLessons = CONFIG.data.unitsCount * CONFIG.data.lessonsPerUnit;
         for (let j = 1; j <= totalLessons; j++) {
-            // Generate 12 assessments instead of 2
+            // Add presentation status
+            row[`grade${j}_presentation`] = generateRandomPresentationStatus();
+            // Generate the 12 assessments
             for (let k = 1; k <= 12; k++) {
                 row[`grade${j}_A${k}`] = generateRandomGrade();
             }
@@ -203,7 +214,7 @@ export function load() {
                     {
                         headerName: 'Grade',
                         valueGetter: (params) => {
-                            // Calculate average of all 12 assessments
+                            // Calculate average of all 12 assessments (excluding presentation)
                             const grades = [];
                             for (let k = 1; k <= 12; k++) {
                                 const value = params.data[`grade${grade}_A${k}`];
@@ -220,6 +231,14 @@ export function load() {
                         },
                         autoSize: true,
                         columnGroupShow: 'closed'
+                    },
+                    // Presentation status column
+                    {
+                        field: `grade${grade}_presentation`,
+                        headerName: 'Presentation',
+                        autoSize: true,
+                        columnGroupShow: 'open',
+                        width: 120
                     },
                     // Generate all 12 assessment columns
                     ...Array.from({ length: 12 }, (_, i) => ({
