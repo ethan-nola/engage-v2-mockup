@@ -84,10 +84,12 @@ function generateMockData() {
         row.firstName = firstNames[Math.floor(Math.random() * firstNames.length)];
         row.lastName = lastNames[Math.floor(Math.random() * lastNames.length)];
         
-        // Generate grades for all units and lessons
-        const totalGrades = CONFIG.data.unitsCount * CONFIG.data.lessonsPerUnit;
-        for (let j = 1; j <= totalGrades; j++) {
-            row[`grade${j}`] = generateRandomGrade();
+        // Generate grades for all units, lessons, and assessments
+        const totalLessons = CONFIG.data.unitsCount * CONFIG.data.lessonsPerUnit;
+        for (let j = 1; j <= totalLessons; j++) {
+            // Generate two assessment grades for each lesson
+            row[`grade${j}_A1`] = generateRandomGrade();
+            row[`grade${j}_A2`] = generateRandomGrade();
         }
         
         rows.push(row);
@@ -117,16 +119,16 @@ export function load() {
             pinned: 'left',
             valueGetter: (params) => {
                 const unitAverages = [];
-                // Calculate average for each unit (10 units, 10 grades each)
                 for (let unit = 0; unit < 10; unit++) {
                     const startGrade = unit * 10 + 1;
                     const endGrade = startGrade + 9;
                     const grades = [];
                     
                     for (let grade = startGrade; grade <= endGrade; grade++) {
-                        const value = params.data[`grade${grade}`];
-                        if (value !== undefined) {
-                            grades.push(value);
+                        const a1 = params.data[`grade${grade}_A1`];
+                        const a2 = params.data[`grade${grade}_A2`];
+                        if (a1 !== undefined && a2 !== undefined) {
+                            grades.push((a1 + a2) / 2);
                         }
                     }
                     
@@ -137,7 +139,6 @@ export function load() {
                     }
                 }
                 
-                // Calculate overall average from unit averages
                 return unitAverages.length > 0
                     ? Math.round(unitAverages.reduce((sum, avg) => sum + avg, 0) / unitAverages.length)
                     : 0;
@@ -172,13 +173,42 @@ export function load() {
             })();
 
             children.push({
-                field: `grade${grade}`,
                 headerName: lessonLabel,
                 width: 100,
                 columnGroupShow: 'open',
-                valueFormatter: (params) => {
-                    return params.value != null ? params.value + '%' : '';
-                }
+                children: [
+                    {
+                        headerName: 'Avg',
+                        valueGetter: (params) => {
+                            const a1 = params.data[`grade${grade}_A1`];
+                            const a2 = params.data[`grade${grade}_A2`];
+                            return Math.round((a1 + a2) / 2);
+                        },
+                        valueFormatter: (params) => {
+                            return params.value != null ? params.value + '%' : '';
+                        },
+                        width: 100,
+                        columnGroupShow: 'closed'
+                    },
+                    {
+                        field: `grade${grade}_A1`,
+                        headerName: 'A1',
+                        width: 100,
+                        columnGroupShow: 'open',
+                        valueFormatter: (params) => {
+                            return params.value != null ? params.value + '%' : '';
+                        }
+                    },
+                    {
+                        field: `grade${grade}_A2`,
+                        headerName: 'A2',
+                        width: 100,
+                        columnGroupShow: 'open',
+                        valueFormatter: (params) => {
+                            return params.value != null ? params.value + '%' : '';
+                        }
+                    }
+                ]
             });
         }
         
@@ -191,9 +221,10 @@ export function load() {
                     valueGetter: (params) => {
                         const grades = [];
                         for (let grade = startGrade; grade <= endGrade; grade++) {
-                            const value = params.data[`grade${grade}`];
-                            if (value !== undefined) {
-                                grades.push(value);
+                            const a1 = params.data[`grade${grade}_A1`];
+                            const a2 = params.data[`grade${grade}_A2`];
+                            if (a1 !== undefined && a2 !== undefined) {
+                                grades.push((a1 + a2) / 2);
                             }
                         }
                         return grades.length > 0 
