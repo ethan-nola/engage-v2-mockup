@@ -1,3 +1,59 @@
+"""
+Gradebook Mock Data Generator
+
+This script generates realistic mock data for a classroom gradebook system that follows
+specific progression rules and learning patterns.
+
+Data Model:
+-----------
+1. Units:
+   - Students can take units in any order
+   - Students can only take one unit at a time
+   - All lessons in a unit must be completed before moving to another unit
+
+2. Lessons:
+   - Each unit contains 10 lessons that must be completed sequentially
+   - Lesson types and their components:
+     * Session 1: Module Guide + Presentation
+     * Sessions 2-4: RCA + Presentation
+     * Diagnostic Day 1: 4 sets of (Diagnostic -> Presentation -> Mastery a -> Mastery b)
+     * Session 5: RCA + Presentation
+     * Session 6: Presentation only
+     * Session 7: Post-test + Presentation
+     * Diagnostic Day 2: 4 sets of (Diagnostic -> Presentation -> Mastery a -> Mastery b)
+     * Enrichments: Presentation only
+
+3. Progress States:
+   - Not Started: No grades or progress
+   - In Progress: Currently working on this component
+   - Completed: All components finished with grades
+
+Progression Rules:
+-----------------
+1. Unit Level:
+   - Previous lessons must be completed before starting next lesson
+   - Future lessons remain "Not Started" until reached
+
+2. Lesson Level:
+   - Assessment (Module Guide, RCA, Post-test) must be completed before presentation
+   - For Diagnostic Days:
+     * Diagnostic test must be completed before presentation
+     * Presentation must be completed before Mastery tests
+     * All components must be completed in sequence
+
+3. Student Progress Types:
+   - First Unit (40%): Working on their first unit
+   - Multiple Units (50%): Completed some units, working on next
+   - Completed All (10%): Finished all units
+
+Grade Distribution:
+------------------
+- Excellent: 90-100 (20% probability)
+- Good: 75-89 (30% probability)
+- Average: 60-74 (40% probability)
+- Poor: 0-59 (10% probability)
+"""
+
 from faker import Faker
 import json
 import random
@@ -56,16 +112,21 @@ def get_student_progress_type() -> StudentProgress:
             return progress_type
     return StudentProgress.FIRST_UNIT  # Default to first unit if something goes wrong
 
-def generate_unit_data(unit_num: int, lesson_count: int, completion_status: str) -> Dict:
+def generate_unit_data(unit_num: int, lesson_count: int, completion_status: str, is_first_unit: bool = False) -> Dict:
     """Generate data for a single unit based on completion status"""
     unit_data = {}
     
     if completion_status == "not_started":
+        # Generate "Not Started" status for all lessons in the unit
+        for lesson in range(1, lesson_count + 1):
+            base_grade = ((unit_num - 1) * 10) + lesson
+            unit_data.update(generate_lesson_data(base_grade, "not_started"))
         return unit_data
     
     elif completion_status == "in_progress":
-        # Pick a random lesson to be watching presentation (1-based index)
-        current_lesson = random.randint(1, lesson_count)
+        # For any in-progress unit, ensure at least one lesson is complete
+        # This guarantees at least one assessment grade
+        current_lesson = random.randint(2, lesson_count) if is_first_unit else random.randint(1, lesson_count)
         
         for lesson in range(1, lesson_count + 1):
             base_grade = ((unit_num - 1) * 10) + lesson
@@ -242,8 +303,8 @@ def generate_mock_data() -> List[Dict[str, Union[str, int]]]:
             # Pick a random unit to be the student's first unit
             current_unit = random.randint(1, CONFIG["data"]["unitsCount"])
             
-            # Generate data for the current unit
-            row.update(generate_unit_data(current_unit, CONFIG["data"]["lessonsPerUnit"], "in_progress"))
+            # Generate data for the current unit, marking it as first unit
+            row.update(generate_unit_data(current_unit, CONFIG["data"]["lessonsPerUnit"], "in_progress", is_first_unit=True))
             
             # All other units are not started
             for unit in range(1, CONFIG["data"]["unitsCount"] + 1):
