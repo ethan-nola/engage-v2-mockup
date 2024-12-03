@@ -1,3 +1,5 @@
+import { faker } from '@faker-js/faker';
+
 // Type definitions for grid data structure
 interface StudentRow {
     firstName: string;
@@ -40,11 +42,6 @@ const CONFIG = {
         studentCount: 80,        // Number of students to generate
         unitsCount: 10,         // Number of units
         lessonsPerUnit: 10      // Lessons per unit
-    },
-    // Sample names for random generation
-    names: {
-        first: ['John', 'Jane', 'Michael', 'Emily', 'David', 'Sarah', 'James', 'Emma', 'William', 'Olivia'],
-        last: ['Smith', 'Johnson', 'Williams', 'Brown', 'Jones', 'Garcia', 'Miller', 'Davis', 'Rodriguez', 'Martinez']
     }
 };
 
@@ -81,19 +78,17 @@ function generateRandomGrade(): number {
 
 // Generate mock student data
 function generateMockData() {
-    const { first: firstNames, last: lastNames } = CONFIG.names;
     const rows = [];
     
     // Generate data for each student
     for (let i = 0; i < CONFIG.data.studentCount; i++) {
         const row = Object.create(null);
-        row.firstName = firstNames[Math.floor(Math.random() * firstNames.length)];
-        row.lastName = lastNames[Math.floor(Math.random() * lastNames.length)];
+        row.firstName = faker.person.firstName();
+        row.lastName = faker.person.lastName();
         
         // Generate grades for each lesson
         const totalLessons = CONFIG.data.unitsCount * CONFIG.data.lessonsPerUnit;
         for (let j = 1; j <= totalLessons; j++) {
-            // Two assessments per lesson
             row[`grade${j}_A1`] = generateRandomGrade();
             row[`grade${j}_A2`] = generateRandomGrade();
         }
@@ -121,7 +116,8 @@ export function load() {
             field: 'lastName', 
             headerName: 'Last Name',
             autoSize: true,
-            pinned: 'left'
+            pinned: 'left',
+            sort: 'asc'
         },
         // Overall grade column
         {
