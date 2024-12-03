@@ -2,9 +2,16 @@ from faker import Faker
 import json
 import random
 from typing import Dict, List, Union
+from enum import Enum
 
 # Initialize Faker
 fake = Faker()
+
+class StudentProgress(Enum):
+    NOT_STARTED = "not_started"
+    FIRST_UNIT = "first_unit"
+    MULTIPLE_UNITS = "multiple_units"
+    COMPLETED_ALL = "completed_all"
 
 # Configuration
 CONFIG = {
@@ -22,6 +29,12 @@ CONFIG = {
         "studentCount": 80,
         "unitsCount": 10,
         "lessonsPerUnit": 10
+    },
+    "progress_distribution": {
+        StudentProgress.NOT_STARTED: 0.1,      # 10% haven't started
+        StudentProgress.FIRST_UNIT: 0.3,       # 30% in first unit
+        StudentProgress.MULTIPLE_UNITS: 0.5,   # 50% completed some units
+        StudentProgress.COMPLETED_ALL: 0.1     # 10% completed all units
     }
 }
 
@@ -36,51 +49,144 @@ def generate_random_grade() -> int:
     
     return random.randint(CONFIG["grades"]["min"], CONFIG["grades"]["max"])
 
-def generate_random_presentation_status() -> str:
-    return random.choice(['Not Started', 'In Progress', 'Completed'])
+def get_student_progress_type() -> StudentProgress:
+    rand = random.random()
+    cumulative = 0
+    for progress_type, weight in CONFIG["progress_distribution"].items():
+        cumulative += weight
+        if rand <= cumulative:
+            return progress_type
+    return StudentProgress.NOT_STARTED
+
+def generate_unit_data(unit_num: int, lesson_count: int, completion_status: str) -> Dict:
+    """Generate data for a single unit based on completion status"""
+    unit_data = {}
+    
+    if completion_status == "not_started":
+        return unit_data
+    
+    elif completion_status == "in_progress":
+        # Randomly choose how many lessons are complete (at least 1)
+        lessons_complete = random.randint(1, lesson_count - 1)
+        
+        for lesson in range(1, lesson_count + 1):
+            base_grade = unit_num * 10 + lesson
+            
+            if lesson <= lessons_complete:
+                # Complete lesson
+                unit_data.update(generate_lesson_data(base_grade, "completed"))
+            elif lesson == lessons_complete + 1:
+                # Current lesson - partially complete
+                unit_data.update(generate_lesson_data(base_grade, "in_progress"))
+            else:
+                # Future lesson - not started
+                unit_data.update(generate_lesson_data(base_grade, "not_started"))
+                
+    elif completion_status == "completed":
+        # All lessons complete
+        for lesson in range(1, lesson_count + 1):
+            base_grade = unit_num * 10 + lesson
+            unit_data.update(generate_lesson_data(base_grade, "completed"))
+    
+    return unit_data
+
+def generate_lesson_data(grade_num: int, status: str) -> Dict:
+    """Generate data for a single lesson based on status"""
+    data = {}
+    lesson_index = ((grade_num - 1) % 10) + 1
+    
+    if status == "not_started":
+        # Add presentation fields as "Not Started"
+        if lesson_index in [5, 9]:
+            for i in range(1, 5):
+                data[f"grade{grade_num}_presentation{i}"] = "Not Started"
+        else:
+            data[f"grade{grade_num}_presentation"] = "Not Started"
+        return data
+    
+    elif status == "in_progress":
+        # Add presentation as "In Progress" and some grades
+        if lesson_index in [5, 9]:
+            for i in range(1, 5):
+                data[f"grade{grade_num}_presentation{i}"] = "In Progress"
+                if random.random() < 0.5:  # 50% chance to have started each assessment
+                    data[f"grade{grade_num}_diagnostic{i}"] = generate_random_grade()
+                    data[f"grade{grade_num}_mastery{i}a"] = generate_random_grade()
+                    data[f"grade{grade_num}_mastery{i}b"] = generate_random_grade()
+        else:
+            data[f"grade{grade_num}_presentation"] = "In Progress"
+            if random.random() < 0.5:  # 50% chance to have started the assessment
+                if lesson_index == 1:
+                    data[f"grade{grade_num}_moduleGuide"] = generate_random_grade()
+                elif lesson_index in [2, 3, 4, 6]:
+                    data[f"grade{grade_num}_rca"] = generate_random_grade()
+                elif lesson_index == 8:
+                    data[f"grade{grade_num}_posttest"] = generate_random_grade()
+        return data
+    
+    elif status == "completed":
+        # Add all data as completed
+        if lesson_index in [5, 9]:
+            for i in range(1, 5):
+                data[f"grade{grade_num}_presentation{i}"] = "Completed"
+                data[f"grade{grade_num}_diagnostic{i}"] = generate_random_grade()
+                data[f"grade{grade_num}_mastery{i}a"] = generate_random_grade()
+                data[f"grade{grade_num}_mastery{i}b"] = generate_random_grade()
+        else:
+            data[f"grade{grade_num}_presentation"] = "Completed"
+            if lesson_index == 1:
+                data[f"grade{grade_num}_moduleGuide"] = generate_random_grade()
+            elif lesson_index in [2, 3, 4, 6]:
+                data[f"grade{grade_num}_rca"] = generate_random_grade()
+            elif lesson_index == 8:
+                data[f"grade{grade_num}_posttest"] = generate_random_grade()
+        return data
+    
+    return data
 
 def generate_mock_data() -> List[Dict[str, Union[str, int]]]:
     rows = []
     
     for _ in range(CONFIG["data"]["studentCount"]):
+        # Start with student info
         row = {
             "firstName": fake.first_name(),
             "lastName": fake.last_name()
         }
         
-        total_lessons = CONFIG["data"]["unitsCount"] * CONFIG["data"]["lessonsPerUnit"]
-        for j in range(1, total_lessons + 1):
-            lesson_index = ((j - 1) % 10) + 1
+        # Determine student's overall progress
+        progress_type = get_student_progress_type()
+        
+        if progress_type == StudentProgress.NOT_STARTED:
+            # Generate empty data for all units
+            for unit in range(CONFIG["data"]["unitsCount"]):
+                row.update(generate_unit_data(unit + 1, CONFIG["data"]["lessonsPerUnit"], "not_started"))
+        
+        elif progress_type == StudentProgress.FIRST_UNIT:
+            # First unit in progress, rest not started
+            row.update(generate_unit_data(1, CONFIG["data"]["lessonsPerUnit"], "in_progress"))
+            for unit in range(2, CONFIG["data"]["unitsCount"] + 1):
+                row.update(generate_unit_data(unit, CONFIG["data"]["lessonsPerUnit"], "not_started"))
+        
+        elif progress_type == StudentProgress.MULTIPLE_UNITS:
+            # Some units complete, one in progress, rest not started
+            completed_units = random.randint(1, CONFIG["data"]["unitsCount"] - 2)
             
-            # Generate data based on lesson type
-            if lesson_index == 1:  # Session 1
-                row[f"grade{j}_moduleGuide"] = generate_random_grade()
-                row[f"grade{j}_presentation"] = generate_random_presentation_status()
+            # Complete units
+            for unit in range(1, completed_units + 1):
+                row.update(generate_unit_data(unit, CONFIG["data"]["lessonsPerUnit"], "completed"))
             
-            elif lesson_index in [2, 3, 4]:  # Sessions 2-4
-                row[f"grade{j}_rca"] = generate_random_grade()
-                row[f"grade{j}_presentation"] = generate_random_presentation_status()
+            # Current unit in progress
+            row.update(generate_unit_data(completed_units + 1, CONFIG["data"]["lessonsPerUnit"], "in_progress"))
             
-            elif lesson_index in [5, 9]:  # Diagnostic Days
-                for diag_num in range(1, 5):
-                    row[f"grade{j}_diagnostic{diag_num}"] = generate_random_grade()
-                    row[f"grade{j}_presentation{diag_num}"] = generate_random_presentation_status()
-                    row[f"grade{j}_mastery{diag_num}a"] = generate_random_grade()
-                    row[f"grade{j}_mastery{diag_num}b"] = generate_random_grade()
-            
-            elif lesson_index == 6:  # Session 5
-                row[f"grade{j}_rca"] = generate_random_grade()
-                row[f"grade{j}_presentation"] = generate_random_presentation_status()
-            
-            elif lesson_index == 7:  # Session 6
-                row[f"grade{j}_presentation"] = generate_random_presentation_status()
-            
-            elif lesson_index == 8:  # Session 7
-                row[f"grade{j}_posttest"] = generate_random_grade()
-                row[f"grade{j}_presentation"] = generate_random_presentation_status()
-            
-            elif lesson_index == 10:  # Enrichments
-                row[f"grade{j}_presentation"] = generate_random_presentation_status()
+            # Remaining units not started
+            for unit in range(completed_units + 2, CONFIG["data"]["unitsCount"] + 1):
+                row.update(generate_unit_data(unit, CONFIG["data"]["lessonsPerUnit"], "not_started"))
+        
+        elif progress_type == StudentProgress.COMPLETED_ALL:
+            # All units complete
+            for unit in range(1, CONFIG["data"]["unitsCount"] + 1):
+                row.update(generate_unit_data(unit, CONFIG["data"]["lessonsPerUnit"], "completed"))
         
         rows.append(row)
     

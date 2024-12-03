@@ -41,6 +41,96 @@ const UNIT_NAMES = [
     "Home Makeover"
 ];
 
+// Add new helper interfaces
+interface LessonCompletion {
+    presentationComplete: boolean;
+    hasAssessmentGrades: boolean;
+}
+
+// Add helper functions at the top of the file
+function isLessonComplete(params: any, grade: number, lessonIndex: number): LessonCompletion {
+    const presentationFields = (() => {
+        switch(lessonIndex) {
+            case 5:
+            case 9:
+                return Array.from({length: 4}, (_, i) => `grade${grade}_presentation${i + 1}`);
+            default:
+                return [`grade${grade}_presentation`];
+        }
+    })();
+
+    // Check if all presentations are completed
+    const presentationComplete = presentationFields.every(
+        field => params.data[field] === 'Completed'
+    );
+
+    // Get assessment fields for this lesson
+    const assessmentFields = (() => {
+        switch(lessonIndex) {
+            case 1: return [`grade${grade}_moduleGuide`];
+            case 2:
+            case 3:
+            case 4:
+            case 6: return [`grade${grade}_rca`];
+            case 5:
+            case 9: return [
+                ...Array.from({length: 4}, (_, i) => [
+                    `grade${grade}_diagnostic${i + 1}`,
+                    `grade${grade}_mastery${i + 1}a`,
+                    `grade${grade}_mastery${i + 1}b`
+                ]).flat()
+            ];
+            case 8: return [`grade${grade}_posttest`];
+            default: return [];
+        }
+    })();
+
+    // Check if all assessment grades exist
+    const hasAssessmentGrades = assessmentFields.every(
+        field => params.data[field] !== undefined
+    );
+
+    return { presentationComplete, hasAssessmentGrades };
+}
+
+function calculateLessonGrade(params: any, grade: number, lessonIndex: number): number | undefined {
+    const completion = isLessonComplete(params, grade, lessonIndex);
+    
+    // Only calculate grade if lesson is complete
+    if (!completion.presentationComplete || !completion.hasAssessmentGrades) {
+        return undefined;
+    }
+
+    // Get assessment fields for this lesson
+    const fields = (() => {
+        switch(lessonIndex) {
+            case 1: return [`grade${grade}_moduleGuide`];
+            case 2:
+            case 3:
+            case 4:
+            case 6: return [`grade${grade}_rca`];
+            case 5:
+            case 9: return [
+                ...Array.from({length: 4}, (_, i) => [
+                    `grade${grade}_diagnostic${i + 1}`,
+                    `grade${grade}_mastery${i + 1}a`,
+                    `grade${grade}_mastery${i + 1}b`
+                ]).flat()
+            ];
+            case 8: return [`grade${grade}_posttest`];
+            default: return [];
+        }
+    })();
+
+    const grades = fields
+        .map(field => params.data[field])
+        .filter(value => value !== undefined);
+    
+    return grades.length > 0
+        ? Math.round(grades.reduce((sum, grade) => sum + grade, 0) / grades.length)
+        : undefined;
+}
+
 // Main load function for the page
 export function load() {
     // Use the pre-generated mock data
@@ -64,42 +154,33 @@ export function load() {
         },
         // Overall grade column
         {
-            headerName: 'Grade',
+            headerName: 'Course Grade',
             pinned: 'left',
             valueGetter: (params) => {
-                const unitAverages = [];
+                const unitGrades = [];
                 for (let unit = 0; unit < 10; unit++) {
                     const startGrade = unit * 10 + 1;
                     const endGrade = startGrade + 9;
                     const grades = [];
                     
-                    // Calculate average for each lesson in unit
                     for (let grade = startGrade; grade <= endGrade; grade++) {
-                        // Calculate average of all 12 assessments
-                        const assessments = [];
-                        for (let k = 1; k <= 12; k++) {
-                            const value = params.data[`grade${grade}_A${k}`];
-                            if (value !== undefined) {
-                                assessments.push(value);
-                            }
-                        }
-                        if (assessments.length > 0) {
-                            grades.push(
-                                assessments.reduce((sum, grade) => sum + grade, 0) / assessments.length
-                            );
+                        const lessonIndex = ((grade - 1) % 10) + 1;
+                        const lessonGrade = calculateLessonGrade(params, grade, lessonIndex);
+                        if (lessonGrade !== undefined) {
+                            grades.push(lessonGrade);
                         }
                     }
                     
                     if (grades.length > 0) {
-                        unitAverages.push(
+                        unitGrades.push(
                             grades.reduce((sum, grade) => sum + grade, 0) / grades.length
                         );
                     }
                 }
                 
-                return unitAverages.length > 0
-                    ? Math.round(unitAverages.reduce((sum, avg) => sum + avg, 0) / unitAverages.length)
-                    : 0;
+                return unitGrades.length > 0
+                    ? Math.round(unitGrades.reduce((sum, avg) => sum + avg, 0) / unitGrades.length)
+                    : undefined;
             },
             valueFormatter: (params) => {
                 return params.value != null ? params.value + '%' : '';
@@ -142,35 +223,9 @@ export function load() {
                 children: [
                     // Average grade column (shown when collapsed)
                     {
-                        headerName: 'Grade',
+                        headerName: 'Lesson Grade',
                         valueGetter: (params: any) => {
-                            const fields = (() => {
-                                switch(lessonIndex) {
-                                    case 1: return [`grade${grade}_moduleGuide`];
-                                    case 2:
-                                    case 3:
-                                    case 4:
-                                    case 6: return [`grade${grade}_rca`];
-                                    case 5:
-                                    case 9: return [
-                                        ...Array.from({length: 4}, (_, i) => [
-                                            `grade${grade}_diagnostic${i + 1}`,
-                                            `grade${grade}_mastery${i + 1}a`,
-                                            `grade${grade}_mastery${i + 1}b`
-                                        ]).flat()
-                                    ];
-                                    case 8: return [`grade${grade}_posttest`];
-                                    default: return [];
-                                }
-                            })();
-
-                            const grades = fields
-                                .map(field => params.data[field])
-                                .filter(value => value !== undefined);
-
-                            return grades.length > 0
-                                ? Math.round(grades.reduce((sum, grade) => sum + grade, 0) / grades.length)
-                                : 0;
+                            return calculateLessonGrade(params, grade, lessonIndex);
                         },
                         valueFormatter: (params: any) => params.value != null ? params.value + '%' : '',
                         columnGroupShow: 'closed'
@@ -299,43 +354,17 @@ export function load() {
                 {
                     headerName: 'Unit Grade',
                     valueGetter: (params: any) => {
-                        // Update unit grade calculation to use new field names
                         const grades = [];
                         for (let grade = startGrade; grade <= endGrade; grade++) {
                             const lessonIndex = ((grade - 1) % 10) + 1;
-                            const fields = (() => {
-                                switch(lessonIndex) {
-                                    case 1: return [`grade${grade}_moduleGuide`];
-                                    case 2:
-                                    case 3:
-                                    case 4:
-                                    case 6: return [`grade${grade}_rca`];
-                                    case 5:
-                                    case 9: return [
-                                        ...Array.from({length: 4}, (_, i) => [
-                                            `grade${grade}_diagnostic${i + 1}`,
-                                            `grade${grade}_mastery${i + 1}a`,
-                                            `grade${grade}_mastery${i + 1}b`
-                                        ]).flat()
-                                    ];
-                                    case 8: return [`grade${grade}_posttest`];
-                                    default: return [];
-                                }
-                            })();
-
-                            const lessonGrades = fields
-                                .map(field => params.data[field])
-                                .filter(value => value !== undefined);
-                            
-                            if (lessonGrades.length > 0) {
-                                grades.push(
-                                    Math.round(lessonGrades.reduce((sum, grade) => sum + grade, 0) / lessonGrades.length)
-                                );
+                            const lessonGrade = calculateLessonGrade(params, grade, lessonIndex);
+                            if (lessonGrade !== undefined) {
+                                grades.push(lessonGrade);
                             }
                         }
                         return grades.length > 0 
                             ? Math.round(grades.reduce((sum, grade) => sum + grade, 0) / grades.length)
-                            : 0;
+                            : undefined;
                     },
                     valueFormatter: (params: any) => {
                         return params.value != null ? params.value + '%' : '';
