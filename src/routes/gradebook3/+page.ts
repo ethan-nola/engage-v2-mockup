@@ -26,10 +26,10 @@ const CONFIG = {
         max: 100,
         // Optionally add some randomness to make data more realistic
         distribution: {
-            excellent: { min: 90, max: 100, weight: 0.1 },  // 10% of grades
-            good: { min: 75, max: 89, weight: 0.3 },        // 30% of grades
+            excellent: { min: 90, max: 100, weight: 0.2 },  // 10% of grades
+            good: { min: 75, max: 89, weight: 0.3},        // 30% of grades
             average: { min: 60, max: 74, weight: 0.4 },     // 40% of grades
-            poor: { min: 0, max: 59, weight: 0.2 }          // 20% of grades
+            poor: { min: 0, max: 59, weight: 0.1 }          // 20% of grades
         }
     },
     // Data size settings
@@ -178,7 +178,7 @@ export function load() {
                 columnGroupShow: 'open',
                 children: [
                     {
-                        headerName: 'Avg',
+                        headerName: 'Grade',
                         valueGetter: (params) => {
                             const a1 = params.data[`grade${grade}_A1`];
                             const a2 = params.data[`grade${grade}_A2`];
@@ -217,7 +217,7 @@ export function load() {
             groupId: `unit${unit + 1}`,
             children: [
                 {
-                    headerName: 'Average',
+                    headerName: 'Unit Grade',
                     valueGetter: (params) => {
                         const grades = [];
                         for (let grade = startGrade; grade <= endGrade; grade++) {
