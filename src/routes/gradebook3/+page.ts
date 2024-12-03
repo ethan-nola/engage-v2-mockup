@@ -21,6 +21,7 @@ interface ColumnDef {
     groupId?: string;           // Identifier for column group
     valueFormatter?: (params: any) => string;  // Format displayed values
     maxWidth?: number;          // Maximum width for column
+    sort?: string;  // Add missing sort property to fix linter error
 }
 
 // Add this near the top with other interfaces
@@ -142,43 +143,148 @@ export function load() {
                     // Average grade column (shown when collapsed)
                     {
                         headerName: 'Grade',
-                        valueGetter: (params) => {
-                            // Calculate average of all 12 assessments (excluding presentation)
-                            const grades = [];
-                            for (let k = 1; k <= 12; k++) {
-                                const value = params.data[`grade${grade}_A${k}`];
-                                if (value !== undefined) {
-                                    grades.push(value);
+                        valueGetter: (params: any) => {
+                            const fields = (() => {
+                                switch(lessonIndex) {
+                                    case 1: return [`grade${grade}_moduleGuide`];
+                                    case 2:
+                                    case 3:
+                                    case 4:
+                                    case 6: return [`grade${grade}_rca`];
+                                    case 5:
+                                    case 9: return [
+                                        ...Array.from({length: 4}, (_, i) => [
+                                            `grade${grade}_diagnostic${i + 1}`,
+                                            `grade${grade}_mastery${i + 1}a`,
+                                            `grade${grade}_mastery${i + 1}b`
+                                        ]).flat()
+                                    ];
+                                    case 8: return [`grade${grade}_posttest`];
+                                    default: return [];
                                 }
-                            }
+                            })();
+
+                            const grades = fields
+                                .map(field => params.data[field])
+                                .filter(value => value !== undefined);
+
                             return grades.length > 0
                                 ? Math.round(grades.reduce((sum, grade) => sum + grade, 0) / grades.length)
                                 : 0;
                         },
-                        valueFormatter: (params) => {
-                            return params.value != null ? params.value + '%' : '';
-                        },
-                        autoSize: true,
+                        valueFormatter: (params: any) => params.value != null ? params.value + '%' : '',
                         columnGroupShow: 'closed'
                     },
-                    // Presentation status column
-                    {
-                        field: `grade${grade}_presentation`,
-                        headerName: 'Presentation',
-                        autoSize: true,
-                        columnGroupShow: 'open',
-                        width: 120
-                    },
-                    // Generate all 12 assessment columns
-                    ...Array.from({ length: 12 }, (_, i) => ({
-                        field: `grade${grade}_A${i + 1}`,
-                        headerName: `A${i + 1}`,
-                        autoSize: true,
-                        columnGroupShow: 'open',
-                        valueFormatter: (params) => {
-                            return params.value != null ? params.value + '%' : '';
+                    // Detailed columns (shown when expanded)
+                    ...(() => {
+                        switch(lessonIndex) {
+                            case 1: // Session 1
+                                return [
+                                    {
+                                        field: `grade${grade}_moduleGuide`,
+                                        headerName: 'Module Guide',
+                                        valueFormatter: (params: any) => params.value != null ? params.value + '%' : '',
+                                        columnGroupShow: 'open'
+                                    },
+                                    {
+                                        field: `grade${grade}_presentation`,
+                                        headerName: 'Presentation',
+                                        columnGroupShow: 'open'
+                                    }
+                                ];
+                            case 2: // Session 2
+                            case 3: // Session 3
+                            case 4: // Session 4
+                                return [
+                                    {
+                                        field: `grade${grade}_rca`,
+                                        headerName: 'RCA',
+                                        valueFormatter: (params: any) => params.value != null ? params.value + '%' : '',
+                                        columnGroupShow: 'open'
+                                    },
+                                    {
+                                        field: `grade${grade}_presentation`,
+                                        headerName: 'Presentation',
+                                        columnGroupShow: 'open'
+                                    }
+                                ];
+                            case 5: // Diagnostic Day 1
+                            case 9: // Diagnostic Day 2
+                                return [
+                                    ...[1, 2, 3, 4].flatMap(diagNum => [
+                                        {
+                                            field: `grade${grade}_diagnostic${diagNum}`,
+                                            headerName: `Diagnostic ${diagNum}`,
+                                            valueFormatter: (params: any) => params.value != null ? params.value + '%' : '',
+                                            columnGroupShow: 'open'
+                                        },
+                                        {
+                                            field: `grade${grade}_presentation${diagNum}`,
+                                            headerName: `Presentation ${diagNum}`,
+                                            columnGroupShow: 'open'
+                                        },
+                                        {
+                                            field: `grade${grade}_mastery${diagNum}a`,
+                                            headerName: `Mastery ${diagNum}a`,
+                                            valueFormatter: (params: any) => params.value != null ? params.value + '%' : '',
+                                            columnGroupShow: 'open'
+                                        },
+                                        {
+                                            field: `grade${grade}_mastery${diagNum}b`,
+                                            headerName: `Mastery ${diagNum}b`,
+                                            valueFormatter: (params: any) => params.value != null ? params.value + '%' : '',
+                                            columnGroupShow: 'open'
+                                        }
+                                    ])
+                                ];
+                            case 6: // Session 5
+                                return [
+                                    {
+                                        field: `grade${grade}_rca`,
+                                        headerName: 'RCA',
+                                        valueFormatter: (params: any) => params.value != null ? params.value + '%' : '',
+                                        columnGroupShow: 'open'
+                                    },
+                                    {
+                                        field: `grade${grade}_presentation`,
+                                        headerName: 'Presentation',
+                                        columnGroupShow: 'open'
+                                    }
+                                ];
+                            case 7: // Session 6
+                                return [
+                                    {
+                                        field: `grade${grade}_presentation`,
+                                        headerName: 'Presentation',
+                                        columnGroupShow: 'open'
+                                    }
+                                ];
+                            case 8: // Session 7
+                                return [
+                                    {
+                                        field: `grade${grade}_posttest`,
+                                        headerName: 'Post-test',
+                                        valueFormatter: (params: any) => params.value != null ? params.value + '%' : '',
+                                        columnGroupShow: 'open'
+                                    },
+                                    {
+                                        field: `grade${grade}_presentation`,
+                                        headerName: 'Presentation',
+                                        columnGroupShow: 'open'
+                                    }
+                                ];
+                            case 10: // Enrichments
+                                return [
+                                    {
+                                        field: `grade${grade}_presentation`,
+                                        headerName: 'Presentation',
+                                        columnGroupShow: 'open'
+                                    }
+                                ];
+                            default:
+                                return [];
                         }
-                    }))
+                    })()
                 ]
             });
         }
@@ -187,24 +293,51 @@ export function load() {
         columnDefs.push({
             headerName: UNIT_NAMES[unit],
             groupId: `unit${unit + 1}`,
+            openByDefault: false,  // Make sure unit starts collapsed
             children: [
                 // Unit average grade column
                 {
                     headerName: 'Unit Grade',
-                    valueGetter: (params) => {
+                    valueGetter: (params: any) => {
+                        // Update unit grade calculation to use new field names
                         const grades = [];
                         for (let grade = startGrade; grade <= endGrade; grade++) {
-                            const a1 = params.data[`grade${grade}_A1`];
-                            const a2 = params.data[`grade${grade}_A2`];
-                            if (a1 !== undefined && a2 !== undefined) {
-                                grades.push((a1 + a2) / 2);
+                            const lessonIndex = ((grade - 1) % 10) + 1;
+                            const fields = (() => {
+                                switch(lessonIndex) {
+                                    case 1: return [`grade${grade}_moduleGuide`];
+                                    case 2:
+                                    case 3:
+                                    case 4:
+                                    case 6: return [`grade${grade}_rca`];
+                                    case 5:
+                                    case 9: return [
+                                        ...Array.from({length: 4}, (_, i) => [
+                                            `grade${grade}_diagnostic${i + 1}`,
+                                            `grade${grade}_mastery${i + 1}a`,
+                                            `grade${grade}_mastery${i + 1}b`
+                                        ]).flat()
+                                    ];
+                                    case 8: return [`grade${grade}_posttest`];
+                                    default: return [];
+                                }
+                            })();
+
+                            const lessonGrades = fields
+                                .map(field => params.data[field])
+                                .filter(value => value !== undefined);
+                            
+                            if (lessonGrades.length > 0) {
+                                grades.push(
+                                    Math.round(lessonGrades.reduce((sum, grade) => sum + grade, 0) / lessonGrades.length)
+                                );
                             }
                         }
                         return grades.length > 0 
                             ? Math.round(grades.reduce((sum, grade) => sum + grade, 0) / grades.length)
                             : 0;
                     },
-                    valueFormatter: (params) => {
+                    valueFormatter: (params: any) => {
                         return params.value != null ? params.value + '%' : '';
                     },
                     columnGroupShow: 'closed'
