@@ -1,6 +1,6 @@
 <script>
     import 'ag-grid-community/styles/ag-grid.css';
-    import 'ag-grid-community/styles/ag-theme-alpine.css';
+    import 'ag-grid-community/styles/ag-theme-balham.css';
     import { Grid } from 'ag-grid-community';
     import { onMount } from 'svelte';
     
@@ -70,14 +70,14 @@
 <!-- Grid Container -->
 <div class="h-full w-full flex flex-col relative">
     <div class="flex-grow relative">
-        <!-- AG Grid container with Alpine theme -->
-        <div bind:this={gridDiv} class="ag-theme-alpine h-full w-full"></div>
+        <!-- AG Grid container with Balham theme -->
+        <div bind:this={gridDiv} class="ag-theme-balham h-full w-full"></div>
     </div>
 </div>
 
 <style>
     /* Ensure grid takes full height of container */
-    :global(.ag-theme-alpine) {
+    :global(.ag-theme-balham) {
         height: 100% !important;
     }
 </style>
