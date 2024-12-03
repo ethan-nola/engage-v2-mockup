@@ -38,12 +38,12 @@
             suppressColumnVirtualisation: true,
 
             onFirstDataRendered: (params) => {
-                params.columnApi.autoSizeAllColumns();
+                params.api.sizeColumnsToFit();
             },
 
             onColumnVisible: (params) => {
                 if (params.visible) {
-                    params.columnApi.autoSizeColumn(params.column);
+                    params.api.sizeColumnsToFit();
                 }
             }
         };
