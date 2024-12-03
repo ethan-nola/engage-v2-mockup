@@ -149,12 +149,68 @@ def generate_unit_data(unit_num: int, lesson_count: int, completion_status: str,
     
     return unit_data
 
+def handle_diagnostic_set(grade_num: int, set_num: int, status: str) -> Dict:
+    """Generate data for a single diagnostic set following progression rules"""
+    data = {}
+    
+    # Generate diagnostic grade
+    diagnostic_grade = generate_random_grade()
+    data[f"grade{grade_num}_diagnostic{set_num}"] = diagnostic_grade
+    
+    # If diagnostic is 100%, skip the rest of the set
+    if diagnostic_grade == 100:
+        return data
+        
+    # Otherwise continue with presentation and mastery tests
+    if status == "completed":
+        data[f"grade{grade_num}_presentation{set_num}"] = "Completed"
+        mastery_a = generate_random_grade()
+        data[f"grade{grade_num}_mastery{set_num}a"] = mastery_a
+        
+        # Only generate mastery_b if mastery_a was failed
+        if mastery_a <= 70:
+            data[f"grade{grade_num}_mastery{set_num}b"] = generate_random_grade()
+            
+    elif status == "in_progress":
+        # Randomly decide which component is in progress
+        progress_point = random.choice(["presentation", "mastery_a", "mastery_b"])
+        
+        if progress_point == "presentation":
+            data[f"grade{grade_num}_presentation{set_num}"] = "In Progress"
+        elif progress_point == "mastery_a":
+            data[f"grade{grade_num}_presentation{set_num}"] = "Completed"
+            data[f"grade{grade_num}_mastery{set_num}a"] = generate_random_grade()
+        else:  # mastery_b
+            data[f"grade{grade_num}_presentation{set_num}"] = "Completed"
+            data[f"grade{grade_num}_mastery{set_num}a"] = random.randint(0, 70)  # Failed mastery_a
+            data[f"grade{grade_num}_mastery{set_num}b"] = generate_random_grade()
+            
+    return data
+
 def generate_lesson_data(grade_num: int, status: str) -> Dict:
     """Generate data for a single lesson based on status"""
     data = {}
     lesson_index = ((grade_num - 1) % 10) + 1
     
-    if status == "not_started":
+    if lesson_index in [5, 9]:  # Diagnostic Days
+        if status == "completed":
+            for i in range(1, 5):
+                data.update(handle_diagnostic_set(grade_num, i, "completed"))
+        elif status == "in_progress":
+            # Complete previous sets
+            current_set = random.randint(1, 4)
+            for i in range(1, current_set):
+                data.update(handle_diagnostic_set(grade_num, i, "completed"))
+            # Current set in progress
+            data.update(handle_diagnostic_set(grade_num, current_set, "in_progress"))
+            # Future sets not started
+            for i in range(current_set + 1, 5):
+                data[f"grade{grade_num}_presentation{i}"] = "Not Started"
+        elif status == "not_started":
+            for i in range(1, 5):
+                data[f"grade{grade_num}_presentation{i}"] = "Not Started"
+    
+    elif status == "not_started":
         # Add presentation fields as "Not Started"
         if lesson_index in [5, 9]:
             for i in range(1, 5):
@@ -182,46 +238,6 @@ def generate_lesson_data(grade_num: int, status: str) -> Dict:
             else:
                 if random.random() < 0.7:
                     data[f"grade{grade_num}_moduleGuide"] = generate_random_grade()
-        
-        elif lesson_index in [5, 9]:
-            # Diagnostic Days - 4 sets of diagnostic/mastery/presentation
-            # Randomly choose which set is in progress (1-4)
-            current_set = random.randint(1, 4)
-            
-            for i in range(1, 5):
-                if i < current_set:
-                    # Previous sets are completed
-                    data[f"grade{grade_num}_presentation{i}"] = "Completed"
-                    data[f"grade{grade_num}_diagnostic{i}"] = generate_random_grade()
-                    data[f"grade{grade_num}_mastery{i}a"] = generate_random_grade()
-                    data[f"grade{grade_num}_mastery{i}b"] = generate_random_grade()
-                elif i == current_set:
-                    # Current set is in progress
-                    # Determine which part is in progress
-                    parts = ["diagnostic", "mastery_a", "mastery_b", "presentation"]
-                    current_part_index = random.randint(0, len(parts) - 1)
-                    
-                    for j, part in enumerate(parts):
-                        if j < current_part_index:
-                            # Previous parts are completed
-                            if part == "presentation":
-                                data[f"grade{grade_num}_presentation{i}"] = "Completed"
-                            else:
-                                data[f"grade{grade_num}_{part}{i}"] = generate_random_grade()
-                        elif j == current_part_index:
-                            # This part is in progress
-                            if part == "presentation":
-                                data[f"grade{grade_num}_presentation{i}"] = "In Progress"
-                            else:
-                                # For assessments, in progress means having a grade
-                                data[f"grade{grade_num}_{part}{i}"] = generate_random_grade()
-                        else:
-                            # Future parts are not started
-                            if part == "presentation":
-                                data[f"grade{grade_num}_presentation{i}"] = "Not Started"
-                else:
-                    # Future sets are not started
-                    data[f"grade{grade_num}_presentation{i}"] = "Not Started"
         
         elif lesson_index == 8:
             # Post-test lessons

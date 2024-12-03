@@ -96,7 +96,40 @@ function isLessonComplete(params: any, grade: number, lessonIndex: number): Less
 function calculateLessonGrade(params: any, grade: number, lessonIndex: number): number | undefined {
     const completion = isLessonComplete(params, grade, lessonIndex);
     
-    // Only calculate grade if lesson is complete
+    // For diagnostic days, calculate average differently
+    if (lessonIndex === 5 || lessonIndex === 9) {
+        const grades: number[] = [];
+        
+        // Check each diagnostic set
+        for (let i = 1; i <= 4; i++) {
+            const diagnostic = params.data[`grade${grade}_diagnostic${i}`];
+            
+            if (diagnostic !== undefined) {
+                if (diagnostic === 100) {
+                    // If diagnostic is 100%, use that as the grade for this set
+                    grades.push(100);
+                } else {
+                    // Otherwise, look for mastery grades
+                    const mastery_a = params.data[`grade${grade}_mastery${i}a`];
+                    const mastery_b = params.data[`grade${grade}_mastery${i}b`];
+                    
+                    // Use the highest passing grade, or the diagnostic if no passing grades
+                    const passing_grade = [mastery_a, mastery_b]
+                        .filter(g => g !== undefined && g > 70)
+                        .sort((a, b) => b - a)[0];
+                        
+                    grades.push(passing_grade || diagnostic);
+                }
+            }
+        }
+        
+        // Return average if we have any grades
+        return grades.length > 0 
+            ? Math.round(grades.reduce((sum, g) => sum + g, 0) / grades.length)
+            : undefined;
+    }
+    
+    // For non-diagnostic days, use existing logic
     if (!completion.presentationComplete || !completion.hasAssessmentGrades) {
         return undefined;
     }
@@ -109,14 +142,6 @@ function calculateLessonGrade(params: any, grade: number, lessonIndex: number): 
             case 3:
             case 4:
             case 6: return [`grade${grade}_rca`];
-            case 5:
-            case 9: return [
-                ...Array.from({length: 4}, (_, i) => [
-                    `grade${grade}_diagnostic${i + 1}`,
-                    `grade${grade}_mastery${i + 1}a`,
-                    `grade${grade}_mastery${i + 1}b`
-                ]).flat()
-            ];
             case 8: return [`grade${grade}_posttest`];
             default: return [];
         }
