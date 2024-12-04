@@ -201,27 +201,13 @@ def generate_lesson_data(grade_num: int, status: str) -> Dict:
                 data.update(handle_diagnostic_set(grade_num, i, "completed"))
             # Current set in progress
             data.update(handle_diagnostic_set(grade_num, current_set, "in_progress"))
-            # Future sets not started
-            for i in range(current_set + 1, 5):
-                data[f"grade{grade_num}_presentation{i}"] = "Not Started"
-        elif status == "not_started":
-            for i in range(1, 5):
-                data[f"grade{grade_num}_presentation{i}"] = "Not Started"
-    
-    elif status == "not_started":
-        # Add presentation fields as "Not Started"
-        if lesson_index in [5, 9]:
-            for i in range(1, 5):
-                data[f"grade{grade_num}_presentation{i}"] = "Not Started"
-        else:
-            data[f"grade{grade_num}_presentation"] = "Not Started"
+            # Future sets - leave empty instead of "Not Started"
     
     elif status == "in_progress":
         if lesson_index in [2, 3, 4, 6]:
             # For RCA lessons, either RCA is in progress or presentation is
-            data[f"grade{grade_num}_presentation"] = random.choice(["Not Started", "In Progress"])
-            if data[f"grade{grade_num}_presentation"] == "In Progress":
-                # If presentation is in progress, RCA must be completed
+            if random.random() < 0.5:  # 50% chance for presentation to be in progress
+                data[f"grade{grade_num}_presentation"] = "In Progress"
                 data[f"grade{grade_num}_rca"] = generate_random_grade()
             else:
                 # If presentation not started, RCA might be in progress
