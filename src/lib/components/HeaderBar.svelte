@@ -7,7 +7,7 @@
     // Map route paths to display names
     const routeNames: Record<string, string> = {
         "/": "Overview",
-        "/gradebook": "Gradebook",
+        "/gradebook": "Gradebook / Courses / 8th Grade Math Modules",
         "/library": "Library",
         "/accounts": "Accounts",
         "/sites": "Sites",
@@ -19,7 +19,7 @@
 </script>
 
 <header class="bg-[#1b2655] px-6 flex items-center justify-between">
-    <h1 class="text-white text-[28px] font-semibold">
+    <h1 class="text-white text-[24px] font-semibold">
         {routeNames[$page.url.pathname] || "Not Found"}
     </h1>
     
@@ -37,9 +37,9 @@
                 >
                     <div class="flex items-center gap-2">
                         <span class="h-8 w-8 rounded-full bg-white/10 flex items-center justify-center text-white">
-                            KG
+                            MH
                         </span>
-                        <span>Ken Goode</span>
+                        <span>Melissa Harris</span>
                     </div>
                 </Button>
             </DropdownMenu.Trigger>

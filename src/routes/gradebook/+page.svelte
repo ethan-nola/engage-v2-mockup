@@ -38,7 +38,7 @@
         };
 
         const gridOptions = {
-            rowHeight: 38,
+            rowHeight: 42,
             defaultColDef: {
                 sortable: true,
                 resizable: true,
@@ -57,41 +57,7 @@
                 studentCellRenderer: StudentCellRenderer
             },
             onGridReady: (params) => {
-                setTimeout(() => {
-                    const lessonColumns = params.api.getColumns().filter(col => 
-                        col.getColDef().columnGroupShow === 'open'
-                    );
-                    
-                    if (lessonColumns.length > 0) {
-                        params.api.autoSizeColumns(
-                            lessonColumns.map(col => col.getColId()),
-                            { skipHeader: false }
-                        );
-                    }
-                    
-                    params.api.sizeColumnsToFit();
-                }, 0);
-            },
-            onColumnVisible: (params) => {
-                if (params.visible) {
-                    const column = params.column;
-                    const colDef = column.getColDef();
-                    
-                    if (colDef.columnGroupShow === 'open') {
-                        params.api.autoSizeColumn(column, { skipHeader: false });
-                        
-                        const parentGroup = column.getParent();
-                        if (parentGroup) {
-                            const visibleSiblings = parentGroup.getChildren()
-                                .filter(col => col.isVisible());
-                                
-                            params.api.autoSizeColumns(
-                                visibleSiblings.map(col => col.getColId()),
-                                { skipHeader: false }
-                            );
-                        }
-                    }
-                }
+                gridApi = params.api;
             }
         };
 

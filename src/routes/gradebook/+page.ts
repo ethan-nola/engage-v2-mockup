@@ -246,6 +246,7 @@ export function load() {
             pinned: 'left',
             sort: 'asc',
             cellClass: 'emphasized-text',
+            headerClass: 'emphasized-text',
             width: 220,  // Add fixed width for student names
             minWidth: 220  // Ensure it doesn't get smaller than this
         },
@@ -253,8 +254,10 @@ export function load() {
         {
             headerName: 'Grade',
             pinned: 'left',
-            width: 90, // Set fixed width
-            suppressSizeToFit: true, // Prevent auto-sizing
+            width: 90,
+            suppressSizeToFit: true,
+            cellClass: 'emphasized-text',
+            headerClass: 'emphasized-text',
             valueGetter: (params) => {
                 const unitGrades = [];
                 for (let unit = 0; unit < 10; unit++) {
@@ -414,12 +417,16 @@ export function load() {
                                         field: `grade${grade}_rca`,
                                         headerName: 'RCA',
                                         valueFormatter: (params: any) => params.value != null ? params.value + '%' : '',
-                                        columnGroupShow: 'open'
+                                        columnGroupShow: 'open',
+                                        width: 120,
+                                        suppressSizeToFit: true
                                     },
                                     {
                                         field: `grade${grade}_presentation`,
                                         headerName: 'Presentation',
-                                        columnGroupShow: 'open'
+                                        columnGroupShow: 'open',
+                                        width: 120,
+                                        suppressSizeToFit: true
                                     }
                                 ];
                             case 7: // Session 6
@@ -427,7 +434,9 @@ export function load() {
                                     {
                                         field: `grade${grade}_presentation`,
                                         headerName: 'Presentation',
-                                        columnGroupShow: 'open'
+                                        columnGroupShow: 'open',
+                                        width: 120,
+                                        suppressSizeToFit: true
                                     }
                                 ];
                             case 8: // Session 7
@@ -436,12 +445,16 @@ export function load() {
                                         field: `grade${grade}_posttest`,
                                         headerName: 'Post-test',
                                         valueFormatter: (params: any) => params.value != null ? params.value + '%' : '',
-                                        columnGroupShow: 'open'
+                                        columnGroupShow: 'open',
+                                        width: 120,
+                                        suppressSizeToFit: true
                                     },
                                     {
                                         field: `grade${grade}_presentation`,
                                         headerName: 'Presentation',
-                                        columnGroupShow: 'open'
+                                        columnGroupShow: 'open',
+                                        width: 120,
+                                        suppressSizeToFit: true
                                     }
                                 ];
                             case 10: // Enrichments
@@ -449,7 +462,9 @@ export function load() {
                                     {
                                         field: `grade${grade}_presentation`,
                                         headerName: 'Presentation',
-                                        columnGroupShow: 'open'
+                                        columnGroupShow: 'open',
+                                        width: 120,
+                                        suppressSizeToFit: true
                                     }
                                 ];
                             default:
@@ -464,8 +479,13 @@ export function load() {
         columnDefs.push({
             headerName: UNIT_NAMES[unit],
             groupId: `unit${unit + 1}`,
-            openByDefault: false,  // Make sure unit starts collapsed
+            openByDefault: false,
             headerClass: 'emphasized-text',
+            width: 200,                    // Increase fixed width
+            minWidth: 200,                 // Match minWidth to width
+            suppressSizeToFit: true,       // Prevent column from being sized to fit
+            resizable: true,               // Allow manual resizing
+            suppressAutoSize: true,        // Prevent auto-sizing
             children: [
                 // Unit average grade column
                 {
