@@ -2,6 +2,7 @@
     import { onMount, onDestroy } from 'svelte';
     import { browser } from '$app/environment';
     import { createGrid } from 'ag-grid-community';
+    import 'ag-grid-enterprise';
     import 'ag-grid-community/styles/ag-grid.css';
     import 'ag-grid-community/styles/ag-theme-balham.css';
     import Icon from '$lib/components/Icon.svelte';
@@ -17,7 +18,6 @@
             const div = document.createElement('div');
             div.classList.add('student-cell');
             
-            // Create the icon component
             const iconWrapper = document.createElement('div');
             iconWrapper.classList.add('icon-wrapper', 'text-nav-text');
             const icon = new Icon({
@@ -45,7 +45,32 @@
                 minWidth: 80,
                 editable: true,
                 wrapHeaderText: true,
-                autoHeaderHeight: true
+                autoHeaderHeight: true,
+                suppressMenu: true
+            },
+            enableRangeSelection: true,
+            suppressCellSelection: false,
+            allowContextMenuWithControlKey: true,
+            copyHeadersToClipboard: true,
+            clipboardDelimiter: ',',
+            processCellForClipboard: (params) => {
+                if (typeof params.value === 'number') {
+                    return `${params.value}%`;
+                }
+                if (typeof params.value === 'string' && params.value.includes(',')) {
+                    return `"${params.value}"`;
+                }
+                return params.value;
+            },
+            getContextMenuItems: (params) => {
+                return [
+                    'copy',
+                    'copyWithHeaders',
+                    'separator',
+                    'export',
+                    'separator',
+                    'autoSizeAll'
+                ];
             },
             columnHoverHighlight: true,
             rowData: data.rowData,
@@ -71,7 +96,6 @@
     });
 </script>
 
-<!-- Grid Container -->
 <div class="h-full w-full flex flex-col relative">
     <div class="flex-grow relative">
         <div bind:this={gridDiv} class="ag-theme-balham h-full w-full"></div>
@@ -79,34 +103,45 @@
 </div>
 
 <style>
-    /* Ensure grid takes full height of container */
     :global(.ag-theme-balham) {
         height: 100% !important;
-        /* Set hover colors to standard AG Grid light blue */
-        --ag-row-hover-color: rgb(33, 150, 243, 0.1);  /* Light blue with 10% opacity */
-        --ag-column-hover-color: rgb(33, 150, 243, 0.1);  /* Light blue with 10% opacity */
+        --ag-row-hover-color: rgb(33, 150, 243, 0.1);
+        --ag-column-hover-color: rgb(33, 150, 243, 0.1);
+        --ag-range-selection-border-color: rgb(33, 150, 243);
+        --ag-range-selection-border-style: solid;
+        --ag-range-selection-background-color: rgba(33, 150, 243, 0.1);
+        --ag-range-selection-background-color-2: rgba(33, 150, 243, 0.19);
+        --ag-range-selection-background-color-3: rgba(33, 150, 243, 0.27);
+        --ag-range-selection-background-color-4: rgba(33, 150, 243, 0.34);
     }
 
-    /* Center cell contents vertically */
     :global(.ag-theme-balham .ag-cell) {
         display: flex;
         align-items: center;
+        user-select: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
     }
 
-    /* Replace the student-name-cell style with emphasized-text */
+    :global(.ag-theme-balham .ag-cell-editing) {
+        user-select: text;
+        -webkit-user-select: text;
+        -moz-user-select: text;
+        -ms-user-select: text;
+    }
+
     :global(.emphasized-text) {
         font-size: 13px;
         font-weight: 500;
         color: rgba(0, 0, 0, 1);
     }
 
-    /* Ensure the header class is applied correctly */
     :global(.ag-header-cell.emphasized-text .ag-header-cell-text) {
         font-size: 13px;
         font-weight: 500;
     }
 
-    /* Add styles for the student cell */
     :global(.student-cell) {
         display: flex;
         align-items: center;
