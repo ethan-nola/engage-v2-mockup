@@ -3,11 +3,23 @@
     import { createGrid } from 'ag-grid-community';
     import 'ag-grid-community/styles/ag-grid.css';
     import 'ag-grid-community/styles/ag-theme-balham.css';
+    import { icons } from '$lib/components/icons';
     
     export let data;
     
     let gridDiv;
     let gridApi;
+    
+    // Create a custom cell renderer for the student column
+    function StudentCellRenderer(params) {
+        const div = document.createElement('div');
+        div.classList.add('student-cell');
+        div.innerHTML = `
+            <div class="icon-wrapper">${icons.person}</div>
+            <span>${params.value}</span>
+        `;
+        return div;
+    }
     
     onMount(() => {
         const gridOptions = {
@@ -70,6 +82,11 @@
                         }
                     }
                 }
+            },
+
+            // Add the custom cell renderer to the components
+            components: {
+                studentCellRenderer: StudentCellRenderer
             }
         };
         
@@ -117,6 +134,24 @@
     :global(.ag-header-cell.emphasized-text .ag-header-cell-text) {
         font-size: 13px;
         font-weight: 500;
+    }
+
+    /* Add styles for the student cell */
+    :global(.student-cell) {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    :global(.student-cell .icon-wrapper) {
+        display: flex;
+        align-items: center;
+    }
+
+    :global(.student-cell .icon-wrapper svg) {
+        width: 20px;
+        height: 20px;
+        opacity: 0.7;
     }
 </style>
 

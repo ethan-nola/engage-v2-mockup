@@ -241,6 +241,7 @@ export function load() {
             valueGetter: (params) => {
                 return `${params.data.firstName} ${params.data.lastName}`;
             },
+            cellRenderer: 'studentCellRenderer',
             suppressSizeToFit: false,
             pinned: 'left',
             sort: 'asc',
