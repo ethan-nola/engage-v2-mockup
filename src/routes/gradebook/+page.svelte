@@ -1,5 +1,6 @@
 <script>
-    import { onDestroy, onMount } from 'svelte';
+    import { onMount, onDestroy } from 'svelte';
+    import { browser } from '$app/environment';
     import { createGrid } from 'ag-grid-community';
     import 'ag-grid-community/styles/ag-grid.css';
     import 'ag-grid-community/styles/ag-theme-balham.css';
@@ -9,33 +10,33 @@
     
     let gridDiv;
     let gridApi;
-    
-    // Create a custom cell renderer for the student column
-    function StudentCellRenderer(params) {
-        const div = document.createElement('div');
-        div.classList.add('student-cell');
-        
-        // Create the icon component
-        const iconWrapper = document.createElement('div');
-        iconWrapper.classList.add('icon-wrapper', 'text-nav-text');
-        const icon = new Icon({
-            target: iconWrapper,
-            props: {
-                name: 'person',
-                size: 'sm'
-            }
-        });
-        
-        const nameSpan = document.createElement('span');
-        nameSpan.textContent = params.value;
-        
-        div.appendChild(iconWrapper);
-        div.appendChild(nameSpan);
-        
-        return div;
-    }
+    let StudentCellRenderer;
     
     onMount(() => {
+        StudentCellRenderer = function(params) {
+            const div = document.createElement('div');
+            div.classList.add('student-cell');
+            
+            // Create the icon component
+            const iconWrapper = document.createElement('div');
+            iconWrapper.classList.add('icon-wrapper', 'text-nav-text');
+            const icon = new Icon({
+                target: iconWrapper,
+                props: {
+                    name: 'person',
+                    size: 'sm'
+                }
+            });
+            
+            const nameSpan = document.createElement('span');
+            nameSpan.textContent = params.value;
+            
+            div.appendChild(iconWrapper);
+            div.appendChild(nameSpan);
+            
+            return div;
+        };
+
         const gridOptions = {
             rowHeight: 38,
             defaultColDef: {
@@ -46,69 +47,59 @@
                 wrapHeaderText: true,
                 autoHeaderHeight: true
             },
-
             columnHoverHighlight: true,
             rowData: data.rowData,
             columnDefs: data.columnDefs,
             popupParent: document.body,
             groupDisplayType: 'columnGroupCells',
-
             suppressColumnVirtualisation: true,
-
-            onFirstDataRendered: (params) => {
-                // Get all lesson columns
-                const lessonColumns = params.columnApi.getAllColumns().filter(col => 
-                    col.getColDef().columnGroupShow === 'open'
-                );
-                
-                // Auto-size lesson columns first
-                if (lessonColumns.length > 0) {
-                    params.columnApi.autoSizeColumns(
-                        lessonColumns.map(col => col.getColId()),
-                        { skipHeader: false }
-                    );
-                }
-                
-                // Then size remaining columns to fit
-                params.api.sizeColumnsToFit();
+            components: {
+                studentCellRenderer: StudentCellRenderer
             },
-
+            onGridReady: (params) => {
+                setTimeout(() => {
+                    const lessonColumns = params.api.getColumns().filter(col => 
+                        col.getColDef().columnGroupShow === 'open'
+                    );
+                    
+                    if (lessonColumns.length > 0) {
+                        params.api.autoSizeColumns(
+                            lessonColumns.map(col => col.getColId()),
+                            { skipHeader: false }
+                        );
+                    }
+                    
+                    params.api.sizeColumnsToFit();
+                }, 0);
+            },
             onColumnVisible: (params) => {
                 if (params.visible) {
                     const column = params.column;
                     const colDef = column.getColDef();
                     
-                    // Only auto-size lesson columns
                     if (colDef.columnGroupShow === 'open') {
-                        // First auto-size the newly visible column
-                        params.columnApi.autoSizeColumn(column, { skipHeader: false });
+                        params.api.autoSizeColumn(column, { skipHeader: false });
                         
                         const parentGroup = column.getParent();
                         if (parentGroup) {
                             const visibleSiblings = parentGroup.getChildren()
                                 .filter(col => col.isVisible());
                                 
-                            // Then auto-size all visible siblings
-                            params.columnApi.autoSizeColumns(
+                            params.api.autoSizeColumns(
                                 visibleSiblings.map(col => col.getColId()),
                                 { skipHeader: false }
                             );
                         }
                     }
                 }
-            },
-
-            // Add the custom cell renderer to the components
-            components: {
-                studentCellRenderer: StudentCellRenderer
             }
         };
-        
+
         gridApi = createGrid(gridDiv, gridOptions);
     });
 
     onDestroy(() => {
-        if (gridApi) {
+        if (browser && gridApi) {
             gridApi.destroy();
         }
     });
@@ -117,7 +108,6 @@
 <!-- Grid Container -->
 <div class="h-full w-full flex flex-col relative">
     <div class="flex-grow relative">
-        <!-- AG Grid container with Balham theme -->
         <div bind:this={gridDiv} class="ag-theme-balham h-full w-full"></div>
     </div>
 </div>
