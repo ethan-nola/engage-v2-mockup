@@ -338,12 +338,16 @@ export function load() {
                                         field: `grade${grade}_moduleGuide`,
                                         headerName: 'Module Guide',
                                         valueFormatter: (params: any) => params.value != null ? params.value + '%' : '',
-                                        columnGroupShow: 'open'
+                                        columnGroupShow: 'open',
+                                        width: 120,
+                                        suppressSizeToFit: true
                                     },
                                     {
                                         field: `grade${grade}_presentation`,
                                         headerName: 'Presentation',
-                                        columnGroupShow: 'open'
+                                        columnGroupShow: 'open',
+                                        width: 120,
+                                        suppressSizeToFit: true
                                     }
                                 ];
                             case 2: // Session 2
@@ -354,12 +358,16 @@ export function load() {
                                         field: `grade${grade}_rca`,
                                         headerName: 'RCA',
                                         valueFormatter: (params: any) => params.value != null ? params.value + '%' : '',
-                                        columnGroupShow: 'open'
+                                        columnGroupShow: 'open',
+                                        width: 120,
+                                        suppressSizeToFit: true
                                     },
                                     {
                                         field: `grade${grade}_presentation`,
                                         headerName: 'Presentation',
-                                        columnGroupShow: 'open'
+                                        columnGroupShow: 'open',
+                                        width: 120,
+                                        suppressSizeToFit: true
                                     }
                                 ];
                             case 5: // Diagnostic Day 1
@@ -370,24 +378,32 @@ export function load() {
                                             field: `grade${grade}_diagnostic${diagNum}`,
                                             headerName: `Diagnostic ${diagNum}`,
                                             valueFormatter: (params: any) => params.value != null ? params.value + '%' : '',
-                                            columnGroupShow: 'open'
+                                            columnGroupShow: 'open',
+                                            width: 120,
+                                            suppressSizeToFit: true
                                         },
                                         {
                                             field: `grade${grade}_presentation${diagNum}`,
                                             headerName: `Presentation ${diagNum}`,
-                                            columnGroupShow: 'open'
+                                            columnGroupShow: 'open',
+                                            width: 120,
+                                            suppressSizeToFit: true
                                         },
                                         {
                                             field: `grade${grade}_mastery${diagNum}a`,
                                             headerName: `Mastery ${diagNum}a`,
                                             valueFormatter: (params: any) => params.value != null ? params.value + '%' : '',
-                                            columnGroupShow: 'open'
+                                            columnGroupShow: 'open',
+                                            width: 120,
+                                            suppressSizeToFit: true
                                         },
                                         {
                                             field: `grade${grade}_mastery${diagNum}b`,
                                             headerName: `Mastery ${diagNum}b`,
                                             valueFormatter: (params: any) => params.value != null ? params.value + '%' : '',
-                                            columnGroupShow: 'open'
+                                            columnGroupShow: 'open',
+                                            width: 120,
+                                            suppressSizeToFit: true
                                         }
                                     ])
                                 ];

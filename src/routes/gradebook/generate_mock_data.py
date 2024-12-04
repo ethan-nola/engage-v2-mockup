@@ -147,15 +147,36 @@ def generate_unit_data(unit_num: int, lesson_count: int, completion_status: str,
     
     return unit_data
 
+def generate_diagnostic_grade() -> int:
+    """Generate a grade for diagnostic tests with higher chance of 100%"""
+    # 40% chance of getting 100%
+    if random.random() < 0.4:
+        return 100
+        
+    # For remaining 60%, use normal distribution but exclude 100
+    rand = random.random()
+    cumulative_weight = 0
+    
+    for level in CONFIG["grades"]["distribution"].values():
+        cumulative_weight += level["weight"]
+        if rand <= cumulative_weight:
+            if level["max"] == 100:
+                # For excellent range, generate 90-99 instead of 90-100
+                return random.randint(level["min"], 99)
+            return random.randint(level["min"], level["max"])
+    
+    return random.randint(60, 99)  # Fallback
+
 def handle_diagnostic_set(grade_num: int, set_num: int, status: str) -> Dict:
     """Generate data for a single diagnostic set following progression rules"""
     data = {}
     
-    # Generate diagnostic grade
-    diagnostic_grade = generate_random_grade()
+    # Use special diagnostic grade generation
+    diagnostic_grade = generate_diagnostic_grade()
     data[f"grade{grade_num}_diagnostic{set_num}"] = diagnostic_grade
     
-    # If diagnostic is 100%, skip the rest of the set
+    # If diagnostic is 100%, skip everything else in this set
+    # Don't add any presentation or mastery data - they skip straight to next diagnostic
     if diagnostic_grade == 100:
         return data
         
