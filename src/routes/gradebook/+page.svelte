@@ -17,7 +17,8 @@
                 resizable: true,
                 minWidth: 80,
                 editable: true,
-                suppressSizeToFit: false
+                wrapHeaderText: true,
+                autoHeaderHeight: true
             },
 
             columnHoverHighlight: true,
@@ -26,24 +27,48 @@
             popupParent: document.body,
             groupDisplayType: 'columnGroupCells',
 
-            autoSizeStrategy: {
-                type: 'fitCellContents',
-                skipHeader: false,
-                columnLimits: [
-                    { colId: 'firstName', maxWidth: 120 },
-                    { colId: 'lastName', maxWidth: 120 }
-                ]
-            },
-
             suppressColumnVirtualisation: true,
 
             onFirstDataRendered: (params) => {
+                // Get all lesson columns
+                const lessonColumns = params.columnApi.getAllColumns().filter(col => 
+                    col.getColDef().columnGroupShow === 'open'
+                );
+                
+                // Auto-size lesson columns first
+                if (lessonColumns.length > 0) {
+                    params.columnApi.autoSizeColumns(
+                        lessonColumns.map(col => col.getColId()),
+                        { skipHeader: false }
+                    );
+                }
+                
+                // Then size remaining columns to fit
                 params.api.sizeColumnsToFit();
             },
 
             onColumnVisible: (params) => {
                 if (params.visible) {
-                    params.api.sizeColumnsToFit();
+                    const column = params.column;
+                    const colDef = column.getColDef();
+                    
+                    // Only auto-size lesson columns
+                    if (colDef.columnGroupShow === 'open') {
+                        // First auto-size the newly visible column
+                        params.columnApi.autoSizeColumn(column, { skipHeader: false });
+                        
+                        const parentGroup = column.getParent();
+                        if (parentGroup) {
+                            const visibleSiblings = parentGroup.getChildren()
+                                .filter(col => col.isVisible());
+                                
+                            // Then auto-size all visible siblings
+                            params.columnApi.autoSizeColumns(
+                                visibleSiblings.map(col => col.getColId()),
+                                { skipHeader: false }
+                            );
+                        }
+                    }
                 }
             }
         };

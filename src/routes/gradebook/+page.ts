@@ -1,6 +1,25 @@
+/**
+ * Gradebook Data Loading and Configuration
+ * 
+ * This module handles the data structure and configuration for a complex educational gradebook
+ * that displays student progress across multiple units and lessons. The gradebook is organized as:
+ * - 10 Units (Forensic Math, Environmental Math, etc.)
+ * - Each unit contains 9-10 lessons/sessions
+ * - Different lesson types (regular sessions, diagnostic days) have different grading structures
+ * 
+ * The data is displayed using AG Grid with a hierarchical column structure:
+ * Student Name -> Overall Grade -> Units -> Lessons -> Individual Assignments
+ */
+
 import mockData from './mock_data.json';
 
-// Type definitions for grid data structure
+// At the top of the file, add overview documentation
+/**
+ * Represents a row of student data in the gradebook
+ * @property firstName - Student's first name
+ * @property lastName - Student's last name
+ * @property [key: string] - Dynamic grade fields (e.g., 'grade1_presentation', 'grade1_moduleGuide')
+ */
 interface StudentRow {
     firstName: string;
     lastName: string;
@@ -9,6 +28,10 @@ interface StudentRow {
 
 
 // Type definition for AG Grid column configuration
+/**
+ * AG Grid column configuration interface
+ * Defines the structure and behavior of grid columns
+ */
 interface ColumnDef {
     field?: string;              // Data field to display
     headerName: string;          // Column header text
@@ -25,12 +48,23 @@ interface ColumnDef {
     sort?: string;  // Add missing sort property to fix linter error
     cellClass?: string;          // Add missing cellClass property to fix linter error
     headerClass?: string;        // Add missing headerClass property to fix linter error
+    suppressSizeToFit?: boolean; // Add this property to fix linter error
+    minWidth?: number;
+    wrapHeaderText?: boolean;
+    autoHeaderHeight?: boolean;
+    headerComponentParams?: {
+        template?: string;
+    };
 }
 
-// Add this near the top with other interfaces
+/**
+ * Status types for presentation completion
+ */
 type PresentationStatus = 'Not Started' | 'In Progress' | 'Completed';
 
-// Names for each unit
+/**
+ * Names of the educational units in the curriculum
+ */
 const UNIT_NAMES = [
     "Forensic Math",
     "Environmental Math", 
@@ -44,13 +78,23 @@ const UNIT_NAMES = [
     "Home Makeover"
 ];
 
-// Add new helper interfaces
+/**
+ * Tracks the completion status of a lesson's components
+ * @property presentationComplete - Whether all presentations for the lesson are marked as completed
+ * @property hasAssessmentGrades - Whether all required assessment grades have been entered
+ */
 interface LessonCompletion {
     presentationComplete: boolean;
     hasAssessmentGrades: boolean;
 }
 
-// Add helper functions at the top of the file
+/**
+ * Determines if a lesson is complete by checking both presentations and assessments
+ * @param params - AG Grid row parameters containing student data
+ * @param grade - The grade number being checked
+ * @param lessonIndex - The index of the lesson within its unit (1-10)
+ * @returns Object containing completion status for presentations and assessments
+ */
 function isLessonComplete(params: any, grade: number, lessonIndex: number): LessonCompletion {
     const presentationFields = (() => {
         switch(lessonIndex) {
@@ -96,6 +140,17 @@ function isLessonComplete(params: any, grade: number, lessonIndex: number): Less
     return { presentationComplete, hasAssessmentGrades };
 }
 
+/**
+ * Calculates the overall grade for a specific lesson
+ * Different lesson types have different grade calculation methods:
+ * - Diagnostic days (5, 9): Average of best scores (diagnostic or mastery)
+ * - Regular sessions: Average of assessment grades if presentations are complete
+ * 
+ * @param params - AG Grid row parameters containing student data
+ * @param grade - The grade number to calculate
+ * @param lessonIndex - The index of the lesson within its unit (1-10)
+ * @returns The calculated grade (0-100) or undefined if incomplete
+ */
 function calculateLessonGrade(params: any, grade: number, lessonIndex: number): number | undefined {
     const completion = isLessonComplete(params, grade, lessonIndex);
     
@@ -159,7 +214,21 @@ function calculateLessonGrade(params: any, grade: number, lessonIndex: number): 
         : undefined;
 }
 
-// Main load function for the page
+/**
+ * Main data loading function for the gradebook
+ * Configures the column structure and loads student data
+ * 
+ * Column hierarchy:
+ * 1. Student Name (pinned left)
+ * 2. Overall Grade (pinned left)
+ * 3. Units (collapsible)
+ *    - Unit Grade (visible when collapsed)
+ *    - Lessons (visible when expanded)
+ *      - Lesson Grade (visible when collapsed)
+ *      - Individual assignments (visible when expanded)
+ * 
+ * @returns Object containing row data and column definitions for AG Grid
+ */
 export function load() {
     // Use the pre-generated mock data
     const rowData = mockData.rowData;
@@ -243,12 +312,13 @@ export function load() {
             // Define column structure for each lesson
             children.push({
                 headerName: lessonLabel,
-                suppressSizeToFit: false,
+                width: 150,  // Set a fixed width that accommodates "Diagnostic Day 1"
                 columnGroupShow: 'open',
                 children: [
                     // Average grade column (shown when collapsed)
                     {
                         headerName: 'Lesson Grade',
+                        width: 150,
                         valueGetter: (params: any) => {
                             return calculateLessonGrade(params, grade, lessonIndex) ?? 0;
                         },
