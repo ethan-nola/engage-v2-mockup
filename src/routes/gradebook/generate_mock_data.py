@@ -9,24 +9,25 @@ Data Model:
 1. Units:
    - Students can take units in any order
    - Students can only take one unit at a time
-   - All lessons in a unit must be completed before moving to another unit
+   - Each student has exactly 5 completed units and 1 unit in progress
+   - Remaining units are not started
 
 2. Lessons:
    - Each unit contains 10 lessons that must be completed sequentially
    - Lesson types and their components:
-     * Session 1: Module Guide + Presentation
-     * Sessions 2-4: RCA + Presentation
-     * Diagnostic Day 1: 4 sets of (Diagnostic -> Presentation -> Mastery a -> Mastery b)
-     * Session 5: RCA + Presentation
-     * Session 6: Presentation only
-     * Session 7: Post-test + Presentation
-     * Diagnostic Day 2: 4 sets of (Diagnostic -> Presentation -> Mastery a -> Mastery b)
-     * Enrichments: Presentation only
+     * Lesson 1: Module Guide + Presentation
+     * Lessons 2-4, 6: RCA + Presentation
+     * Lesson 5: Diagnostic Day 1 - 4 sets of (Diagnostic -> Presentation -> Mastery a -> Mastery b)
+     * Lesson 7: Presentation only
+     * Lesson 8: Post-test + Presentation
+     * Lesson 9: Diagnostic Day 2 - 4 sets of (Diagnostic -> Presentation -> Mastery a -> Mastery b)
+     * Lesson 10: Enrichments (Not implemented in current code)
 
 3. Progress States:
    - Not Started: No grades or progress
    - In Progress: Currently working on this component
    - Completed: All components finished with grades
+   - Watching Presentation: Special state where assessment is completed but presentation is in progress
 
 Progression Rules:
 -----------------
@@ -38,11 +39,14 @@ Progression Rules:
    - Assessment (Module Guide, RCA, Post-test) must be completed before presentation
    - For Diagnostic Days:
      * Diagnostic test must be completed before presentation
+     * If diagnostic score is 100%, rest of set is skipped
      * Presentation must be completed before Mastery tests
-     * All components must be completed in sequence
+     * Mastery b is only generated if Mastery a score is ≤ 70
 
-3. Student Progress Types:
-   - Working on Sixth (100%): All students working on 6th unit
+3. Student Progress Pattern:
+   - Each student has exactly 5 completed units
+   - One unit in progress
+   - Remaining units not started
 
 Grade Distribution:
 ------------------
