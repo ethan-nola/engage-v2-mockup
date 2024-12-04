@@ -244,12 +244,16 @@ export function load() {
             suppressSizeToFit: false,
             pinned: 'left',
             sort: 'asc',
-            cellClass: 'emphasized-text'
+            cellClass: 'emphasized-text',
+            width: 220,  // Add fixed width for student names
+            minWidth: 220  // Ensure it doesn't get smaller than this
         },
-        // Overall grade column
+        // Modified grade column
         {
             headerName: 'Grade',
             pinned: 'left',
+            width: 90, // Set fixed width
+            suppressSizeToFit: true, // Prevent auto-sizing
             valueGetter: (params) => {
                 const unitGrades = [];
                 for (let unit = 0; unit < 10; unit++) {
