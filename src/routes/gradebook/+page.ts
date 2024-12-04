@@ -7,6 +7,7 @@ interface StudentRow {
     [key: string]: string | number;  // Allow dynamic grade fields
 }
 
+
 // Type definition for AG Grid column configuration
 interface ColumnDef {
     field?: string;              // Data field to display
