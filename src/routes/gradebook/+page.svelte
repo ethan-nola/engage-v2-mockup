@@ -3,7 +3,7 @@
     import { createGrid } from 'ag-grid-community';
     import 'ag-grid-community/styles/ag-grid.css';
     import 'ag-grid-community/styles/ag-theme-balham.css';
-    import { icons } from '$lib/components/icons';
+    import Icon from '$lib/components/Icon.svelte';
     
     export let data;
     
@@ -14,10 +14,24 @@
     function StudentCellRenderer(params) {
         const div = document.createElement('div');
         div.classList.add('student-cell');
-        div.innerHTML = `
-            <div class="icon-wrapper">${icons.person}</div>
-            <span>${params.value}</span>
-        `;
+        
+        // Create the icon component
+        const iconWrapper = document.createElement('div');
+        iconWrapper.classList.add('icon-wrapper', 'text-nav-text');
+        const icon = new Icon({
+            target: iconWrapper,
+            props: {
+                name: 'person',
+                size: 'sm'
+            }
+        });
+        
+        const nameSpan = document.createElement('span');
+        nameSpan.textContent = params.value;
+        
+        div.appendChild(iconWrapper);
+        div.appendChild(nameSpan);
+        
         return div;
     }
     
@@ -146,12 +160,6 @@
     :global(.student-cell .icon-wrapper) {
         display: flex;
         align-items: center;
-    }
-
-    :global(.student-cell .icon-wrapper svg) {
-        width: 20px;
-        height: 20px;
-        opacity: 0.7;
     }
 </style>
 
