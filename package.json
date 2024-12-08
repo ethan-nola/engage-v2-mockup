@@ -28,15 +28,15 @@
 		"vite": "^5.0.3"
 	},
 	"dependencies": {
-		"@ag-grid-enterprise/core": "^32.3.3",
-		"@ag-grid-enterprise/master-detail": "^32.3.3",
+		"@ag-grid-enterprise/core": "^30.2.1",
+		"@ag-grid-enterprise/master-detail": "^30.2.1",
 		"@supabase/supabase-js": "^2.x.x",
 		"@tailwindcss/aspect-ratio": "^0.4.2",
 		"@tailwindcss/container-queries": "^0.1.1",
 		"@tailwindcss/forms": "^0.5.9",
 		"@tailwindcss/typography": "^0.5.15",
-		"ag-grid-community": "^32.3.3",
-		"ag-grid-enterprise": "^32.3.3",
+		"ag-grid-community": "^30.2.1",
+		"ag-grid-enterprise": "^30.2.1",
 		"ag-grid-svelte": "^0.3.0"
 	}
 }

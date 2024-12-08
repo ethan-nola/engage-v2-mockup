@@ -75,3 +75,10 @@ This project includes mock data to simulate the functionality of the Engage Lear
    - Configure CI/CD pipelines if applicable.
    - Prepare for deployment to staging and production environments.
 
+---
+pushing to multiple repositories:
+
+```bash
+git push origin main  # Push to Azure DevOps
+git push github main  # Push to GitHub
+```
